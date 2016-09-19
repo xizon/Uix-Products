@@ -26,10 +26,8 @@ get_header(); ?>
             
             <div class="uix-products-cat-list" id="nav-filters-<?php the_ID(); ?>">
                 <ul>
-                    <li class="current-cat"><a href="javascript:" data-group="all">All</a></li>
+                    <li class="current-cat"><a href="javascript:" data-group="all"><?php esc_html_e( 'All', 'uix-products'); ?></a></li>
                     <?php
-                        echo '';
-                        
                         wp_list_categories(array(
                         
                             'show_option_all'    => '', 
@@ -48,7 +46,7 @@ get_header(); ?>
                             'include'            => '',
                             'hierarchical'       => 0,
                             'title_li'           => '',
-                            'show_option_none'   => __( 'No categories', 'uix-products'),
+                            'show_option_none'   => __( 'No categories', 'uix-products' ),
                             'number'             => null,
                             'echo'               => 1,
                             'depth'              => 0,

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Mon Sep 19 2016 21:44:21 GMT+0800 (CST)\n"
+"POT-Revision-Date: Tue Sep 20 2016 01:21:06 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -783,7 +783,7 @@ msgid "Categories"
 msgstr ""
 
 #: ../post-extensions/products.php:81 ../post-extensions/products.php:216 ..
-#: /theme_templates/single-uix_products.php:87 ../theme_templates/single-
+#: theme_templates/single-uix_products.php:87 ../theme_templates/single-
 #: uix_products.php:153
 msgid "Category"
 msgstr ""
