@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Wed Sep 07 2016 16:44:14 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Sep 19 2016 21:44:21 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,13 +25,13 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/"
 
 #. URI of the plugin
-msgid "https://uiux.cc/wp-plugins/uix-slideshow"
+msgid "https://uiux.cc/wp-plugins/uix-products"
 msgstr ""
 
 #. Description of the plugin
 msgid ""
-"This plugin is a simple way to build, organize and display slideshow into "
-"any existing WordPress theme."
+"Readily organize & present your artworks, themes, plugins with Uix Products "
+"template files. Convenient for theme customization."
 msgstr ""
 
 #. Author of the plugin
@@ -42,110 +42,205 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-slideshow.php:206
-msgid "Uix Slideshow Settings"
+#: ../uix-products.php:171
+msgid "Uix Products Settings"
 msgstr ""
 
-#: ../uix-slideshow.php:207 ../uix-slideshow.php:269
+#: ../uix-products.php:172 ../uix-products.php:221
 msgid "Settings"
 msgstr ""
 
-#: ../uix-slideshow.php:222 ../uix-slideshow.php:223
+#: ../uix-products.php:187 ../uix-products.php:188
 msgid "Helper"
 msgstr ""
 
-#: ../uix-slideshow.php:270 ../uix-slideshow.php:363 ../helper/settings.php:70
+#: ../uix-products.php:222 ../uix-products.php:284 ../helper/settings.php:69
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-slideshow.php:362
+#: ../uix-products.php:283
 msgid ""
-"Do you want to create a slideshow website with WordPress?  Learn how to add "
-"slideshow to your themes."
+"Do you want to create a products website with WordPress?  Learn how to add "
+"products to your themes."
 msgstr ""
 
-#: ../uix-slideshow.php:366
+#: ../uix-products.php:287
 #, php-format
 msgid "<a href=\"%1$s\">Hide Notice</a>"
 msgstr ""
 
-#: ../uix-slideshow.php:378
+#: ../uix-products.php:299
 msgid ""
-"<strong>You need to create Uix Slideshow template files in your templates "
+"<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: ../uix-slideshow.php:378 ../helper/tabs/usage.php:22
+#: ../uix-products.php:299 ../helper/tabs/usage.php:22
 msgid "Create now!"
 msgstr ""
 
-#: ../uix-slideshow.php:378 ../helper/tabs/temp.php:55
+#: ../uix-products.php:299 ../helper/tabs/temp.php:73
 msgid ""
-"As a workaround you can use FTP, access the Uix Slideshow template files "
-"path <code>/wp-content/plugins/uix-slideshow/theme_templates/</code> and "
-"upload files to your theme templates directory <code>/wp-"
-"content/themes/{your-theme}/</code>. "
+"As a workaround you can use FTP, access the Uix Products template files path "
+"<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
+"files to your theme templates directory <code>/wp-content/themes/{your-"
+"theme}/</code>. "
 msgstr ""
 
-#: ../uix-slideshow.php:532 ../uix-slideshow.php:607
+#: ../uix-products.php:454 ../uix-products.php:529
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-slideshow.php:534
+#: ../uix-products.php:456
 msgid ""
 "<div class=\"notice notice-error\"><p><strong>There was a problem copying your "
 "template files:</strong> Please check your server settings. You can upload "
 "files to theme templates directory using FTP.</p></div>"
 msgstr ""
 
-#: ../uix-slideshow.php:539
+#: ../uix-products.php:461
 msgid ""
 "<div class=\"notice notice-error\"><p><strong>There was a problem removing "
 "your template files:</strong> Please check your server settings. You can "
 "upload files to theme templates directory using FTP.</p></div>"
 msgstr ""
 
-#: ../uix-slideshow.php:542
+#: ../uix-products.php:464
 msgid "<div class=\"notice notice-success\"><p>Remove successful!</p></div>"
 msgstr ""
 
-#: ../helper/settings.php:8
+#: ../uix-products.php:641
+msgid "Primary Sidebar"
+msgstr ""
+
+#: ../uix-products.php:643
+msgid "Appears on posts and pages in the sidebar."
+msgstr ""
+
+#: ../uix-products.php:866
+msgid "Load More"
+msgstr ""
+
+#: ../uix-products.php:999 ../uix-products.php:1007
+msgid "Newer Posts"
+msgstr ""
+
+#: ../uix-products.php:1001 ../uix-products.php:1008
+msgid "Older Posts"
+msgstr ""
+
+#: ../gallery-metabox/init.php:110 ../gallery-metabox/init.php:166
+msgid "Remove image"
+msgstr ""
+
+#: ../gallery-metabox/init.php:120
+msgid "Add/Edit Images"
+msgstr ""
+
+#: ../gallery-metabox/init.php:125
+msgid "Enable Lightbox for this gallery?"
+msgstr ""
+
+#: ../gallery-metabox/init.php:147
+msgid "Add Images to Gallery"
+msgstr ""
+
+#: ../gallery-metabox/init.php:149
+msgid "Add to gallery"
+msgstr ""
+
+#: ../gallery-metabox/init.php:285
+msgid "Image Gallery"
+msgstr ""
+
+#: ../helper/settings.php:7
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../helper/settings.php:52
-msgid "Uix Slideshow Helper"
+#: ../helper/settings.php:51
+msgid "Uix Products Helper"
 msgstr ""
 
-#: ../helper/settings.php:66
+#: ../helper/settings.php:65
 msgid "About"
 msgstr ""
 
-#: ../helper/settings.php:75
+#: ../helper/settings.php:74
 msgid "Credits"
 msgstr ""
 
-#: ../helper/settings.php:80
+#: ../helper/settings.php:79
 msgid "Template Files"
 msgstr ""
 
 #: ../helper/settings.php:85
+msgid "Products List File"
+msgstr ""
+
+#: ../helper/settings.php:91
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: ../helper/settings.php:90
+#: ../helper/settings.php:96
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
-#: ../helper/tabs/about.php:10
+#: ../helper/tabs/about.php:12
 msgid ""
-"This plugin is a simple way to build, organize and display slideshow into "
-"any existing WordPress theme. <strong>Using template file to embed your "
-"theme.</strong> <br>Insert slideshow anywhere on your site using a custom "
-"post type. Powered by jQuery Flexslider with some transition styles to "
-"choose from."
+"This plugin enables a products post type and taxonomies. You can add a new "
+"artwork, theme or plugin item to appear in your theme. It also registers "
+"separate products taxonomies for tags and categories. If featured images are "
+"selected, they will be displayed in the column view."
+msgstr ""
+
+#: ../helper/tabs/about.php:15
+msgid "Features"
+msgstr ""
+
+#: ../helper/tabs/about.php:18
+msgid "* 3 Product types for choice"
+msgstr ""
+
+#: ../helper/tabs/about.php:19
+msgid "* List of retina-ready"
+msgstr ""
+
+#: ../helper/tabs/about.php:20
+msgid "* Full responsive design"
+msgstr ""
+
+#: ../helper/tabs/about.php:21
+msgid "* Using template files to customize your theme & display all product items"
+msgstr ""
+
+#: ../helper/tabs/about.php:22
+msgid "* Regenerate thumbnails after changing their size."
+msgstr ""
+
+#: ../helper/tabs/about.php:23
+msgid "* Adding categories support to a custom post type in WordPress"
+msgstr ""
+
+#: ../helper/tabs/about.php:24
+msgid "* It contains about 4 different layouts to choose from"
+msgstr ""
+
+#: ../helper/tabs/about.php:25
+msgid "* Support gallery"
+msgstr ""
+
+#: ../helper/tabs/about.php:26
+msgid "* There are some simple options to the theme customizer"
+msgstr ""
+
+#: ../helper/tabs/about.php:27
+msgid "* Filterable to display product items to your site"
+msgstr ""
+
+#: ../helper/tabs/about.php:28
+msgid "* Support widgets to the spot you wish it to appear"
 msgstr ""
 
 #: ../helper/tabs/credits.php:11
@@ -154,127 +249,148 @@ msgid ""
 "the list of credits for this plugin:"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:19 ../helper/tabs/general-settings.php:28
+#: ../helper/tabs/credits.php:16
+msgid "Gallery Metabox"
+msgstr ""
+
+#: ../helper/tabs/credits.php:17
+msgid "Custom Metaboxes and Fields"
+msgstr ""
+
+#: ../helper/tabs/credits.php:18
+msgid "Flexslider"
+msgstr ""
+
+#: ../helper/tabs/credits.php:19
+msgid "Shuffle"
+msgstr ""
+
+#: ../helper/tabs/credits.php:20
+msgid "Switcheroo"
+msgstr ""
+
+#: ../helper/tabs/credits.php:21 ../helper/tabs/general-settings.php:132
+msgid "Masonry"
+msgstr ""
+
+#: ../helper/tabs/custom-css.php:27 ../helper/tabs/general-settings.php:65
 msgid "Settings saved."
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:33
+#: ../helper/tabs/custom-css.php:44
 msgid ""
 "You can overview the original styles to overwrite it. It will be on creating "
 "new styles to your website, without modifying original <code>.css</code> "
 "files."
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:38
+#: ../helper/tabs/custom-css.php:49
 msgid "Paste your CSS code"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:71 ../helper/tabs/custom-css.php:108
+#: ../helper/tabs/custom-css.php:80 ../helper/tabs/custom-css.php:117
 msgid "CSS file root directory:"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:76
+#: ../helper/tabs/custom-css.php:85
 msgid "Close"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:46
-msgid "Effect"
+#: ../helper/tabs/general-settings.php:87
+msgid "Numeric Pagination"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:53
-msgid "Slide"
-msgstr ""
-
-#: ../helper/tabs/general-settings.php:60
-msgid "Fade"
-msgstr ""
-
-#: ../helper/tabs/general-settings.php:71
-msgid "Speed of Images Appereance"
-msgstr ""
-
-#: ../helper/tabs/general-settings.php:76 ../helper/tabs/general-settings.php:91
-msgid "ms"
-msgstr ""
-
-#: ../helper/tabs/general-settings.php:86
-msgid "Delay Between Images"
+#: ../helper/tabs/general-settings.php:93
+msgid "If this option turned on, the products list will use numeric pagination."
 msgstr ""
 
 #: ../helper/tabs/general-settings.php:102
-msgid "Previous Button Text"
+msgid "Filterable Animated Products"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:115
-msgid "Next Button Text"
+#: ../helper/tabs/general-settings.php:108
+msgid ""
+"Allows you to create a very modern and outstanding products which filters "
+"instantly."
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:128
-msgid "Automatically Transition"
+#: ../helper/tabs/general-settings.php:118 ../post-extensions/post-extensions-
+#: init.php:252 ../theme_templates/single-uix_products.php:201
+msgid "Layout"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:134
-msgid "Setup a slideshow for the slider to animate automatically."
+#: ../helper/tabs/general-settings.php:126
+msgid "Standard"
 msgstr ""
 
 #: ../helper/tabs/general-settings.php:144
-msgid "Show Arrow Navigation"
+msgid "Products Pages Show at Most"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:150
-msgid "Create previous/next arrow navigation."
+#: ../helper/tabs/general-settings.php:149
+msgid "products"
 msgstr ""
 
 #: ../helper/tabs/general-settings.php:160
-msgid "Show Paging Navigation"
+msgid "Image Size for Cover Thumbnails"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:166
-msgid "Create navigation for paging control of each slide."
+#: ../helper/tabs/general-settings.php:165 ../helper/tabs/general-settings.php:
+#: 171 ../helper/tabs/general-settings.php:187 ../helper/tabs/general-settings.
+#: php:193
+msgid "px"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:177
-msgid "Animation Loop"
+#: ../helper/tabs/general-settings.php:165 ../helper/tabs/general-settings.php:187
+msgid "(width)"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:183
-msgid "Gives the slider a seamless infinite loop."
+#: ../helper/tabs/general-settings.php:171 ../helper/tabs/general-settings.php:193
+msgid "(height)"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:193
-msgid "Smooth Height"
+#: ../helper/tabs/general-settings.php:182
+msgid "Image Size in Single Post"
 msgstr ""
 
-#: ../helper/tabs/general-settings.php:199
-msgid "Animate the height of the slider smoothly for slides of varying height."
+#: ../helper/tabs/products-list.php:51
+msgid "Create Uix Products list files in this plugin directory:"
 msgstr ""
 
-#: ../helper/tabs/temp.php:17
+#: ../helper/tabs/products-list.php:54
+msgid "Themes list file's name:"
+msgstr ""
+
+#: ../helper/tabs/products-list.php:59
+msgid "Click This Button to Create Uix Products List Files"
+msgstr ""
+
+#: ../helper/tabs/temp.php:50
 msgid ""
-"Uix Slideshow template files already exists. Remove Uix Slideshow template "
+"Uix Products template files already exists. Remove Uix Products template "
 "files in your templates directory:"
 msgstr ""
 
-#: ../helper/tabs/temp.php:19
+#: ../helper/tabs/temp.php:52
 msgid ""
 "As a workaround you can use FTP, access path <code>/wp-content/themes/{your-"
-"theme}/</code> and remove Uix Slideshow template files."
+"theme}/</code> and remove Uix Products template files."
 msgstr ""
 
-#: ../helper/tabs/temp.php:24 ../helper/tabs/temp.php:60
+#: ../helper/tabs/temp.php:56 ../helper/tabs/temp.php:78
 msgid "Template files list:"
 msgstr ""
 
-#: ../helper/tabs/temp.php:44
-msgid "Remove Uix Slideshow Template Files"
+#: ../helper/tabs/temp.php:60
+msgid "Remove Uix Products Template Files"
 msgstr ""
 
-#: ../helper/tabs/temp.php:53
-msgid "Copy Uix Slideshow template files in your templates directory:"
+#: ../helper/tabs/temp.php:71
+msgid "Copy Uix Products template files in your templates directory:"
 msgstr ""
 
-#: ../helper/tabs/temp.php:79
-msgid "Click This Button to Copy Uix Slideshow Files"
+#: ../helper/tabs/temp.php:82
+msgid "Click This Button to Copy Uix Products Files"
 msgstr ""
 
 #: ../helper/tabs/usage.php:11
@@ -288,7 +404,7 @@ msgstr ""
 
 #: ../helper/tabs/usage.php:18
 msgid ""
-"<h4 class=\"uix-bg-custom-title\">2. You need to create Uix Slideshow template "
+"<h4 class=\"uix-bg-custom-title\">2. You need to create Uix Products template "
 "files in your templates directory. You can create the files on the WordPress "
 "admin panel.</h4>"
 msgstr ""
@@ -296,41 +412,70 @@ msgstr ""
 #: ../helper/tabs/usage.php:26
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;As a workaround you can use FTP, access the Uix "
-"Slideshow template files path <code>/wp-content/plugins/uix-"
-"slideshow/theme_templates/</code> and upload files to your theme templates "
+"Products template files path <code>/wp-content/plugins/uix-"
+"products/theme_templates/</code> and upload files to your theme templates "
 "directory <code>/wp-content/themes/{your-theme}/</code>. "
 msgstr ""
 
 #: ../helper/tabs/usage.php:30
 msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;Please check if you have the 1 template file "
-"<code>\"partials-uix_slideshow.php\"</code> in your templates directory. If "
-"you can't find these files, then just copy them from the directory \"/wp-"
-"content/plugins/uix-slideshow/theme_templates/\" to your templates directory."
+"&nbsp;&nbsp;&nbsp;&nbsp;Please check if you have the 4 template files "
+"<code>\"content-uix_products.php\"</code>, <code>\"page-uix_products."
+"php\"</code>, <code>\"single-uix_products.php\"</code> and <code>\"taxonomy-"
+"uix_products_category.php\"</code> in your templates directory. If you can\"t "
+"find these files, then just copy them from the directory \"/wp-"
+"content/plugins/uix-products/theme_templates/\" to your templates directory."
 msgstr ""
 
-#: ../helper/tabs/usage.php:39
+#: ../helper/tabs/usage.php:38
 msgid ""
-"<h4 class=\"uix-bg-custom-title\">3. Create uix slideshow item and publish "
-"slideshow then.</h4>"
+"<h4 class=\"uix-bg-custom-title\">3. Create a new WordPress file or edit an "
+"existing one. Just make sure to select this new created template file as the "
+"\"Template\" for this page from the \"Attributes\" section. Enter page title "
+"like \"Product\". Save the page and hit \"Preview\" to see how it looks. ( You "
+"should specify the template name, in this case I used \"Uix Products\". The "
+"\"Template Name: Uix Products\" tells WordPress that this will be a custom "
+"page template. )</h4>"
 msgstr ""
 
-#: ../helper/tabs/usage.php:46
+#: ../helper/tabs/usage.php:44
 msgid ""
-"<h4 class=\"uix-bg-custom-title\">4. You can pretty much custom every aspect "
+"<h4 class=\"uix-bg-custom-title\">4. In your dashboard go to "
+"<strong>\"Appearance -> Menus\"</strong>. You’ll be able to add items to the "
+"menu. On the left you have your products pages.</h4>"
+msgstr ""
+
+#: ../helper/tabs/usage.php:52
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">5. Or use the Uix Products Widget to add it "
+"to a sidebar. Go to <strong>\"Appearance -> Widgets\"</strong> in the "
+"WordPress Administration Screens. Find the <strong>\"Recent Products (Uix "
+"Products Widget)\"</strong> in the list of Widgets and click and drag the "
+"Widget to the spot you wish it to appear.</h4>"
+msgstr ""
+
+#: ../helper/tabs/usage.php:62
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">6. Create uix products item and publish "
+"products then.</h4>"
+msgstr ""
+
+#: ../helper/tabs/usage.php:68
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">7. You can pretty much custom every aspect "
 "of the look and feel of this page by modifying the <code>*.php</code> "
 "template files <strong>(Access the path to the themes directory)</strong> . "
 "Best Practices for Editing WordPress Template Files:</h4>"
 msgstr ""
 
-#: ../helper/tabs/usage.php:49
+#: ../helper/tabs/usage.php:71
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;(1) WordPress comes with a theme and plugin editor "
 "as part of the core functionality. You can find it in your install by going "
 "to <strong>\"Appearance > Editor\"</strong> from your sidebar."
 msgstr ""
 
-#: ../helper/tabs/usage.php:57
+#: ../helper/tabs/usage.php:79
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;(2) You can connect to your site via an "
 "<strong>FTP</strong> client, download a copy of the file you want to change, "
@@ -338,157 +483,365 @@ msgid ""
 "the file that’s on the server."
 msgstr ""
 
-#: ../helper/tabs/usage.php:62
-msgid "<h4 class=\"uix-bg-custom-title\">5. Adding Uix Slideshow to Web Pages.</h4>"
-msgstr ""
-
-#: ../helper/tabs/usage.php:65
-msgid ""
-"There are two different ways you can add the Uix Slideshow widget to your "
-"site's pages:"
-msgstr ""
-
-#: ../helper/tabs/usage.php:69
-msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;(1) <strong>Shortcode</strong> - Embed a shortcode "
-"into the editor of any post, page, or custom post type."
-msgstr ""
-
-#: ../helper/tabs/usage.php:72
-msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use <code>[uix_slideshow_output show=\"-"
-"1\"]</code> to add it to your Post, Widgets or Page content. Now this "
-"shortcode has one attributes. Uix Slideshow show at most can be customized "
-"using the \"show\" parameter. Show all items if value is \"-1\". Go to your "
-"WordPress admin panel, edit or create a new post (or page). You’ll see our "
-"tiny little button in the toolbar, preceded by a separator:"
-msgstr ""
-
-#: ../helper/tabs/usage.php:80
-msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;(2) <strong>Template tags</strong> - Add a simple "
-"PHP function to one of your theme's template files."
-msgstr ""
-
 #: ../helper/tabs/usage.php:83
 msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Place <code>&lt;?php get_template_part( "
-"'partials', 'uix_slideshow' ); ?&gt;</code> in your templates."
+"<h4 class=\"uix-bg-custom-title\">8. The Uix Products plugin allows users to "
+"easily enable a \"Customizer Page\" to themes. Go to <strong>\"Uix Products -> "
+"Settings -> General Settings\"</strong>.</h4>"
 msgstr ""
 
-#: ../helper/tabs/usage.php:88
+#: ../helper/tabs/usage.php:89
 msgid ""
-"<h4 class=\"uix-bg-custom-title\">6. The Uix Slideshow plugin allows users to "
-"easily customize to themes. Go to <strong>\"Uix Slideshow -> Settings -> "
-"General Settings\"</strong>.</h4>"
-msgstr ""
-
-#: ../helper/tabs/usage.php:94
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">7. You can overview the original styles to "
+"<h4 class=\"uix-bg-custom-title\">9. You can overview the original styles to "
 "overwrite it. It will be on creating new styles to your website, without "
-"modifying original <code>.css</code> files. Go to <strong>\"Uix Slideshow -> "
+"modifying original <code>.css</code> files. Go to <strong>\"Uix Products -> "
 "Settings -> Custom CSS\"</strong>.</h4>"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:16
-msgid "Slider Image"
+#: ../inc/class-widgets.php:14
+msgid "Use this widget to list your recent products."
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:35
-msgid "Slider Settings"
+#: ../inc/class-widgets.php:17
+msgid "Uix Products: Recent Products"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:43
-msgid "Caption"
+#: ../inc/class-widgets.php:31 ../inc/class-widgets.php:228
+msgid "Recent Products"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:51
-msgid "Title Color"
+#: ../inc/class-widgets.php:236
+msgid "Title:"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:59
-msgid "Caption Color"
+#: ../inc/class-widgets.php:239
+msgid "Number of products to show:"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:73
-msgid "URL Settings"
+#: ../inc/class-widgets.php:244
+msgid "Only display artworks?"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:80 ../post-extensions/slideshow.
-#: php:96
+#: ../inc/class-widgets.php:249
+msgid "Only display themes?"
+msgstr ""
+
+#: ../inc/class-widgets.php:253
+msgid "Only display plugins?"
+msgstr ""
+
+#: ../inc/class-widgets.php:257
+msgid "Display post date?"
+msgstr ""
+
+#: ../inc/featured-image-column.php:63
+msgid "Featured Image Column"
+msgstr ""
+
+#: ../inc/featured-image-column.php:64
+#, php-format
+msgid "by <a href=\"%s\">Austin Passy</a>"
+msgstr ""
+
+#: ../inc/featured-image-column.php:74
+msgid "Allowed Post Types"
+msgstr ""
+
+#: ../inc/featured-image-column.php:88
+msgid "By default all post types that support \"thumbnails\" are selected."
+msgstr ""
+
+#: ../inc/featured-image-column.php:213
+msgid "Image"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:66
+msgid "Product Type"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:78
+msgid ""
+"<i class=\"dashicons dashicons-admin-customizer uix-products-type-"
+"icon\"></i>Artwork"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:79
+msgid ""
+"<i class=\"dashicons dashicons-laptop uix-products-type-icon\"></i>Theme or "
+"Plugin"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:90
+msgid "Artwork Settings"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:97
+msgid "Client Name"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:98
+msgid "Enter name of your clients. <strong>(optional)</strong>"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:104
 msgid "URL"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:81
+#: ../post-extensions/post-extensions-init.php:105
+msgid "Enter URL of your clients site. <strong>(optional)</strong>"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:112
+msgid "Date Projects"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:113
+msgid "Enter date of your projects. <strong>(optional)</strong>"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:127
+msgid "Theme or Plugin Settings"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:134 ../post-extensions/products.
+#: php:215
+msgid "Type"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:140
+msgid "Theme"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:141
+msgid "Plugin"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:145
+msgid "Item Prices"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:146
+msgid "Enter your expected value of this item for every single sell minimum"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:155
+msgid "Item Name"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:158
+msgid "Eg. Uixplant, 15 characters maximum"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:163
+msgid "Item Title"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:166
+msgid "Eg. Multi-purpose HTML5 WordPress Theme"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:172
+msgid "Demo Link"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:175
 msgid ""
-"Enter a custom URL to link this slide to. Don't forget the http:// at the "
-"front!"
+"Direct link to your demo or video without any iframe. (Eg. http://my-site."
+"com/demo/)"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:87
-msgid "Button Label"
+#: ../post-extensions/post-extensions-init.php:183
+msgid "Purchase/Download Link"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:88
-msgid "It defines the text on the button."
+#: ../post-extensions/post-extensions-init.php:186
+msgid ""
+"Direct link to the purchase or download page. (Eg. http://market-place."
+"com/yourtheme/)"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:91
-msgid "Check Out"
+#: ../post-extensions/post-extensions-init.php:195
+msgid "Current Version"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:95
-msgid "Target"
+#: ../post-extensions/post-extensions-init.php:198
+msgid "Your Item Version, Eg. 1.0.0"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:96
-msgid "Open link in a new window/tab"
+#: ../post-extensions/post-extensions-init.php:202 ../theme_templates/single-
+#: uix_products.php:168
+msgid "Compatible With"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:46 ../shortcodes/core/tinymce-plugin-lang.php:
-#: 12
-msgid "Uix Slideshow"
+#: ../post-extensions/post-extensions-init.php:205
+msgid "Eg. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:47
-msgid "Slideshow Item"
+#: ../post-extensions/post-extensions-init.php:212 ../theme_templates/single-
+#: uix_products.php:175
+msgid "Compatible Browsers"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:48
+#: ../post-extensions/post-extensions-init.php:230 ../theme_templates/single-
+#: uix_products.php:188
+msgid "Files Included"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:258
+msgid "Null"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:259
+msgid "Responsive"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:260
+msgid "Fixed"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:261
+msgid "Liquid"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:262
+msgid "Static"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:266 ../theme_templates/single-
+#: uix_products.php:208
+msgid "Additional Info"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:269
+msgid "Well Documentation"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:273
+msgid "Installation Info"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:276
+msgid ""
+"Installation and set up instructions are attached (look for Documentation "
+"folder)."
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:280 ../theme_templates/single-
+#: uix_products.php:222
+msgid "Tags"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:283
+msgid ""
+"Maximum of 15 keywords covering features, usage, and styling. Keywords "
+"should all be in lowercase and separated by commas. e.g. photography, "
+"gallery, modern, jquery, wordpress theme"
+msgstr ""
+
+#: ../post-extensions/post-extensions-init.php:287
+msgid "Updated Date"
+msgstr ""
+
+#: ../post-extensions/products.php:34
+msgid "Uix Products"
+msgstr ""
+
+#: ../post-extensions/products.php:35
+msgid "Products Item"
+msgstr ""
+
+#: ../post-extensions/products.php:36 ../post-extensions/products.php:39
 msgid "Add New Item"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:49 ../post-extensions/slideshow.php:51
-msgid "Add New Slideshow Item"
+#: ../post-extensions/products.php:37
+msgid "Add New Products Item"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:50
-msgid "Edit Slideshow Item"
+#: ../post-extensions/products.php:38
+msgid "Edit Item"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:52
+#: ../post-extensions/products.php:40
 msgid "View Item"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:53
-msgid "Search Slideshow"
+#: ../post-extensions/products.php:41
+msgid "Search Items"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:54
-msgid "No slideshow items found"
+#: ../post-extensions/products.php:42
+msgid "No Items Found"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:55
-msgid "No slideshow items found in trash"
+#: ../post-extensions/products.php:43
+msgid "No Items Found In Trash"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:94
-msgid "Slide Image"
+#: ../post-extensions/products.php:80 ../post-extensions/products.php:82
+msgid "Categories"
 msgstr ""
 
-#: ../post-extensions/slideshow.php:97
+#: ../post-extensions/products.php:81 ../post-extensions/products.php:216 ..
+#: /theme_templates/single-uix_products.php:87 ../theme_templates/single-
+#: uix_products.php:153
+msgid "Category"
+msgstr ""
+
+#: ../post-extensions/products.php:83
+msgid "Search"
+msgstr ""
+
+#: ../post-extensions/products.php:84
+msgid "Popular"
+msgstr ""
+
+#: ../post-extensions/products.php:85
+msgid "All"
+msgstr ""
+
+#: ../post-extensions/products.php:86 ../post-extensions/products.php:87
+msgid "Parent"
+msgstr ""
+
+#: ../post-extensions/products.php:88 ../theme_templates/single-uix_products.php:59
+msgid "Edit"
+msgstr ""
+
+#: ../post-extensions/products.php:89
+msgid "Update"
+msgstr ""
+
+#: ../post-extensions/products.php:90
+msgid "Add New"
+msgstr ""
+
+#: ../post-extensions/products.php:91
+msgid "New"
+msgstr ""
+
+#: ../post-extensions/products.php:92
+msgid "Separate with commas"
+msgstr ""
+
+#: ../post-extensions/products.php:93
+msgid "Add or remove"
+msgstr ""
+
+#: ../post-extensions/products.php:94
+msgid "Choose from the most used"
+msgstr ""
+
+#: ../post-extensions/products.php:213
+msgid "Thumbnail"
+msgstr ""
+
+#: ../post-extensions/products.php:217
 msgid "Author"
+msgstr ""
+
+#: ../post-extensions/products.php:270
+msgid "[artwork]"
 msgstr ""
 
 #. Description of the plugin
@@ -584,10 +937,67 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:13
-msgid "Insert Uix Slideshow"
+#: ../theme_templates/page-uix_products.php:50 ../theme_templates/taxonomy-
+#: uix_products_category.php:51
+msgid "No categories"
 msgstr ""
 
-#: ../shortcodes/core/tinymce-plugin-lang.php:14
-msgid "Show at most (Show all items if value is \"-1\")"
+#: ../theme_templates/single-uix_products.php:52
+msgid "Pages: "
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:73
+msgid "Date"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:80
+msgid "Client"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:95 ../theme_templates/single-
+#: uix_products.php:229
+msgid "Description"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:104 ../theme_templates/single-
+#: uix_products.php:239
+msgid "&larr;"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:105 ../theme_templates/single-
+#: uix_products.php:240
+msgid "&rarr;"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:117
+msgid "Live Demo"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:124
+msgid "Buy Now for $"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:126
+msgid "Free Download"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:134
+msgid "Created"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:146
+msgid "Updated"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:161
+msgid "Version"
+msgstr ""
+
+#: ../theme_templates/single-uix_products.php:215
+msgid "Installation"
+msgstr ""
+
+#: ../theme_templates/taxonomy-uix_products_category.php:24
+#, php-format
+msgid "%s"
 msgstr ""
