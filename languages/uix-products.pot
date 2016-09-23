@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Tue Sep 20 2016 01:21:06 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Sep 23 2016 11:37:20 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -315,7 +315,7 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/general-settings.php:118 ../post-extensions/post-extensions-
-#: init.php:252 ../theme_templates/single-uix_products.php:201
+#: init.php:252 ../theme_templates/single-uix_products.php:238
 msgid "Layout"
 msgstr ""
 
@@ -669,7 +669,7 @@ msgid "Your Item Version, Eg. 1.0.0"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:202 ../theme_templates/single-
-#: uix_products.php:168
+#: uix_products.php:205
 msgid "Compatible With"
 msgstr ""
 
@@ -678,12 +678,12 @@ msgid "Eg. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:212 ../theme_templates/single-
-#: uix_products.php:175
+#: uix_products.php:212
 msgid "Compatible Browsers"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:230 ../theme_templates/single-
-#: uix_products.php:188
+#: uix_products.php:225
 msgid "Files Included"
 msgstr ""
 
@@ -708,7 +708,7 @@ msgid "Static"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:266 ../theme_templates/single-
-#: uix_products.php:208
+#: uix_products.php:245
 msgid "Additional Info"
 msgstr ""
 
@@ -727,7 +727,7 @@ msgid ""
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:280 ../theme_templates/single-
-#: uix_products.php:222
+#: uix_products.php:259
 msgid "Tags"
 msgstr ""
 
@@ -783,8 +783,8 @@ msgid "Categories"
 msgstr ""
 
 #: ../post-extensions/products.php:81 ../post-extensions/products.php:216 ..
-#: theme_templates/single-uix_products.php:87 ../theme_templates/single-
-#: uix_products.php:153
+#: /theme_templates/single-uix_products.php:124 ../theme_templates/single-
+#: uix_products.php:190
 msgid "Category"
 msgstr ""
 
@@ -796,7 +796,8 @@ msgstr ""
 msgid "Popular"
 msgstr ""
 
-#: ../post-extensions/products.php:85
+#: ../post-extensions/products.php:85 ../theme_templates/page-uix_products.php:28 
+#: ../theme_templates/taxonomy-uix_products_category.php:29
 msgid "All"
 msgstr ""
 
@@ -804,7 +805,7 @@ msgstr ""
 msgid "Parent"
 msgstr ""
 
-#: ../post-extensions/products.php:88 ../theme_templates/single-uix_products.php:59
+#: ../post-extensions/products.php:88 ../theme_templates/single-uix_products.php:96
 msgid "Edit"
 msgstr ""
 
@@ -840,7 +841,7 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: ../post-extensions/products.php:270
+#: ../post-extensions/products.php:273
 msgid "[artwork]"
 msgstr ""
 
@@ -937,63 +938,63 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: ../theme_templates/page-uix_products.php:50 ../theme_templates/taxonomy-
-#: uix_products_category.php:51
+#: ../theme_templates/page-uix_products.php:48 ../theme_templates/taxonomy-
+#: uix_products_category.php:49
 msgid "No categories"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:52
+#: ../theme_templates/single-uix_products.php:89
 msgid "Pages: "
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:73
+#: ../theme_templates/single-uix_products.php:110
 msgid "Date"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:80
+#: ../theme_templates/single-uix_products.php:117
 msgid "Client"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:95 ../theme_templates/single-
-#: uix_products.php:229
+#: ../theme_templates/single-uix_products.php:132 ../theme_templates/single-
+#: uix_products.php:266
 msgid "Description"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:104 ../theme_templates/single-
-#: uix_products.php:239
+#: ../theme_templates/single-uix_products.php:141 ../theme_templates/single-
+#: uix_products.php:294
 msgid "&larr;"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:105 ../theme_templates/single-
-#: uix_products.php:240
+#: ../theme_templates/single-uix_products.php:142 ../theme_templates/single-
+#: uix_products.php:300
 msgid "&rarr;"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:117
+#: ../theme_templates/single-uix_products.php:154
 msgid "Live Demo"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:124
+#: ../theme_templates/single-uix_products.php:161
 msgid "Buy Now for $"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:126
+#: ../theme_templates/single-uix_products.php:163
 msgid "Free Download"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:134
+#: ../theme_templates/single-uix_products.php:171
 msgid "Created"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:146
+#: ../theme_templates/single-uix_products.php:183
 msgid "Updated"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:161
+#: ../theme_templates/single-uix_products.php:198
 msgid "Version"
 msgstr ""
 
-#: ../theme_templates/single-uix_products.php:215
+#: ../theme_templates/single-uix_products.php:252
 msgid "Installation"
 msgstr ""
 

@@ -12,10 +12,9 @@ $project_cat        = UixProducts::list_post_terms( 'uix_products_category', fal
 $project_date       = get_post_meta( get_the_ID(), 'uix_products_artwork_date', true );
 $project_client_URL = get_post_meta( get_the_ID(), 'uix_products_artwork_client_URL', true );
 $project_client     = ( !empty( $project_client_URL ) ? '<a href="'.esc_url( $project_client_URL ).'" target="_blank">'.esc_html( get_post_meta( get_the_ID(), 'uix_products_artwork_client', true ) ).'</a>' : esc_html( get_post_meta( get_the_ID(), 'uix_products_artwork_client', true ) ) );
-$project_type       = get_post_meta( get_the_ID(), 'uix_products_typeshow', true );
-
 
 // Theme or Plugin
+$project_type            = get_post_meta( get_the_ID(), 'uix_products_typeshow', true );
 $project_tp_type         = get_post_meta( get_the_ID(), 'uix_products_themeplugin_type', true );
 $project_tp_price        = intval( get_post_meta( get_the_ID(), 'uix_products_themeplugin_price', true ) );
 $project_tp_name         = get_post_meta( get_the_ID(), 'uix_products_themeplugin_name', true );
@@ -37,6 +36,44 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<?php
+$arg_prevnext = array(
+	'post_type'           => 'uix_products',
+	'posts_per_page'      => -1,
+	'no_found_rows'       => true,
+	'post_status'         => 'publish',
+	'ignore_sticky_posts' => true,
+	'meta_query'          => array(
+								array(
+										'key'     => 'uix_products_themeplugin_type',
+										'value'   => $project_tp_type,
+										'compare' => 'IN',
+								   ),
+							 ),
+	
+);
+
+if ( $project_type == 'artwork' ) {
+	$arg_prevnext = array(
+		'post_type'           => 'uix_products',
+		'posts_per_page'      => -1,
+		'no_found_rows'       => true,
+		'post_status'         => 'publish',
+		'ignore_sticky_posts' => true,
+		'meta_query'          => array(
+									array(
+											'key'     => 'uix_products_typeshow',
+											'value'   => 'artwork',
+											'compare' => 'IN',
+									   ),
+								 ),
+		
+	);	
+}
+$items_prevnext = new WP_Query( $arg_prevnext );
+?>
+
+
 
     <section class="uix-products-single-section">
         <div class="container">
@@ -49,7 +86,7 @@ get_header(); ?>
                 <?php       
                     the_content();
                     wp_link_pages( array(
-                        'before'      => '<div class="page-links">' . esc_html__( 'Pages: ', 'uiuxlabtheme' ) . '',
+                        'before'      => '<div class="page-links">' . esc_html__( 'Pages: ', 'uix-products' ) . '',
                         'after'       => '</div>',
                         'link_before' => '<span>',
                         'link_after'  => '</span>',
@@ -236,8 +273,34 @@ get_header(); ?>
                      
                     <div class="uix-products-pagination uix-products-pagination-single">
                         <ul>
-                            <?php previous_post_link( '<li class="previous">%link</li>', wp_kses( __( '&larr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ) ); ?>
-                            <?php next_post_link( '<li class="next">%link</li>', wp_kses( __( '&rarr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ) ); ?>
+						   <?php
+                            if ( $items_prevnext->have_posts() ) { 
+                                $post_ids = array();
+                                while ( $items_prevnext->have_posts() ) :
+                                    $items_prevnext->the_post();
+                                    $post_ids[] += get_the_ID();
+                                endwhile;
+                                wp_reset_postdata();
+                                
+                                $current = array_search( get_the_ID(), $post_ids );
+                                $nextID  = ( $current > 0 ) ? $post_ids[ $current - 1 ] : '';
+                                $prevID  = ( $current < count( $post_ids ) - 1 ) ? $post_ids[ $current + 1 ] : '';
+                            }
+                            ?> 
+                        
+                            
+                            <?php if ( !empty( $prevID ) ) { ?>
+                               <li class="previous">
+                                   <a href="<?php echo esc_url( get_permalink( $prevID ) ); ?>"><?php echo wp_kses( __( '&larr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ); ?></a>
+                               </li>
+                            <?php } ?>
+                            
+                            <?php if ( !empty( $nextID ) ) { ?>
+                               <li class="next">
+                                   <a href="<?php echo esc_url( get_permalink( $nextID ) ); ?>"><?php echo wp_kses( __( '&rarr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ); ?></a>
+                               </li>
+                            <?php } ?>
+                                
                         </ul>
                     </div>
 
