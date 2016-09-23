@@ -261,11 +261,14 @@ function uix_products_taxonomy_cols_display( $columns, $post_id ) {
 		
 		
 		case "uix-products-type":
-
-            $project_type = get_post_meta( get_the_ID(), 'uix_products_themeplugin_type', true );
+		
+            $project_btype = get_post_meta( get_the_ID(), 'uix_products_typeshow', true );
+            $project_type  = get_post_meta( get_the_ID(), 'uix_products_themeplugin_type', true );
 			
-			if ( !empty( $project_type ) ) {
-				echo '['.$project_type.']';
+			if ( $project_btype == 'theme-plugin' ) {
+				if ( !empty( $project_type ) ) {
+					echo '['.$project_type.']';
+				}
 			} else {
 				echo __( '[artwork]', 'uix-products' );
 			}
