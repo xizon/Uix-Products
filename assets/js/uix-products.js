@@ -86,7 +86,7 @@
 						  });
 						  
 						
-						$filterOptions.find( 'li > a' ).unbind( 'click' ).click( function(){
+						$filterOptions.find( 'li > a' ).on( 'click', function( e ) {
 							
 							  var $this = $( this ),
 								  activeClass = 'current-cat',
