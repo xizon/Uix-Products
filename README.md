@@ -37,6 +37,15 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates 
 
+##### Version 1.0.1
+
+Optimized for tablet display.
+
+Improved event binding from the plugin main JavaScript file.
+
+Improved the main CSS file.
+
+
 ##### Version 1.0.0
 
 Initial Release.
