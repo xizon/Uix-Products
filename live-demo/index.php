@@ -5,6 +5,11 @@ require '../../../../wp-load.php';
 
 $demopath = UixProducts::plug_directory().'live-demo/';
 
+function gravatar_favicon() {
+	$GetTheHash = md5( strtolower( trim( get_bloginfo( 'admin_email' ) ) ) );
+	echo esc_url( 'http://www.gravatar.com/avatar/' . $GetTheHash . '?s=16' );
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +26,13 @@ $demopath = UixProducts::plug_directory().'live-demo/';
     <!--[if lt IE 9]>
     <script type='text/javascript' src='<?php echo $demopath; ?>js/respond.min.js?ver=1.4.2'></script>
     <![endif]-->
+    <link rel="shortcut icon" href="<?php gravatar_favicon(); ?>" type="image/x-icon" />
     
 </head>
 	
 <body>
-
+    
+   
     <!-- Header -->
     <header class="switcher-bar clearfix">
     
@@ -65,34 +72,34 @@ $demopath = UixProducts::plug_directory().'live-demo/';
     
         <!-- Product Switcher -->
         <div class="product-switcher fa-pull-left">
-            <a href="#" title="Select a Theme">
-                Select a Theme <span>+</span>
+            <a href="#" title="<?php echo ( esc_attr__( 'Select a Theme', 'uix-products' ) ); ?>">
+                <?php _e( 'Select a Theme', 'uix-products' ); ?> <span>+</span>
             </a>
         </div>
     
         <!-- Bar Remove Button -->
         <div class="remove-btn header-btn fa-pull-right">
-            <a href="#" title="Close this bar" class="fa fa-remove"></a>
+            <a href="#" title="<?php echo ( esc_attr__( 'Close This Bar', 'uix-products' ) ); ?>" class="fa fa-remove"></a>
         </div>
     
         <!-- Purchase Button -->
         <div class="purchase-btn header-btn fa-pull-right">
-            <a href="#" title="Download" class="fa fa-download"></a>
+            <a href="#" title="<?php echo ( esc_attr__( 'Download', 'uix-products' ) ); ?>" class="fa fa-download"></a>
         </div>
     
         <!-- Mobile Button -->
         <div class="mobile-btn header-btn fa-pull-right hidden-xs">
-            <a href="#" title="Smartphone View" class="fa fa-mobile-phone"></a>
+            <a href="#" title="<?php echo ( esc_attr__( 'Smartphone View', 'uix-products' ) ); ?>" class="fa fa-mobile-phone"></a>
         </div>
     
         <!-- Tablet Button -->
         <div class="tablet-btn header-btn fa-pull-right hidden-xs">
-            <a href="#" title="Tablet View" class="fa fa-tablet"></a>
+            <a href="#" title="<?php echo ( esc_attr__( 'Tablet View', 'uix-products' ) ); ?>" class="fa fa-tablet"></a>
         </div>
     
         <!-- Desktop Button -->
         <div class="desktop-btn header-btn fa-pull-right hidden-xs">
-            <a href="#" title="Desktop View" class="fa fa-desktop"></a>
+            <a href="#" title="<?php echo ( esc_attr__( 'Desktop View', 'uix-products' ) ); ?>" class="fa fa-desktop"></a>
         </div>
     
     </header>
@@ -100,7 +107,7 @@ $demopath = UixProducts::plug_directory().'live-demo/';
     <!-- Products List -->
     <section class="switcher-body">
     
-        <a href="#" title="Prev" class="fa fa-angle-left products-prev"></a>
+        <a href="#" title="<?php echo ( esc_attr__( 'Prev', 'uix-products' ) ); ?>" class="fa fa-angle-left products-prev"></a>
     
         <div class="products-wrapper">
             <div class="products-list clearfix">
@@ -108,7 +115,7 @@ $demopath = UixProducts::plug_directory().'live-demo/';
             </div>
         </div>
     
-        <a href="#" title="Next" class="fa fa-angle-right products-next"></a>
+        <a href="#" title="<?php echo ( esc_attr__( 'Next', 'uix-products' ) ); ?>" class="fa fa-angle-right products-next"></a>
     
     </section>
     
@@ -120,7 +127,7 @@ $demopath = UixProducts::plug_directory().'live-demo/';
 	<script type="text/javascript" src="<?php echo $demopath; ?>js/jquery.min.js?ver=1.11.3"></script>
     <script type="text/javascript" src="<?php echo $demopath; ?>js/jquery.migrate.min.js?ver=1.2.1"></script>
 	<script type="text/javascript">
-        document.write('<scr'+'ipt src="themes-list.php?'+Math.random()+'" type="text/javascript"></scr'+'ipt>');
+        document.write('<scr'+'ipt src="<?php echo $demopath; ?>themes-list.php?'+Math.random()+'" type="text/javascript"></scr'+'ipt>');
     </script>
 	<script src="<?php echo $demopath; ?>js/script.js"></script>
    
