@@ -1156,10 +1156,8 @@ class UixProducts {
 				$theme_previewURL = get_post_meta( get_the_ID(), 'uix_products_themeplugin_previewURL', true );
 			
 				// Purchase or Download URL
-				$theme_fileURL = get_post_meta( get_the_ID(), 'uix_products_themeplugin_fileURL', true );
-				if ( self::inc_str( $theme_fileURL, '[purchase_link' ) ) {
-					$theme_fileURL = esc_url( get_permalink() );
-				}
+				//$theme_fileURL = get_post_meta( get_the_ID(), 'uix_products_themeplugin_fileURL', true );
+				$theme_fileURL = esc_url( get_permalink() );
 			
 				// Thumbnail URL
 				if ( has_post_thumbnail() ) {
