@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Fri Sep 23 2016 11:37:20 GMT+0800 (CST)\n"
+"POT-Revision-Date: Wed Nov 02 2016 12:25:20 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -555,6 +555,44 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: ../live-demo/index.php:19
+msgid "Demos"
+msgstr ""
+
+#: ../live-demo/index.php:75 ../live-demo/index.php:76
+msgid "Select a Theme"
+msgstr ""
+
+#: ../live-demo/index.php:82
+msgid "Close This Bar"
+msgstr ""
+
+#: ../live-demo/index.php:87 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_Meta_Box_types.php:706 ../post-extensions/custom-metaboxes-
+#: and-fields/helpers/cmb_Meta_Box_types.php:768
+msgid "Download"
+msgstr ""
+
+#: ../live-demo/index.php:92
+msgid "Smartphone View"
+msgstr ""
+
+#: ../live-demo/index.php:97
+msgid "Tablet View"
+msgstr ""
+
+#: ../live-demo/index.php:102
+msgid "Desktop View"
+msgstr ""
+
+#: ../live-demo/index.php:110
+msgid "Prev"
+msgstr ""
+
+#: ../live-demo/index.php:118
+msgid "Next"
+msgstr ""
+
 #: ../post-extensions/post-extensions-init.php:66
 msgid "Product Type"
 msgstr ""
@@ -712,18 +750,18 @@ msgstr ""
 msgid "Additional Info"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:269
-msgid "Well Documentation"
+#: ../post-extensions/post-extensions-init.php:267
+msgid "Eg. Well Documentation"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:273
 msgid "Installation Info"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:276
+#: ../post-extensions/post-extensions-init.php:274
 msgid ""
-"Installation and set up instructions are attached (look for Documentation "
-"folder)."
+"Eg. Installation and set up instructions are attached (look for "
+"Documentation folder)."
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:280 ../theme_templates/single-
@@ -930,12 +968,6 @@ msgstr ""
 #: 706 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
 #: php:768
 msgid "File:"
-msgstr ""
-
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 706 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:768
-msgid "Download"
 msgstr ""
 
 #: ../theme_templates/page-uix_products.php:48 ../theme_templates/taxonomy-

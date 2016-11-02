@@ -264,16 +264,16 @@ function uix_products_metaboxes( array $meta_boxes ) {
 			),	
 			array(
 				'name'	=> __( 'Additional Info', 'uix-products' ),
-				'desc'	=> '',
+				'desc'	=> __( 'Eg. Well Documentation', 'uix-products' ),
 				'id'	=> 'uix_products_themeplugin_addinfo',
-				'default' => __( 'Well Documentation', 'uix-products' ),
+				'default' => '',
 				'type'	=> 'text',
 			),		
 			array(
 				'name'	=> __( 'Installation Info', 'uix-products' ),
-				'desc'	=> '',
+				'desc'	=> __( 'Eg. Installation and set up instructions are attached (look for Documentation folder).', 'uix-products' ),
 				'id'	=> 'uix_products_themeplugin_install',
-				'default' => __( 'Installation and set up instructions are attached (look for Documentation folder).', 'uix-products' ),
+				'default' => '',
 				'type'	=> 'text',
 			),		
 			array(
