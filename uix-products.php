@@ -451,17 +451,17 @@ class UixProducts {
 				
 				if ( !$remove ) {
 					if ( self::tempfile_exists() ) {
-						return __( '<div class="notice notice-success"><p>Operation successfully completed!</p></div>', 'uix-slideshow' );
+						return __( '<div class="notice notice-success"><p>Operation successfully completed!</p></div>', 'uix-products' );
 					} else {
-						return __( '<div class="notice notice-error"><p><strong>There was a problem copying your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.</p></div>', 'uix-slideshow' );
+						return __( '<div class="notice notice-error"><p><strong>There was a problem copying your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.</p></div>', 'uix-products' );
 					}
 	
 				} else {
 					if ( self::tempfile_exists() ) {
-						return __( '<div class="notice notice-error"><p><strong>There was a problem removing your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.</p></div>', 'uix-slideshow' );
+						return __( '<div class="notice notice-error"><p><strong>There was a problem removing your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.</p></div>', 'uix-products' );
 						
 					} else {
-						return __( '<div class="notice notice-success"><p>Remove successful!</p></div>', 'uix-slideshow' );
+						return __( '<div class="notice notice-success"><p>Remove successful!</p></div>', 'uix-products' );
 					}	
 					
 				}
