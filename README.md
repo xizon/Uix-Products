@@ -37,6 +37,14 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates 
 
+#### Version 1.0.3
+
+Enqueue enqueue scripts for front-end.
+
+Fixed some bugs.
+
+
+
 #### Version 1.0.2
 
 Fixed some bugs.
@@ -64,6 +72,7 @@ Initial Release.
 - WP 4.4.2
 - WP 4.5.*
 - WP 4.6.*
+- WP 4.7
 
 
 ###Screenshot

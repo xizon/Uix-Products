@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -87,14 +87,14 @@ class UixProducts {
 		wp_enqueue_script( 'modernizr', self::plug_directory() .'assets/js/modernizr.min.js', false, '3.3.1', false );	
 		
 		// imagesloaded
-		wp_enqueue_script( 'imagesloaded', self::plug_directory() .'assets/js/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
+		wp_enqueue_script( 'uix-imagesloaded', self::plug_directory() .'assets/js/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
 		
 		// imagesloaded
-		wp_enqueue_script( 'masonry', self::plug_directory() .'assets/js/masonry.js', array( 'jquery', 'imagesloaded' ), '3.3.2', true );	
+		wp_enqueue_script( 'uix-masonry', self::plug_directory() .'assets/js/masonry.js', array( 'jquery', 'imagesloaded' ), '3.3.2', true );	
 		
 		//Main stylesheets and scripts to Front-End
 		wp_enqueue_style( self::PREFIX . '-products', self::plug_directory() .'assets/css/uix-products.css', false, self::ver(), 'all' );	
-		wp_enqueue_script( self::PREFIX . '-products', self::plug_directory() .'assets/js/uix-products.js', array( 'jquery', 'masonry', 'shuffle', 'flexslider' ), self::ver(), true );	
+		wp_enqueue_script( self::PREFIX . '-products', self::plug_directory() .'assets/js/uix-products.js', array( 'jquery', 'uix-masonry', 'shuffle', 'flexslider' ), self::ver(), true );	
 		
 		
 
