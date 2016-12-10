@@ -1,7 +1,12 @@
 <?php
-/** Sets up the WordPress Environment. */
-header( 'Content-Type:text/html;charset=utf-8' );
-require '../../../../wp-load.php';
+/**
+ * Sets up the WordPress Environment.
+ *
+ * @package WordPress
+ */
+require_once( dirname( dirname( dirname( dirname( dirname( __FILE__ ) ) ) ) ) . '/wp-load.php' );
+
+header( 'Content-Type: text/html; charset=utf-8' );
 
 $demopath = UixProducts::plug_directory().'live-demo/';
 
