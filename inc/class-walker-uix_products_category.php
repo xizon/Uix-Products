@@ -58,11 +58,11 @@ class Uix_Products_Dropdown_Walker_Products_Category extends Walker_Category {
 					}
 		
 					$output .=  ' class="' . $class . '"';
-					$output .= ">$link\n";
+					$output .= ">$link".PHP_EOL;
 		
 			} else {
 		
-					$output .= "\t$link<br />\n";
+					$output .= "\t$link<br />".PHP_EOL;
 		
 			}
 				
