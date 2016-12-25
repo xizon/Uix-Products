@@ -57,23 +57,39 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
           
 <?php
 
+	$newFilePath                = get_stylesheet_directory() . '/uix-products-style.css';
+	$newFilePath2               = get_stylesheet_directory() . '/assets/css/uix-products-style.css';
+	$org_cssname_uix_products   = UixProducts::core_css_file( 'name' );
+	$org_csspath_uix_products   = UixProducts::core_css_file();
+	
 
-	$org_cssname_uix_products = 'uix-products.css';
-	$org_csspath_uix_products = UixProducts::plug_directory() .'assets/css/'. $org_cssname_uix_products;
-	$filesystype = 'plugin';
-	$filesyspath = 'assets/css/';
+	if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+		$filetype = 'theme';
+		
+		//CSS file directory
+		$filepath = '';
+		
+		if ( file_exists( $newFilePath2 ) ) {
+			$filepath = 'assets/css/';
+		}
+		
+	} else {
+		$filetype = 'plugin';
+		$filepath = 'assets/css/';
+	}
+	
 
 
 	// capture output from WP_Filesystem
 	ob_start();
 	
-		UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'edit.php?post_type=uix_products&page='.UixProducts::HELPER.'&tab=custom-css', $filesyspath, $org_cssname_uix_products, $filesystype );
+		UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'admin.php?page='.UixProducts::HELPER.'&tab=custom-css', $filepath, $org_cssname_uix_products, $filetype );
 		$filesystem_uix_products_out = ob_get_contents();
 	ob_end_clean();
 	
 	if ( empty( $filesystem_uix_products_out ) ) {
 		
-		$style_org_code_uix_products = UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'edit.php?post_type=uix_products&page='.UixProducts::HELPER.'&tab=custom-css', $filesyspath, $org_cssname_uix_products, $filesystype );
+		$style_org_code_uix_products = UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'admin.php?page='.UixProducts::HELPER.'&tab=custom-css', $filepath, $org_cssname_uix_products, $filetype );
 		
 		echo '
 		

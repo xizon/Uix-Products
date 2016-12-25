@@ -31,7 +31,7 @@ if ( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' 
 		
 		$status_echo = '';
 		
-		$status_echo = UixProducts::wpfilesystem_write_file( 'uix_products_listfiles', 'edit.php?post_type=uix_products&page='.UixProducts::HELPER, 'live-demo/', 'themes.js', UixProducts::theme_list() );
+		$status_echo = UixProducts::wpfilesystem_write_file( 'uix_products_listfiles', 'admin.php?page='.UixProducts::HELPER.'&tab=products-list', 'live-demo/', 'themes.js', UixProducts::theme_list() );
 		echo $status_echo;
 		
 	}

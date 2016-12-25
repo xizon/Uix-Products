@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Sat Nov 26 2016 22:01:43 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Dec 26 2016 01:52:49 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,44 +42,44 @@ msgstr ""
 msgid "https://uiux.cc"
 msgstr ""
 
-#: ../uix-products.php:171
+#: ../uix-products.php:219
 msgid "Uix Products Settings"
 msgstr ""
 
-#: ../uix-products.php:172 ../uix-products.php:221
+#: ../uix-products.php:220 ../uix-products.php:269
 msgid "Settings"
 msgstr ""
 
-#: ../uix-products.php:187 ../uix-products.php:188
+#: ../uix-products.php:235 ../uix-products.php:236
 msgid "Helper"
 msgstr ""
 
-#: ../uix-products.php:222 ../uix-products.php:284 ../helper/settings.php:69
+#: ../uix-products.php:270 ../uix-products.php:317 ../helper/settings.php:69
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-products.php:283
+#: ../uix-products.php:316
 msgid ""
 "Do you want to create a products website with WordPress?  Learn how to add "
 "products to your themes."
 msgstr ""
 
-#: ../uix-products.php:287
+#: ../uix-products.php:320
 #, php-format
 msgid "<a href=\"%1$s\">Hide Notice</a>"
 msgstr ""
 
-#: ../uix-products.php:299
+#: ../uix-products.php:332
 msgid ""
 "<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: ../uix-products.php:299 ../helper/tabs/usage.php:22
+#: ../uix-products.php:332 ../helper/tabs/usage.php:22
 msgid "Create now!"
 msgstr ""
 
-#: ../uix-products.php:299 ../helper/tabs/temp.php:73
+#: ../uix-products.php:332 ../helper/tabs/temp.php:73
 msgid ""
 "As a workaround you can use FTP, access the Uix Products template files path "
 "<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
@@ -87,47 +87,47 @@ msgid ""
 "theme}/</code>. "
 msgstr ""
 
-#: ../uix-products.php:454 ../uix-products.php:529
+#: ../uix-products.php:496 ../uix-products.php:571
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-products.php:456
+#: ../uix-products.php:498
 msgid ""
 "<div class=\"notice notice-error\"><p><strong>There was a problem copying your "
 "template files:</strong> Please check your server settings. You can upload "
 "files to theme templates directory using FTP.</p></div>"
 msgstr ""
 
-#: ../uix-products.php:461
+#: ../uix-products.php:503
 msgid ""
 "<div class=\"notice notice-error\"><p><strong>There was a problem removing "
 "your template files:</strong> Please check your server settings. You can "
 "upload files to theme templates directory using FTP.</p></div>"
 msgstr ""
 
-#: ../uix-products.php:464
+#: ../uix-products.php:506
 msgid "<div class=\"notice notice-success\"><p>Remove successful!</p></div>"
 msgstr ""
 
-#: ../uix-products.php:641
+#: ../uix-products.php:668
 msgid "Primary Sidebar"
 msgstr ""
 
-#: ../uix-products.php:643
+#: ../uix-products.php:670
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: ../uix-products.php:866
+#: ../uix-products.php:889
 msgid "Load More"
 msgstr ""
 
-#: ../uix-products.php:999 ../uix-products.php:1007
+#: ../uix-products.php:1022 ../uix-products.php:1030
 msgid "Newer Posts"
 msgstr ""
 
-#: ../uix-products.php:1001 ../uix-products.php:1008
+#: ../uix-products.php:1024 ../uix-products.php:1031
 msgid "Older Posts"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: ../helper/settings.php:96
+#: ../helper/settings.php:97
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -288,11 +288,11 @@ msgstr ""
 msgid "Paste your CSS code"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:80 ../helper/tabs/custom-css.php:117
+#: ../helper/tabs/custom-css.php:96 ../helper/tabs/custom-css.php:133
 msgid "CSS file root directory:"
 msgstr ""
 
-#: ../helper/tabs/custom-css.php:85
+#: ../helper/tabs/custom-css.php:101
 msgid "Close"
 msgstr ""
 
@@ -363,6 +363,12 @@ msgstr ""
 
 #: ../helper/tabs/products-list.php:59
 msgid "Click This Button to Create Uix Products List Files"
+msgstr ""
+
+#: ../helper/tabs/temp.php:44
+msgid ""
+"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
+"When you create them again, the default plugin template will be used."
 msgstr ""
 
 #: ../helper/tabs/temp.php:50
@@ -555,41 +561,41 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: ../live-demo/index.php:19
+#: ../live-demo/index.php:24
 msgid "Demos"
 msgstr ""
 
-#: ../live-demo/index.php:75 ../live-demo/index.php:76
+#: ../live-demo/index.php:80 ../live-demo/index.php:81
 msgid "Select a Theme"
 msgstr ""
 
-#: ../live-demo/index.php:82
+#: ../live-demo/index.php:87
 msgid "Close This Bar"
 msgstr ""
 
-#: ../live-demo/index.php:87 ../post-extensions/custom-metaboxes-and-
+#: ../live-demo/index.php:92 ../post-extensions/custom-metaboxes-and-
 #: fields/helpers/cmb_Meta_Box_types.php:706 ../post-extensions/custom-metaboxes-
 #: and-fields/helpers/cmb_Meta_Box_types.php:768
 msgid "Download"
 msgstr ""
 
-#: ../live-demo/index.php:92
+#: ../live-demo/index.php:97
 msgid "Smartphone View"
 msgstr ""
 
-#: ../live-demo/index.php:97
+#: ../live-demo/index.php:102
 msgid "Tablet View"
 msgstr ""
 
-#: ../live-demo/index.php:102
+#: ../live-demo/index.php:107
 msgid "Desktop View"
 msgstr ""
 
-#: ../live-demo/index.php:110
+#: ../live-demo/index.php:115
 msgid "Prev"
 msgstr ""
 
-#: ../live-demo/index.php:118
+#: ../live-demo/index.php:123
 msgid "Next"
 msgstr ""
 
@@ -641,8 +647,8 @@ msgstr ""
 msgid "Theme or Plugin Settings"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:134 ../post-extensions/products.
-#: php:215
+#: ../post-extensions/post-extensions-init.php:134 ../post-extensions/post-
+#: extensions-init.php:519
 msgid "Type"
 msgstr ""
 
@@ -780,106 +786,110 @@ msgstr ""
 msgid "Updated Date"
 msgstr ""
 
-#: ../post-extensions/products.php:34
+#: ../post-extensions/post-extensions-init.php:338
 msgid "Uix Products"
 msgstr ""
 
-#: ../post-extensions/products.php:35
+#: ../post-extensions/post-extensions-init.php:339
 msgid "Products Item"
 msgstr ""
 
-#: ../post-extensions/products.php:36 ../post-extensions/products.php:39
+#: ../post-extensions/post-extensions-init.php:340 ../post-extensions/post-
+#: extensions-init.php:343
 msgid "Add New Item"
 msgstr ""
 
-#: ../post-extensions/products.php:37
+#: ../post-extensions/post-extensions-init.php:341
 msgid "Add New Products Item"
 msgstr ""
 
-#: ../post-extensions/products.php:38
+#: ../post-extensions/post-extensions-init.php:342
 msgid "Edit Item"
 msgstr ""
 
-#: ../post-extensions/products.php:40
+#: ../post-extensions/post-extensions-init.php:344
 msgid "View Item"
 msgstr ""
 
-#: ../post-extensions/products.php:41
+#: ../post-extensions/post-extensions-init.php:345
 msgid "Search Items"
 msgstr ""
 
-#: ../post-extensions/products.php:42
+#: ../post-extensions/post-extensions-init.php:346
 msgid "No Items Found"
 msgstr ""
 
-#: ../post-extensions/products.php:43
+#: ../post-extensions/post-extensions-init.php:347
 msgid "No Items Found In Trash"
 msgstr ""
 
-#: ../post-extensions/products.php:80 ../post-extensions/products.php:82
+#: ../post-extensions/post-extensions-init.php:384 ../post-extensions/post-
+#: extensions-init.php:386
 msgid "Categories"
 msgstr ""
 
-#: ../post-extensions/products.php:81 ../post-extensions/products.php:216 ..
-#: /theme_templates/single-uix_products.php:124 ../theme_templates/single-
-#: uix_products.php:190
+#: ../post-extensions/post-extensions-init.php:385 ../post-extensions/post-
+#: extensions-init.php:520 ../theme_templates/single-uix_products.php:124 ..
+#: /theme_templates/single-uix_products.php:190
 msgid "Category"
 msgstr ""
 
-#: ../post-extensions/products.php:83
+#: ../post-extensions/post-extensions-init.php:387
 msgid "Search"
 msgstr ""
 
-#: ../post-extensions/products.php:84
+#: ../post-extensions/post-extensions-init.php:388
 msgid "Popular"
 msgstr ""
 
-#: ../post-extensions/products.php:85 ../theme_templates/page-uix_products.php:28 
-#: ../theme_templates/taxonomy-uix_products_category.php:29
+#: ../post-extensions/post-extensions-init.php:389 ../theme_templates/page-
+#: uix_products.php:28 ../theme_templates/taxonomy-uix_products_category.php:29
 msgid "All"
 msgstr ""
 
-#: ../post-extensions/products.php:86 ../post-extensions/products.php:87
+#: ../post-extensions/post-extensions-init.php:390 ../post-extensions/post-
+#: extensions-init.php:391
 msgid "Parent"
 msgstr ""
 
-#: ../post-extensions/products.php:88 ../theme_templates/single-uix_products.php:96
+#: ../post-extensions/post-extensions-init.php:392 ../theme_templates/single-
+#: uix_products.php:96
 msgid "Edit"
 msgstr ""
 
-#: ../post-extensions/products.php:89
+#: ../post-extensions/post-extensions-init.php:393
 msgid "Update"
 msgstr ""
 
-#: ../post-extensions/products.php:90
+#: ../post-extensions/post-extensions-init.php:394
 msgid "Add New"
 msgstr ""
 
-#: ../post-extensions/products.php:91
+#: ../post-extensions/post-extensions-init.php:395
 msgid "New"
 msgstr ""
 
-#: ../post-extensions/products.php:92
+#: ../post-extensions/post-extensions-init.php:396
 msgid "Separate with commas"
 msgstr ""
 
-#: ../post-extensions/products.php:93
+#: ../post-extensions/post-extensions-init.php:397
 msgid "Add or remove"
 msgstr ""
 
-#: ../post-extensions/products.php:94
+#: ../post-extensions/post-extensions-init.php:398
 msgid "Choose from the most used"
 msgstr ""
 
-#: ../post-extensions/products.php:213
+#: ../post-extensions/post-extensions-init.php:517
 msgid "Thumbnail"
 msgstr ""
 
-#: ../post-extensions/products.php:217
+#: ../post-extensions/post-extensions-init.php:521
 msgid "Author"
 msgstr ""
 
-#: ../post-extensions/products.php:273
+#: ../post-extensions/post-extensions-init.php:577
 msgid "[artwork]"
 msgstr ""
 

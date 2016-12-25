@@ -29,8 +29,8 @@ class UixProducts {
 	 */
 	public static function init() {
 	
-		self::meta_boxes();
-		self::featured_image_support();
+		self::setup_constants();
+		self::includes();
 		
 		global $products_prefix;
 		$products_prefix = 'custom-products';
@@ -60,6 +60,44 @@ class UixProducts {
 		
 		
 	}
+	
+	
+	/**
+	 * Setup plugin constants.
+	 *
+	 */
+	public static  function setup_constants() {
+
+		// Plugin Folder Path.
+		if ( ! defined( 'UIX_PRODUCTS_PLUGIN_DIR' ) ) {
+			define( 'UIX_PRODUCTS_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+		}
+
+		// Plugin Folder URL.
+		if ( ! defined( 'UIX_PRODUCTS_PLUGIN_URL' ) ) {
+			define( 'UIX_PRODUCTS_PLUGIN_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+		}
+
+		// Plugin Root File.
+		if ( ! defined( 'UIX_PRODUCTS_PLUGIN_FILE' ) ) {
+			define( 'UIX_PRODUCTS_PLUGIN_FILE', trailingslashit( __FILE__ ) );
+		}
+	}	
+	
+	/*
+	 * Include required files.
+	 *
+	 *
+	 */
+	public static function includes() {
+		
+		if ( ! class_exists( 'cmb_Meta_Box' ) ) {
+			require_once UIX_PRODUCTS_PLUGIN_DIR.'post-extensions/custom-metaboxes-and-fields/init.php';
+		}
+		
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'inc/featured-image-column.php';
+	}
+	
 	
 	
 	/*
@@ -92,11 +130,16 @@ class UixProducts {
 		// imagesloaded
 		wp_enqueue_script( 'uix-masonry', self::plug_directory() .'assets/js/masonry.js', array( 'jquery', 'imagesloaded' ), '3.3.2', true );	
 		
+		
+		if ( self::core_css_file_exists() ) {
+			//Add shortcodes style to Front-End
+			wp_enqueue_style( self::PREFIX . '-products', self::core_css_file(), false, self::ver(), 'all');
+			
+		}
+		
 		//Main stylesheets and scripts to Front-End
-		wp_enqueue_style( self::PREFIX . '-products', self::plug_directory() .'assets/css/uix-products.css', false, self::ver(), 'all' );	
-		wp_enqueue_script( self::PREFIX . '-products', self::plug_directory() .'assets/js/uix-products.js', array( 'jquery', 'uix-masonry', 'shuffle', 'flexslider' ), self::ver(), true );	
-		
-		
+		wp_enqueue_script( self::PREFIX . '-products', self::core_js_file(), array( 'jquery' ), self::ver(), true );	
+
 
 	}
 	
@@ -145,7 +188,25 @@ class UixProducts {
 	 *
 	 */
 	public static function inc_str( $str, $incstr ) {
-	    
+		
+		$incstr = str_replace( '(', '\(',
+				  str_replace( ')', '\)',
+				  str_replace( '|', '\|',
+				  str_replace( '*', '\*',
+				  str_replace( '+', '\+',
+			      str_replace( '.', '\.',
+				  str_replace( '[', '\[',
+				  str_replace( ']', '\]',
+				  str_replace( '?', '\?',
+				  str_replace( '/', '\/',
+				  str_replace( '^', '\^',
+			      str_replace( '{', '\{',
+				  str_replace( '}', '\}',	
+				  str_replace( '$', '\$',
+			      str_replace( '\\', '\\\\',
+				  $incstr 
+				  )))))))))))))));
+			
 		if ( !empty( $incstr ) ) {
 			if ( preg_match( '/'.$incstr.'/', $str ) ) {
 				return true;
@@ -214,7 +275,7 @@ class UixProducts {
 	 */
 	 public static function load_helper() {
 		 
-		 require_once 'helper/settings.php';
+		 require_once UIX_PRODUCTS_PLUGIN_DIR.'helper/settings.php';
 	 }
 	
 	
@@ -241,21 +302,6 @@ class UixProducts {
          return dirname( plugin_basename( __FILE__ ) );
 	
 	}
-	
-	
-	/*
-	 * Custom Metaboxes and Fields
-	 *
-	 *
-	 */
-	public static function meta_boxes() {
-	
-		if ( ! class_exists( 'cmb_Meta_Box' ) ) {
-			require_once 'post-extensions/custom-metaboxes-and-fields/init.php';
-		}
-
-	}
-
 
 	
 	/*
@@ -343,19 +389,28 @@ class UixProducts {
 
 	}
 	
-	
+
+	/*
+	 * Callback the plugin directory URL
+	 *
+	 *
+	 */
+	public static function plug_directory() {
+
+	  return UIX_PRODUCTS_PLUGIN_URL;
+
+	}
 	
 	/*
 	 * Callback the plugin directory
 	 *
 	 *
 	 */
-	public static function plug_directory() {
+	public static function plug_filepath() {
 
-	  return plugin_dir_url( __FILE__ );
+	  return UIX_PRODUCTS_PLUGIN_DIR;
 
 	}
-	
 	
 	
 	/*
@@ -367,7 +422,7 @@ class UixProducts {
 	
 		
 		$filenames = array();
-		$filepath = WP_PLUGIN_DIR .'/'.self::get_slug(). '/theme_templates/';
+		$filepath = UIX_PRODUCTS_PLUGIN_DIR. 'theme_templates/';
 		$themepath = get_stylesheet_directory() . '/';
 		
 		foreach ( glob( dirname(__FILE__). "/theme_templates/*") as $file ) {
@@ -406,7 +461,7 @@ class UixProducts {
 		  global $wp_filesystem;
 			
 		  $filenames = array();
-		  $filepath = WP_PLUGIN_DIR .'/'.self::get_slug(). '/theme_templates/';
+		  $filepath = UIX_PRODUCTS_PLUGIN_DIR. 'theme_templates/';
 		  $themepath = get_stylesheet_directory() . '/';
 
 	      foreach ( glob( dirname(__FILE__). "/theme_templates/*") as $file ) {
@@ -485,21 +540,21 @@ class UixProducts {
 	 * Example:
 	 
             $output = "";
-			$wpnonce_url = 'edit.php?post_type=uix_products&page='.UixProducts::HELPER;
-			$wpnonce_action = 'temp-filesystem-nonce';
-
-            if ( !empty( $_POST ) ) {
+			
+            if ( !empty( $_POST ) && check_admin_referer( 'custom_action_nonce') ) {
 				
 				
-                  $output = UixProducts::wpfilesystem_write_file( $wpnonce_action, $wpnonce_url, 'helper/tabs/', '1.txt', 'This is test.' );
+                  $output = UixProducts::wpfilesystem_write_file( 'custom_action_nonce', 'admin.php?page='.UixProducts::HELPER.'&tab=???', 'helper/', 'debug.txt', 'This is test.' );
 				  echo $output;
 			
             } else {
 				
-				wp_nonce_field( $wpnonce_action );
-				echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Click This Button to Copy Files', 'uix-products' ).'"  /></p>';
+				wp_nonce_field( 'custom_action_nonce' );
+				echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Click This Button to Copy Files', 'uix-pagebuilder' ).'"  /></p>';
 				
 			}
+			
+			
 	 *
 	 */
 	public static function wpfilesystem_connect_fs( $url, $method, $context, $fields = null) {
@@ -523,7 +578,7 @@ class UixProducts {
 		
 		  $url = wp_nonce_url( $nonce, $nonceaction );
 		
-		  $contentdir = trailingslashit( WP_PLUGIN_DIR .'/'.self::get_slug() ).$path; 
+		  $contentdir = UIX_PRODUCTS_PLUGIN_DIR.$path; 
 		  
 		  if ( self::wpfilesystem_connect_fs( $url, '', $contentdir, '' ) ) {
 			  
@@ -543,7 +598,7 @@ class UixProducts {
 		  $url = wp_nonce_url( $nonce, $nonceaction );
 	
 		  if ( $type == 'plugin' ) {
-			  $contentdir = trailingslashit( WP_PLUGIN_DIR .'/'.self::get_slug() ).$path; 
+			  $contentdir = UIX_PRODUCTS_PLUGIN_DIR.$path; 
 		  } 
 		  if ( $type == 'theme' ) {
 			  $contentdir = trailingslashit( get_template_directory() ).$path; 
@@ -587,21 +642,6 @@ class UixProducts {
 
 
 	}
-	
-
-	/*
-	 * Custom post extensions
-	 *
-	 *
-	 */
-	public static function post_ex() {
-	
-		require_once 'post-extensions/post-extensions-init.php';
-
-		
-	}
-	
-
 
 	/*
 	 * Print Custom Stylesheet
@@ -629,7 +669,7 @@ class UixProducts {
 	 */
 	public static function cat() {
 	
-		require_once 'inc/class-walker-uix_products_category.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'inc/class-walker-uix_products_category.php';
 		
 	}
 	
@@ -700,7 +740,7 @@ class UixProducts {
 		  $currentScreen = get_current_screen();
 
 		  if( $currentScreen->id === "uix_products" ) {
-			  require_once 'gallery-metabox/init.php';
+			  require_once UIX_PRODUCTS_PLUGIN_DIR.'gallery-metabox/init.php';
 		  }
 		
 	
@@ -708,7 +748,7 @@ class UixProducts {
 	
 	public static function gallery_app() {
 		
-		require_once 'gallery-metabox/front-display.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'gallery-metabox/front-display.php';
 	
 	}
 	
@@ -746,10 +786,6 @@ class UixProducts {
 	 * Featured Image
 	 * Add support for a custom default image
 	 */
-	public static function featured_image_support() {
-		require_once 'inc/featured-image-column.php';
-	}
-	
 	public static function custom_featured_image_column_image( $image ) {
 		if ( !has_post_thumbnail() ) {
 			return self::plug_directory() .'assets/images/featured-image.png';
@@ -1093,7 +1129,7 @@ class UixProducts {
 	 */
 	public static function product_preview( $name, $link, $type, $value = true ) {
 		
-		$project_tp_preview_folder = WP_PLUGIN_DIR . '/'.self::get_slug().'/live-demo';
+		$project_tp_preview_folder = UIX_PRODUCTS_PLUGIN_DIR.'live-demo';
 		
 		if ( $value ) {
 			
@@ -1206,6 +1242,90 @@ class UixProducts {
 		
 	}
 	
+
+	/*
+	 * Custom post extensions
+	 *
+	 *
+	 */
+	public static function post_ex() {
+	
+		require_once 'post-extensions/post-extensions-init.php';
+
+		
+	}	
+	
+	
+	/**
+	 * Determine whether the css core file exists
+	 *
+	 */
+	public static function core_css_file_exists() {
+		  $FilePath      = get_stylesheet_directory() . '/uix-products-style.css';
+	      $FilePath2     = get_stylesheet_directory() . '/assets/css/uix-products-style.css';
+		  $FilePath3     = self::plug_filepath() .'assets/css/uix-products.css';
+		  if ( file_exists( $FilePath ) || file_exists( $FilePath2 ) || file_exists( $FilePath3 ) ) {
+			  return true;
+		  } else {
+			  return false;
+		  }	
+	}
+	
+	/**
+	 * Returns .css file name of custom script 
+	 *
+	 */
+	public static function core_css_file( $type = 'uri' ) {
+		
+		$validPath    = self::plug_directory() .'assets/css/uix-products.css';
+		$newFilePath  = get_stylesheet_directory() . '/uix-products-style.css';
+		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-products-style.css';
+	
+		if ( file_exists( $newFilePath ) ) {
+			$validPath = get_template_directory_uri() . '/uix-products-style.css';
+		}
+		
+	
+		if ( file_exists( $newFilePath2 ) ) {
+			$validPath = get_template_directory_uri() . '/assets/css/uix-products-style.css';
+		}
+		
+		
+		if ( $type == 'name' ) {
+			if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+				$validPath = 'uix-products-style.css';
+			} else {
+				$validPath = 'uix-products.css';
+			}
+		}
+		
+		return $validPath;
+		
+	}
+		
+	/**
+	 * Returns .js file name of custom script 
+	 *
+	 */
+	public static function core_js_file() {
+		
+		$validPath    = self::plug_directory() .'assets/js/uix-products.js';
+		$newFilePath  = get_stylesheet_directory() . '/uix-products-custom.js';
+		$newFilePath2 = get_stylesheet_directory() . '/assets/js/uix-products-custom.js';
+	
+		if ( file_exists( $newFilePath ) ) {
+			$validPath = get_template_directory_uri() . '/uix-products-custom.js';
+		}
+		
+	
+		if ( file_exists( $newFilePath2 ) ) {
+			$validPath = get_template_directory_uri() . '/assets/js/uix-products-custom.js';
+		}
+		
+		return $validPath;
+		
+	}
+			
 	
 	
 }
