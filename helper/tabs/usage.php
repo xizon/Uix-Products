@@ -88,7 +88,21 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
         <p>
            <?php _e( '<h4 class="uix-bg-custom-title">9. You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original <code>.css</code> files. Go to <strong>"Uix Products -> Settings -> Custom CSS"</strong>.</h4>', 'uix-products' ); ?>
         </p> 
+        <blockquote class="uix-bg-custom-blockquote">
+			<p class="uix-bg-custom-desc">
+			   <?php _e( 'There is a second way, make a new Cascading Style Sheet (CSS) document which name to <strong>uix-products-style.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Products will use it as a default style sheet to your WordPress Theme. Of course, Uix Products\'s function of "Custom CSS" is still valid.', 'uix-products' ); ?>
+
+			</p>    
+			<p class="uix-bg-custom-desc">
+			   <?php _e( '<b>Note:<b> Making a new javascrpt (.js) document which name to <strong>uix-products-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Products will use it as a default script to your WordPress Theme.', 'uix-products' ); ?>
+
+			</p>
+        </blockquote>      
         <p>
            <img src="<?php echo UixProducts::plug_directory(); ?>helper/img/css.jpg" alt="">
         </p>   
+
+        
+        
+        
 <?php } ?>
