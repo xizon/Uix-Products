@@ -156,11 +156,14 @@ class UixProducts {
 		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
 		  $currentScreen = get_current_screen();
 		  
-		 if( self::inc_str( $currentScreen->id, 'uix_products' ) || self::inc_str( $currentScreen->id, 'uix-products' ) || self::inc_str( $currentScreen->base, '_page_' )) {
+		 if ( 
+			 self::inc_str( $currentScreen->id, 'uix_products' ) || 
+			 self::inc_str( $currentScreen->id, 'uix-products' ) || 
+			 self::inc_str( $currentScreen->base, '_page_' )
+		 ) 
+		 {
 				  
-					if ( is_admin()) {
-							wp_enqueue_style( self::PREFIX . '-products-main', self::plug_directory() .'style.css', false, self::ver(), 'all');	
-					}
+		     wp_enqueue_style( self::PREFIX . '-products-admin', self::plug_directory() .'style.css', false, self::ver(), 'all' );		
 	  
 		  }
 		
@@ -315,7 +318,12 @@ class UixProducts {
 		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
 		  $currentScreen = get_current_screen();
 
-		  if( ( self::inc_str( $currentScreen->id, 'uix_products' ) || self::inc_str( $currentScreen->id, 'uix-products' ) ) && !self::inc_str( $currentScreen->id, '_page_' ) ) {
+		  if ( 
+			  ( self::inc_str( $currentScreen->id, 'uix_products' ) || self::inc_str( $currentScreen->id, 'uix-products' ) ) && 
+			  !self::inc_str( $currentScreen->id, '_page_' ) 
+		  ) 
+		  {
+
 			  add_action( 'admin_notices', array( __CLASS__, 'usage_notice_app' ) );
 			  add_action( 'admin_notices', array( __CLASS__, 'template_notice_required' ) );
 		  }
