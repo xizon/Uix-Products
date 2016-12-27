@@ -439,7 +439,7 @@ class UixProducts {
 			if ( $show == 'plug' ) {
 				echo '<li>'.trailingslashit( $filepath ) . $filename.'</li>';
 			} else {
-				echo '<li>'.trailingslashit( $themepath ) . $filename.'</li>';
+				echo '<li>'.trailingslashit( $themepath ) . $filename.' &nbsp;&nbsp;'.sprintf( __( '<a target="_blank" href="%1$s"><i class="dashicons dashicons-welcome-write-blog"></i> Edit this template</a>', 'uix-products' ), admin_url( 'theme-editor.php?file='.$filename ) ).'</li>';
 			}
 			
 		}	
