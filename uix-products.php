@@ -33,6 +33,7 @@ class UixProducts {
 		self::includes();
 		
 		global $products_prefix;
+		
 		$products_prefix = 'custom-products';
 		
 		
@@ -47,6 +48,7 @@ class UixProducts {
 		add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
 		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
 		add_action( 'admin_init', array( __CLASS__, 'nag_ignore' ) );
+		add_action( 'current_screen', array( __CLASS__, 'gallery' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
 		add_action( 'wp_head', array( __CLASS__, 'cat' ) );
 		add_action( 'wp_head', array( __CLASS__, 'gallery_app' ) );
@@ -58,6 +60,7 @@ class UixProducts {
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_featured_image_support' ), 11 );
 		add_filter( 'init', array( __CLASS__, 'taxonomy_archive_init' ) );
 		
+
 		
 	}
 	
@@ -316,8 +319,9 @@ class UixProducts {
 		  $currentScreen = get_current_screen();
 
 		  if ( 
-			  ( self::inc_str( $currentScreen->id, 'uix_products' ) || self::inc_str( $currentScreen->id, 'uix-products' ) ) && 
-			  !self::inc_str( $currentScreen->id, '_page_' ) 
+			  ( self::inc_str( $currentScreen->id, 'uix_products' ) || 
+			    self::inc_str( $currentScreen->id, 'uix-products' ) ) && 
+			    !self::inc_str( $currentScreen->id, '_page_' ) 
 		  ) 
 		  {
 
@@ -740,10 +744,9 @@ class UixProducts {
 	 */
 	public static function gallery() {
 		
-		
-		  //Check if screen’s ID, base, post type, and taxonomy, among other data points
+		  //Check if screen ID
 		  $currentScreen = get_current_screen();
-
+		
 		  if( $currentScreen->id === "uix_products" ) {
 			  require_once UIX_PRODUCTS_PLUGIN_DIR.'gallery-metabox/init.php';
 		  }

@@ -119,10 +119,9 @@ if ( ! class_exists( 'uix_products_gallery_metabox' ) ) {
             <p class="add_gallery_images hide-if-no-js">
                 <a href="#" class="button-primary"><?php _e( 'Add/Edit Images', 'uix-products' ); ?></a>
             </p>
-            <?php $checked = checked( get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ), 'on', 1 ); ?>
             <p>
                 <label for="easy_image_gallery_link_images">
-                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images"<?php echo $checked; ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'uix-products' )?>
+                    <input type="checkbox" id="easy_image_gallery_link_images" value="on" name="easy_image_gallery_link_images" <?php checked( 'on', get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ) ); ?> /> <?php _e( 'Enable Lightbox for this gallery?', 'uix-products' )?>
                 </label>
             </p>
             <?php // Props to WooCommerce for the following JS code ?>
@@ -263,8 +262,8 @@ if ( ! class_exists( 'uix_products_gallery_metabox' ) ) {
                 .gallery_images .image > div { width: 80px; height: 80px; box-shadow: none; }
                 .gallery_images .attachment-preview { position: relative; padding: 4px; }
                 .gallery_images .attachment-preview .thumbnail { cursor: move }    
-                .gallery_images .wc-metabox-sortable-placeholder{width: 80px;height: 80px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border:4px dashed #ddd;background:#f7f7f7 url("<?php echo $this->dir; ?>watermark.png") no-repeat center}      
-                .gallery_images .uix-gmb-remove {background: #eee url("<?php echo $this->dir; ?>delete.png") center center no-repeat;position: absolute;top: 2px;right: 2px;border-radius: 2px;padding: 2px;display: none;width: 10px;height: 10px;margin: 0;display: none;overflow: hidden;} 
+                .gallery_images .wc-metabox-sortable-placeholder{width: 80px;height: 80px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;border:4px dashed #ddd;background:#f7f7f7 url("<?php echo UixProducts::plug_directory() .'gallery-metabox/'; ?>watermark.png") no-repeat center}      
+                .gallery_images .uix-gmb-remove {background: #eee url("<?php echo UixProducts::plug_directory() .'gallery-metabox/'; ?>delete.png") center center no-repeat;position: absolute;top: 2px;right: 2px;border-radius: 2px;padding: 2px;display: none;width: 10px;height: 10px;margin: 0;display: none;overflow: hidden;} 
                 .gallery_images .image div:hover .uix-gmb-remove { display: block }
                 .gallery_images:after, #gallery_images_container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
                 #gallery_images_container ul { margin: 0 !important }
@@ -286,3 +285,4 @@ if ( is_admin() ) {
 		)
 	);
 }
+

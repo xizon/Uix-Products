@@ -40,45 +40,42 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 ### Updates
 
 
-#### === 1.0.5 ===
+#### = 1.0.6 =
 
-WordPress 4.7 compatible.
-
-Enhanced scalability structure.
-
-Enhanced the user experience of templates admin panel.
-
-Supports custom Uix Products core stylesheet and script based on "/wp-content/themes/{your-theme}/" and "/wp-content/themes/{your-theme}/" directories  for your theme.
-
-Supports custom Uix Products core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
+* Optimized gallery selector.
 
 
+#### = 1.0.5 =
 
-#### === 1.0.3 ===
-
-Enqueue enqueue scripts for front-end.
-
-Fixed some bugs.
-
-
-#### === 1.0.2 ===
-
-Fixed some bugs.
-
-
-#### === 1.0.1 ===
-
-Optimized for tablet display.
-
-Improved event binding from the plugin main JavaScript file.
-
-Improved the main CSS file.
+* WordPress 4.7 compatible.
+* Enhanced scalability structure.
+* Enhanced the user experience of templates admin panel.
+* Supports custom Uix Products core stylesheet and script based on "/wp-content/themes/{your-theme}/" and "/wp-content/themes/{your-theme}/" directories  for your theme.
+* Supports custom Uix Products core stylesheet and script based on "/wp-content/themes/{your-theme}/assets/css/" and "/wp-content/themes/{your-theme}/assets/js/" directories  for your theme.
 
 
 
-#### === 1.0.0 ===
+#### = 1.0.3 =
 
-First release.
+* Optimized enqueue scripts for front-end.
+* Fixed some bugs.
+
+
+#### = 1.0.2 =
+
+* Fixed some bugs.
+
+
+#### = 1.0.1 =
+
+* Optimized for tablet display.
+* Improved event binding from the plugin main JavaScript file.
+* Improved the main CSS file.
+
+
+#### = 1.0.0 =
+
+* First release.
 
 
 
