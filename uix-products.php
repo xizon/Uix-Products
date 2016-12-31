@@ -123,12 +123,9 @@ class UixProducts {
 		
 		// Shuffle.js requires Modernizr..
 		wp_enqueue_script( 'modernizr', self::plug_directory() .'assets/js/modernizr.min.js', false, '3.3.1', false );	
-		
-		// imagesloaded
-		wp_enqueue_script( 'uix-imagesloaded', self::plug_directory() .'assets/js/imagesloaded.min.js', array( 'jquery' ), '4.1.0', true );	
-		
-		// imagesloaded
-		wp_enqueue_script( 'uix-masonry', self::plug_directory() .'assets/js/masonry.js', array( 'jquery', 'uix-imagesloaded' ), '3.3.2', true );	
+	
+		// Masonry
+		wp_enqueue_script( 'masonry' );	
 		
 		
 		if ( self::core_css_file_exists() ) {
