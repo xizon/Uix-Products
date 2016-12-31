@@ -18,7 +18,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'credits' ) {
             <li><a href="https://github.com/woothemes/FlexSlider" target="_blank" rel="nofollow"><?php _e( 'Flexslider', 'uix-products' ); ?></a></li>
             <li><a href="https://github.com/Vestride/Shuffle" target="_blank" rel="nofollow"><?php _e( 'Shuffle', 'uix-products' ); ?></a></li>
             <li><a href="https://github.com/OriginalEXE/Switcheroo" target="_blank" rel="nofollow"><?php _e( 'Switcheroo', 'uix-products' ); ?></a></li>
-            <li><a href="http://masonry.desandro.com" target="_blank" rel="nofollow"><?php _e( 'Masonry', 'uix-products' ); ?></a></li>
         </ul>
         
         </p> 

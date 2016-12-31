@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // Start Class
-if ( ! class_exists( 'uix_products_gallery_metabox' ) ) {
-    class uix_products_gallery_metabox {
+if ( ! class_exists( 'Uix_Products_GalleryMetabox' ) ) {
+    class Uix_Products_GalleryMetabox {
 
         /**
          * Vars
@@ -278,7 +278,7 @@ if ( ! class_exists( 'uix_products_gallery_metabox' ) ) {
 
 // Class needed only in the admin
 if ( is_admin() ) {
-    $uix_products_gallery_metabox = new uix_products_gallery_metabox(
+    $Uix_Products_GalleryMetabox = new Uix_Products_GalleryMetabox(
 		array(
 			'id'         => 'gallery-metabox',
 			'title'      => __( 'Image Gallery', 'uix-products' )

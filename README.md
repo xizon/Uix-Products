@@ -119,7 +119,6 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 - [Flexslider](https://github.com/woothemes/FlexSlider)
 - [Shuffle](https://github.com/Vestride/Shuffle)
 - [Switcheroo](https://github.com/OriginalEXE/Switcheroo)
-- [Masonry](http://masonry.desandro.com)
 
 
 ###How to use?

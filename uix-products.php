@@ -55,8 +55,6 @@ class UixProducts {
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
 		add_action( 'widgets_init', array( __CLASS__, 'register_my_widget' ) );
 		add_filter( 'post_thumbnail_html', array( __CLASS__, 'remove_thumbnail_dimensions' ), 10, 4 );
-		add_filter( 'featured_image_column_default_image', array( __CLASS__, 'custom_featured_image_column_image' ) );
-		add_action( 'featured_image_column_init', array( __CLASS__, 'custom_featured_image_column_init' ) );
 		add_action( 'after_setup_theme', array( __CLASS__, 'add_featured_image_support' ), 11 );
 		add_filter( 'init', array( __CLASS__, 'taxonomy_archive_init' ) );
 		
@@ -98,7 +96,6 @@ class UixProducts {
 			require_once UIX_PRODUCTS_PLUGIN_DIR.'post-extensions/custom-metaboxes-and-fields/init.php';
 		}
 		
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'inc/featured-image-column.php';
 	}
 	
 	
