@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // Start Class
-if ( ! class_exists( 'gallery_metabox' ) ) {
-    class gallery_metabox {
+if ( ! class_exists( 'uix_products_gallery_metabox' ) ) {
+    class uix_products_gallery_metabox {
 
         /**
          * Vars
@@ -35,7 +35,7 @@ if ( ! class_exists( 'gallery_metabox' ) ) {
 		 */
 		protected static $mb_defaults = array(
 			'id'         => 'gallery-metabox',
-			'title'      => 'Image Gallery',
+			'title'      => NULL,
 		);
 
         /**
@@ -279,72 +279,10 @@ if ( ! class_exists( 'gallery_metabox' ) ) {
 
 // Class needed only in the admin
 if ( is_admin() ) {
-    $gallery_metabox = new gallery_metabox(
+    $uix_products_gallery_metabox = new uix_products_gallery_metabox(
 		array(
 			'id'         => 'gallery-metabox',
 			'title'      => __( 'Image Gallery', 'uix-products' )
 		)
 	);
-}
-
-
-/**
- * Retrieve attachment IDs
- *
- * @since   1.0.0
- * @return  bool
- */
-if ( ! function_exists ( 'get_gallery_ids' ) ) {
-    function get_gallery_ids() {
-        $attachment_ids = get_post_meta( get_the_ID(), '_easy_image_gallery', true );
-        $attachment_ids = explode( ',', $attachment_ids );
-        return array_filter( $attachment_ids );
-    }
-}
-
-/**
- * Retrieve attachment data
- *
- * @since   1.0.0
- * @return  array
- */
-if ( ! function_exists ( 'get_attachment' ) ) {
-    function get_attachment( $id ) {
-        $attachment = get_post( $id );
-        return array(
-            'alt'           => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
-            'caption'       => $attachment->post_excerpt,
-            'description'   => $attachment->post_content,
-            'href'          => get_permalink( $attachment->ID ),
-            'src'           => $attachment->guid,
-            'title'         => $attachment->post_title,
-        );
-    }
-}
-
-/**
- * Return gallery count
- *
- * @since   1.0.0
- * @return  bool
- */
-if ( ! function_exists ( 'gallery_count' ) ) {
-    function gallery_count() {
-        $ids = get_gallery_ids();
-        return count( $ids );
-    }
-}
-
-/**
- * Check if lightbox is enabled
- *
- * @since   1.0.0
- * @return  bool
- */
-if ( ! function_exists ( 'gallery_is_lightbox_enabled' ) ) {
-    function gallery_is_lightbox_enabled() {
-        if ( 'on' == get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true ) ) {
-            return true;
-        }
-    }
 }

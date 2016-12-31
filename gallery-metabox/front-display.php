@@ -5,8 +5,8 @@
 
 
 // Retrieve attachment IDs
-if ( !function_exists ( 'get_gallery_ids' ) ) {
-	function get_gallery_ids() {
+if ( !function_exists ( 'uix_products_get_gallery_ids' ) ) {
+	function uix_products_get_gallery_ids() {
 		global $post;
 		$id_array = '';
 		$postid = $post->ID;
@@ -22,8 +22,8 @@ if ( !function_exists ( 'get_gallery_ids' ) ) {
 }
 
 // Get attachment data
-if ( !function_exists ( 'get_attachment' ) ) {
-	function get_attachment( $attachment_id ) {
+if ( !function_exists ( 'uix_products_get_attachment' ) ) {
+	function uix_products_get_attachment( $attachment_id ) {
 		$attachment = get_post( $attachment_id );
 		return array(
 			'alt'			=> get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
@@ -38,8 +38,8 @@ if ( !function_exists ( 'get_attachment' ) ) {
 
 
 // Return gallery images count
-if ( !function_exists ( 'gallery_count' ) ) {
-	function gallery_count() {
+if ( !function_exists ( 'uix_products_gallery_count' ) ) {
+	function uix_products_gallery_count() {
 		$images = get_post_meta( get_the_ID(), '_easy_image_gallery', true );
 		$images = explode( ',', $images );
 		$number = count( $images );
@@ -49,8 +49,8 @@ if ( !function_exists ( 'gallery_count' ) ) {
 
 
 // Check if lightbox is enabled
-if ( !function_exists ( 'gallery_is_lightbox_enabled' ) ) {
-	function gallery_is_lightbox_enabled() {
+if ( !function_exists ( 'uix_products_gallery_is_lightbox_enabled' ) ) {
+	function uix_products_gallery_is_lightbox_enabled() {
 		$link_images = get_post_meta( get_the_ID(), '_easy_image_gallery_link_images', true );
 		if ( $link_images == '' ) return 'empty';
 		if ( 'on' == $link_images ) return true;

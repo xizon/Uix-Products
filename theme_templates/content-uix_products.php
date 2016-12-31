@@ -7,7 +7,7 @@
 
 $layout            = get_option( 'uix_products_opt_layout', 'standard' );
 $cat_termlist      = get_the_term_list( get_the_ID(), 'uix_products_category', '', ', ', '' );
-$attachments       = get_gallery_ids(); 
+$attachments       = uix_products_get_gallery_ids(); 
 
 // Thumbnail size
 if ( $layout == 'masonry' ) { 
@@ -35,7 +35,7 @@ if ( $layout == 'masonry' ) {
                     ?>
                         <?php if ( !empty( $img_echo ) ) { ?>
                                     <div class="item">
-                                        <?php if (  'on' == gallery_is_lightbox_enabled() ) { ?>
+                                        <?php if (  'on' == uix_products_gallery_is_lightbox_enabled() ) { ?>
                                             <a href="<?php echo esc_url( $img_url ); ?>" title="<?php echo esc_attr( $img_alt ); ?>" rel="uix-products-slider-prettyPhoto[<?php the_ID(); ?>]">
                                                 <?php echo wp_kses( $img_echo, wp_kses_allowed_html( 'post' ) ); ?>
                                             </a>
