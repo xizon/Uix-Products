@@ -39,6 +39,10 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates
 
+#### = 1.0.7 =
+
+* Optimized binding theme picker.
+
 
 #### = 1.0.6 =
 
