@@ -1266,8 +1266,8 @@ class UixProducts {
 	 *
 	 */
 	public static function core_css_file_exists() {
-		  $FilePath      = get_stylesheet_directory() . '/uix-products-style.css';
-	      $FilePath2     = get_stylesheet_directory() . '/assets/css/uix-products-style.css';
+		  $FilePath      = get_stylesheet_directory() . '/uix-products-custom.css';
+	      $FilePath2     = get_stylesheet_directory() . '/assets/css/uix-products-custom.css';
 		  $FilePath3     = self::plug_filepath() .'assets/css/uix-products.css';
 		  if ( file_exists( $FilePath ) || file_exists( $FilePath2 ) || file_exists( $FilePath3 ) ) {
 			  return true;
@@ -1283,22 +1283,22 @@ class UixProducts {
 	public static function core_css_file( $type = 'uri' ) {
 		
 		$validPath    = self::plug_directory() .'assets/css/uix-products.css';
-		$newFilePath  = get_stylesheet_directory() . '/uix-products-style.css';
-		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-products-style.css';
+		$newFilePath  = get_stylesheet_directory() . '/uix-products-custom.css';
+		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-products-custom.css';
 	
 		if ( file_exists( $newFilePath ) ) {
-			$validPath = get_template_directory_uri() . '/uix-products-style.css';
+			$validPath = get_template_directory_uri() . '/uix-products-custom.css';
 		}
 		
 	
 		if ( file_exists( $newFilePath2 ) ) {
-			$validPath = get_template_directory_uri() . '/assets/css/uix-products-style.css';
+			$validPath = get_template_directory_uri() . '/assets/css/uix-products-custom.css';
 		}
 		
 		
 		if ( $type == 'name' ) {
 			if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
-				$validPath = 'uix-products-style.css';
+				$validPath = 'uix-products-custom.css';
 			} else {
 				$validPath = 'uix-products.css';
 			}
