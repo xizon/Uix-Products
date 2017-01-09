@@ -556,7 +556,7 @@ class UixProducts {
             } else {
 				
 				wp_nonce_field( 'custom_action_nonce' );
-				echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Click This Button to Copy Files', 'uix-pagebuilder' ).'"  /></p>';
+				echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="'.__( 'Click This Button to Copy Files', 'uix-products' ).'"  /></p>';
 				
 			}
 			
