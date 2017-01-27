@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Tue Dec 27 2016 14:25:26 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Jan 27 2017 17:24:11 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,32 +54,32 @@ msgstr ""
 msgid "Helper"
 msgstr ""
 
-#: ../uix-products.php:288 ../uix-products.php:335 ../helper/settings.php:113
+#: ../uix-products.php:288 ../uix-products.php:341 ../helper/settings.php:113
 msgid "How to use?"
 msgstr ""
 
-#: ../uix-products.php:334
+#: ../uix-products.php:340
 msgid ""
 "Do you want to create a products website with WordPress?  Learn how to add "
 "products to your themes."
 msgstr ""
 
-#: ../uix-products.php:338
+#: ../uix-products.php:344
 #, php-format
 msgid "<a href=\"%1$s\">Hide Notice</a>"
 msgstr ""
 
-#: ../uix-products.php:350
+#: ../uix-products.php:356
 msgid ""
 "<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: ../uix-products.php:350 ../helper/tabs/usage.php:22
+#: ../uix-products.php:356 ../helper/tabs/usage.php:22
 msgid "Create now!"
 msgstr ""
 
-#: ../uix-products.php:350 ../helper/tabs/temp.php:73
+#: ../uix-products.php:356 ../helper/tabs/temp.php:73
 msgid ""
 "As a workaround you can use FTP, access the Uix Products template files path "
 "<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
@@ -87,58 +87,58 @@ msgid ""
 "theme}/</code>. "
 msgstr ""
 
-#: ../uix-products.php:442
+#: ../uix-products.php:448
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-write-"
 "blog\"></i> Edit this template</a>"
 msgstr ""
 
-#: ../uix-products.php:514 ../uix-products.php:589
+#: ../uix-products.php:520 ../uix-products.php:595
 msgid ""
 "<div class=\"notice notice-success\"><p>Operation successfully completed!"
 "</p></div>"
 msgstr ""
 
-#: ../uix-products.php:516
+#: ../uix-products.php:522
 msgid ""
 "<div class=\"notice notice-error\"><p><strong>There was a problem copying your "
 "template files:</strong> Please check your server settings. You can upload "
 "files to theme templates directory using FTP.</p></div>"
 msgstr ""
 
-#: ../uix-products.php:521
+#: ../uix-products.php:527
 msgid ""
 "<div class=\"notice notice-error\"><p><strong>There was a problem removing "
 "your template files:</strong> Please check your server settings. You can "
 "upload files to theme templates directory using FTP.</p></div>"
 msgstr ""
 
-#: ../uix-products.php:524
+#: ../uix-products.php:530
 msgid "<div class=\"notice notice-success\"><p>Remove successful!</p></div>"
 msgstr ""
 
-#: ../uix-products.php:686
+#: ../uix-products.php:692
 msgid "Primary Sidebar"
 msgstr ""
 
-#: ../uix-products.php:688
+#: ../uix-products.php:694
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: ../uix-products.php:907
+#: ../uix-products.php:912
 msgid "Load More"
 msgstr ""
 
-#: ../uix-products.php:1040 ../uix-products.php:1048
+#: ../uix-products.php:1045 ../uix-products.php:1053
 msgid "Newer Posts"
 msgstr ""
 
-#: ../uix-products.php:1042 ../uix-products.php:1049
+#: ../uix-products.php:1047 ../uix-products.php:1054
 msgid "Older Posts"
 msgstr ""
 
-#: ../gallery-metabox/init.php:110 ../gallery-metabox/init.php:166
+#: ../gallery-metabox/init.php:110 ../gallery-metabox/init.php:165
 msgid "Remove image"
 msgstr ""
 
@@ -146,19 +146,19 @@ msgstr ""
 msgid "Add/Edit Images"
 msgstr ""
 
-#: ../gallery-metabox/init.php:125
+#: ../gallery-metabox/init.php:124
 msgid "Enable Lightbox for this gallery?"
 msgstr ""
 
-#: ../gallery-metabox/init.php:147
+#: ../gallery-metabox/init.php:146
 msgid "Add Images to Gallery"
 msgstr ""
 
-#: ../gallery-metabox/init.php:149
+#: ../gallery-metabox/init.php:148
 msgid "Add to gallery"
 msgstr ""
 
-#: ../gallery-metabox/init.php:285
+#: ../gallery-metabox/init.php:284
 msgid "Image Gallery"
 msgstr ""
 
@@ -276,10 +276,6 @@ msgstr ""
 msgid "Switcheroo"
 msgstr ""
 
-#: ../helper/tabs/credits.php:21 ../helper/tabs/general-settings.php:132
-msgid "Masonry"
-msgstr ""
-
 #: ../helper/tabs/custom-css.php:27 ../helper/tabs/general-settings.php:65
 msgid "Settings saved."
 msgstr ""
@@ -328,6 +324,10 @@ msgstr ""
 
 #: ../helper/tabs/general-settings.php:126
 msgid "Standard"
+msgstr ""
+
+#: ../helper/tabs/general-settings.php:132
+msgid "Masonry"
 msgstr ""
 
 #: ../helper/tabs/general-settings.php:144
@@ -568,27 +568,6 @@ msgstr ""
 msgid "Display post date?"
 msgstr ""
 
-#: ../inc/featured-image-column.php:63
-msgid "Featured Image Column"
-msgstr ""
-
-#: ../inc/featured-image-column.php:64
-#, php-format
-msgid "by <a href=\"%s\">Austin Passy</a>"
-msgstr ""
-
-#: ../inc/featured-image-column.php:74
-msgid "Allowed Post Types"
-msgstr ""
-
-#: ../inc/featured-image-column.php:88
-msgid "By default all post types that support \"thumbnails\" are selected."
-msgstr ""
-
-#: ../inc/featured-image-column.php:213
-msgid "Image"
-msgstr ""
-
 #: ../live-demo/index.php:24
 msgid "Demos"
 msgstr ""
@@ -607,23 +586,23 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: ../live-demo/index.php:97
+#: ../live-demo/index.php:99
 msgid "Smartphone View"
 msgstr ""
 
-#: ../live-demo/index.php:102
+#: ../live-demo/index.php:104
 msgid "Tablet View"
 msgstr ""
 
-#: ../live-demo/index.php:107
+#: ../live-demo/index.php:109
 msgid "Desktop View"
 msgstr ""
 
-#: ../live-demo/index.php:115
+#: ../live-demo/index.php:117
 msgid "Prev"
 msgstr ""
 
-#: ../live-demo/index.php:123
+#: ../live-demo/index.php:125
 msgid "Next"
 msgstr ""
 
