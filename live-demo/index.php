@@ -26,7 +26,7 @@ function gravatar_favicon() {
 	<script src="<?php echo $demopath; ?>js/modernizr.min.js?ver=3.3.1"></script>
 	<script>if ( top !== self ) top.location.replace( self.location.href );</script>
     <link rel="stylesheet" href='<?php echo $demopath; ?>css/bootstrap.min.css?ver=3.3.7' type='text/css' media='all' />
-    <link rel="stylesheet" href='<?php echo $demopath; ?>css/template.css' type='text/css' media='all' />
+    <link rel="stylesheet" href='<?php echo $demopath; ?>css/template.min.css' type='text/css' media='all' />
 	<link href="<?php echo $demopath; ?>css/font-awesome.css?ver=4.5.0" rel="stylesheet">
     <!--[if lt IE 9]>
     <script type='text/javascript' src='<?php echo $demopath; ?>js/respond.min.js?ver=1.4.2'></script>
@@ -91,19 +91,21 @@ function gravatar_favicon() {
         <div class="purchase-btn header-btn fa-pull-right">
             <a href="#" title="<?php echo ( esc_attr__( 'Download', 'uix-products' ) ); ?>" class="fa fa-download"></a>
         </div>
+        
+        
     
         <!-- Mobile Button -->
-        <div class="mobile-btn header-btn fa-pull-right hidden-xs">
+        <div data-size="[375,568]" class="res-btn mobile-btn header-btn fa-pull-right hidden-xs">
             <a href="#" title="<?php echo ( esc_attr__( 'Smartphone View', 'uix-products' ) ); ?>" class="fa fa-mobile-phone"></a>
         </div>
     
         <!-- Tablet Button -->
-        <div class="tablet-btn header-btn fa-pull-right hidden-xs">
+        <div data-size="[768,1024]" class="res-btn tablet-btn header-btn fa-pull-right hidden-xs">
             <a href="#" title="<?php echo ( esc_attr__( 'Tablet View', 'uix-products' ) ); ?>" class="fa fa-tablet"></a>
         </div>
     
         <!-- Desktop Button -->
-        <div class="desktop-btn header-btn fa-pull-right hidden-xs">
+        <div  data-size="[0,0]" class="res-btn desktop-btn header-btn fa-pull-right hidden-xs active">
             <a href="#" title="<?php echo ( esc_attr__( 'Desktop View', 'uix-products' ) ); ?>" class="fa fa-desktop"></a>
         </div>
     
@@ -126,7 +128,7 @@ function gravatar_favicon() {
     
     
     <!-- Product iframe -->
-    <iframe class="product-iframe" frameborder="0" border="0"></iframe>
+    <iframe class="product-iframe" frameborder="0" border="0" width="100%"></iframe>
 
     <!-- Javascript -->
 	<script type="text/javascript" src="<?php echo $demopath; ?>js/jquery.min.js?ver=1.11.3"></script>
