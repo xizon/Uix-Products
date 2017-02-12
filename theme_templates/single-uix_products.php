@@ -3,15 +3,18 @@
  * The Template for displaying your single products posts
  *
  */
- 
+
 if ( !class_exists( 'UixProducts' ) ) {
     return;
 }
 
-$project_cat        = UixProducts::list_post_terms( 'uix_products_category', false );
-$project_date       = get_post_meta( get_the_ID(), 'uix_products_artwork_date', true );
-$project_client_URL = get_post_meta( get_the_ID(), 'uix_products_artwork_client_URL', true );
-$project_client     = ( !empty( $project_client_URL ) ? '<a href="'.esc_url( $project_client_URL ).'" target="_blank">'.esc_html( get_post_meta( get_the_ID(), 'uix_products_artwork_client', true ) ).'</a>' : esc_html( get_post_meta( get_the_ID(), 'uix_products_artwork_client', true ) ) );
+$project_cat           = UixProducts::list_post_terms( 'uix_products_category', false );
+$project_date          = get_post_meta( get_the_ID(), 'uix_products_artwork_date', true );
+$project_client_URL    = get_post_meta( get_the_ID(), 'uix_products_artwork_client_URL', true );
+$project_client        = ( !empty( $project_client_URL ) ? '<a href="'.esc_url( $project_client_URL ).'" target="_blank">'.esc_html( get_post_meta( get_the_ID(), 'uix_products_artwork_client', true ) ).'</a>' : esc_html( get_post_meta( get_the_ID(), 'uix_products_artwork_client', true ) ) );
+$project_URL           = get_post_meta( get_the_ID(), 'uix_products_artwork_project_url', true );
+$project_author        = get_post_meta( get_the_ID(), 'uix_products_artwork_author', true );
+$project_artwork_attrs = json_decode( get_post_meta( get_the_ID(), 'uix_products_artwork_attrs', true ), true );
 
 // Theme or Plugin
 $project_type            = get_post_meta( get_the_ID(), 'uix_products_typeshow', true );
@@ -30,7 +33,7 @@ $project_tp_addinfo      = get_post_meta( get_the_ID(), 'uix_products_themeplugi
 $project_tp_install      = get_post_meta( get_the_ID(), 'uix_products_themeplugin_install', true );
 $project_tp_tags         = get_post_meta( get_the_ID(), 'uix_products_themeplugin_tags', true );
 $project_tp_updated_date = get_post_meta( get_the_ID(), 'uix_products_themeplugin_updated_date', true );
-
+$project_tp_attrs        = json_decode( get_post_meta( get_the_ID(), 'uix_products_themeplugin_attrs', true ), true );
 
 get_header(); ?>
 
@@ -75,7 +78,7 @@ $items_prevnext = new WP_Query( $arg_prevnext );
 
 
 
-    <section class="uix-products-single-section">
+    <section class="uix-products-section">
         <div class="container">
             
             <?php get_template_part( 'content', 'uix_products' ); ?>
@@ -125,6 +128,35 @@ $items_prevnext = new WP_Query( $arg_prevnext );
                             <?php echo wp_strip_all_tags( wp_kses( $project_cat, wp_kses_allowed_html( 'post' ) ) ); ?>
                         </p> 
                     <?php } ?> 
+                    
+					<?php if ( !empty( $project_URL ) ) { ?>
+                        <p>
+                            <strong class="title"><?php esc_html_e( 'Project URL', 'uix-products' ); ?></strong>
+                            <a href="<?php echo esc_url( $project_URL ); ?>" target="_blank"><?php echo esc_url( $project_URL ); ?></a>
+                        </p>
+					<?php } ?> 								 	 
+
+					<?php if ( !empty( $project_author ) ) { ?>
+                        <p>
+                            <strong class="title"><?php esc_html_e( 'Author', 'uix-products' ); ?></strong>
+                            <?php echo esc_html( $project_author ); ?>
+                        </p>
+					<?php } ?> 	 
+                    
+                    
+					<?php 
+					if ( is_array( $project_artwork_attrs ) && sizeof( $project_artwork_attrs ) > 0 ) {
+
+						foreach( $project_artwork_attrs as $value ) {
+						?>
+							<p>
+								<strong class="title"><?php echo esc_html( $value[ 'name' ] ); ?></strong>
+								<?php echo esc_html( $value[ 'value' ] ); ?>
+							</p>
+						<?php
+						}
+					} 
+					?> 
         
         
                     <?php if ( has_excerpt() ) {  ?>
@@ -260,6 +292,20 @@ $items_prevnext = new WP_Query( $arg_prevnext );
                             <?php echo esc_html( $project_tp_tags ); ?>
                         </p>
                     <?php } ?>        
+                    
+					<?php 
+					if ( is_array( $project_tp_attrs ) && sizeof( $project_tp_attrs ) > 0 ) {
+
+						foreach( $project_tp_attrs as $value ) {
+						?>
+							<p>
+								<strong class="title"><?php echo esc_html( $value[ 'name' ] ); ?></strong>
+								<?php echo esc_html( $value[ 'value' ] ); ?>
+							</p>
+						<?php
+						}
+					} 
+					?> 
                     
                     <?php if ( has_excerpt() ) {  ?>
                         <p>

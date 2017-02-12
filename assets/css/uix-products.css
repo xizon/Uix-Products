@@ -1,4 +1,23 @@
 /* ====================================================== 
+   Products Container   
+/* ====================================================== */
+.uix-products-section {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 15px;
+	position: relative;
+
+}
+
+@media all and (max-width: 768px) {
+	.uix-products-section {
+        width: 100%;
+    }	
+}
+
+
+
+/* ====================================================== 
    Products Tiles   
 /* ====================================================== */
 .uix-products-container {
@@ -263,6 +282,12 @@
 /* ====================================================== 
    Products Pagination             
 /* ====================================================== */
+.uix-products-pagination-container ul, 
+.uix-products-pagination-single ul {
+	list-style: none;
+}
+
+
 .uix-products-pagination-container {
     margin-top: 3.25em;
 }

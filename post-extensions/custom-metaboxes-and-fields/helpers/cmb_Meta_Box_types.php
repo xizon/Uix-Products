@@ -349,6 +349,79 @@ class cmb_Meta_Box_types {
 		return $this->field->id() . $suffix . ( $this->field->args( 'repeatable' ) ? '_'. $this->iterator .'" data-iterator="'. $this->iterator : '' );
 	}
 
+	
+	/**
+	 * Handles outputting an 'dynamic_attributes' element
+	 * @author UIUX Lab 
+	 * @since  1.0.0
+	 * @param  array  $args Override arguments
+	 * @return string       Form input element
+	 */
+	public function dynamic_attributes( $args = array() ) {
+		$args = $this->parse_args( $args, 'input', array(
+			'type'  => 'text',
+			'class' => 'regular-text',
+			'name'  => $this->_name(),
+			'id'    => $this->_id(),
+			'value' => $this->field->escaped_value(),
+			'desc'  => $this->_desc( true ),
+		) );
+		
+		$project_custom_attrs = json_decode( get_post_meta( get_the_ID(), $args['id'], true ), true );
+		$default_html         = '';
+	
+		if ( is_array( $project_custom_attrs ) && sizeof( $project_custom_attrs ) > 0 ) {
+
+			foreach( $project_custom_attrs as $value ) {
+				$default_html .= '
+				<div class="uix-products-cus-metabox-text-div">
+					<label class="uix-products-cus-metabox-text-p">
+						<p class="cmb_metabox_description">
+							'.esc_html__( 'Title', 'uix-products' ).'
+						</p>
+						<input class="uix-products-cus-metabox-text-small" name="uix_products_custom_attrs_'.$args['id'].'_title[]" value="'.esc_attr( $value[ 'name' ] ).'"><span class="uix-products-cus-metabox-imtxt">*</span>&nbsp;&nbsp;</label>
+					<label class="uix-products-cus-metabox-text-p">
+						<p class="cmb_metabox_description">
+						    '.esc_html__( 'Value', 'uix-products' ).'
+						</p>
+						<input class="uix-products-cus-metabox-text-medium" name="uix_products_custom_attrs_'.$args['id'].'_value[]" value="'.esc_attr( $value[ 'value' ] ).'"><a href="javascript:void(0);" class="uix-products-cus-metabox-attributes-remove-button" title="'.esc_attr__( 'Remove field', 'uix-products' ).'"><img src="'.esc_url( UixProducts::plug_directory() . 'assets/images/remove-icon.png' ).'"/></a></label>
+				</div>
+			  ';
+			}
+		} 
+		
+		
+		$output = '
+		<!-- Custom Attributes -->
+		<div class="uix-products-cus-metabox-attributes-wrapper" data-id="'.$args['id'].'">
+		   <a href="javascript:void(0);" class="uix-products-cus-metabox-attributes-add-button"><img src="'.esc_url( UixProducts::plug_directory() . 'assets/images/add-icon.png' ).'" alt="'.esc_attr__( 'Add a custom attribute', 'uix-products' ).'"/></a>
+			'.$default_html.'
+			<div id="uix-products-cus-metabox-attributes-appendbox-'.$args['id'].'"></div>
+			
+			<div id="uix-products-cus-metabox-attributes-clonehtml-'.$args['id'].'" style="display:none">
+				<div class="uix-products-cus-metabox-text-div">
+					<label class="uix-products-cus-metabox-text-p">
+						<p class="cmb_metabox_description">
+							'.esc_html__( 'Title', 'uix-products' ).'
+						</p>
+						<input class="uix-products-cus-metabox-text-small" name="uix_products_custom_attrs_'.$args['id'].'_title[]" value=""><span class="uix-products-cus-metabox-imtxt">*</span>&nbsp;&nbsp;</label>
+					<label class="uix-products-cus-metabox-text-p">
+						<p class="cmb_metabox_description">
+						    '.esc_html__( 'Value', 'uix-products' ).'
+						</p>
+						<input class="uix-products-cus-metabox-text-medium" name="uix_products_custom_attrs_'.$args['id'].'_value[]" value=""><a href="javascript:void(0);" class="uix-products-cus-metabox-attributes-remove-button" title="'.esc_attr__( 'Remove field', 'uix-products' ).'"><img src="'.esc_url( UixProducts::plug_directory() . 'assets/images/remove-icon.png' ).'"/></a></label>
+				</div>
+			</div>
+			
+			
+		</div>	
+		';
+
+		return $output;
+	}
+
+
+	
 	/**
 	 * Handles outputting an 'input' element
 	 * @since  1.1.0

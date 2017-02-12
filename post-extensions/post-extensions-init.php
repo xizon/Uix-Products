@@ -8,7 +8,7 @@
  *
  */
 
- 
+
 /*
  * Display the Correct Metabox at the Correct Time
  * 
@@ -20,37 +20,86 @@ function uix_products_metaboxes_display_script() {
 		?>
 		<script type="text/javascript">
 		( function( $ ) {
-		
-			var formats = { 
-				'uix_products_typeshow1': 'uix-products-meta-artwork-settings', 
-				'uix_products_typeshow2': 'uix-products-meta-themeplugin-settings',
-				
-				
-			};
-			var ids = '#uix-products-meta-artwork-settings,#uix-products-meta-themeplugin-settings';
-			
-			function displayMetaboxes() {
-				// Hide all post format metaboxes
-				$(ids).hide();
-				// Get current post format
-				var selectedElt = $("input[name='uix_products_typeshow']:checked").attr("id");
- 
-				// If exists, fade in current post format metabox
-				if ( formats[selectedElt] )
-					$("#" + formats[selectedElt]).fadeIn();
-			}
- 
-			$(function() {
+		"use strict";
+			$( function() {
+
+				/*
+				 *  -------- Switch post type --------
+				*/
+				if ( $( '.uix-products-meta-theme-custom' ).length == 0 ) {
+					setTimeout( function() {
+						var $type = $( '#uix-products-meta-typeshow-hide' );
+						if ( ! $type.is( ":checked" ) ) $type.trigger( 'click' );	
+					}, 100 );
+				}
+					
+
+				var formats = { 
+					'uix_products_typeshow1': 'uix-products-meta-artwork-settings', 
+					'uix_products_typeshow2': 'uix-products-meta-themeplugin-settings',
+
+
+				};
+				var ids = '#uix-products-meta-artwork-settings,#uix-products-meta-themeplugin-settings';
+
+				function displayMetaboxes() {
+					// Hide all post format metaboxes
+					$(ids).hide();
+					// Get current post format
+					var selectedElt = $("input[name='uix_products_typeshow']:checked").attr("id");
+
+					// If exists, fade in current post format metabox
+					if ( formats[selectedElt] )
+						$("#" + formats[selectedElt]).fadeIn();
+				}
+
 				// Show/hide metaboxes on page load
 				displayMetaboxes();
- 
+
 				// Show/hide metaboxes on change event
 				$("input[name='uix_products_typeshow']").change(function() {
 					displayMetaboxes();
 				});
-			});
-		
-		} )( jQuery );
+
+
+				<?php //echo esc_url( UixProducts::plug_directory() . 'assets/images/remove-icon.png' ); ?>
+				/*
+				 * -------- Custom Attributes --------
+				*/
+
+				var maxField  = 20;
+				
+				$( '.uix-products-cus-metabox-attributes-wrapper' ).each( function()  {
+					var _id       = $( this ).data( 'id' ),
+						addButton = $( this ).find( '.uix-products-cus-metabox-attributes-add-button' ),
+						wrapper   = $( this ).find( '#uix-products-cus-metabox-attributes-appendbox-' + _id ),
+						fieldHTML = $( this ).find( '#uix-products-cus-metabox-attributes-clonehtml-' + _id ).html();
+					var x = 1;
+					$( addButton ).click(function(){
+						if(x < maxField){ 
+							x++;
+							$( wrapper ).append( fieldHTML );
+						}
+					});
+					$( document ).on( 'click', '.uix-products-cus-metabox-attributes-remove-button', function(e){
+						e.preventDefault();
+						var $li = $( this ).closest( '.uix-products-cus-metabox-text-div' );
+						
+						if ( $( '.uix-products-cus-metabox-attributes-wrapper .uix-products-cus-metabox-text-div' ).length == 1 ) {
+							$li.find( 'input' ).val( '' );
+							$li.hide();
+						} else {
+							$li.remove();
+						}
+						
+						x--;
+					});
+				});
+				
+			} );
+
+
+		} ) ( jQuery );	
 		</script>
 		<?php
 	endif;
@@ -93,6 +142,15 @@ function uix_products_metaboxes( array $meta_boxes ) {
 		'priority'		=> 'high',
 		'show_names'	=> true,
 		'fields'		=> array(
+		
+			array(
+				'name'	=> __( 'Project URL', 'uix-products' ),
+				'desc'	=>  __( 'Enter destination URL of this project. <strong>(optional)</strong>', 'uix-products' ),
+				'id'	=> 'uix_products_artwork_project_url',
+				'placeholder' => 'http://',
+				'type'	=> 'text',
+				
+			),
 			array(
 				'name'	=> __( 'Client Name', 'uix-products' ),
 				'desc'	=>  __( 'Enter name of your clients. <strong>(optional)</strong>', 'uix-products' ),
@@ -101,21 +159,37 @@ function uix_products_metaboxes( array $meta_boxes ) {
 				
 			),
 			array(
-				'name'	=> __( 'URL', 'uix-products' ),
+				'name'	=> __( 'CLient URL', 'uix-products' ),
 				'desc'	=>  __( 'Enter URL of your clients site. <strong>(optional)</strong>', 'uix-products' ),
 				'id'	=> 'uix_products_artwork_client_URL',
 				'placeholder' => 'http://',
 				'type'	=> 'text',
 				
 			),
+		
 			array(
-				'name'	=> __( 'Date Projects', 'uix-products' ),
+				'name'	=> __( 'Author', 'uix-products' ),
+				'desc'	=>  __( 'Enter name of this project author. <strong>(optional)</strong>', 'uix-products' ),
+				'id'	=> 'uix_products_artwork_author',
+				'placeholder' => 'http://',
+				'type'	=> 'text',
+				
+			),
+		
+			array(
+				'name'	=> __( 'Release Date', 'uix-products' ),
 				'desc'	=>  __( 'Enter date of your projects. <strong>(optional)</strong>', 'uix-products' ),
 				'id'	=> 'uix_products_artwork_date',
 				'type'	=> 'text_date',
 				
 			),		
-			
+			array(
+				'name'	=> __( 'Custom Attributes', 'uix-products' ),
+				'desc'	=>  '',
+				'id'	=> 'uix_products_artwork_attrs',
+				'type'	=> 'dynamic_attributes',
+				
+			),
 			
 		),
 	);
@@ -288,6 +362,13 @@ function uix_products_metaboxes( array $meta_boxes ) {
 				'desc'	=> '',
 				'id'	=> 'uix_products_themeplugin_updated_date',
 				'type'	=> 'text_date',
+				
+			),
+			array(
+				'name'	=> __( 'Custom Attributes', 'uix-products' ),
+				'desc'	=>  '',
+				'id'	=> 'uix_products_themeplugin_attrs',
+				'type'	=> 'dynamic_attributes',
 				
 			),
 				
@@ -588,7 +669,3 @@ add_action( 'manage_uix_products_posts_custom_column', 'uix_products_taxonomy_co
 
 
 
-
-
-
- 

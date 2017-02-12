@@ -23,7 +23,7 @@ if ( $layout == 'masonry' ) {
 <?php  if ( is_singular() ) {  ?>
 
 
-    <div <?php post_class(); ?>  id="uix-products-item-<?php the_ID(); ?>">
+    <div id="uix-products-item-<?php the_ID(); ?>">
     
         <?php if ( $attachments && is_array( $attachments ) ) { ?>
             <div class="custom-uix-products-flexslider">
@@ -70,7 +70,7 @@ if ( $layout == 'masonry' ) {
 
 
     <!-- Product Item -->
-    <div <?php post_class( array( 'uix-products-item', UixProducts::cat_class( $cat_termlist ), ( ( !has_post_thumbnail() ) ? esc_attr( 'no-featured-img' ) : '' ) ) ); ?> id="uix-products-item-<?php the_ID(); ?>" <?php echo UixProducts::cat_class_filter( $cat_termlist ); ?>>
+    <div class="uix-products-item <?php echo UixProducts::cat_class( $cat_termlist ); ?> <?php echo ( !has_post_thumbnail() ? esc_attr( 'no-featured-img' ) : '' ); ?>" id="uix-products-item-<?php the_ID(); ?>" <?php echo UixProducts::cat_class_filter( $cat_termlist ); ?>>
         <a href="<?php the_permalink(); ?>" class="image" >
             <div class="cover">
                 <?php if ( has_post_thumbnail() ) { ?>

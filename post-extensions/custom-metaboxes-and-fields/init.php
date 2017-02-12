@@ -1,4 +1,11 @@
 <?php
+/* ------------------------------------
+ * Upgraded custom field types
+ * Author: UIUX Lab
+ * ------------------------------------
+*/
+
+
 /*
 Script Name:  Custom Metaboxes and Fields
 Contributors: WebDevStudios (@webdevstudios / webdevstudios.com)
@@ -7,7 +14,7 @@ Contributors: WebDevStudios (@webdevstudios / webdevstudios.com)
               Bill Erickson (@billerickson / billerickson.net)
               Andrew Norcross (@norcross / andrewnorcross.com)
 Description:  This will create metaboxes with custom fields that will blow your mind.
-Version:      1.2.0
+Version:      1.2.1
 */
 
 /**
@@ -55,7 +62,7 @@ class cmb_Meta_Box {
 	 * @var   string
 	 * @since 1.0.0
 	 */
-	const CMB_VERSION = '1.2.0';
+	const CMB_VERSION = '1.2.1';
 
 	/**
 	 * Metabox Config array
@@ -518,6 +525,53 @@ class cmb_Meta_Box {
 			return $post_id;
 
 		self::save_fields( $this->_meta_box, $post_id, 'post' );
+		
+		
+		// -------------Custom Attributes
+
+		// Artwork
+		if ( isset( $_POST[ 'uix_products_custom_attrs_uix_products_artwork_attrs_title' ] ) ) {
+			$custom_attrs          = array();
+			$field_values_array_1  = $_POST[ 'uix_products_custom_attrs_uix_products_artwork_attrs_title' ];
+			$field_values_array_2  = $_POST[ 'uix_products_custom_attrs_uix_products_artwork_attrs_value' ];
+
+
+			foreach( $field_values_array_1 as $index => $value ) {	
+				if ( !empty( $value ) ) {
+					array_push( $custom_attrs, array(
+														'name'  => sanitize_text_field( $value ),
+														'value' => sanitize_text_field( $field_values_array_2[ $index ] )
+													) );		
+				}
+
+			}
+
+			update_post_meta( $post_id, 'uix_products_artwork_attrs', json_encode( $custom_attrs ) );
+
+		}
+		
+		// Theme or Plugin
+		if ( isset( $_POST[ 'uix_products_custom_attrs_uix_products_themeplugin_attrs_title' ] ) ) {
+			$custom_attrs          = array();
+			$field_values_array_1  = $_POST[ 'uix_products_custom_attrs_uix_products_themeplugin_attrs_title' ];
+			$field_values_array_2  = $_POST[ 'uix_products_custom_attrs_uix_products_themeplugin_attrs_value' ];
+
+
+			foreach( $field_values_array_1 as $index => $value ) {	
+				if ( !empty( $value ) ) {
+					array_push( $custom_attrs, array(
+														'name'  => sanitize_text_field( $value ),
+														'value' => sanitize_text_field( $field_values_array_2[ $index ] )
+													) );		
+				}
+
+			}
+
+			update_post_meta( $post_id, 'uix_products_themeplugin_attrs', json_encode( $custom_attrs ) );
+
+		}
+		
+		
 	}
 
 	/**
@@ -1185,3 +1239,4 @@ function cmb_metabox_form( $meta_box, $object_id, $echo = true ) {
 }
 
 // End. That's it, folks! //
+
