@@ -3,7 +3,7 @@
  * Custom Metaboxes and Fields
  *
  * Define the metabox and field configurations.
- * @param  array $meta_boxes
+ * @param  array $meta_uix_boxes
  * @return array
  *
  */
@@ -69,11 +69,11 @@ function uix_products_metaboxes_display_script() {
 
 				var maxField  = 20;
 				
-				$( '.uix-products-cus-metabox-attributes-wrapper' ).each( function()  {
+				$( '.uix-plug-cus-metabox-attributes-wrapper' ).each( function()  {
 					var _id       = $( this ).data( 'id' ),
-						addButton = $( this ).find( '.uix-products-cus-metabox-attributes-add-button' ),
-						wrapper   = $( this ).find( '#uix-products-cus-metabox-attributes-appendbox-' + _id ),
-						fieldHTML = $( this ).find( '#uix-products-cus-metabox-attributes-clonehtml-' + _id ).html();
+						addButton = $( this ).find( '.uix-plug-cus-metabox-attributes-add-button' ),
+						wrapper   = $( this ).find( '#uix-plug-cus-metabox-attributes-appendbox-' + _id ),
+						fieldHTML = $( this ).find( '#uix-plug-cus-metabox-attributes-clonehtml-' + _id ).html();
 					var x = 1;
 					$( addButton ).click(function(){
 						if(x < maxField){ 
@@ -81,11 +81,11 @@ function uix_products_metaboxes_display_script() {
 							$( wrapper ).append( fieldHTML );
 						}
 					});
-					$( document ).on( 'click', '.uix-products-cus-metabox-attributes-remove-button', function(e){
+					$( document ).on( 'click', '.uix-plug-cus-metabox-attributes-remove-button', function(e){
 						e.preventDefault();
-						var $li = $( this ).closest( '.uix-products-cus-metabox-text-div' );
+						var $li = $( this ).closest( '.uix-plug-cus-metabox-text-div' );
 						
-						if ( $( '.uix-products-cus-metabox-attributes-wrapper .uix-products-cus-metabox-text-div' ).length == 1 ) {
+						if ( $( '.uix-plug-cus-metabox-attributes-wrapper .uix-plug-cus-metabox-text-div' ).length == 1 ) {
 							$li.find( 'input' ).val( '' );
 							$li.hide();
 						} else {
@@ -108,9 +108,9 @@ function uix_products_metaboxes_display_script() {
 add_action( 'admin_print_scripts', 'uix_products_metaboxes_display_script', 1000 );
  
  
-function uix_products_metaboxes( array $meta_boxes ) {
+function uix_products_metaboxes( array $meta_uix_boxes ) {
 
-	$meta_boxes[] = array(
+	$meta_uix_boxes[] = array(
 		'id'			=> 'uix-products-meta-typeshow',
 		'title'			=> __( 'Product Type', 'uix-products' ),
 		'pages'			=> array( 'uix_products' ),
@@ -134,7 +134,7 @@ function uix_products_metaboxes( array $meta_boxes ) {
 
 
     // Artwork Options
-	$meta_boxes[] = array(
+	$meta_uix_boxes[] = array(
 		'id'			=> 'uix-products-meta-artwork-settings',
 		'title'			=> __( 'Artwork Settings', 'uix-products' ),
 		'pages'			=> array( 'uix_products' ),
@@ -196,7 +196,7 @@ function uix_products_metaboxes( array $meta_boxes ) {
 	
 	
     // Theme or Plugin Options
-	$meta_boxes[] = array(
+	$meta_uix_boxes[] = array(
 		'id'			=> 'uix-products-meta-themeplugin-settings',
 		'title'			=> __( 'Theme or Plugin Settings', 'uix-products' ),
 		'pages'			=> array( 'uix_products' ),
@@ -379,9 +379,9 @@ function uix_products_metaboxes( array $meta_boxes ) {
 
 	
 
-	return $meta_boxes;
+	return $meta_uix_boxes;
 }
-add_filter( 'cmb_meta_boxes', 'uix_products_metaboxes' );
+add_filter( 'cmb_uix_meta_boxes', 'uix_products_metaboxes' );
 
 
 

@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -92,7 +92,7 @@ class UixProducts {
 	 */
 	public static function includes() {
 		
-		if ( ! class_exists( 'cmb_Meta_Box' ) ) {
+		if ( ! class_exists( 'cmb_uix_Meta_Box' ) ) {
 			require_once UIX_PRODUCTS_PLUGIN_DIR.'post-extensions/custom-metaboxes-and-fields/init.php';
 		}
 		

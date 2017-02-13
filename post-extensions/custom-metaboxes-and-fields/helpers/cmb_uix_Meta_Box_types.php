@@ -9,7 +9,7 @@
  *
  * @since  1.0.0
  */
-class cmb_Meta_Box_types {
+class cmb_uix_Meta_Box_types {
 
 	/**
 	 * An iterator value for repeatable fields
@@ -30,14 +30,14 @@ class cmb_Meta_Box_types {
 	}
 
 	/**
-	 * Default fallback. Allows rendering fields via "cmb_render_$name" hook
+	 * Default fallback. Allows rendering fields via "cmb_uix_render_$name" hook
 	 * @since  1.0.0
 	 * @param  string $name      Non-existent method name
 	 * @param  array  $arguments All arguments passed to the method
 	 */
 	public function __call( $name, $arguments ) {
 		// When a non-registered field is called, send it through an action.
-		do_action( "cmb_render_$name", $this->field->args(), $this->field->escaped_value(), $this->field->object_id, $this->field->object_type, $this );
+		do_action( "cmb_uix_render_$name", $this->field->args(), $this->field->escaped_value(), $this->field->object_id, $this->field->object_type, $this );
 	}
 
 	/**
@@ -71,7 +71,7 @@ class cmb_Meta_Box_types {
 
 		if ( ! $post = get_post( $object_id ) ) {
 
-			$cache_key = 'cmb-cache-'. $taxonomy .'-'. $object_id;
+			$cache_key = 'cmb-uix-cache-'. $taxonomy .'-'. $object_id;
 
 			// Check cache
 			$cached = $test = get_transient( $cache_key );
@@ -110,7 +110,7 @@ class cmb_Meta_Box_types {
 		$file_ext = $this->get_file_ext( $file );
 
 		$this->valid = empty( $this->valid )
-			? (array) apply_filters( 'cmb_valid_img_types', array( 'jpg', 'jpeg', 'png', 'gif', 'ico', 'icon' ) )
+			? (array) apply_filters( 'cmb_uix_valid_img_types', array( 'jpg', 'jpeg', 'png', 'gif', 'ico', 'icon' ) )
 			: $this->valid;
 
 		return ( $file_ext && in_array( $file_ext, $this->valid ) );
@@ -125,7 +125,7 @@ class cmb_Meta_Box_types {
 	 * @return array            Parsed and filtered arguments
 	 */
 	public function parse_args( $args, $element, $defaults ) {
-		return wp_parse_args( apply_filters( "cmb_{$element}_attributes", $this->field->maybe_set_attributes( $args ), $this->field, $this ), $defaults );
+		return wp_parse_args( apply_filters( "cmb_uix_{$element}_attributes", $this->field->maybe_set_attributes( $args ), $this->field, $this ), $defaults );
 	}
 
 	/**
@@ -205,7 +205,7 @@ class cmb_Meta_Box_types {
 	public function list_input( $args = array(), $i ) {
 		$args = $this->parse_args( $args, 'list_input', array(
 			'type'  => 'radio',
-			'class' => 'cmb_option',
+			'class' => 'cmb_uix_option',
 			'name'  => $this->_name(),
 			'id'    => $this->_id( $i ),
 			'value' => $this->field->escaped_value(),
@@ -241,7 +241,7 @@ class cmb_Meta_Box_types {
 		$this->_desc( true, true );
 		?>
 
-		<table id="<?php echo $table_id; ?>" class="cmb-repeat-table">
+		<table id="<?php echo $table_id; ?>" class="cmb-uix-repeat-table">
 			<tbody>
 				<?php $this->repeatable_rows(); ?>
 			</tbody>
@@ -323,7 +323,7 @@ class cmb_Meta_Box_types {
 			return '';
 		}
 		$tag = $paragraph ? 'p' : 'span';
-		$desc = "\n<$tag class=\"cmb_metabox_description\">{$this->field->args( 'description' )}</$tag>\n";
+		$desc = "\n<$tag class=\"cmb_uix_metabox_description\">{$this->field->args( 'description' )}</$tag>\n";
 		if ( $echo )
 			echo $desc;
 		return $desc;
@@ -374,17 +374,17 @@ class cmb_Meta_Box_types {
 
 			foreach( $project_custom_attrs as $value ) {
 				$default_html .= '
-				<div class="uix-products-cus-metabox-text-div">
-					<label class="uix-products-cus-metabox-text-p">
-						<p class="cmb_metabox_description">
+				<div class="uix-plug-cus-metabox-text-div">
+					<label class="uix-plug-cus-metabox-text-p">
+						<p class="cmb_uix_metabox_description">
 							'.esc_html__( 'Title', 'uix-products' ).'
 						</p>
-						<input class="uix-products-cus-metabox-text-small" name="uix_products_custom_attrs_'.$args['id'].'_title[]" value="'.esc_attr( $value[ 'name' ] ).'"><span class="uix-products-cus-metabox-imtxt">*</span>&nbsp;&nbsp;</label>
-					<label class="uix-products-cus-metabox-text-p">
-						<p class="cmb_metabox_description">
+						<input class="uix-plug-cus-metabox-text-small" name="uix_plug_metabox__'.$args['id'].'_title[]" value="'.esc_attr( $value[ 'name' ] ).'"><span class="uix-plug-cus-metabox-imtxt">*</span>&nbsp;&nbsp;</label>
+					<label class="uix-plug-cus-metabox-text-p">
+						<p class="cmb_uix_metabox_description">
 						    '.esc_html__( 'Value', 'uix-products' ).'
 						</p>
-						<input class="uix-products-cus-metabox-text-medium" name="uix_products_custom_attrs_'.$args['id'].'_value[]" value="'.esc_attr( $value[ 'value' ] ).'"><a href="javascript:void(0);" class="uix-products-cus-metabox-attributes-remove-button" title="'.esc_attr__( 'Remove field', 'uix-products' ).'"><img src="'.esc_url( UixProducts::plug_directory() . 'assets/images/remove-icon.png' ).'"/></a></label>
+						<input class="uix-plug-cus-metabox-text-medium" name="uix_plug_metabox__'.$args['id'].'_value[]" value="'.esc_attr( $value[ 'value' ] ).'"><a href="javascript:void(0);" class="uix-plug-cus-metabox-attributes-remove-button" title="'.esc_attr__( 'Remove field', 'uix-products' ).'"><img src="'.esc_url( CMB_UIX_META_BOX_URL . 'images/remove-icon.png' ).'"/></a></label>
 				</div>
 			  ';
 			}
@@ -393,23 +393,23 @@ class cmb_Meta_Box_types {
 		
 		$output = '
 		<!-- Custom Attributes -->
-		<div class="uix-products-cus-metabox-attributes-wrapper" data-id="'.$args['id'].'">
-		   <a href="javascript:void(0);" class="uix-products-cus-metabox-attributes-add-button"><img src="'.esc_url( UixProducts::plug_directory() . 'assets/images/add-icon.png' ).'" alt="'.esc_attr__( 'Add a custom attribute', 'uix-products' ).'"/></a>
+		<div class="uix-plug-cus-metabox-attributes-wrapper" data-id="'.$args['id'].'">
+		   <a href="javascript:void(0);" class="uix-plug-cus-metabox-attributes-add-button"><img src="'.esc_url( CMB_UIX_META_BOX_URL . 'images/add-icon.png' ).'" alt="'.esc_attr__( 'Add a custom attribute', 'uix-products' ).'"/></a>
 			'.$default_html.'
-			<div id="uix-products-cus-metabox-attributes-appendbox-'.$args['id'].'"></div>
+			<div id="uix-plug-cus-metabox-attributes-appendbox-'.$args['id'].'"></div>
 			
-			<div id="uix-products-cus-metabox-attributes-clonehtml-'.$args['id'].'" style="display:none">
-				<div class="uix-products-cus-metabox-text-div">
-					<label class="uix-products-cus-metabox-text-p">
-						<p class="cmb_metabox_description">
+			<div id="uix-plug-cus-metabox-attributes-clonehtml-'.$args['id'].'" style="display:none">
+				<div class="uix-plug-cus-metabox-text-div">
+					<label class="uix-plug-cus-metabox-text-p">
+						<p class="cmb_uix_metabox_description">
 							'.esc_html__( 'Title', 'uix-products' ).'
 						</p>
-						<input class="uix-products-cus-metabox-text-small" name="uix_products_custom_attrs_'.$args['id'].'_title[]" value=""><span class="uix-products-cus-metabox-imtxt">*</span>&nbsp;&nbsp;</label>
-					<label class="uix-products-cus-metabox-text-p">
-						<p class="cmb_metabox_description">
+						<input class="uix-plug-cus-metabox-text-small" name="uix_plug_metabox__'.$args['id'].'_title[]" value=""><span class="uix-plug-cus-metabox-imtxt">*</span>&nbsp;&nbsp;</label>
+					<label class="uix-plug-cus-metabox-text-p">
+						<p class="cmb_uix_metabox_description">
 						    '.esc_html__( 'Value', 'uix-products' ).'
 						</p>
-						<input class="uix-products-cus-metabox-text-medium" name="uix_products_custom_attrs_'.$args['id'].'_value[]" value=""><a href="javascript:void(0);" class="uix-products-cus-metabox-attributes-remove-button" title="'.esc_attr__( 'Remove field', 'uix-products' ).'"><img src="'.esc_url( UixProducts::plug_directory() . 'assets/images/remove-icon.png' ).'"/></a></label>
+						<input class="uix-plug-cus-metabox-text-medium" name="uix_plug_metabox__'.$args['id'].'_value[]" value=""><a href="javascript:void(0);" class="uix-plug-cus-metabox-attributes-remove-button" title="'.esc_attr__( 'Remove field', 'uix-products' ).'"><img src="'.esc_url( CMB_UIX_META_BOX_URL . 'images/remove-icon.png' ).'"/></a></label>
 				</div>
 			</div>
 			
@@ -449,7 +449,7 @@ class cmb_Meta_Box_types {
 	 */
 	public function textarea( $args = array() ) {
 		$args = $this->parse_args( $args, 'textarea', array(
-			'class' => 'cmb_textarea',
+			'class' => 'cmb_uix_textarea',
 			'name'  => $this->_name(),
 			'id'    => $this->_id(),
 			'cols'  => 60,
@@ -469,39 +469,39 @@ class cmb_Meta_Box_types {
 	}
 
 	public function text_small() {
-		return $this->input( array( 'class' => 'cmb_text_small', 'desc' => $this->_desc() ) );
+		return $this->input( array( 'class' => 'cmb_uix_text_small', 'desc' => $this->_desc() ) );
 	}
 
 	public function text_medium() {
-		return $this->input( array( 'class' => 'cmb_text_medium', 'desc' => $this->_desc() ) );
+		return $this->input( array( 'class' => 'cmb_uix_text_medium', 'desc' => $this->_desc() ) );
 	}
 
 	public function text_email() {
-		return $this->input( array( 'class' => 'cmb_text_email cmb_text_medium', 'type' => 'email' ) );
+		return $this->input( array( 'class' => 'cmb_uix_text_email cmb_uix_text_medium', 'type' => 'email' ) );
 	}
 
 	public function text_url() {
-		return $this->input( array( 'class' => 'cmb_text_url cmb_text_medium regular-text', 'value' => $this->field->escaped_value( 'esc_url' ) ) );
+		return $this->input( array( 'class' => 'cmb_uix_text_url cmb_uix_text_medium regular-text', 'value' => $this->field->escaped_value( 'esc_url' ) ) );
 	}
 
 	public function text_date() {
-		return $this->input( array( 'class' => 'cmb_text_small cmb_datepicker', 'desc' => $this->_desc() ) );
+		return $this->input( array( 'class' => 'cmb_uix_text_small cmb_uix_datepicker', 'desc' => $this->_desc() ) );
 	}
 
 	public function text_time() {
-		return $this->input( array( 'class' => 'cmb_timepicker text_time', 'desc' => $this->_desc() ) );
+		return $this->input( array( 'class' => 'cmb_uix_timepicker text_time', 'desc' => $this->_desc() ) );
 	}
 
 	public function text_money() {
-		return ( ! $this->field->args( 'before' ) ? '$ ' : ' ' ) . $this->input( array( 'class' => 'cmb_text_money', 'desc' => $this->_desc() ) );
+		return ( ! $this->field->args( 'before' ) ? '$ ' : ' ' ) . $this->input( array( 'class' => 'cmb_uix_text_money', 'desc' => $this->_desc() ) );
 	}
 
 	public function textarea_small() {
-		return $this->textarea( array( 'class' => 'cmb_textarea_small', 'rows' => 4 ) );
+		return $this->textarea( array( 'class' => 'cmb_uix_textarea_small', 'rows' => 4 ) );
 	}
 
 	public function textarea_code() {
-		return sprintf( '<pre>%s</pre>', $this->textarea( array( 'class' => 'cmb_textarea_code' )  ) );
+		return sprintf( '<pre>%s</pre>', $this->textarea( array( 'class' => 'cmb_uix_textarea_code' )  ) );
 	}
 
 	public function wysiwyg( $args = array() ) {
@@ -519,7 +519,7 @@ class cmb_Meta_Box_types {
 	public function text_date_timestamp() {
 		$meta_value = $this->field->escaped_value();
 		$value = ! empty( $meta_value ) ? date( $this->field->args( 'date_format' ), $meta_value ) : '';
-		return $this->input( array( 'class' => 'cmb_text_small cmb_datepicker', 'value' => $value ) );
+		return $this->input( array( 'class' => 'cmb_uix_text_small cmb_uix_datepicker', 'value' => $value ) );
 	}
 
 	public function text_datetime_timestamp( $meta_value = '' ) {
@@ -536,14 +536,14 @@ class cmb_Meta_Box_types {
 
 		$inputs = array(
 			$this->input( array(
-				'class' => 'cmb_text_small cmb_datepicker',
+				'class' => 'cmb_uix_text_small cmb_uix_datepicker',
 				'name'  => $this->_name( '[date]' ),
 				'id'    => $this->_id( '_date' ),
 				'value' => ! empty( $meta_value ) ? date( $this->field->args( 'date_format' ), $meta_value ) : '',
 				'desc'  => '',
 			) ),
 			$this->input( array(
-				'class' => 'cmb_timepicker text_time',
+				'class' => 'cmb_uix_timepicker text_time',
 				'name'  => $this->_name( '[time]' ),
 				'id'    => $this->_id( '_time' ),
 				'value' => ! empty( $meta_value ) ? date( $this->field->args( 'time_format' ), $meta_value ) : '',
@@ -576,7 +576,7 @@ class cmb_Meta_Box_types {
 	public function select_timezone() {
 		$this->field->args['default'] = $this->field->args( 'default' )
 			? $this->field->args( 'default' )
-			: cmb_Meta_Box::timezone_string();
+			: cmb_uix_Meta_Box::timezone_string();
 
 		$meta_value = $this->field->escaped_value();
 
@@ -591,13 +591,13 @@ class cmb_Meta_Box_types {
 		elseif ( ! preg_match( '/^#' . $hex_color . '/i', $meta_value ) ) // Value doesn't match #123abc, so sanitize to just #.
 			$meta_value = "#";
 
-		return $this->input( array( 'class' => 'cmb_colorpicker cmb_text_small', 'value' => $meta_value ) );
+		return $this->input( array( 'class' => 'cmb_uix_colorpicker cmb_uix_text_small', 'value' => $meta_value ) );
 	}
 
 	public function title() {
 		extract( $this->parse_args( array(), 'title', array(
 			'tag'   => $this->field->object_type == 'post' ? 'h5' : 'h3',
-			'class' => 'cmb_metabox_title',
+			'class' => 'cmb_uix_metabox_title',
 			'name'  => $this->field->args( 'name' ),
 			'desc'  => $this->_desc( true ),
 		) ) );
@@ -607,7 +607,7 @@ class cmb_Meta_Box_types {
 
 	public function select( $args = array() ) {
 		$args = $this->parse_args( $args, 'select', array(
-			'class'   => 'cmb_select',
+			'class'   => 'cmb_uix_select',
 			'name'    => $this->_name(),
 			'id'      => $this->_id(),
 			'desc'    => $this->_desc( true ),
@@ -635,7 +635,7 @@ class cmb_Meta_Box_types {
 
 	public function radio( $args = array(), $type = 'radio' ) {
 		extract( $this->parse_args( $args, $type, array(
-			'class'   => 'cmb_radio_list cmb_list',
+			'class'   => 'cmb_uix_radio_list cmb_uix_list',
 			'options' => $this->concat_options( array( 'label' => 'test' ) ),
 			'desc'    => $this->_desc( true ),
 		) ) );
@@ -648,7 +648,7 @@ class cmb_Meta_Box_types {
 	}
 
 	public function multicheck( $type = 'checkbox' ) {
-		return $this->radio( array( 'class' => 'cmb_checkbox_list cmb_list', 'options' => $this->concat_options( array( 'type' => 'checkbox', 'name' => $this->_name() .'[]' ), 'list_input_checkbox' ) ), $type );
+		return $this->radio( array( 'class' => 'cmb_uix_checkbox_list cmb_uix_list', 'options' => $this->concat_options( array( 'type' => 'checkbox', 'name' => $this->_name() .'[]' ), 'list_input_checkbox' ) ), $type );
 	}
 
 	public function multicheck_inline() {
@@ -657,7 +657,7 @@ class cmb_Meta_Box_types {
 
 	public function checkbox() {
 		$meta_value = $this->field->escaped_value();
-		$args = array( 'type' => 'checkbox', 'class' => 'cmb_option cmb_list', 'value' => 'on', 'desc' => '' );
+		$args = array( 'type' => 'checkbox', 'class' => 'cmb_uix_option cmb_uix_list', 'value' => 'on', 'desc' => '' );
 		if ( ! empty( $meta_value ) ) {
 			$args['checked'] = 'checked';
 		}
@@ -724,7 +724,7 @@ class cmb_Meta_Box_types {
 			}
 		}
 
-		return $this->radio( array( 'class' => 'cmb_checkbox_list cmb_list', 'options' => $options ), 'taxonomy_multicheck' );
+		return $this->radio( array( 'class' => 'cmb_uix_checkbox_list cmb_uix_list', 'options' => $options ), 'taxonomy_multicheck' );
 	}
 
 	public function taxonomy_multicheck_inline() {
@@ -738,17 +738,17 @@ class cmb_Meta_Box_types {
 
 		echo $this->input( array(
 			'type'  => 'hidden',
-			'class' => 'cmb_upload_file cmb_upload_list',
+			'class' => 'cmb_uix_upload_file cmb_uix_upload_list',
 			'size'  => 45, 'desc'  => '', 'value'  => '',
 		) ),
 		$this->input( array(
 			'type'  => 'button',
-			'class' => 'cmb_upload_button button cmb_upload_list',
+			'class' => 'cmb_uix_upload_button button cmb_uix_upload_list',
 			'value'  => __( 'Add or Upload File', 'uix-products' ),
 			'name'  => '', 'id'  => '',
 		) );
 
-		echo '<ul id="', $this->_id( '_status' ) ,'" class="cmb_media_status attach_list">';
+		echo '<ul id="', $this->_id( '_status' ) ,'" class="cmb_uix_media_status attach_list">';
 
 		if ( $meta_value && is_array( $meta_value ) ) {
 
@@ -765,7 +765,7 @@ class cmb_Meta_Box_types {
 					echo
 					'<li class="img_status">',
 						wp_get_attachment_image( $id, $this->field->args( 'preview_size' ) ),
-						'<p class="cmb_remove_wrapper"><a href="#" class="cmb_remove_file_button">'. __( 'Remove Image', 'uix-products' ) .'</a></p>
+						'<p class="cmb_uix_remove_wrapper"><a href="#" class="cmb_uix_remove_file_button">'. __( 'Remove Image', 'uix-products' ) .'</a></p>
 						'. $id_input .'
 					</li>';
 
@@ -776,7 +776,7 @@ class cmb_Meta_Box_types {
 					}
 					echo
 					'<li>',
-						__( 'File:', 'uix-products' ), ' <strong>', $title, '</strong>&nbsp;&nbsp;&nbsp; (<a href="', $fullurl, '" target="_blank" rel="external">'. __( 'Download', 'uix-products' ) .'</a> / <a href="#" class="cmb_remove_file_button">'. __( 'Remove', 'uix-products' ) .'</a>)
+						__( 'File:', 'uix-products' ), ' <strong>', $title, '</strong>&nbsp;&nbsp;&nbsp; (<a href="', $fullurl, '" target="_blank" rel="external">'. __( 'Download', 'uix-products' ) .'</a> / <a href="#" class="cmb_uix_remove_file_button">'. __( 'Remove', 'uix-products' ) .'</a>)
 						'. $id_input .'
 					</li>';
 				}
@@ -794,11 +794,11 @@ class cmb_Meta_Box_types {
 
 		echo $this->input( array(
 			'type'  => $input_type,
-			'class' => 'cmb_upload_file',
+			'class' => 'cmb_uix_upload_file',
 			'size'  => 45,
 			'desc'  => '',
 		) ),
-		'<input class="cmb_upload_button button" type="button" value="'. __( 'Add or Upload File', 'uix-products' ) .'" />',
+		'<input class="cmb_uix_upload_button button" type="button" value="'. __( 'Add or Upload File', 'uix-products' ) .'" />',
 		$this->_desc( true );
 
 		$cached_id = $this->_id();
@@ -808,29 +808,29 @@ class cmb_Meta_Box_types {
 		unset( $args['_id'], $args['_name'] );
 
 		// And get new field object
-		$this->field = new cmb_Meta_Box_field( $args, $this->field->group );
+		$this->field = new cmb_uix_Meta_Box_field( $args, $this->field->group );
 
 		// Get ID value
 		$_id_value = $this->field->escaped_value( 'absint' );
 
 		// If there is no ID saved yet, try to get it from the url
 		if ( $meta_value && ! $_id_value ) {
-			$_id_value = cmb_Meta_Box::image_id_from_url( esc_url_raw( $meta_value ) );
+			$_id_value = cmb_uix_Meta_Box::image_id_from_url( esc_url_raw( $meta_value ) );
 		}
 
 		echo $this->input( array(
 			'type'  => 'hidden',
-			'class' => 'cmb_upload_file_id',
+			'class' => 'cmb_uix_upload_file_id',
 			'value' => $_id_value,
 			'desc'  => '',
 		) ),
-		'<div id="', $this->_id( '_status' ) ,'" class="cmb_media_status">';
+		'<div id="', $this->_id( '_status' ) ,'" class="cmb_uix_media_status">';
 			if ( ! empty( $meta_value ) ) {
 
 				if ( $this->is_valid_img_ext( $meta_value ) ) {
 					echo '<div class="img_status">';
 					echo '<img style="max-width: 350px; width: 100%; height: auto;" src="', $meta_value, '" alt="" />';
-					echo '<p class="cmb_remove_wrapper"><a href="#" class="cmb_remove_file_button" rel="', $cached_id, '">'. __( 'Remove Image', 'uix-products' ) .'</a></p>';
+					echo '<p class="cmb_uix_remove_wrapper"><a href="#" class="cmb_uix_remove_file_button" rel="', $cached_id, '">'. __( 'Remove Image', 'uix-products' ) .'</a></p>';
 					echo '</div>';
 				} else {
 					// $file_ext = $this->get_file_ext( $meta_value );
@@ -838,7 +838,7 @@ class cmb_Meta_Box_types {
 					for ( $i = 0; $i < count( $parts ); ++$i ) {
 						$title = $parts[$i];
 					}
-					echo __( 'File:', 'uix-products' ), ' <strong>', $title, '</strong>&nbsp;&nbsp;&nbsp; (<a href="', $meta_value, '" target="_blank" rel="external">'. __( 'Download', 'uix-products' ) .'</a> / <a href="#" class="cmb_remove_file_button" rel="', $cached_id, '">'. __( 'Remove', 'uix-products' ) .'</a>)';
+					echo __( 'File:', 'uix-products' ), ' <strong>', $title, '</strong>&nbsp;&nbsp;&nbsp; (<a href="', $meta_value, '" target="_blank" rel="external">'. __( 'Download', 'uix-products' ) .'</a> / <a href="#" class="cmb_uix_remove_file_button" rel="', $cached_id, '">'. __( 'Remove', 'uix-products' ) .'</a>)';
 				}
 			}
 		echo '</div>';
@@ -846,15 +846,15 @@ class cmb_Meta_Box_types {
 
 	public function oembed() {
 		echo $this->input( array(
-			'class'           => 'cmb_oembed regular-text',
+			'class'           => 'cmb_uix_oembed regular-text',
 			'data-objectid'   => $this->field->object_id,
 			'data-objecttype' => $this->field->object_type
 		) ),
-		'<p class="cmb-spinner spinner" style="display:none;"><img src="'. admin_url( '/images/wpspin_light.gif' ) .'" alt="spinner"/></p>',
-		'<div id="',$this->_id( '_status' ) ,'" class="cmb_media_status ui-helper-clearfix embed_wrap">';
+		'<p class="cmb-uix-spinner spinner" style="display:none;"><img src="'. admin_url( '/images/wpspin_light.gif' ) .'" alt="spinner"/></p>',
+		'<div id="',$this->_id( '_status' ) ,'" class="cmb_uix_media_status ui-helper-clearfix embed_wrap">';
 
 			if ( $meta_value = $this->field->escaped_value() ) {
-				echo cmb_Meta_Box_ajax::get_oembed( $meta_value, $this->field->object_id, array(
+				echo cmb_uix_Meta_Box_ajax::get_oembed( $meta_value, $this->field->object_id, array(
 					'object_type' => $this->field->object_type,
 					'oembed_args' => array( 'width' => '640' ),
 					'field_id'    => $this->_id(),

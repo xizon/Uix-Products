@@ -39,18 +39,18 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates
 
-#### = 1.1.0 =
+#### = 1.1.1 =
 
 * Optimized front-end style.
 * Add dynamic form fields, meet the needs of custom fields.
 * Enhanced API compatibility for themes.
 
 
-
-#### = 1.0.8 =
+#### = 1.1.0 =
 
 * Fixed an online preview error.
 * Add a responsive preview component.
+
 
 
 #### = 1.0.7 =
