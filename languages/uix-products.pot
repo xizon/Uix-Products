@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Mon Feb 13 2017 03:22:35 GMT+0800 (CST)\n"
+"POT-Revision-Date: Mon Feb 13 2017 12:42:15 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -318,7 +318,7 @@ msgid ""
 msgstr ""
 
 #: ../helper/tabs/general-settings.php:118 ../post-extensions/post-extensions-
-#: init.php:318 ../theme_templates/single-uix_products.php:270
+#: init.php:326 ../theme_templates/single-uix_products.php:270
 msgid "Layout"
 msgstr ""
 
@@ -581,8 +581,8 @@ msgid "Close This Bar"
 msgstr ""
 
 #: ../live-demo/index.php:92 ../post-extensions/custom-metaboxes-and-
-#: fields/helpers/cmb_Meta_Box_types.php:779 ../post-extensions/custom-metaboxes-
-#: and-fields/helpers/cmb_Meta_Box_types.php:841
+#: fields/helpers/cmb_uix_Meta_Box_types.php:779 ../post-extensions/custom-
+#: metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.php:841
 msgid "Download"
 msgstr ""
 
@@ -606,316 +606,316 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:107
+#: ../post-extensions/post-extensions-init.php:115
 msgid "Product Type"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:119
+#: ../post-extensions/post-extensions-init.php:127
 msgid ""
 "<i class=\"dashicons dashicons-admin-customizer uix-products-type-"
 "icon\"></i>Artwork"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:120
+#: ../post-extensions/post-extensions-init.php:128
 msgid ""
 "<i class=\"dashicons dashicons-laptop uix-products-type-icon\"></i>Theme or "
 "Plugin"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:131
+#: ../post-extensions/post-extensions-init.php:139
 msgid "Artwork Settings"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:139 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:147 ../theme_templates/single-
 #: uix_products.php:134
 msgid "Project URL"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:140
+#: ../post-extensions/post-extensions-init.php:148
 msgid "Enter destination URL of this project. <strong>(optional)</strong>"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:147
+#: ../post-extensions/post-extensions-init.php:155
 msgid "Client Name"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:148
+#: ../post-extensions/post-extensions-init.php:156
 msgid "Enter name of your clients. <strong>(optional)</strong>"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:154
+#: ../post-extensions/post-extensions-init.php:162
 msgid "CLient URL"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:155
+#: ../post-extensions/post-extensions-init.php:163
 msgid "Enter URL of your clients site. <strong>(optional)</strong>"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:163 ../post-extensions/post-
-#: extensions-init.php:594 ../theme_templates/single-uix_products.php:141
+#: ../post-extensions/post-extensions-init.php:171 ../post-extensions/post-
+#: extensions-init.php:602 ../theme_templates/single-uix_products.php:141
 msgid "Author"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:164
+#: ../post-extensions/post-extensions-init.php:172
 msgid "Enter name of this project author. <strong>(optional)</strong>"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:172
+#: ../post-extensions/post-extensions-init.php:180
 msgid "Release Date"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:173
+#: ../post-extensions/post-extensions-init.php:181
 msgid "Enter date of your projects. <strong>(optional)</strong>"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:179 ../post-extensions/post-
-#: extensions-init.php:360
+#: ../post-extensions/post-extensions-init.php:187 ../post-extensions/post-
+#: extensions-init.php:368
 msgid "Custom Attributes"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:193
+#: ../post-extensions/post-extensions-init.php:201
 msgid "Theme or Plugin Settings"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:200 ../post-extensions/post-
-#: extensions-init.php:592
+#: ../post-extensions/post-extensions-init.php:208 ../post-extensions/post-
+#: extensions-init.php:600
 msgid "Type"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:206
+#: ../post-extensions/post-extensions-init.php:214
 msgid "Theme"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:207
+#: ../post-extensions/post-extensions-init.php:215
 msgid "Plugin"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:211
+#: ../post-extensions/post-extensions-init.php:219
 msgid "Item Prices"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:212
+#: ../post-extensions/post-extensions-init.php:220
 msgid "Enter your expected value of this item for every single sell minimum"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:221
+#: ../post-extensions/post-extensions-init.php:229
 msgid "Item Name"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:224
+#: ../post-extensions/post-extensions-init.php:232
 msgid "Eg. Uixplant, 15 characters maximum"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:229
+#: ../post-extensions/post-extensions-init.php:237
 msgid "Item Title"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:232
+#: ../post-extensions/post-extensions-init.php:240
 msgid "Eg. Multi-purpose HTML5 WordPress Theme"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:238
+#: ../post-extensions/post-extensions-init.php:246
 msgid "Demo Link"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:241
+#: ../post-extensions/post-extensions-init.php:249
 msgid ""
 "Direct link to your demo or video without any iframe. (Eg. http://my-site."
 "com/demo/)"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:249
+#: ../post-extensions/post-extensions-init.php:257
 msgid "Purchase/Download Link"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:252
+#: ../post-extensions/post-extensions-init.php:260
 msgid ""
 "Direct link to the purchase or download page. (Eg. http://market-place."
 "com/yourtheme/)"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:261
+#: ../post-extensions/post-extensions-init.php:269
 msgid "Current Version"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:264
+#: ../post-extensions/post-extensions-init.php:272
 msgid "Your Item Version, Eg. 1.0.0"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:268 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:276 ../theme_templates/single-
 #: uix_products.php:237
 msgid "Compatible With"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:271
+#: ../post-extensions/post-extensions-init.php:279
 msgid "Eg. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:278 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:286 ../theme_templates/single-
 #: uix_products.php:244
 msgid "Compatible Browsers"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:296 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:304 ../theme_templates/single-
 #: uix_products.php:257
 msgid "Files Included"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:324
+#: ../post-extensions/post-extensions-init.php:332
 msgid "Null"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:325
+#: ../post-extensions/post-extensions-init.php:333
 msgid "Responsive"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:326
+#: ../post-extensions/post-extensions-init.php:334
 msgid "Fixed"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:327
+#: ../post-extensions/post-extensions-init.php:335
 msgid "Liquid"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:328
+#: ../post-extensions/post-extensions-init.php:336
 msgid "Static"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:332 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:340 ../theme_templates/single-
 #: uix_products.php:277
 msgid "Additional Info"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:333
+#: ../post-extensions/post-extensions-init.php:341
 msgid "Eg. Well Documentation"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:339
+#: ../post-extensions/post-extensions-init.php:347
 msgid "Installation Info"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:340
+#: ../post-extensions/post-extensions-init.php:348
 msgid ""
 "Eg. Installation and set up instructions are attached (look for "
 "Documentation folder)."
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:346 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:354 ../theme_templates/single-
 #: uix_products.php:291
 msgid "Tags"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:349
+#: ../post-extensions/post-extensions-init.php:357
 msgid ""
 "Maximum of 15 keywords covering features, usage, and styling. Keywords "
 "should all be in lowercase and separated by commas. e.g. photography, "
 "gallery, modern, jquery, wordpress theme"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:353
+#: ../post-extensions/post-extensions-init.php:361
 msgid "Updated Date"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:411
+#: ../post-extensions/post-extensions-init.php:419
 msgid "Uix Products"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:412
+#: ../post-extensions/post-extensions-init.php:420
 msgid "Products Item"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:413 ../post-extensions/post-
-#: extensions-init.php:416
+#: ../post-extensions/post-extensions-init.php:421 ../post-extensions/post-
+#: extensions-init.php:424
 msgid "Add New Item"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:414
+#: ../post-extensions/post-extensions-init.php:422
 msgid "Add New Products Item"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:415
+#: ../post-extensions/post-extensions-init.php:423
 msgid "Edit Item"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:417
+#: ../post-extensions/post-extensions-init.php:425
 msgid "View Item"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:418
+#: ../post-extensions/post-extensions-init.php:426
 msgid "Search Items"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:419
+#: ../post-extensions/post-extensions-init.php:427
 msgid "No Items Found"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:420
+#: ../post-extensions/post-extensions-init.php:428
 msgid "No Items Found In Trash"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:457 ../post-extensions/post-
-#: extensions-init.php:459
+#: ../post-extensions/post-extensions-init.php:465 ../post-extensions/post-
+#: extensions-init.php:467
 msgid "Categories"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:458 ../post-extensions/post-
-#: extensions-init.php:593 ../theme_templates/single-uix_products.php:127 ..
+#: ../post-extensions/post-extensions-init.php:466 ../post-extensions/post-
+#: extensions-init.php:601 ../theme_templates/single-uix_products.php:127 ..
 #: /theme_templates/single-uix_products.php:222
 msgid "Category"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:460
+#: ../post-extensions/post-extensions-init.php:468
 msgid "Search"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:461
+#: ../post-extensions/post-extensions-init.php:469
 msgid "Popular"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:462 ../theme_templates/page-
+#: ../post-extensions/post-extensions-init.php:470 ../theme_templates/page-
 #: uix_products.php:28 ../theme_templates/taxonomy-uix_products_category.php:29
 msgid "All"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:463 ../post-extensions/post-
-#: extensions-init.php:464
+#: ../post-extensions/post-extensions-init.php:471 ../post-extensions/post-
+#: extensions-init.php:472
 msgid "Parent"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:465 ../theme_templates/single-
+#: ../post-extensions/post-extensions-init.php:473 ../theme_templates/single-
 #: uix_products.php:99
 msgid "Edit"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:466
+#: ../post-extensions/post-extensions-init.php:474
 msgid "Update"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:467
+#: ../post-extensions/post-extensions-init.php:475
 msgid "Add New"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:468
+#: ../post-extensions/post-extensions-init.php:476
 msgid "New"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:469
+#: ../post-extensions/post-extensions-init.php:477
 msgid "Separate with commas"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:470
+#: ../post-extensions/post-extensions-init.php:478
 msgid "Add or remove"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:471
+#: ../post-extensions/post-extensions-init.php:479
 msgid "Choose from the most used"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:590
+#: ../post-extensions/post-extensions-init.php:598
 msgid "Thumbnail"
 msgstr ""
 
-#: ../post-extensions/post-extensions-init.php:650
+#: ../post-extensions/post-extensions-init.php:658
 msgid "[artwork]"
 msgstr ""
 
@@ -943,89 +943,92 @@ msgstr ""
 msgid "Select / Deselect All"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/init.php:1233
+#: ../post-extensions/custom-metaboxes-and-fields/init.php:1275
 msgid "Save"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:47
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_ajax.
+#: php:47
 msgid "Please Try Again"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:131
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_ajax.
+#: php:131
 msgid "Remove Embed"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_ajax.php:134
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_ajax.
+#: php:134
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:
-#: 459
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_field.
+#: php:459
 msgid "Add Group"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_field.php:
-#: 460
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_field.
+#: php:460
 msgid "Remove Group"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 250
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:250
 msgid "Add Row"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 306 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:779 ../post-extensions/custom-metaboxes-and-
-#: fields/helpers/cmb_Meta_Box_types.php:841
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:306 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:779 ../post-extensions/custom-
+#: metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.php:841
 msgid "Remove"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 380 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:405
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:380 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:405
 msgid "Title"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 385 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:410
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:385 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:410
 msgid "Value"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 387 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:412
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:387 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:412
 msgid "Remove field"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 397
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:397
 msgid "Add a custom attribute"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 674 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:708
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:674 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:708
 msgid "No terms"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 747 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:801
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:747 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:801
 msgid "Add or Upload File"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 768 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:833
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:768 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:833
 msgid "Remove Image"
 msgstr ""
 
-#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.php:
-#: 779 ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_Meta_Box_types.
-#: php:841
+#: ../post-extensions/custom-metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.
+#: php:779 ../post-extensions/custom-metaboxes-and-
+#: fields/helpers/cmb_uix_Meta_Box_types.php:841
 msgid "File:"
 msgstr ""
 
