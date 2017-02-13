@@ -159,7 +159,7 @@ function uix_products_metaboxes( array $meta_uix_boxes ) {
 				
 			),
 			array(
-				'name'	=> __( 'CLient URL', 'uix-products' ),
+				'name'	=> __( 'Client URL', 'uix-products' ),
 				'desc'	=>  __( 'Enter URL of your clients site. <strong>(optional)</strong>', 'uix-products' ),
 				'id'	=> 'uix_products_artwork_client_URL',
 				'placeholder' => 'http://',

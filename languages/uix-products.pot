@@ -644,7 +644,7 @@ msgid "Enter name of your clients. <strong>(optional)</strong>"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:162
-msgid "CLient URL"
+msgid "Client URL"
 msgstr ""
 
 #: ../post-extensions/post-extensions-init.php:163
