@@ -19,6 +19,10 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 **Using this plugin require with Uix Products template files. Convenient for theme customization.**
 
+
+https://www.youtube.com/watch?v=1tqTc6kW7_g
+
+
 = Features =
 
 * 3 Product types for choice

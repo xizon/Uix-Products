@@ -15,6 +15,8 @@ Licensed under the [GPL3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ### Description
 
+[![Uix Products Live Demo](https://github.com/xizon/Uix-Products/blob/master/assets/video-cover.jpg)](https://www.youtube.com/watch?v=1tqTc6kW7_g "Uix Products Live Demo")
+
 
 This plugin enables a products post type and taxonomies. You can add a new artwork, theme or plugin item to appear in your theme. It also registers separate products taxonomies for tags and categories. If featured images are selected, they will be displayed in the column view.
 
