@@ -41,6 +41,12 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates
 
+##### = 1.1.2 =
+
+* Compatible with low version PHP (5.3+)
+* Fixed some minor errors in the low version of PHP.
+
+
 #### = 1.1.1 =
 
 * Optimized front-end style.

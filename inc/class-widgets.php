@@ -168,9 +168,10 @@ class Uix_Products_Recent_Products_Widget extends WP_Widget {
                            <div class="item-thumb">
                                <a href="<?php the_permalink(); ?>">
                            <?php
+								$imgarr = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'uix-products-retina-entry' );
                                 the_post_thumbnail( 'uix-products-entry', array(
                                     'alt' => esc_attr( get_the_title() ),
-									'data-retina' => esc_url( wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'uix-products-retina-entry' )[0] ),
+									'data-retina' => esc_url( $imgarr[0] ),
                                 ) ); 
 							?>
                                 </a>

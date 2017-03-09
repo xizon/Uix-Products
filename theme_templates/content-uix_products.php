@@ -75,10 +75,11 @@ if ( $layout == 'masonry' ) {
             <div class="cover">
                 <?php if ( has_post_thumbnail() ) { ?>
 					<?php
+	                    $imgarr = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), $thumbnail_retina_size );
                         the_post_thumbnail( $thumbnail_size, array(
                             'alt'         => esc_attr( get_the_title() ),
 							'class'	      => 'uix-products-entry-img',
-                            'data-retina' => esc_url( wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), $thumbnail_retina_size )[0] ),
+                            'data-retina' => esc_url( $imgarr[0] ),
                             
                         ) ); 
                     ?>

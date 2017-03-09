@@ -60,8 +60,9 @@ function gravatar_favicon() {
 					}
 				
 				} else {
-					if ( !empty( get_theme_mod( 'theme_extra_custom_logo' ) ) ) {
-						echo '<img src="'.esc_url( get_theme_mod( 'theme_extra_custom_logo' ) ).'" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" />';
+					$clogo = get_theme_mod( 'theme_extra_custom_logo' );
+					if ( !empty( $clogo ) ) {
+						echo '<img src="'.esc_url( $clogo ).'" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" />';
 						$logo_url = true;
 	
 					}
@@ -138,7 +139,9 @@ function gravatar_favicon() {
     </script>
 	<script src="<?php echo $demopath; ?>js/script.js"></script>
    
-   <?php if ( !empty( get_theme_mod( 'custom_google_analytics' ) ) ) { ?>
+   <?php 
+	$value = esc_attr( get_theme_mod( 'uiuxlabtheme_customize_opts_google_analytics' ) );
+	if ( !empty( $value ) ) { ?>
        <!-- Google analytics begin  --> 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -146,7 +149,7 @@ function gravatar_favicon() {
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         
-          ga('create', '<?php echo esc_attr( get_theme_mod( 'custom_google_analytics' ) );?>', 'auto');
+          ga('create', '<?php echo $value;?>', 'auto');
           ga('send', 'pageview');
         
         </script>
