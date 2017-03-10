@@ -239,7 +239,7 @@ $items_prevnext = new WP_Query( $arg_prevnext );
                         </p>
                     <?php } ?>
                     
-                    <?php if ( !empty( $project_tp_browsers && is_array( $project_tp_browsers ) ) ) { ?>
+                    <?php if ( !empty( $project_tp_browsers ) && is_array( $project_tp_browsers ) ) { ?>
                         <p>
                             <strong class="title"><?php esc_html_e( 'Compatible Browsers', 'uix-products' ); ?></strong>
                             <?php 
@@ -252,7 +252,7 @@ $items_prevnext = new WP_Query( $arg_prevnext );
                         </p>
                     <?php } ?>
                     
-                    <?php if ( !empty( $project_tp_include && is_array( $project_tp_include ) ) ) { ?>
+                    <?php if ( !empty( $project_tp_include ) && is_array( $project_tp_include ) ) { ?>
                         <p>
                             <strong class="title"><?php esc_html_e( 'Files Included', 'uix-products' ); ?></strong>
                             <?php 

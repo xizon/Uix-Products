@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
-"POT-Revision-Date: Mon Feb 13 2017 12:42:15 GMT+0800 (CST)\n"
+"POT-Revision-Date: Fri Mar 10 2017 16:12:42 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,14 +128,6 @@ msgstr ""
 
 #: ../uix-products.php:912
 msgid "Load More"
-msgstr ""
-
-#: ../uix-products.php:1045 ../uix-products.php:1053
-msgid "Newer Posts"
-msgstr ""
-
-#: ../uix-products.php:1047 ../uix-products.php:1054
-msgid "Older Posts"
 msgstr ""
 
 #: ../gallery-metabox/init.php:110 ../gallery-metabox/init.php:165
@@ -540,31 +532,31 @@ msgstr ""
 msgid "Uix Products: Recent Products"
 msgstr ""
 
-#: ../inc/class-widgets.php:31 ../inc/class-widgets.php:228
+#: ../inc/class-widgets.php:31 ../inc/class-widgets.php:229
 msgid "Recent Products"
 msgstr ""
 
-#: ../inc/class-widgets.php:236
+#: ../inc/class-widgets.php:237
 msgid "Title:"
 msgstr ""
 
-#: ../inc/class-widgets.php:239
+#: ../inc/class-widgets.php:240
 msgid "Number of products to show:"
 msgstr ""
 
-#: ../inc/class-widgets.php:244
+#: ../inc/class-widgets.php:245
 msgid "Only display artworks?"
 msgstr ""
 
-#: ../inc/class-widgets.php:249
+#: ../inc/class-widgets.php:250
 msgid "Only display themes?"
 msgstr ""
 
-#: ../inc/class-widgets.php:253
+#: ../inc/class-widgets.php:254
 msgid "Only display plugins?"
 msgstr ""
 
-#: ../inc/class-widgets.php:257
+#: ../inc/class-widgets.php:258
 msgid "Display post date?"
 msgstr ""
 
@@ -572,37 +564,37 @@ msgstr ""
 msgid "Demos"
 msgstr ""
 
-#: ../live-demo/index.php:80 ../live-demo/index.php:81
+#: ../live-demo/index.php:81 ../live-demo/index.php:82
 msgid "Select a Theme"
 msgstr ""
 
-#: ../live-demo/index.php:87
+#: ../live-demo/index.php:88
 msgid "Close This Bar"
 msgstr ""
 
-#: ../live-demo/index.php:92 ../post-extensions/custom-metaboxes-and-
+#: ../live-demo/index.php:93 ../post-extensions/custom-metaboxes-and-
 #: fields/helpers/cmb_uix_Meta_Box_types.php:779 ../post-extensions/custom-
 #: metaboxes-and-fields/helpers/cmb_uix_Meta_Box_types.php:841
 msgid "Download"
 msgstr ""
 
-#: ../live-demo/index.php:99
+#: ../live-demo/index.php:100
 msgid "Smartphone View"
 msgstr ""
 
-#: ../live-demo/index.php:104
+#: ../live-demo/index.php:105
 msgid "Tablet View"
 msgstr ""
 
-#: ../live-demo/index.php:109
+#: ../live-demo/index.php:110
 msgid "Desktop View"
 msgstr ""
 
-#: ../live-demo/index.php:117
+#: ../live-demo/index.php:118
 msgid "Prev"
 msgstr ""
 
-#: ../live-demo/index.php:125
+#: ../live-demo/index.php:126
 msgid "Next"
 msgstr ""
 
