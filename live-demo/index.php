@@ -12,7 +12,7 @@ $demopath = UixProducts::plug_directory().'live-demo/';
 
 function gravatar_favicon() {
 	$GetTheHash = md5( strtolower( trim( get_bloginfo( 'admin_email' ) ) ) );
-	echo esc_url( 'http://www.gravatar.com/avatar/' . $GetTheHash . '?s=16' );
+	echo esc_url( '//www.gravatar.com/avatar/' . $GetTheHash . '?s=16' );
 }
 
 ?>
