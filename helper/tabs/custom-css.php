@@ -42,29 +42,33 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	$org_jsname_uix_products    = UixProducts::core_js_file( 'name' );
 	$org_jspath_uix_products    = UixProducts::core_js_file();
 
-	if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) || file_exists( $newJSFilePath ) || file_exists( $newJSFilePath2 ) ) {
-		$filetype = 'theme';
+	//CSS file directory
+	if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+		$cssfiletype = 'theme';
 		
-		//CSS file directory
 		$filepath = '';
 		if ( file_exists( $newFilePath2 ) ) {
 			$filepath = 'assets/css/';
 		}
+
 		
-		//Javascript file directory
+	} else {
+		$cssfiletype   = 'plugin';
+		$filepath   = 'assets/css/';	
+	}
+	
+	
+	//Javascript file directory
+	if ( file_exists( $newJSFilePath ) || file_exists( $newJSFilePath2 ) ) {
+		$JSfiletype = 'theme';
+		
 		$jsfilepath = '';
 		if ( file_exists( $newJSFilePath2 ) ) {
 			$jsfilepath = 'assets/js/';
 		}	
-		
-		
+			
 	} else {
-		$filetype   = 'plugin';
-		
-		//CSS file directory
-		$filepath   = 'assets/css/';
-		
-		//Javascript file directory
+		$JSfiletype   = 'plugin';
 		$jsfilepath = 'assets/js/';
 	}
 	
@@ -104,13 +108,13 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	// capture output from WP_Filesystem
 	ob_start();
 	
-		UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'admin.php?page='.UixProducts::HELPER.'&tab=custom-css', $filepath, $org_cssname_uix_products, $filetype );
+		UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'admin.php?page='.UixProducts::HELPER.'&tab=custom-css', $filepath, $org_cssname_uix_products, $cssfiletype );
 		$filesystem_uix_products_out = ob_get_contents();
 	ob_end_clean();
 	
 	if ( empty( $filesystem_uix_products_out ) ) {
 		
-		$style_org_code_uix_products = UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'admin.php?page='.UixProducts::HELPER.'&tab=custom-css', $filepath, $org_cssname_uix_products, $filetype );
+		$style_org_code_uix_products = UixProducts::wpfilesystem_read_file( 'uix_products_customcss', 'admin.php?page='.UixProducts::HELPER.'&tab=custom-css', $filepath, $org_cssname_uix_products, $cssfiletype );
 		
 		echo '
 		
