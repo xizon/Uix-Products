@@ -77,11 +77,11 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
         
         
 	   	<p class="uix-bg-custom-desc">
-		   <?php _e( '1) Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-products-custom.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Slideshow will use it as a default style sheet instead of the "<a href="'.$org_csspath_uix_products.'" target="_blank"><strong>uix-products.css</strong></a>" to your WordPress Theme. Of course, Uix Slideshow\'s function of "Custom CSS" is still valid.', 'uix-products' ); ?>
+		   <?php _e( '1) Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-products-custom.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Products will use it as a default style sheet instead of the "<a href="'.$org_csspath_uix_products.'" target="_blank"><strong>uix-products.css</strong></a>" to your WordPress Theme. Of course, Uix Products\'s function of "Custom CSS" is still valid.', 'uix-products' ); ?>
 
 		</p>    
 		<p class="uix-bg-custom-desc">
-		   <?php _e( '2) Making a new javascrpt (.js) document which name to <strong>uix-products-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Slideshow will use it as a default script instead of the "<a href="'.$org_jspath_uix_products.'" target="_blank"><strong>uix-products.js</strong></a>" to your WordPress Theme.', 'uix-products' ); ?>
+		   <?php _e( '2) Making a new javascrpt (.js) document which name to <strong>uix-products-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Products will use it as a default script instead of the "<a href="'.$org_jspath_uix_products.'" target="_blank"><strong>uix-products.js</strong></a>" to your WordPress Theme.', 'uix-products' ); ?>
 
 		</p>      
             
