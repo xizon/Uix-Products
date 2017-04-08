@@ -41,6 +41,12 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates
 
+##### = 1.1.3 =
+
+* Optimized core stylesheets for front-end.
+* Optimized admin panel of Custom CSS.
+
+
 ##### = 1.1.2 =
 
 * Compatible with low version PHP (5.3+)

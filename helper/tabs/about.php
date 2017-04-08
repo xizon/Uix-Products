@@ -29,6 +29,15 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'about' ) {
         
         </p>   
         
+        
+        <p>
+            <?php 
+				$embed_code = wp_oembed_get('https://www.youtube.com/watch?v=1tqTc6kW7_g', array('width'=>560, 'height'=>315 )); 
+				echo $embed_code;										 
+			  ?>
+        
+        </p>    
+        
    
     
 <?php } ?>

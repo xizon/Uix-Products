@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.1.2
+ * Version:     1.1.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -247,7 +247,16 @@ class UixProducts {
 		'));
 	
 	
-        //helper
+        //Add sub links
+		add_submenu_page(
+			'edit.php?post_type=uix_products',
+			__( 'Custom CSS', 'uix-products' ),
+			__( 'Custom CSS', 'uix-products' ),
+			'manage_options',
+			'admin.php?page='.self::HELPER.'&tab=custom-css'
+		);
+		 
+		 
 		add_submenu_page(
 			'edit.php?post_type=uix_products',
 			__( 'Helper', 'uix-products' ),
@@ -1265,7 +1274,7 @@ class UixProducts {
 	 * Returns .js file name of custom script 
 	 *
 	 */
-	public static function core_js_file() {
+	public static function core_js_file( $type = 'uri' ) {
 		
 		$validPath    = self::plug_directory() .'assets/js/uix-products.js';
 		$newFilePath  = get_stylesheet_directory() . '/uix-products-custom.js';
@@ -1278,6 +1287,15 @@ class UixProducts {
 	
 		if ( file_exists( $newFilePath2 ) ) {
 			$validPath = get_template_directory_uri() . '/assets/js/uix-products-custom.js';
+		}
+		
+		
+		if ( $type == 'name' ) {
+			if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
+				$validPath = 'uix-products-custom.js';
+			} else {
+				$validPath = 'uix-products.js';
+			}
 		}
 		
 		return $validPath;

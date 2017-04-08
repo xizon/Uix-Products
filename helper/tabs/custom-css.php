@@ -33,7 +33,41 @@ if ( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' 
 
 if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 	
+	$newFilePath                 = get_stylesheet_directory() . '/uix-products-custom.css';
+	$newFilePath2                = get_stylesheet_directory() . '/assets/css/uix-products-custom.css';
+	$newJSFilePath               = get_stylesheet_directory() . '/uix-products-custom.js';
+	$newJSFilePath2              = get_stylesheet_directory() . '/assets/js/uix-products-custom.js';
+	$org_cssname_uix_products   = UixProducts::core_css_file( 'name' );
+	$org_csspath_uix_products   = UixProducts::core_css_file();
+	$org_jsname_uix_products    = UixProducts::core_js_file( 'name' );
+	$org_jspath_uix_products    = UixProducts::core_js_file();
 
+	if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) || file_exists( $newJSFilePath ) || file_exists( $newJSFilePath2 ) ) {
+		$filetype = 'theme';
+		
+		//CSS file directory
+		$filepath = '';
+		if ( file_exists( $newFilePath2 ) ) {
+			$filepath = 'assets/css/';
+		}
+		
+		//Javascript file directory
+		$jsfilepath = '';
+		if ( file_exists( $newJSFilePath2 ) ) {
+			$jsfilepath = 'assets/js/';
+		}	
+		
+		
+	} else {
+		$filetype   = 'plugin';
+		
+		//CSS file directory
+		$filepath   = 'assets/css/';
+		
+		//Javascript file directory
+		$jsfilepath = 'assets/js/';
+	}
+	
 ?>
 
     <form method="post" action="">
@@ -41,12 +75,22 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
         <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
         <?php wp_nonce_field( 'uix_products_customcss' ); ?>
         
-        <h4><?php _e( 'You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original <code>.css</code> files.', 'uix-products' ); ?></h4>
+        
+	   	<p class="uix-bg-custom-desc">
+		   <?php _e( '1) Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-products-custom.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Slideshow will use it as a default style sheet instead of the "<a href="'.$org_csspath_uix_products.'" target="_blank"><strong>uix-products.css</strong></a>" to your WordPress Theme. Of course, Uix Slideshow\'s function of "Custom CSS" is still valid.', 'uix-products' ); ?>
+
+		</p>    
+		<p class="uix-bg-custom-desc">
+		   <?php _e( '2) Making a new javascrpt (.js) document which name to <strong>uix-products-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Slideshow will use it as a default script instead of the "<a href="'.$org_jspath_uix_products.'" target="_blank"><strong>uix-products.js</strong></a>" to your WordPress Theme.', 'uix-products' ); ?>
+
+		</p>      
             
         <table class="form-table">
           <tr>
             <th scope="row">
               <?php _e( 'Paste your CSS code', 'uix-products' ); ?>
+              <hr>
+              <p class="uix-bg-custom-desc-note"><?php _e( 'You could add new styles code to your website, without modifying original .css files.', 'uix-products' ); ?></p>
             </th>
             <td>
               <textarea name="uix_products_opt_cssnewcode" class="regular-text" rows="25" style="width:98%;"><?php echo esc_textarea( get_option( 'uix_products_opt_cssnewcode' ) ); ?></textarea>
@@ -56,29 +100,6 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
         
           
 <?php
-
-	$newFilePath                = get_stylesheet_directory() . '/uix-products-custom.css';
-	$newFilePath2               = get_stylesheet_directory() . '/assets/css/uix-products-custom.css';
-	$org_cssname_uix_products   = UixProducts::core_css_file( 'name' );
-	$org_csspath_uix_products   = UixProducts::core_css_file();
-	
-
-	if ( file_exists( $newFilePath ) || file_exists( $newFilePath2 ) ) {
-		$filetype = 'theme';
-		
-		//CSS file directory
-		$filepath = '';
-		
-		if ( file_exists( $newFilePath2 ) ) {
-			$filepath = 'assets/css/';
-		}
-		
-	} else {
-		$filetype = 'plugin';
-		$filepath = 'assets/css/';
-	}
-	
-
 
 	// capture output from WP_Filesystem
 	ob_start();
