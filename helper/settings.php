@@ -158,8 +158,8 @@ function uix_products_options_page(){
 			'title'   =>  __( '<i class="dashicons dashicons-welcome-view-site"></i> Custom CSS', 'uix-shortcodes' )
 		);		
 	}
-
 	
+
 	
 	?>
     <h2 class="nav-tab-wrapper">
