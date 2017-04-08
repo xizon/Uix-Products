@@ -149,13 +149,13 @@ function uix_products_options_page(){
 
 	$tabs[] = array(
 	    'tab'     =>  'general-settings', 
-		'title'   =>  __( '<i class="dashicons dashicons-admin-generic"></i> General Settings', 'uix-shortcodes' )
+		'title'   =>  __( '<i class="dashicons dashicons-admin-generic"></i> General Settings', 'uix-products' )
 	);
 	
 	if ( UixProducts::core_css_file_exists() ) {
 		$tabs[] = array(
 			'tab'     =>  'custom-css', 
-			'title'   =>  __( '<i class="dashicons dashicons-welcome-view-site"></i> Custom CSS', 'uix-shortcodes' )
+			'title'   =>  __( '<i class="dashicons dashicons-welcome-view-site"></i> Custom CSS', 'uix-products' )
 		);		
 	}
 	
