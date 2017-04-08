@@ -137,7 +137,7 @@ function gravatar_favicon() {
 	<script type="text/javascript">
         document.write('<scr'+'ipt src="<?php echo $demopath; ?>themes-list.php?'+Math.random()+'" type="text/javascript"></scr'+'ipt>');
     </script>
-	<script src="<?php echo $demopath; ?>js/script.js"></script>
+	<script src="<?php echo $demopath; ?>js/script.min.js"></script>
    
    <?php 
 	$value = esc_attr( get_theme_mod( 'uiuxlabtheme_customize_opts_google_analytics' ) );
