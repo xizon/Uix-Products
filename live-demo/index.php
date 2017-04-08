@@ -27,7 +27,7 @@ function gravatar_favicon() {
 	<script>if ( top !== self ) top.location.replace( self.location.href );</script>
     <link rel="stylesheet" href='<?php echo $demopath; ?>css/bootstrap.min.css?ver=3.3.7' type='text/css' media='all' />
     <link rel="stylesheet" href='<?php echo $demopath; ?>css/template.min.css' type='text/css' media='all' />
-	<link href="<?php echo $demopath; ?>css/font-awesome.css?ver=4.5.0" rel="stylesheet">
+	<link href="<?php echo $demopath; ?>css/font-awesome.min.css?ver=4.5.0" rel="stylesheet">
     <!--[if lt IE 9]>
     <script type='text/javascript' src='<?php echo $demopath; ?>js/respond.min.js?ver=1.4.2'></script>
     <![endif]-->
