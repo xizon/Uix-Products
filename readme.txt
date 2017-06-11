@@ -106,42 +106,42 @@ The version number is the date of the revision of the [guidelines](https://make.
 
 == Changelog ==
 
-= 1.1.3 =
+= 1.1.3 (April 8, 2017) =
 
 * Optimized core stylesheets for front-end.
 * Optimized admin panel of Custom CSS.
 
 
-= 1.1.2 =
+= 1.1.2 (March 25, 2017) =
 
 * Compatible with low version PHP (5.3+)
 * Fixed some minor errors in the low version of PHP.
 
 
-= 1.1.1 =
+= 1.1.1 (March 11, 2017) =
 
 * Optimized front-end style.
 * Add dynamic form fields, meet the needs of custom fields.
 * Enhanced API compatibility for themes.
 
 
-= 1.1.0 =
+= 1.1.0 (March 4, 2017) =
 
 * Fixed an online preview error.
 * Add a responsive preview component.
 
 
-= 1.0.7 =
+= 1.0.7 (March 1, 2017) =
 
 * Optimized binding theme picker.
 
 
-= 1.0.6 =
+= 1.0.6 (January 5, 2017) =
 
 * Optimized gallery selector.
 
 
-= 1.0.5 =
+= 1.0.5 (December 28, 2016) =
 
 * WordPress 4.7 compatible.
 * Enhanced scalability structure.
@@ -151,25 +151,25 @@ The version number is the date of the revision of the [guidelines](https://make.
 
 
 
-= 1.0.3 =
+= 1.0.3 (November 22, 2016) =
 
 * Optimized enqueue scripts for front-end.
 * Fixed some bugs.
 
 
-= 1.0.2 =
+= 1.0.2 (October 19, 2016) =
 
 * Fixed some bugs.
 
 
-= 1.0.1 =
+= 1.0.1 (October 17, 2016)  =
 
 * Optimized for tablet display.
 * Improved event binding from the plugin main JavaScript file.
 * Improved the main CSS file.
 
 
-= 1.0.0 =
+= 1.0.0  (September 23, 2016)  =
 
 * First release.
 
