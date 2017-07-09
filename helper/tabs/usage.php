@@ -27,7 +27,7 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
    
         </p>         
         <p>
-           <?php _e( '&nbsp;&nbsp;&nbsp;&nbsp;Please check if you have the 4 template files <code>"content-uix_products.php"</code>, <code>"page-uix_products.php"</code>, <code>"single-uix_products.php"</code> and <code>"taxonomy-uix_products_category.php"</code> in your templates directory. If you can"t find these files, then just copy them from the directory "/wp-content/plugins/uix-products/theme_templates/" to your templates directory.', 'uix-products' ); ?>
+           <?php _e( '&nbsp;&nbsp;&nbsp;&nbsp;Please check if you have the 4 template files <code>"content-uix_products.php"</code>, <code>"tmpl-uix_products.php"</code>, <code>"single-uix_products.php"</code> and <code>"taxonomy-uix_products_category.php"</code> in your templates directory. If you can"t find these files, then just copy them from the directory "/wp-content/plugins/uix-products/theme_templates/" to your templates directory.', 'uix-products' ); ?>
            
           
         </p>  

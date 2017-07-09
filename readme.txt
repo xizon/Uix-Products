@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,7 +57,7 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 
 2. You need to create Uix Products template files in your templates directory. You can create the files on the WordPress admin panel. As a workaround you can use FTP, access the Uix Products template files path (/wp-content/plugins/uix-products/theme_templates/) and upload files to your theme templates directory (/wp-content/themes/{your-theme}/).  
 
-	Please check if you have the 4 template files **'content-uix_products.php'**, **'page-uix_products.php'**, **'single-uix_products.php'**  and **'taxonomy-uix_products_category.php'** in your templates directory. If you can't find these files, then just copy them from the directory '/wp-content/plugins/uix-products/theme_templates/' to your templates directory.
+	Please check if you have the 4 template files **'content-uix_products.php'**, **'tmpl-uix_products.php'**, **'single-uix_products.php'**  and **'taxonomy-uix_products_category.php'** in your templates directory. If you can't find these files, then just copy them from the directory '/wp-content/plugins/uix-products/theme_templates/' to your templates directory.
 
 3. Create a new WordPress file or edit an existing one. Just make sure to select this new created template file as the "Template" for this page from the "Attributes" section. Enter page title like "Product". Save the page and hit "Preview" to see how it looks. ( You should specify the template name, in this case I used **"Uix Products"**. The "Template Name: Uix Products" tells WordPress that this will be a custom page template. )
 
@@ -105,6 +105,12 @@ The version number is the date of the revision of the [guidelines](https://make.
 
 
 == Changelog ==
+
+= 1.1.4 (July 9, 2017) =
+
+* Rename the page templates so that they do not start with "page-".
+
+
 
 = 1.1.3 (April 8, 2017) =
 

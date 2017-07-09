@@ -41,6 +41,12 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 ### Updates
 
+
+##### = 1.1.4 (July 9, 2017) =
+
+* Rename the page templates so that they do not start with "page-".
+
+
 ##### = 1.1.3 (April 8, 2017) =
 
 * Optimized core stylesheets for front-end.
@@ -164,7 +170,7 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 2.You need to create Uix Products template files in your templates directory. You can create the files on the WordPress admin panel. As a workaround you can use FTP, access the Uix Products template files path (`/wp-content/plugins/uix-products/theme_templates/`) and upload files to your theme templates directory (`/wp-content/themes/{your-theme}/`).  
 
 
-Please check if you have the **4** template files `content-uix_products.php`, `page-uix_products.php`, `single-uix_products.php` and `taxonomy-uix_products_category.php` in your templates directory. If you can't find these files, then just copy them from the directory **"/wp-content/plugins/uix-products/theme_templates/"** to your templates directory.
+Please check if you have the **4** template files `content-uix_products.php`, `tmpl-uix_products.php`, `single-uix_products.php` and `taxonomy-uix_products_category.php` in your templates directory. If you can't find these files, then just copy them from the directory **"/wp-content/plugins/uix-products/theme_templates/"** to your templates directory.
 
 ![](https://github.com/xizon/Uix-Products/blob/master/helper/img/temp.jpg)
 
