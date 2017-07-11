@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.1.4
+ * Version:     1.2.1
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -92,9 +92,9 @@ class UixProducts {
 	 */
 	public static function includes() {
 		
-		if ( ! class_exists( 'cmb_uix_Meta_Box' ) ) {
-			require_once UIX_PRODUCTS_PLUGIN_DIR.'post-extensions/custom-metaboxes-and-fields/init.php';
-		}
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/custom-metaboxes/class-custom-metaboxes-init.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/custom-metaboxes/class-custom-metaboxes-cmpt-uploadController.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/options.php';
 		
 	}
 	
@@ -160,7 +160,8 @@ class UixProducts {
 		 ) 
 		 {
 				  
-		     wp_enqueue_style( self::PREFIX . '-products-admin', self::plug_directory() .'style.css', false, self::ver(), 'all' );		
+		     wp_enqueue_style( self::PREFIX . '-products-admin', self::plug_directory() .'admin/css/style.min.css', false, self::ver(), 'all' );
+			 wp_enqueue_script( self::PREFIX . '-products-admin', self::plug_directory() .'admin/js/core.min.js', array( 'jquery' ), self::ver(), true );	
 	  
 		  }
 		
@@ -754,7 +755,7 @@ class UixProducts {
 		  $currentScreen = get_current_screen();
 		
 		  if( $currentScreen->id === "uix_products" ) {
-			  require_once UIX_PRODUCTS_PLUGIN_DIR.'gallery-metabox/init.php';
+			  require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/gallery-metabox/init.php';
 		  }
 		
 	
@@ -762,7 +763,7 @@ class UixProducts {
 	
 	public static function gallery_app() {
 		
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'gallery-metabox/front-display.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/gallery-metabox/front-display.php';
 	
 	}
 	
@@ -1209,18 +1210,6 @@ class UixProducts {
 		
 	}
 	
-
-	/*
-	 * Custom post extensions
-	 *
-	 *
-	 */
-	public static function post_ex() {
-	
-		require_once 'post-extensions/post-extensions-init.php';
-
-		
-	}	
 	
 	
 	/**
@@ -1302,9 +1291,18 @@ class UixProducts {
 		
 	}
 			
+	/**
+	 * Filters content and keeps only allowable HTML elements.
+	 *
+	 */
+	public static function kses( $html ){
+		
+		return wp_kses( $html, wp_kses_allowed_html( 'post' ) );
+
+	}
+	
 	
 	
 }
 
 add_action( 'plugins_loaded', array( 'UixProducts', 'init' ) );
-UixProducts::post_ex();

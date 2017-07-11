@@ -136,10 +136,13 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 						
 						var dialog_uix_products = $( "#uix-products-view-css-container, .uix-products-dialog-mask" );  
 						
-						$( "#uix_products_view_css" ).click( function() {
+						
+						$( "#uix_products_view_css" ).on( "click", function( e ) {
+						    e.preventDefault();
 							dialog_uix_products.show();
 						});
-						$( "#uix_products_close_css" ).click( function() {
+						$( "#uix_products_close_css" ).on( "click", function( e ) {
+						    e.preventDefault();
 							dialog_uix_products.hide();
 						});
 					

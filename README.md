@@ -42,6 +42,14 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 ### Updates
 
 
+##### = 1.2.1 (July 11, 2017) =
+
+* Remove the "CMB" classes and files.
+* Using "Uix_Products_Uix_Custom_Metaboxes" class instead of "CMB" class. (More fast, simple and compatible).
+* Remove the "CMB" classes and files.
+* Rebuild part of the background file directory.
+
+
 ##### = 1.1.4 (July 9, 2017) =
 
 * Rename the page templates so that they do not start with "page-".
@@ -154,7 +162,6 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 #####I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
 - [Gallery Metabox](https://github.com/uixplorer/gallery-metabox)
-- [Custom Metaboxes and Fields](https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress)
 - [Flexslider](https://github.com/woothemes/FlexSlider)
 - [Shuffle](https://github.com/Vestride/Shuffle)
 - [Switcheroo](https://github.com/OriginalEXE/Switcheroo)
