@@ -42,7 +42,7 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 ### Updates
 
 
-##### = 1.2.1 (July 11, 2017) =
+##### = 1.2.2 (July 11, 2017) =
 
 * Remove the "CMB" classes and files.
 * Using "Uix_Products_Uix_Custom_Metaboxes" class instead of "CMB" class. (More fast, simple and compatible).

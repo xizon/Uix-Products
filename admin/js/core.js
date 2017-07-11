@@ -128,7 +128,7 @@ var UixProducts_uixCustomMetaboxes = function( obj ) {
 				UixProducts_uixCustomMetaboxesConstructor.prototype.color.call( this, '.custom_color_selector' );
 				UixProducts_uixCustomMetaboxesConstructor.prototype.tabs.call( this, '.custom_tabsgroup_selector' );
 				UixProducts_uixCustomMetaboxesConstructor.prototype.date.call( this, '.custom_date_selector' );
-				UixProducts_uixCustomMetaboxesConstructor.prototype.upload.call( this, '.upload-media-btn' );
+				UixProducts_uixCustomMetaboxesConstructor.prototype.upload.call( this, '.custom_uploadimg_selector' );
 				UixProducts_uixCustomMetaboxesConstructor.prototype.customAttrs.call( this, '.custom_attributes_field_wrapper', 20 );
 	
 				
