@@ -1,12 +1,27 @@
-/* ====================================================== 
-   Pagination
-/* ====================================================== */
-.page-numbers-hide {
-	display: none !important;
-}
+/*
+
+	 Uix Products
+	 Plugin URI: https://uiux.cc/wp-plugins/uix-products/
+	 Author: UIUX Lab
+	 Author URI: https://uiux.cc
+	 License: GPLv2 or later
+
+	
+	TABLE OF CONTENTS
+	---------------------------
+	
+	1. Products Container  
+	2. Products Tiles   
+	3. Products Categories  
+	4. Products Pagination       
+	5. Products for Widget  
+	6. Custom Single Page   
+	7. Custom Flexslider
+
+*/
 
 /* ====================================================== 
-   Products Container   
+   1. Products Container   
 /* ====================================================== */
 .uix-products-section {
 	margin: 0 auto;
@@ -25,7 +40,7 @@
 
 
 /* ====================================================== 
-   Products Tiles   
+   2. Products Tiles   
 /* ====================================================== */
 .uix-products-container {
 	position: relative;
@@ -109,10 +124,13 @@
 	position: relative;
 	padding-top: .625em;
 	display: block;
-	width: 100%;
+	width: calc( 100% - 50px );
 	font-weight: 400;
 	font-size: 1em;
 	line-height: 1.5;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -237,7 +255,7 @@
 }
 
 /* ====================================================== 
-   Products Categories            
+   3. Products Categories            
 /* ====================================================== */
 .uix-products-cat-list {
     clear: both;
@@ -287,7 +305,7 @@
 }
 
 /* ====================================================== 
-   Products Pagination             
+   4. Products Pagination             
 /* ====================================================== */
 .uix-products-pagination-container ul, 
 .uix-products-pagination-single ul {
@@ -361,10 +379,14 @@
     margin: 0;
 }
 
+/* Only "next" and "previous" button */
+.page-numbers-hide {
+	display: none !important;
+}
 
 
 /* ====================================================== 
-   Products for Widget          
+   5. Products for Widget          
 /* ====================================================== */
 .uix-products-widget:after,
 .uix-products-widget:before {
@@ -438,7 +460,7 @@
 }
 
 /* ====================================================== 
-   Custom Single Page   
+   6. Custom Single Page   
 /* ====================================================== */
 .uix-products-single-main,
 .uix-products-single-side {
@@ -497,7 +519,7 @@
 
 
 /* ====================================================== 
-   Custom Flexslider      
+   7. Custom Flexslider      
 /* ====================================================== */
 .custom-uix-products-flexslider-loading {
     background: url("data:image/gif;base64,R0lGODlhEAAQALMMAKqooJGOhp2bk7e1rZ2bkre1rJCPhqqon8PBudDOxXd1bISCef///wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFAAAMACwAAAAAEAAQAAAET5DJyYyhmAZ7sxQEs1nMsmACGJKmSaVEOLXnK1PuBADepCiMg/DQ+/2GRI8RKOxJfpTCIJNIYArS6aRajWYZCASDa41Ow+Fx2YMWOyfpTAQAIfkEBQAADAAsAAAAABAAEAAABE6QyckEoZgKe7MEQMUxhoEd6FFdQWlOqTq15SlT9VQM3rQsjMKO5/n9hANixgjc9SQ/CgKRUSgw0ynFapVmGYkEg3v1gsPibg8tfk7CnggAIfkEBQAADAAsAAAAABAAEAAABE2QycnOoZjaA/IsRWV1goCBoMiUJTW8A0XMBPZmM4Ug3hQEjN2uZygahDyP0RBMEpmTRCKzWGCkUkq1SsFOFQrG1tr9gsPc3jnco4A9EQAh+QQFAAAMACwAAAAAEAAQAAAETpDJyUqhmFqbJ0LMIA7McWDfF5LmAVApOLUvLFMmlSTdJAiM3a73+wl5HYKSEET2lBSFIhMIYKRSimFriGIZiwWD2/WCw+Jt7xxeU9qZCAAh+QQFAAAMACwAAAAAEAAQAAAETZDJyRCimFqbZ0rVxgwF9n3hSJbeSQ2rCWIkpSjddBzMfee7nQ/XCfJ+OQYAQFksMgQBxumkEKLSCfVpMDCugqyW2w18xZmuwZycdDsRACH5BAUAAAwALAAAAAAQABAAAARNkMnJUqKYWpunUtXGIAj2feFIlt5JrWybkdSydNNQMLaND7pC79YBFnY+HENHMRgyhwPGaQhQotGm00oQMLBSLYPQ9QIASrLAq5x0OxEAIfkEBQAADAAsAAAAABAAEAAABE2QycmUopham+da1cYkCfZ94UiW3kmtbJuRlGF0E4Iwto3rut6tA9wFAjiJjkIgZAYDTLNJgUIpgqyAcTgwCuACJssAdL3gpLmbpLAzEQA7") no-repeat center center;

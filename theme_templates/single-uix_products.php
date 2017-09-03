@@ -165,16 +165,7 @@ $items_prevnext = new WP_Query( $arg_prevnext );
                             <?php the_excerpt(); ?>
                         </p>
                     <?php } ?>      
-                     
-                    <hr>
-                     
-                    <div class="uix-products-pagination uix-products-pagination-single">
-                        <ul>
-                            <?php previous_post_link( '<li class="previous">%link</li>', wp_kses( __( '&larr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ) ); ?>
-                            <?php next_post_link( '<li class="next">%link</li>', wp_kses( __( '&rarr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ) ); ?>
-                        </ul>
-                    </div>
-
+           
                 
                 <?php } else { ?>
                 
@@ -315,44 +306,17 @@ $items_prevnext = new WP_Query( $arg_prevnext );
                     <?php } ?>  
                              
 
-                    <hr>
-                     
-                    <div class="uix-products-pagination uix-products-pagination-single">
-                        <ul>
-						   <?php
-                            if ( $items_prevnext->have_posts() ) { 
-                                $post_ids = array();
-                                while ( $items_prevnext->have_posts() ) :
-                                    $items_prevnext->the_post();
-                                    $post_ids[] += get_the_ID();
-                                endwhile;
-                                wp_reset_postdata();
-                                
-                                $current = array_search( get_the_ID(), $post_ids );
-                                $nextID  = ( $current > 0 ) ? $post_ids[ $current - 1 ] : '';
-                                $prevID  = ( $current < count( $post_ids ) - 1 ) ? $post_ids[ $current + 1 ] : '';
-                            }
-                            ?> 
-                        
-                            
-                            <?php if ( !empty( $prevID ) ) { ?>
-                               <li class="previous">
-                                   <a href="<?php echo esc_url( get_permalink( $prevID ) ); ?>"><?php echo wp_kses( __( '&larr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ); ?></a>
-                               </li>
-                            <?php } ?>
-                            
-                            <?php if ( !empty( $nextID ) ) { ?>
-                               <li class="next">
-                                   <a href="<?php echo esc_url( get_permalink( $nextID ) ); ?>"><?php echo wp_kses( __( '&rarr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ); ?></a>
-                               </li>
-                            <?php } ?>
-                                
-                        </ul>
-                    </div>
-
-                
                 <?php } ?>
              
+
+				<hr>
+
+				<div class="uix-products-pagination uix-products-pagination-single">
+					<ul>
+						<?php previous_post_link( '<li class="previous">%link</li>', wp_kses( __( '&larr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ) ); ?>
+						<?php next_post_link( '<li class="next">%link</li>', wp_kses( __( '&rarr;', 'uix-products' ), wp_kses_allowed_html( 'post' ) ) ); ?>
+					</ul>
+				</div>
 
                 
                 

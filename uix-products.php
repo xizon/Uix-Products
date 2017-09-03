@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.2.2
+ * Version:     1.2.3
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -927,87 +927,61 @@ class UixProducts {
 	
 
 	/*
-	 * Numbered Pagination
+	 * Use numeric Paginate
 	 *
 	 *
 	 */
-	public static function pagination( $show=3, $custom_prev = '&larr; Previous', $custom_next = 'Next &rarr;', $li = true, $inf_enable = false, $custom_query = '' ) {
+	public static function pagination( $show = 3, $custom_prev = '&larr; Previous', $custom_next = 'Next &rarr;', $li = true, $inf_enable = false ) {
 	
 
-		// Get currect number of pages and define total var
-		if ( $custom_query ) {
-			$total = $custom_query->max_num_pages;
-		} else {
-			global $wp_query;
-			$total = $wp_query->max_num_pages;
+		//static front page & custom page @https://codex.wordpress.org/Pagination
+		if ( get_query_var( 'paged' ) ) { 
+			$paged = get_query_var( 'paged' ); 
+		} elseif ( get_query_var( 'page' ) ) { 
+			$paged = get_query_var( 'page' ); 
+		} else { 
+			$paged = 1; 
 		}
-		
 
-		// Display pagination if total var is greater then 1 ( current query is paginated )
-		if ( $total > 1 )  {
+		the_posts_pagination( array(
+			'mid_size'           => $show,
+			'prev_text'          => $custom_prev,
+			'next_text'          => $custom_next,
+		) ); 
 
-			// Set current page if not defined
-			if ( ! $current_page = get_query_var( 'paged') ) {
-				 $current_page = 1;
-			 }
-			
-			if ( !$inf_enable ) {
-				the_posts_pagination( array(
-					'prev_text'          => $custom_prev,
-					'next_text'          => $custom_next,
-				) );
-			}
-	
-		}
 	}
 
 
 	/*
-	 * Load more button
+	 * Only "next" and "previous" button
 	 *
 	 *
 	 */
 	public static function pagejump( $custom_prev = '&larr; Previous', $custom_next = 'Next &rarr;', $li = true, $inf_enable = false, $pages = '' ) {
 	
-		// Set correct paged var
-		global $paged;
-	
-		
-		if ( empty( $paged ) ) {
-			$paged = 1;
+		//static front page & custom page @https://codex.wordpress.org/Pagination
+		if ( get_query_var( 'paged' ) ) { 
+			$paged = get_query_var( 'paged' ); 
+		} elseif ( get_query_var( 'page' ) ) { 
+			$paged = get_query_var( 'page' ); 
+		} else { 
+			$paged = 1; 
 		}
 
-		// Get pages var
-		if ( ! $pages ) {
-			global $wp_query;
-			$pages = $wp_query->max_num_pages;
-			if ( ! $pages ) {
-				$pages = 1;
-			}
-		}
+		ob_start();
+			the_posts_pagination( array(
+				'prev_text'          => $custom_prev,
+				'next_text'          => $custom_next,
+			) ); 
+			$out = ob_get_contents();
+		ob_end_clean();	
 
-		// Display next/previous pagination
-		if ( 1 != $pages ) {
-			
-			if ( !$inf_enable ) {
-				ob_start();
-					the_posts_pagination( array(
-						'prev_text'          => $custom_prev,
-						'next_text'          => $custom_next,
-					) );
-					$out = ob_get_contents();
-				ob_end_clean();	
-				
-				$out = str_replace( 'next page-numbers page-numbers-hide', 'next page-numbers', 
-					   str_replace( 'prev page-numbers page-numbers-hide', 'prev page-numbers', 
-					   str_replace( 'page-numbers', 'page-numbers page-numbers-hide',
-					   $out ) ) );
-			
-				echo $out;
+		$out = str_replace( 'next page-numbers page-numbers-hide', 'next page-numbers', 
+			   str_replace( 'prev page-numbers page-numbers-hide', 'prev page-numbers', 
+			   str_replace( 'page-numbers', 'page-numbers page-numbers-hide',
+			   $out ) ) );
 
-			}
-
-		}
+		echo $out;
 	
 
 	}

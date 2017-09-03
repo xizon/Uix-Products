@@ -39,7 +39,25 @@ This plugin enables a products post type and taxonomies. You can add a new artwo
 
 
 
+### Frequently Asked Questions
+
+##### FAQ 1: How to customize the Uix Products templates by your theme location?
+
+Occasionally you may wish to edit one of the templates that come with Uix Products. Instead of editing the templates right in the plugin you should move them to your theme, so that your changes aren\'t lost when you update the Uix Products plugin. As a workaround you can use FTP, access the Uix Products template files path (/wp-content/plugins/uix-products/theme_templates/) and upload files to your theme templates directory (/wp-content/themes/{your-theme}/).  
+
+##### FAQ 2: How to customize page options and stylesheets?
+
+Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> Settings -> Custom CSS"**
+
+
+
 ### Updates
+
+##### = 1.2.3 (September 2, 2017) =
+
+* Optimize the default paging function.
+* Optimize the default front end style.
+* Optimize the default page templates.
 
 
 ##### = 1.2.2 (July 11, 2017) =

@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,9 +82,15 @@ Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/p
 
 == Frequently Asked Questions ==
 
-= What's with the version numbers? =
+= FAQ 1: How to customize the Uix Products templates by your theme location? =
 
-The version number is the date of the revision of the [guidelines](https://make.wordpress.org/themes/handbook/review/) used to create it.
+Occasionally you may wish to edit one of the templates that come with Uix Products. Instead of editing the templates right in the plugin you should move them to your theme, so that your changes aren\'t lost when you update the Uix Products plugin. As a workaround you can use FTP, access the Uix Products template files path (/wp-content/plugins/uix-products/theme_templates/) and upload files to your theme templates directory (/wp-content/themes/{your-theme}/).  
+
+= FAQ 2: How to customize page options and stylesheets? =
+
+Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> Settings -> Custom CSS"**
+
+
 
 
 == Screenshots ==
@@ -105,6 +111,13 @@ The version number is the date of the revision of the [guidelines](https://make.
 
 
 == Changelog ==
+
+= 1.2.3 (September 2, 2017) =
+
+* Optimize the default paging function.
+* Optimize the default front end style.
+* Optimize the default page templates.
+
 
 
 = 1.2.2 (July 11, 2017) =
