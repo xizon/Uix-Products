@@ -53,6 +53,15 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+
+
+##### = 1.2.4 (September 17, 2017) =
+
+* Optimized the directory and file structure, delete the unnecessary files and codes.
+* Improve the Uix Products assistant(helper) experience in admin panel.
+* Resolved the possible permissions issues to create a template files.
+
+
 ##### = 1.2.3 (September 2, 2017) =
 
 * Optimize the default paging function.
@@ -155,7 +164,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 - WP 4.8
 
 
-###Screenshot
+### Screenshot
 
 ![](https://github.com/xizon/Uix-Products/blob/master/screenshots/screenshot-1.jpg)
 
@@ -175,9 +184,9 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 
-###Credits
+### Credits
 
-#####I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
+##### I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
 - [Gallery Metabox](https://github.com/uixplorer/gallery-metabox)
 - [Flexslider](https://github.com/woothemes/FlexSlider)
@@ -185,12 +194,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 - [Switcheroo](https://github.com/OriginalEXE/Switcheroo)
 
 
-###How to use?
+### How to use?
 
 1.After activating your theme, you can see a prompt pointed out as absolutely critical. Go to **"Appearance -> Install Plugins"**.
 Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-content/plugins/) And upload files there.)
 
-![](https://github.com/xizon/Uix-Products/blob/master/helper/img/plug.jpg)
 
 2.You need to create Uix Products template files in your templates directory. You can create the files on the WordPress admin panel. As a workaround you can use FTP, access the Uix Products template files path (`/wp-content/plugins/uix-products/theme_templates/`) and upload files to your theme templates directory (`/wp-content/themes/{your-theme}/`).  
 

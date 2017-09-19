@@ -762,3 +762,172 @@ html[xmlns] .custom-uix-products-flexslider .custom-uix-products-slides {
 .custom-uix-products-flex-dir.custom-uix-products-flex-dir-next:before {
   content: '\f002';
 }
+
+
+
+/*
+
+	 Uix Products  (RTL)
+	 Plugin URI: https://uiux.cc/wp-plugins/uix-products/
+	 Author: UIUX Lab
+	 Author URI: https://uiux.cc
+	 License: GPLv2 or later
+
+	
+	TABLE OF CONTENTS
+	---------------------------
+	
+	1. Products Tiles   
+	2. Products Categories  
+	3. Products Pagination       
+	4. Products for Widget  
+	5. Custom Single Page   
+	6. Custom Flexslider
+
+*/
+
+
+/* ====================================================== 
+   1. Products Tiles   
+/* ====================================================== */
+.rtl .uix-products-container {
+    margin: -2.5em -2.5em 0 0;
+}
+
+
+.rtl .uix-products-container .uix-products-item {
+    margin: 1.5em 2.5em 2.5em 0;
+    float: right;
+	
+}
+
+
+.rtl .uix-products-item .cover:before {
+    left: auto;
+	right: 0;
+}
+
+@media screen and (max-width: 1280px) {
+	
+    .rtl .uix-products-container {
+        margin: -1.25em -1.25em 0 0;
+    }
+
+    .rtl .uix-products-container .uix-products-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+
+    .rtl .uix-products-container.small .uix-products-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+
+    .rtl .uix-products-container.large .uix-products-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .rtl .uix-products-container {
+        margin: -2.5em -2.5em 0 0;
+    }
+
+    .rtl .uix-products-container .uix-products-item ,
+	.rtl .uix-products-container.small .uix-products-item,
+	.rtl .uix-products-container.large .uix-products-item {
+        margin: 2.5em 2.5em 0 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .rtl .uix-products-container {
+        margin: -1.25em -1.25em 0 0;
+    }
+
+    .rtl .uix-products-container .uix-products-item,
+	.rtl .uix-products-container.small .uix-products-item,
+	.rtl .uix-products-container.large .uix-products-item {
+        margin: 1.25em 1.25em 0 0;
+    }
+}
+
+/* ====================================================== 
+   2. Products Categories            
+/* ====================================================== */
+.rtl .uix-products-cat-list li {
+    margin-right: auto;
+	margin-left: 20px;
+}
+
+.rtl .uix-products-cat-list li ul.children {
+    float: right;
+}
+
+
+/* ====================================================== 
+   3. Products Pagination             
+/* ====================================================== */
+.rtl .uix-products-pagination-single ul .previous {
+    float: right;
+}
+
+.rtl .uix-products-pagination-single ul .next {
+    float: left;
+}
+
+
+/* ====================================================== 
+   4. Products for Widget          
+/* ====================================================== */
+.rtl .uix-products-widget .uix-products-recent-item .item-thumb {
+    float: right;
+    margin-right: auto;
+    margin-left: 1em;
+    text-align: right;
+}
+
+.rtl .uix-products-widget .uix-products-recent-item .item-info {
+    float: right;
+}
+
+
+/* ====================================================== 
+   5. Custom Single Page   
+/* ====================================================== */
+
+.rtl .uix-products-single-main {
+    float: right;
+}
+
+.rtl .uix-products-single-side {
+    float: left;
+}
+
+
+.rtl .uix-products-single-side .title:after {
+	padding-left: auto;
+	padding-right: 2px;
+	
+}
+
+
+/* ====================================================== 
+   6. Custom Flexslider      
+/* ====================================================== */
+.rtl .flexslider,
+.rtl .custom-uix-products-flexslider {
+    direction: ltr !important;
+}
+
+
+.rtl .custom-uix-products-flex-control-paging li {
+    margin-right: auto;
+	margin-left: 10px;
+}
+
+
+.rtl .custom-uix-products-flex-control-thumbs li {
+    float: right;
+}
+

@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 4.8
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,9 +42,9 @@ https://www.youtube.com/watch?v=1tqTc6kW7_g
 
 You can overview the original styles to overwrite it. It will be on creating new styles to your website, without modifying original .css files. Go to "Uix Products" in the WordPress Administration Screens, then link to a specific tab like "Custom CSS".
 
-> There is a second way, make a new Cascading Style Sheet (CSS) document which name to <strong>"uix-products-custom.css"</strong> to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/css/" ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Products will use it as a default style sheet to your WordPress Theme. Of course, Uix Products's function of "Custom CSS" is still valid.
+> There is a second way, make a new Cascading Style Sheet (CSS) document which name to **"uix-products-custom.css"** to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/css/" ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Products will use it as a default style sheet to your WordPress Theme. Of course, Uix Products's function of "Custom CSS" is still valid.
 
-> Note: Making a new javascrpt (.js) document which name to <strong>"uix-products-custom.js"</strong> to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/js/" ). Once you have created an existing JS file, Uix Products will use it as a default script to your WordPress Theme.
+> Note: Making a new javascrpt (.js) document which name to **"uix-products-custom.js"** to your templates directory ( "/wp-content/themes/{your-theme}/" or "/wp-content/themes/{your-theme}/assets/js/" ). Once you have created an existing JS file, Uix Products will use it as a default script to your WordPress Theme.
 
 
 
@@ -111,6 +111,15 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 == Changelog ==
+
+
+= 1.2.4 (September 17, 2017) =
+
+* Optimized the directory and file structure, delete the unnecessary files and codes.
+* Improve the Uix Products assistant(helper) experience in admin panel.
+* Resolved the possible permissions issues to create a template files.
+
+
 
 = 1.2.3 (September 2, 2017) =
 

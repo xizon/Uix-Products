@@ -79,22 +79,46 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
         <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
         <?php wp_nonce_field( 'uix_products_customcss' ); ?>
         
-        
-	   	<p class="uix-bg-custom-desc">
-		   <?php _e( '1) Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-products-custom.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Products will use it as a default style sheet instead of the "<a href="'.$org_csspath_uix_products.'" target="_blank"><strong>uix-products.css</strong></a>" to your WordPress Theme. Of course, Uix Products\'s function of "Custom CSS" is still valid.', 'uix-products' ); ?>
+          
+          <?php if ( UixProducts::theme_core_css_file_exists() ) :  ?>
+				<p class="uix-bg-custom-info-msg">
+					<i class="dashicons dashicons-smiley"></i> <?php _e( 'You have already used custom stylesheet files.', 'uix-products' ); ?>
+				</p>  
+          <?php else:  ?>
+				
+				<p class="uix-bg-custom-desc">
 
-		</p>    
-		<p class="uix-bg-custom-desc">
-		   <?php _e( '2) Making a new javascrpt (.js) document which name to <strong>uix-products-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Products will use it as a default script instead of the "<a href="'.$org_jspath_uix_products.'" target="_blank"><strong>uix-products.js</strong></a>" to your WordPress Theme.', 'uix-products' ); ?>
 
-		</p>      
+				   <?php
+				   printf( __( '- Making a new Cascading Style Sheet (CSS) document which name to <strong>uix-products-custom.css</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/css/</code> ). You can connect to your site via an FTP client, make the changes and then upload the file back to the server. Once you have created an existing CSS file, Uix Products will use it as a default style sheet instead of the <a href="%1$s" target="_blank">%2$s</a> to your WordPress Theme. Of course, Uix Products\'s function of "Custom CSS" is still valid.', 'uix-products' ), $org_csspath_uix_products, $org_cssname_uix_products );   
+				   ?>
+
+				</p>    
+          <?php endif;  ?>      
             
+          <?php if ( UixProducts::theme_core_js_file_exists() ) :  ?>
+				<p class="uix-bg-custom-info-msg">
+					<i class="dashicons dashicons-smiley"></i> <?php _e( 'You have already used custom JavaScript files.', 'uix-products' ); ?>
+				</p>  
+          <?php else:  ?>  
+				<p class="uix-bg-custom-desc">
+
+				   <?php
+				   printf( __( '- Making a new javascrpt (.js) document which name to <strong>uix-products-custom.js</strong> to your templates directory ( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}/assets/js/</code> ). Once you have created an existing JS file, Uix Products will use it as a default script instead of the "<a href="%1$s" target="_blank">%2$s</a>" to your WordPress Theme.', 'uix-products' ), $org_jspath_uix_products, $org_jsname_uix_products );   
+				   ?>
+
+				</p>    
+         
+          <?php endif;  ?>      
+            
+                      
         <table class="form-table">
           <tr>
             <th scope="row">
               <?php _e( 'Paste your CSS code', 'uix-products' ); ?>
               <hr>
               <p class="uix-bg-custom-desc-note"><?php _e( 'You could add new styles code to your website, without modifying original .css files.', 'uix-products' ); ?></p>
+              <p class="uix-bg-custom-desc-note"><?php _e( 'Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets.', 'uix-products' ); ?></p>
             </th>
             <td>
               <textarea name="uix_products_opt_cssnewcode" class="regular-text" rows="25" style="width:98%;"><?php echo esc_textarea( get_option( 'uix_products_opt_cssnewcode' ) ); ?></textarea>
@@ -118,55 +142,33 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'custom-css' ) {
 		
 		echo '
 		
-		         <p>'.__( 'CSS file root directory:', 'uix-products' ).' 
-				     <a href="javascript:" id="uix_products_view_css" >'.$org_csspath_uix_products.'</a>
-					 <div class="uix-products-dialog-mask"></div>
-					 <div class="uix-products-dialog" id="uix-products-view-css-container">  
+		         <div class="uix-popwin-dialog-wrapper">
+				     '.esc_html__( 'CSS file root directory:', 'uix-products' ).' 
+				     <a href="javascript:" class="uix-popwin-viewcss-btn">'.$org_csspath_uix_products.'</a>
+					 <div class="uix-popwin-dialog-mask"></div>
+					 <div class="uix-popwin-dialog">  
 						<textarea rows="15" style=" width:95%;" class="regular-text">'.$style_org_code_uix_products.'</textarea>
-						<a href="javascript:" id="uix_products_close_css" class="close button button-primary">'.__( 'Close', 'uix-products' ).'</a>  
+						<a href="javascript:" class="close button button-primary">'.esc_html__( 'Close', 'uix-products' ).'</a>  
 					</div>
-				 </p><hr />
-				<script type="text/javascript">
-					
-				( function($) {
-					
-					"use strict";
-					
-					$( function() {
-						
-						var dialog_uix_products = $( "#uix-products-view-css-container, .uix-products-dialog-mask" );  
-						
-						
-						$( "#uix_products_view_css" ).on( "click", function( e ) {
-						    e.preventDefault();
-							dialog_uix_products.show();
-						});
-						$( "#uix_products_close_css" ).on( "click", function( e ) {
-						    e.preventDefault();
-							dialog_uix_products.hide();
-						});
-					
-			
-					} );
-					
-				} ) ( jQuery );
+				 </div>
 				
-				</script>
-		
 		';	
 
 	} else {
 		
 		echo '
-		         <p>'.__( 'CSS file root directory:', 'uix-products' ).' 
+		         <div>'.esc_html__( 'CSS file root directory:', 'uix-products' ).' 
 				     <a href="'.$org_csspath_uix_products.'" target="_blank">'.$org_csspath_uix_products.'</a>
-				 </p><hr />
+				 </div>
 
 		';	
 		
 		
 	}
 ?>
+       
+         
+         <hr>
         
         
         <?php submit_button(); ?>

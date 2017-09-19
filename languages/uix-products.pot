@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-11 16:25+0000\n"
+"POT-Creation-Date: 2017-09-19 12:41+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -27,39 +27,48 @@ msgstr ""
 msgid "Uix Products Settings"
 msgstr ""
 
-#: uix-products.php:239 uix-products.php:297
+#: uix-products.php:239 uix-products.php:314
 msgid "Settings"
 msgstr ""
 
-#: uix-products.php:254 uix-products.php:255
-msgid "Custom CSS"
-msgstr ""
-
-#: uix-products.php:263 uix-products.php:264
-msgid "Helper"
-msgstr ""
-
-#: uix-products.php:298 uix-products.php:351 helper/settings.php:130
+#: uix-products.php:254 uix-products.php:255 uix-products.php:315
+#: uix-products.php:368 helper/settings.php:59
 msgid "How to use?"
 msgstr ""
 
-#: uix-products.php:350
+#: uix-products.php:262 uix-products.php:263 helper/settings.php:69
+msgid "Template Files"
+msgstr ""
+
+#: uix-products.php:271 uix-products.php:272
+msgid "Custom CSS"
+msgstr ""
+
+#: uix-products.php:280
+msgid "Helper"
+msgstr ""
+
+#: uix-products.php:281 helper/settings.php:55
+msgid "About"
+msgstr ""
+
+#: uix-products.php:367
 msgid ""
 "Do you want to create a products website with WordPress?  Learn how to add "
 "products to your themes."
 msgstr ""
 
-#: uix-products.php:366
+#: uix-products.php:383
 msgid ""
 "<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: uix-products.php:366 helper/tabs/usage.php:22
+#: uix-products.php:383 helper/tabs/usage.php:29
 msgid "Create now!"
 msgstr ""
 
-#: uix-products.php:366 helper/tabs/temp.php:73
+#: uix-products.php:383 helper/tabs/temp.php:61
 msgid ""
 "As a workaround you can use FTP, access the Uix Products template files path "
 "<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
@@ -67,46 +76,42 @@ msgid ""
 "/</code>. "
 msgstr ""
 
-#: uix-products.php:458
+#: uix-products.php:475
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
 "write-blog\"></i> Edit this template</a>"
 msgstr ""
 
-#: uix-products.php:530 uix-products.php:605
+#: uix-products.php:605
+msgid "Operation successfully completed!"
+msgstr ""
+
+#: uix-products.php:615
 msgid ""
-"<div class=\"notice notice-success\"><p>Operation successfully completed!</p>"
-"</div>"
+"There was a problem copying your template files:</strong> Please check your "
+"server settings. You can upload files to theme templates directory using FTP."
 msgstr ""
 
-#: uix-products.php:532
+#: uix-products.php:623
 msgid ""
-"<div class=\"notice notice-error\"><p><strong>There was a problem copying "
-"your template files:</strong> Please check your server settings. You can "
-"upload files to theme templates directory using FTP.</p></div>"
+"There was a problem removing your template files:</strong> Please check your "
+"server settings. You can upload files to theme templates directory using FTP."
 msgstr ""
 
-#: uix-products.php:537
-msgid ""
-"<div class=\"notice notice-error\"><p><strong>There was a problem removing "
-"your template files:</strong> Please check your server settings. You can "
-"upload files to theme templates directory using FTP.</p></div>"
+#: uix-products.php:626
+msgid "Remove successful!"
 msgstr ""
 
-#: uix-products.php:540
-msgid "<div class=\"notice notice-success\"><p>Remove successful!</p></div>"
-msgstr ""
-
-#: uix-products.php:702
+#: uix-products.php:834
 msgid "Primary Sidebar"
 msgstr ""
 
-#: uix-products.php:704
+#: uix-products.php:836
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: uix-products.php:922
+#: uix-products.php:1054
 msgid "Load More"
 msgstr ""
 
@@ -257,7 +262,7 @@ msgstr ""
 msgid "Your Item Version, E.g. 1.0.0"
 msgstr ""
 
-#: admin/options.php:199 theme_templates/single-uix_products.php:237
+#: admin/options.php:199 theme_templates/single-uix_products.php:228
 msgid "Compatible With"
 msgstr ""
 
@@ -265,15 +270,15 @@ msgstr ""
 msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr ""
 
-#: admin/options.php:206 theme_templates/single-uix_products.php:244
+#: admin/options.php:206 theme_templates/single-uix_products.php:235
 msgid "Compatible Browsers"
 msgstr ""
 
-#: admin/options.php:236 theme_templates/single-uix_products.php:257
+#: admin/options.php:236 theme_templates/single-uix_products.php:248
 msgid "Files Included"
 msgstr ""
 
-#: admin/options.php:263 theme_templates/single-uix_products.php:270
+#: admin/options.php:263 theme_templates/single-uix_products.php:261
 #: helper/tabs/general-settings.php:118
 msgid "Layout"
 msgstr ""
@@ -298,7 +303,7 @@ msgstr ""
 msgid "Static"
 msgstr ""
 
-#: admin/options.php:283 theme_templates/single-uix_products.php:277
+#: admin/options.php:283 theme_templates/single-uix_products.php:268
 msgid "Additional Info"
 msgstr ""
 
@@ -316,7 +321,7 @@ msgid ""
 "Documentation folder)."
 msgstr ""
 
-#: admin/options.php:297 theme_templates/single-uix_products.php:291
+#: admin/options.php:297 theme_templates/single-uix_products.php:282
 msgid "Tags"
 msgstr ""
 
@@ -373,7 +378,7 @@ msgstr ""
 
 #: admin/options.php:418 admin/options.php:553
 #: theme_templates/single-uix_products.php:127
-#: theme_templates/single-uix_products.php:222
+#: theme_templates/single-uix_products.php:213
 msgid "Category"
 msgstr ""
 
@@ -430,35 +435,23 @@ msgstr ""
 msgid "[artwork]"
 msgstr ""
 
-#: helper/settings.php:7
+#: helper/settings.php:33
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: helper/settings.php:112
+#: helper/settings.php:41
 msgid "Uix Products Helper"
 msgstr ""
 
-#: helper/settings.php:126
-msgid "About"
-msgstr ""
-
-#: helper/settings.php:135
+#: helper/settings.php:64
 msgid "Credits"
 msgstr ""
 
-#: helper/settings.php:140
-msgid "Template Files"
-msgstr ""
-
-#: helper/settings.php:146
-msgid "Products List File"
-msgstr ""
-
-#: helper/settings.php:152
+#: helper/settings.php:75
 msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: helper/settings.php:158
+#: helper/settings.php:81
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
@@ -547,46 +540,44 @@ msgid "Client"
 msgstr ""
 
 #: theme_templates/single-uix_products.php:164
-#: theme_templates/single-uix_products.php:312
+#: theme_templates/single-uix_products.php:303
 msgid "Description"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:173
-#: theme_templates/single-uix_products.php:340
-msgid "&larr;"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:174
-#: theme_templates/single-uix_products.php:346
-msgid "&rarr;"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:186
+#: theme_templates/single-uix_products.php:177
 msgid "Live Demo"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:193
+#: theme_templates/single-uix_products.php:184
 msgid "Buy Now for $"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:195
+#: theme_templates/single-uix_products.php:186
 msgid "Free Download"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:203
+#: theme_templates/single-uix_products.php:194
 msgid "Created"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:215
+#: theme_templates/single-uix_products.php:206
 msgid "Updated"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:230
+#: theme_templates/single-uix_products.php:221
 msgid "Version"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:284
+#: theme_templates/single-uix_products.php:275
 msgid "Installation"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:316
+msgid "&larr;"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:317
+msgid "&rarr;"
 msgstr ""
 
 #: theme_templates/taxonomy-uix_products_category.php:24
@@ -730,21 +721,58 @@ msgstr ""
 msgid "Settings saved."
 msgstr ""
 
-#: helper/tabs/custom-css.php:95
+#: helper/tabs/custom-css.php:85
+msgid "You have already used custom stylesheet files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:93
+#, php-format
+msgid ""
+"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
+"uix-products-custom.css</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/css/</code> ). You can connect to your site via an FTP client, make "
+"the changes and then upload the file back to the server. Once you have "
+"created an existing CSS file, Uix Products will use it as a default style "
+"sheet instead of the <a href=\"%1$s\" target=\"_blank\">%2$s</a> to your "
+"WordPress Theme. Of course, Uix Products's function of \"Custom CSS\" is "
+"still valid."
+msgstr ""
+
+#: helper/tabs/custom-css.php:101
+msgid "You have already used custom JavaScript files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:107
+#, php-format
+msgid ""
+"- Making a new javascrpt (.js) document which name to <strong>uix-products-"
+"custom.js</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/js/</code> ). Once you have created an existing JS file, Uix "
+"Products will use it as a default script instead of the \"<a href=\"%1$s\" "
+"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
+msgstr ""
+
+#: helper/tabs/custom-css.php:118
 msgid "Paste your CSS code"
 msgstr ""
 
-#: helper/tabs/custom-css.php:97
+#: helper/tabs/custom-css.php:120
 msgid ""
 "You could add new styles code to your website, without modifying original ."
 "css files."
 msgstr ""
 
-#: helper/tabs/custom-css.php:121 helper/tabs/custom-css.php:161
+#: helper/tabs/custom-css.php:121
+msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
+msgstr ""
+
+#: helper/tabs/custom-css.php:146 helper/tabs/custom-css.php:160
 msgid "CSS file root directory:"
 msgstr ""
 
-#: helper/tabs/custom-css.php:126
+#: helper/tabs/custom-css.php:151
 msgid "Close"
 msgstr ""
 
@@ -804,53 +832,48 @@ msgstr ""
 msgid "Image Size in Single Post"
 msgstr ""
 
-#: helper/tabs/products-list.php:51
-msgid "Create Uix Products list files in this plugin directory:"
-msgstr ""
-
-#: helper/tabs/products-list.php:54
-msgid "Themes list file's name:"
-msgstr ""
-
-#: helper/tabs/products-list.php:59
-msgid "Click This Button to Create Uix Products List Files"
-msgstr ""
-
-#: helper/tabs/temp.php:44
-msgid ""
-"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
-"When you create them again, the default plugin template will be used."
-msgstr ""
-
-#: helper/tabs/temp.php:50
+#: helper/tabs/temp.php:43
 msgid ""
 "Uix Products template files already exists. Remove Uix Products template "
 "files in your templates directory:"
 msgstr ""
 
-#: helper/tabs/temp.php:52
+#: helper/tabs/temp.php:45
 msgid ""
 "As a workaround you can use FTP, access path <code>/wp-content/themes/{your-"
 "theme}/</code> and remove Uix Products template files."
 msgstr ""
 
-#: helper/tabs/temp.php:56 helper/tabs/temp.php:78
+#: helper/tabs/temp.php:49 helper/tabs/temp.php:71
 msgid "Template files list:"
 msgstr ""
 
-#: helper/tabs/temp.php:60
+#: helper/tabs/temp.php:53
+msgid ""
+"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
+"When you create them again, the default plugin template will be used."
+msgstr ""
+
+#: helper/tabs/temp.php:53
 msgid "Remove Uix Products Template Files"
 msgstr ""
 
-#: helper/tabs/temp.php:71
+#: helper/tabs/temp.php:59
 msgid "Copy Uix Products template files in your templates directory:"
 msgstr ""
 
-#: helper/tabs/temp.php:82
+#: helper/tabs/temp.php:66
+msgid ""
+"Hi, there! It’s just a custom template file in the theme folder. Of course "
+"you doesn’t need to create it, you can use of the default page template or "
+"your own custom template file directly."
+msgstr ""
+
+#: helper/tabs/temp.php:77
 msgid "Click This Button to Copy Uix Products Files"
 msgstr ""
 
-#: helper/tabs/usage.php:11
+#: helper/tabs/usage.php:21
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can "
 "see a prompt pointed out as absolutely critical. Go to <strong>\"Appearance -"
@@ -859,14 +882,14 @@ msgid ""
 "content/plugins/) And upload files there.)</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:18
+#: helper/tabs/usage.php:25
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">2. You need to create Uix Products "
 "template files in your templates directory. You can create the files on the "
 "WordPress admin panel.</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:26
+#: helper/tabs/usage.php:33
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;As a workaround you can use FTP, access the Uix "
 "Products template files path <code>/wp-content/plugins/uix-"
@@ -874,7 +897,7 @@ msgid ""
 "directory <code>/wp-content/themes/{your-theme}/</code>. "
 msgstr ""
 
-#: helper/tabs/usage.php:30
+#: helper/tabs/usage.php:37
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;Please check if you have the 4 template files <code>"
 "\"content-uix_products.php\"</code>, <code>\"tmpl-uix_products.php\"</code>, "
@@ -884,7 +907,7 @@ msgid ""
 "content/plugins/uix-products/theme_templates/\" to your templates directory."
 msgstr ""
 
-#: helper/tabs/usage.php:38
+#: helper/tabs/usage.php:45
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">3. Create a new WordPress file or edit an "
 "existing one. Just make sure to select this new created template file as the "
@@ -895,14 +918,14 @@ msgid ""
 "custom page template. )</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:44
+#: helper/tabs/usage.php:51
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">4. In your dashboard go to <strong>"
 "\"Appearance -> Menus\"</strong>. You’ll be able to add items to the menu. "
 "On the left you have your products pages.</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:52
+#: helper/tabs/usage.php:59
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">5. Or use the Uix Products Widget to add "
 "it to a sidebar. Go to <strong>\"Appearance -> Widgets\"</strong> in the "
@@ -911,13 +934,13 @@ msgid ""
 "Widget to the spot you wish it to appear.</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:62
+#: helper/tabs/usage.php:69
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">6. Create uix products item and publish "
 "products then.</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:68
+#: helper/tabs/usage.php:75
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">7. You can pretty much custom every aspect "
 "of the look and feel of this page by modifying the <code>*.php</code> "
@@ -925,14 +948,14 @@ msgid ""
 "Best Practices for Editing WordPress Template Files:</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:71
+#: helper/tabs/usage.php:78
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;(1) WordPress comes with a theme and plugin editor "
 "as part of the core functionality. You can find it in your install by going "
 "to <strong>\"Appearance > Editor\"</strong> from your sidebar."
 msgstr ""
 
-#: helper/tabs/usage.php:79
+#: helper/tabs/usage.php:86
 msgid ""
 "&nbsp;&nbsp;&nbsp;&nbsp;(2) You can connect to your site via an <strong>"
 "FTP</strong> client, download a copy of the file you want to change, make "
@@ -940,40 +963,19 @@ msgid ""
 "file that’s on the server."
 msgstr ""
 
-#: helper/tabs/usage.php:83
+#: helper/tabs/usage.php:90
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">8. The Uix Products plugin allows users to "
 "easily enable a \"Customizer Page\" to themes. Go to <strong>\"Uix Products -"
 "> Settings -> General Settings\"</strong>.</h4>"
 msgstr ""
 
-#: helper/tabs/usage.php:89
+#: helper/tabs/usage.php:96
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">9. You can overview the original styles to "
 "overwrite it. It will be on creating new styles to your website, without "
 "modifying original <code>.css</code> files. Go to <strong>\"Uix Products -> "
 "Settings -> Custom CSS\"</strong>.</h4>"
-msgstr ""
-
-#: helper/tabs/usage.php:93
-msgid ""
-"There is a second way, make a new Cascading Style Sheet (CSS) document which "
-"name to <strong>uix-products-custom.css</strong> to your templates directory "
-"( <code>/wp-content/themes/{your-theme}/</code> or <code>/wp-"
-"content/themes/{your-theme}/assets/css/</code> ). You can connect to your "
-"site via an FTP client, make the changes and then upload the file back to "
-"the server. Once you have created an existing CSS file, Uix Products will "
-"use it as a default style sheet to your WordPress Theme. Of course, Uix "
-"Products's function of \"Custom CSS\" is still valid."
-msgstr ""
-
-#: helper/tabs/usage.php:97
-msgid ""
-"<b>Note:<b> Making a new javascrpt (.js) document which name to <strong>uix-"
-"products-custom.js</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/js/</code> ). Once you have created an existing JS file, Uix "
-"Products will use it as a default script to your WordPress Theme."
 msgstr ""
 
 #. Description of the plugin
