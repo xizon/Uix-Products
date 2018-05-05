@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.2.4
+ * Version:     1.2.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -108,8 +108,8 @@ class UixProducts {
 	public static function frontpage_scripts() {
 	
 		// flexslider
-		wp_enqueue_script( 'flexslider', self::plug_directory() .'assets/js/jquery.flexslider.min.js', array( 'jquery' ), '2.6.2', true );	
-		wp_enqueue_style( 'flexslider', self::plug_directory() .'assets/css/flexslider.css', false, '2.6.2', 'all' );
+		wp_enqueue_script( 'flexslider', self::plug_directory() .'assets/js/jquery.flexslider.min.js', array( 'jquery' ), '2.7.0', true );	
+		wp_enqueue_style( 'flexslider', self::plug_directory() .'assets/css/flexslider.min.css', false, '2.7.0', 'all' );
 		
 		// prettyPhoto
 		wp_enqueue_script( 'prettyPhoto', self::plug_directory() .'assets/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );	
@@ -691,7 +691,7 @@ class UixProducts {
 			  $contentdir = UIX_PRODUCTS_PLUGIN_DIR.$path; 
 		  } 
 		  if ( $type == 'theme' ) {
-			  $contentdir = trailingslashit( get_template_directory() ).$path; 
+			  $contentdir = trailingslashit( get_stylesheet_directory() ).$path; 
 		  } 
 		  
 		  if ( self::wpfilesystem_connect_fs( $url, '', $contentdir ) ) {
@@ -717,7 +717,7 @@ class UixProducts {
 			  $contentdir = UIX_PRODUCTS_PLUGIN_DIR.$path; 
 		  } 
 		  if ( $type == 'theme' ) {
-			  $contentdir = trailingslashit( get_template_directory() ).$path; 
+			  $contentdir = trailingslashit( get_stylesheet_directory() ).$path; 
 		  } 	  
 		
 		  
@@ -749,7 +749,7 @@ class UixProducts {
 			  $contentdir = UIX_PRODUCTS_PLUGIN_DIR.$path; 
 		  } 
 		  if ( $type == 'theme' ) {
-			  $contentdir = trailingslashit( get_template_directory() ).$path; 
+			  $contentdir = trailingslashit( get_stylesheet_directory() ).$path; 
 		  } 	  
 		
 		  
@@ -1371,12 +1371,12 @@ class UixProducts {
 		$newFilePath2 = get_stylesheet_directory() . '/assets/css/uix-products-custom.css';
 	
 		if ( file_exists( $newFilePath ) ) {
-			$validPath = get_template_directory_uri() . '/uix-products-custom.css';
+			$validPath = get_stylesheet_directory_uri() . '/uix-products-custom.css';
 		}
 		
 	
 		if ( file_exists( $newFilePath2 ) ) {
-			$validPath = get_template_directory_uri() . '/assets/css/uix-products-custom.css';
+			$validPath = get_stylesheet_directory_uri() . '/assets/css/uix-products-custom.css';
 		}
 		
 		
@@ -1403,12 +1403,12 @@ class UixProducts {
 		$newFilePath2 = get_stylesheet_directory() . '/assets/js/uix-products-custom.js';
 	
 		if ( file_exists( $newFilePath ) ) {
-			$validPath = get_template_directory_uri() . '/uix-products-custom.js';
+			$validPath = get_stylesheet_directory_uri() . '/uix-products-custom.js';
 		}
 		
 	
 		if ( file_exists( $newFilePath2 ) ) {
-			$validPath = get_template_directory_uri() . '/assets/js/uix-products-custom.js';
+			$validPath = get_stylesheet_directory_uri() . '/assets/js/uix-products-custom.js';
 		}
 		
 		
