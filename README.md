@@ -53,6 +53,13 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+
+
+##### = 1.2.6 (July 11, 2018) =
+
+* Fix: Fixed issue where color picker does not display.
+
+
 ##### = 1.2.5 (May 3, 2018) =
 
 * Fix: Fixed a bug with custom styles and child themes that if site uses a child theme when you create a custom css/js file in child theme folder, the plugin tries to connect style with path located in the parent theme folder.
@@ -166,7 +173,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 - WP 4.6.*
 - WP 4.7.*
 - WP 4.8.*
-- WP 4.9
+- WP 4.9.*
 
 
 ### Screenshot

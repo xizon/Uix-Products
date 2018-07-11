@@ -604,4 +604,4 @@ var UixProducts_uixCustomMetaboxes = function( obj ) {
 
 var UixProducts_customMetaboxesInit = new UixProducts_uixCustomMetaboxes();
 UixProducts_customMetaboxesInit.getInstance(); 
-			
+
