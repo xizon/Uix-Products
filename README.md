@@ -54,6 +54,10 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 ### Updates
 
 
+##### = 1.2.7 (July 13, 2018) =
+
+* Fix: Fixed an issue when your theme uses more meta boxes.
+
 
 ##### = 1.2.6 (July 11, 2018) =
 
