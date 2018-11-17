@@ -54,6 +54,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 ### Updates
 
 
+##### = 1.2.8 (November 17, 2018) =
+
+* Fix: Fixed some style compatibility issues with the Flexslider plugin.
+
+
 ##### = 1.2.7 (July 13, 2018) =
 
 * Fix: Fixed an issue when your theme uses more meta boxes.
@@ -178,6 +183,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 - WP 4.7.*
 - WP 4.8.*
 - WP 4.9.*
+- WP 5.0 Beta
 
 
 ### Screenshot
