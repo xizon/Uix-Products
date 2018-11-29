@@ -53,6 +53,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.2.9 (November 30, 2018) =
+
+* Fix: Fixed a bug for create_function() is deprecated in PHP 7.2.
+
+
 
 ##### = 1.2.8 (November 17, 2018) =
 
