@@ -94,14 +94,14 @@ if ( !class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 			  {
     
 				
-					wp_enqueue_style( 'uix-custom-metaboxes', UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min.css', false, self::$ver, 'all' );
+					wp_enqueue_style( 'uix-custom-metaboxes', UixProducts::plug_directory() .'admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min.css', false, self::$ver, 'all' );
 					//RTL		
 					if ( is_rtl() ) {
-						wp_enqueue_style( 'uix-custom-metaboxes-rtl', UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min-rtl.css', false, self::$ver, 'all' );
+						wp_enqueue_style( 'uix-custom-metaboxes-rtl', UixProducts::plug_directory() .'admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min-rtl.css', false, self::$ver, 'all' );
 					} 
 				  
 				  
-					wp_enqueue_script( 'uix-custom-metaboxes', UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/js/uix-custom-metaboxes.min.js', array( 'jquery' ), self::$ver, true );
+					wp_enqueue_script( 'uix-custom-metaboxes', UixProducts::plug_directory() .'admin/uix-custom-metaboxes/js/uix-custom-metaboxes.min.js', array( 'jquery' ), self::$ver, true );
 					
 				  
 
