@@ -1,7 +1,7 @@
 # Uix Products
 This is a WordPress Plugin. Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.
 
-Copyright (c) 2016 UIUX Lab [@uiux_lab](https://twitter.com/uiux_lab)
+Copyright (c) 2019 UIUX Lab [@uiux_lab](https://twitter.com/uiux_lab)
 
 [Donate Me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYZLU7UZNQ6CE)
 
@@ -52,6 +52,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 ### Updates
+
+##### = 1.3.0 (February 14, 2019) =
+
+* Fix: Fixed a bug for plugin.
+
+
 
 ##### = 1.2.9 (November 30, 2018) =
 
