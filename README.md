@@ -53,6 +53,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.3.1 (February 20, 2019) =
+
+* New: Add live demo page to this plugin. (/live-demo)
+
+
+
 ##### = 1.3.0 (February 14, 2019) =
 
 * Fix: Fixed a bug for plugin.
