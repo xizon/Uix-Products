@@ -3,13 +3,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-19 12:41+0000\n"
+"POT-Creation-Date: 2019-09-20 09:42+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,54 +21,54 @@ msgstr ""
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Generator: Loco - https://localise.biz/"
+"X-Generator: Loco https://localise.biz/"
 
-#: uix-products.php:238
+#: uix-products.php:242
 msgid "Uix Products Settings"
 msgstr ""
 
-#: uix-products.php:239 uix-products.php:314
+#: uix-products.php:243 uix-products.php:320
 msgid "Settings"
 msgstr ""
 
-#: uix-products.php:254 uix-products.php:255 uix-products.php:315
-#: uix-products.php:368 helper/settings.php:59
+#: uix-products.php:260 uix-products.php:261 uix-products.php:321
+#: uix-products.php:374 helper/settings.php:59
 msgid "How to use?"
 msgstr ""
 
-#: uix-products.php:262 uix-products.php:263 helper/settings.php:69
+#: uix-products.php:268 uix-products.php:269 helper/settings.php:69
 msgid "Template Files"
 msgstr ""
 
-#: uix-products.php:271 uix-products.php:272
+#: uix-products.php:277 uix-products.php:278
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-products.php:280
+#: uix-products.php:286
 msgid "Helper"
 msgstr ""
 
-#: uix-products.php:281 helper/settings.php:55
+#: uix-products.php:287 helper/settings.php:55
 msgid "About"
 msgstr ""
 
-#: uix-products.php:367
+#: uix-products.php:373
 msgid ""
 "Do you want to create a products website with WordPress?  Learn how to add "
 "products to your themes."
 msgstr ""
 
-#: uix-products.php:383
+#: uix-products.php:389
 msgid ""
 "<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: uix-products.php:383 helper/tabs/usage.php:29
+#: uix-products.php:389 helper/tabs/usage.php:29
 msgid "Create now!"
 msgstr ""
 
-#: uix-products.php:383 helper/tabs/temp.php:61
+#: uix-products.php:389 helper/tabs/temp.php:61
 msgid ""
 "As a workaround you can use FTP, access the Uix Products template files path "
 "<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
@@ -76,383 +76,43 @@ msgid ""
 "/</code>. "
 msgstr ""
 
-#: uix-products.php:475
+#: uix-products.php:481
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
 "write-blog\"></i> Edit this template</a>"
 msgstr ""
 
-#: uix-products.php:605
+#: uix-products.php:611
 msgid "Operation successfully completed!"
 msgstr ""
 
-#: uix-products.php:615
+#: uix-products.php:621
 msgid ""
 "There was a problem copying your template files:</strong> Please check your "
 "server settings. You can upload files to theme templates directory using FTP."
 msgstr ""
 
-#: uix-products.php:623
+#: uix-products.php:629
 msgid ""
 "There was a problem removing your template files:</strong> Please check your "
 "server settings. You can upload files to theme templates directory using FTP."
 msgstr ""
 
-#: uix-products.php:626
+#: uix-products.php:632
 msgid "Remove successful!"
 msgstr ""
 
-#: uix-products.php:834
+#: uix-products.php:840
 msgid "Primary Sidebar"
 msgstr ""
 
-#: uix-products.php:836
+#: uix-products.php:842
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: uix-products.php:1054
+#: uix-products.php:1060
 msgid "Load More"
-msgstr ""
-
-#: admin/options.php:14
-msgid "Product Type"
-msgstr ""
-
-#: admin/options.php:29
-msgid "Artwork"
-msgstr ""
-
-#: admin/options.php:30
-msgid "Theme or Plugin"
-msgstr ""
-
-#: admin/options.php:52
-msgid "Artwork Settings"
-msgstr ""
-
-#: admin/options.php:62 theme_templates/single-uix_products.php:134
-msgid "Project URL"
-msgstr ""
-
-#: admin/options.php:63 admin/options.php:78
-msgid "http://"
-msgstr ""
-
-#: admin/options.php:64
-msgid "Enter destination URL of this project. <strong>(optional)</strong>"
-msgstr ""
-
-#: admin/options.php:70
-msgid "Client Name"
-msgstr ""
-
-#: admin/options.php:71
-msgid "Enter name of your clients. <strong>(optional)</strong>"
-msgstr ""
-
-#: admin/options.php:77
-msgid "Client URL"
-msgstr ""
-
-#: admin/options.php:79
-msgid "Enter URL of your clients site. <strong>(optional)</strong>"
-msgstr ""
-
-#: admin/options.php:85 admin/options.php:554
-#: theme_templates/single-uix_products.php:141
-msgid "Author"
-msgstr ""
-
-#: admin/options.php:86
-msgid "Enter name of this project author. <strong>(optional)</strong>"
-msgstr ""
-
-#: admin/options.php:92
-msgid "Release Date"
-msgstr ""
-
-#: admin/options.php:93
-msgid "Enter date of your projects. <strong>(optional)</strong>"
-msgstr ""
-
-#: admin/options.php:104 admin/options.php:317
-msgid "Custom Attributes"
-msgstr ""
-
-#: admin/options.php:106 admin/options.php:319
-#: admin/custom-metaboxes/class-custom-metaboxes-init.php:1115
-msgid "Title"
-msgstr ""
-
-#: admin/options.php:107 admin/options.php:320
-#: admin/custom-metaboxes/class-custom-metaboxes-init.php:1116
-msgid "Value"
-msgstr ""
-
-#: admin/options.php:125
-msgid "Theme or Plugin Settings"
-msgstr ""
-
-#: admin/options.php:135 admin/options.php:552
-msgid "Type"
-msgstr ""
-
-#: admin/options.php:140
-msgid "Theme"
-msgstr ""
-
-#: admin/options.php:141
-msgid "Plugin"
-msgstr ""
-
-#: admin/options.php:152
-msgid "Item Prices"
-msgstr ""
-
-#: admin/options.php:153
-msgid "Enter your expected value of this item for every single sell minimum."
-msgstr ""
-
-#: admin/options.php:155
-msgid "$"
-msgstr ""
-
-#: admin/options.php:163
-msgid "Item Name"
-msgstr ""
-
-#: admin/options.php:164
-msgid "E.g. Uixplant, 15 characters maximum."
-msgstr ""
-
-#: admin/options.php:170
-msgid "Item Title"
-msgstr ""
-
-#: admin/options.php:171
-msgid "E.g. Multi-purpose HTML5 WordPress Theme"
-msgstr ""
-
-#: admin/options.php:177
-msgid "Demo Link"
-msgstr ""
-
-#: admin/options.php:178
-msgid ""
-"Direct link to your demo or video without any iframe, support WP shortcode. "
-"(E.g. http://my-site.com/demo/)"
-msgstr ""
-
-#: admin/options.php:184
-msgid "Purchase/Download Link"
-msgstr ""
-
-#: admin/options.php:185
-msgid ""
-"Direct link to the purchase or download page, support WP shortcode. (E.g. "
-"http://market-place.com/yourtheme/)"
-msgstr ""
-
-#: admin/options.php:192
-msgid "Current Version"
-msgstr ""
-
-#: admin/options.php:193
-msgid "Your Item Version, E.g. 1.0.0"
-msgstr ""
-
-#: admin/options.php:199 theme_templates/single-uix_products.php:228
-msgid "Compatible With"
-msgstr ""
-
-#: admin/options.php:200
-msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
-msgstr ""
-
-#: admin/options.php:206 theme_templates/single-uix_products.php:235
-msgid "Compatible Browsers"
-msgstr ""
-
-#: admin/options.php:236 theme_templates/single-uix_products.php:248
-msgid "Files Included"
-msgstr ""
-
-#: admin/options.php:263 theme_templates/single-uix_products.php:261
-#: helper/tabs/general-settings.php:118
-msgid "Layout"
-msgstr ""
-
-#: admin/options.php:268
-msgid "Null"
-msgstr ""
-
-#: admin/options.php:269
-msgid "Responsive"
-msgstr ""
-
-#: admin/options.php:270
-msgid "Fixed"
-msgstr ""
-
-#: admin/options.php:271
-msgid "Liquid"
-msgstr ""
-
-#: admin/options.php:272
-msgid "Static"
-msgstr ""
-
-#: admin/options.php:283 theme_templates/single-uix_products.php:268
-msgid "Additional Info"
-msgstr ""
-
-#: admin/options.php:284
-msgid "E.g. Well Documentation"
-msgstr ""
-
-#: admin/options.php:290
-msgid "Installation Info"
-msgstr ""
-
-#: admin/options.php:291
-msgid ""
-"E.g. Installation and set up instructions are attached (look for "
-"Documentation folder)."
-msgstr ""
-
-#: admin/options.php:297 theme_templates/single-uix_products.php:282
-msgid "Tags"
-msgstr ""
-
-#: admin/options.php:298
-msgid ""
-"Maximum of 15 keywords covering features, usage, and styling. Keywords "
-"should all be in lowercase and separated by commas. e.g. photography, "
-"gallery, modern, jquery, wordpress theme"
-msgstr ""
-
-#: admin/options.php:305
-msgid "Updated Date"
-msgstr ""
-
-#: admin/options.php:371
-msgid "Uix Products"
-msgstr ""
-
-#: admin/options.php:372
-msgid "Products Item"
-msgstr ""
-
-#: admin/options.php:373 admin/options.php:376
-msgid "Add New Item"
-msgstr ""
-
-#: admin/options.php:374
-msgid "Add New Products Item"
-msgstr ""
-
-#: admin/options.php:375
-msgid "Edit Item"
-msgstr ""
-
-#: admin/options.php:377
-msgid "View Item"
-msgstr ""
-
-#: admin/options.php:378
-msgid "Search Items"
-msgstr ""
-
-#: admin/options.php:379
-msgid "No Items Found"
-msgstr ""
-
-#: admin/options.php:380
-msgid "No Items Found In Trash"
-msgstr ""
-
-#: admin/options.php:417 admin/options.php:419
-msgid "Categories"
-msgstr ""
-
-#: admin/options.php:418 admin/options.php:553
-#: theme_templates/single-uix_products.php:127
-#: theme_templates/single-uix_products.php:213
-msgid "Category"
-msgstr ""
-
-#: admin/options.php:420
-msgid "Search"
-msgstr ""
-
-#: admin/options.php:421
-msgid "Popular"
-msgstr ""
-
-#: admin/options.php:422 theme_templates/taxonomy-uix_products_category.php:29
-#: theme_templates/tmpl-uix_products.php:28
-msgid "All"
-msgstr ""
-
-#: admin/options.php:423 admin/options.php:424
-msgid "Parent"
-msgstr ""
-
-#: admin/options.php:425 theme_templates/single-uix_products.php:99
-msgid "Edit"
-msgstr ""
-
-#: admin/options.php:426
-msgid "Update"
-msgstr ""
-
-#: admin/options.php:427
-msgid "Add New"
-msgstr ""
-
-#: admin/options.php:428
-msgid "New"
-msgstr ""
-
-#: admin/options.php:429
-msgid "Separate with commas"
-msgstr ""
-
-#: admin/options.php:430
-msgid "Add or remove"
-msgstr ""
-
-#: admin/options.php:431
-msgid "Choose from the most used"
-msgstr ""
-
-#: admin/options.php:550
-msgid "Thumbnail"
-msgstr ""
-
-#: admin/options.php:610
-msgid "[artwork]"
-msgstr ""
-
-#: helper/settings.php:33
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: helper/settings.php:41
-msgid "Uix Products Helper"
-msgstr ""
-
-#: helper/settings.php:64
-msgid "Credits"
-msgstr ""
-
-#: helper/settings.php:75
-msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
-msgstr ""
-
-#: helper/settings.php:81
-msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
 #: inc/class-widgets.php:14
@@ -491,6 +151,416 @@ msgstr ""
 msgid "Display post date?"
 msgstr ""
 
+#: theme_templates/single-uix_products.php:92
+msgid "Pages: "
+msgstr ""
+
+#: theme_templates/single-uix_products.php:99 admin/options.php:767
+msgid "Edit"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:113
+msgid "Date"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:120
+msgid "Client"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:127
+#: theme_templates/single-uix_products.php:213 admin/options.php:760
+#: admin/options.php:895
+msgid "Category"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:134 admin/options.php:373
+msgid "Project URL"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:141 admin/options.php:396
+#: admin/options.php:896
+msgid "Author"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:164
+#: theme_templates/single-uix_products.php:303
+msgid "Description"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:177
+msgid "Live Demo"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:184
+msgid "Buy Now for $"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:186
+msgid "Free Download"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:194
+msgid "Created"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:206
+msgid "Updated"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:221
+msgid "Version"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:228 admin/options.php:510
+msgid "Compatible With"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:235 admin/options.php:517
+msgid "Compatible Browsers"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:248 admin/options.php:547
+msgid "Files Included"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:261 admin/options.php:574
+#: helper/tabs/general-settings.php:118
+msgid "Layout"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:268 admin/options.php:594
+msgid "Additional Info"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:275
+msgid "Installation"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:282 admin/options.php:608
+msgid "Tags"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:316
+msgid "&larr;"
+msgstr ""
+
+#: theme_templates/single-uix_products.php:317
+msgid "&rarr;"
+msgstr ""
+
+#: theme_templates/taxonomy-uix_products_category.php:24
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: theme_templates/taxonomy-uix_products_category.php:29
+#: theme_templates/tmpl-uix_products.php:28 admin/options.php:764
+msgid "All"
+msgstr ""
+
+#: theme_templates/taxonomy-uix_products_category.php:49
+#: theme_templates/tmpl-uix_products.php:48
+msgid "No categories"
+msgstr ""
+
+#: admin/options.php:325
+msgid "Product Type"
+msgstr ""
+
+#: admin/options.php:340
+msgid "Artwork"
+msgstr ""
+
+#: admin/options.php:341
+msgid "Theme or Plugin"
+msgstr ""
+
+#: admin/options.php:363
+msgid "Artwork Settings"
+msgstr ""
+
+#: admin/options.php:374 admin/options.php:389
+msgid "http://"
+msgstr ""
+
+#: admin/options.php:375
+msgid "Enter destination URL of this project. <strong>(optional)</strong>"
+msgstr ""
+
+#: admin/options.php:381
+msgid "Client Name"
+msgstr ""
+
+#: admin/options.php:382
+msgid "Enter name of your clients. <strong>(optional)</strong>"
+msgstr ""
+
+#: admin/options.php:388
+msgid "Client URL"
+msgstr ""
+
+#: admin/options.php:390
+msgid "Enter URL of your clients site. <strong>(optional)</strong>"
+msgstr ""
+
+#: admin/options.php:397
+msgid "Enter name of this project author. <strong>(optional)</strong>"
+msgstr ""
+
+#: admin/options.php:403
+msgid "Release Date"
+msgstr ""
+
+#: admin/options.php:404
+msgid "Enter date of your projects. <strong>(optional)</strong>"
+msgstr ""
+
+#: admin/options.php:415 admin/options.php:628
+msgid "Custom Attributes"
+msgstr ""
+
+#: admin/options.php:417 admin/options.php:630 admin/options.php:644
+#: admin/uix-custom-metaboxes/init.php:1336
+#: admin/uix-custom-metaboxes/init.php:1512
+msgid "Title"
+msgstr ""
+
+#: admin/options.php:418 admin/options.php:631
+#: admin/uix-custom-metaboxes/init.php:1337
+#: admin/uix-custom-metaboxes/init.php:1513
+msgid "Value"
+msgstr ""
+
+#: admin/options.php:436
+msgid "Theme or Plugin Settings"
+msgstr ""
+
+#: admin/options.php:446 admin/options.php:894
+msgid "Type"
+msgstr ""
+
+#: admin/options.php:451
+msgid "Theme"
+msgstr ""
+
+#: admin/options.php:452
+msgid "Plugin"
+msgstr ""
+
+#: admin/options.php:463
+msgid "Item Prices"
+msgstr ""
+
+#: admin/options.php:464
+msgid "Enter your expected value of this item for every single sell minimum."
+msgstr ""
+
+#: admin/options.php:466
+msgid "$"
+msgstr ""
+
+#: admin/options.php:474
+msgid "Item Name"
+msgstr ""
+
+#: admin/options.php:475
+msgid "E.g. Uixplant, 15 characters maximum."
+msgstr ""
+
+#: admin/options.php:481
+msgid "Item Title"
+msgstr ""
+
+#: admin/options.php:482
+msgid "E.g. Multi-purpose HTML5 WordPress Theme"
+msgstr ""
+
+#: admin/options.php:488
+msgid "Demo Link"
+msgstr ""
+
+#: admin/options.php:489
+msgid ""
+"Direct link to your demo or video without any iframe, support WP shortcode. "
+"(E.g. http://my-site.com/demo/)"
+msgstr ""
+
+#: admin/options.php:495
+msgid "Purchase/Download Link"
+msgstr ""
+
+#: admin/options.php:496
+msgid ""
+"Direct link to the purchase or download page, support WP shortcode. (E.g. "
+"http://market-place.com/yourtheme/)"
+msgstr ""
+
+#: admin/options.php:503
+msgid "Current Version"
+msgstr ""
+
+#: admin/options.php:504
+msgid "Your Item Version, E.g. 1.0.0"
+msgstr ""
+
+#: admin/options.php:511
+msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
+msgstr ""
+
+#: admin/options.php:579
+msgid "Null"
+msgstr ""
+
+#: admin/options.php:580
+msgid "Responsive"
+msgstr ""
+
+#: admin/options.php:581
+msgid "Fixed"
+msgstr ""
+
+#: admin/options.php:582
+msgid "Liquid"
+msgstr ""
+
+#: admin/options.php:583
+msgid "Static"
+msgstr ""
+
+#: admin/options.php:595
+msgid "E.g. Well Documentation"
+msgstr ""
+
+#: admin/options.php:601
+msgid "Installation Info"
+msgstr ""
+
+#: admin/options.php:602
+msgid ""
+"E.g. Installation and set up instructions are attached (look for "
+"Documentation folder)."
+msgstr ""
+
+#: admin/options.php:609
+msgid ""
+"Maximum of 15 keywords covering features, usage, and styling. Keywords "
+"should all be in lowercase and separated by commas. e.g. photography, "
+"gallery, modern, jquery, wordpress theme"
+msgstr ""
+
+#: admin/options.php:616
+msgid "Updated Date"
+msgstr ""
+
+#: admin/options.php:642
+msgid "Multiple Content Area"
+msgstr ""
+
+#: admin/options.php:645
+msgid "Contnet"
+msgstr ""
+
+#: admin/options.php:646
+msgid "Step ID"
+msgstr ""
+
+#: admin/options.php:647 admin/uix-custom-metaboxes/init.php:1514
+msgid "Subtitle"
+msgstr ""
+
+#: admin/options.php:648 admin/uix-custom-metaboxes/init.php:1516
+msgid "Level"
+msgstr ""
+
+#: admin/options.php:649 admin/uix-custom-metaboxes/init.php:1517
+msgid "Class Name"
+msgstr ""
+
+#: admin/options.php:713
+msgid "Uix Products"
+msgstr ""
+
+#: admin/options.php:714
+msgid "Products Item"
+msgstr ""
+
+#: admin/options.php:715 admin/options.php:718
+msgid "Add New Item"
+msgstr ""
+
+#: admin/options.php:716
+msgid "Add New Products Item"
+msgstr ""
+
+#: admin/options.php:717
+msgid "Edit Item"
+msgstr ""
+
+#: admin/options.php:719
+msgid "View Item"
+msgstr ""
+
+#: admin/options.php:720
+msgid "Search Items"
+msgstr ""
+
+#: admin/options.php:721
+msgid "No Items Found"
+msgstr ""
+
+#: admin/options.php:722
+msgid "No Items Found In Trash"
+msgstr ""
+
+#: admin/options.php:759 admin/options.php:761
+msgid "Categories"
+msgstr ""
+
+#: admin/options.php:762
+msgid "Search"
+msgstr ""
+
+#: admin/options.php:763
+msgid "Popular"
+msgstr ""
+
+#: admin/options.php:765 admin/options.php:766
+msgid "Parent"
+msgstr ""
+
+#: admin/options.php:768
+msgid "Update"
+msgstr ""
+
+#: admin/options.php:769 admin/uix-custom-metaboxes/init.php:1414
+#: admin/uix-custom-metaboxes/init.php:1750
+msgid "Add New"
+msgstr ""
+
+#: admin/options.php:770
+msgid "New"
+msgstr ""
+
+#: admin/options.php:771
+msgid "Separate with commas"
+msgstr ""
+
+#: admin/options.php:772
+msgid "Add or remove"
+msgstr ""
+
+#: admin/options.php:773
+msgid "Choose from the most used"
+msgstr ""
+
+#: admin/options.php:892
+msgid "Thumbnail"
+msgstr ""
+
+#: admin/options.php:952
+msgid "[artwork]"
+msgstr ""
+
 #: live-demo/index.php:24
 msgid "Demos"
 msgstr ""
@@ -527,91 +597,24 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:92
-msgid "Pages: "
+#: helper/settings.php:33
+msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: theme_templates/single-uix_products.php:113
-msgid "Date"
+#: helper/settings.php:41
+msgid "Uix Products Helper"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:120
-msgid "Client"
+#: helper/settings.php:64
+msgid "Credits"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:164
-#: theme_templates/single-uix_products.php:303
-msgid "Description"
+#: helper/settings.php:75
+msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:177
-msgid "Live Demo"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:184
-msgid "Buy Now for $"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:186
-msgid "Free Download"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:194
-msgid "Created"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:206
-msgid "Updated"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:221
-msgid "Version"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:275
-msgid "Installation"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:316
-msgid "&larr;"
-msgstr ""
-
-#: theme_templates/single-uix_products.php:317
-msgid "&rarr;"
-msgstr ""
-
-#: theme_templates/taxonomy-uix_products_category.php:24
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: theme_templates/taxonomy-uix_products_category.php:49
-#: theme_templates/tmpl-uix_products.php:48
-msgid "No categories"
-msgstr ""
-
-#: admin/custom-metaboxes/class-custom-metaboxes-cmpt-uploadController.php:29
-msgid "Select an image"
-msgstr ""
-
-#: admin/custom-metaboxes/class-custom-metaboxes-cmpt-uploadController.php:30
-msgid "remove image"
-msgstr ""
-
-#: admin/custom-metaboxes/class-custom-metaboxes-init.php:114
-msgid "Group Title"
-msgstr ""
-
-#: admin/custom-metaboxes/class-custom-metaboxes-init.php:265
-msgid "Field Title"
-msgstr ""
-
-#: admin/custom-metaboxes/class-custom-metaboxes-init.php:1139
-msgid "Remove field"
-msgstr ""
-
-#: admin/custom-metaboxes/class-custom-metaboxes-init.php:1173
-msgid "Add a custom attribute"
+#: helper/settings.php:81
+msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
 #: admin/gallery-metabox/init.php:110 admin/gallery-metabox/init.php:165
@@ -638,142 +641,81 @@ msgstr ""
 msgid "Image Gallery"
 msgstr ""
 
-#: helper/tabs/about.php:12
-msgid ""
-"This plugin enables a products post type and taxonomies. You can add a new "
-"artwork, theme or plugin item to appear in your theme. It also registers "
-"separate products taxonomies for tags and categories. If featured images are "
-"selected, they will be displayed in the column view."
+#: admin/uix-custom-metaboxes/init.php:120
+msgid "Select Files"
 msgstr ""
 
-#: helper/tabs/about.php:15
-msgid "Features"
+#: admin/uix-custom-metaboxes/init.php:121
+msgid "Insert"
 msgstr ""
 
-#: helper/tabs/about.php:18
-msgid "* 3 Product types for choice"
+#: admin/uix-custom-metaboxes/init.php:122
+msgid "Insert Image"
 msgstr ""
 
-#: helper/tabs/about.php:19
-msgid "* List of retina-ready"
+#: admin/uix-custom-metaboxes/init.php:123
+msgid "Remove link"
 msgstr ""
 
-#: helper/tabs/about.php:20
-msgid "* Full responsive design"
+#: admin/uix-custom-metaboxes/init.php:124
+msgid "Insert/Edit link"
 msgstr ""
 
-#: helper/tabs/about.php:21
-msgid ""
-"* Using template files to customize your theme & display all product items"
+#: admin/uix-custom-metaboxes/init.php:125
+msgid "URL"
 msgstr ""
 
-#: helper/tabs/about.php:22
-msgid "* Regenerate thumbnails after changing their size."
+#: admin/uix-custom-metaboxes/init.php:126
+msgid "Link Text"
 msgstr ""
 
-#: helper/tabs/about.php:23
-msgid "* Adding categories support to a custom post type in WordPress"
+#: admin/uix-custom-metaboxes/init.php:127
+msgid "Open link in a new tab"
 msgstr ""
 
-#: helper/tabs/about.php:24
-msgid "* It contains about 4 different layouts to choose from"
+#: admin/uix-custom-metaboxes/init.php:128
+msgid "Syntax Highlight Code"
 msgstr ""
 
-#: helper/tabs/about.php:25
-msgid "* Support gallery"
+#: admin/uix-custom-metaboxes/init.php:129
+msgid "Language"
 msgstr ""
 
-#: helper/tabs/about.php:26
-msgid "* There are some simple options to the theme customizer"
+#: admin/uix-custom-metaboxes/init.php:170
+msgid "Group Title"
 msgstr ""
 
-#: helper/tabs/about.php:27
-msgid "* Filterable to display product items to your site"
+#: admin/uix-custom-metaboxes/init.php:385
+msgid "Field Title"
 msgstr ""
 
-#: helper/tabs/about.php:28
-msgid "* Support widgets to the spot you wish it to appear"
+#: admin/uix-custom-metaboxes/init.php:1362
+#: admin/uix-custom-metaboxes/init.php:1586
+msgid "Remove field"
 msgstr ""
 
-#: helper/tabs/credits.php:11
-msgid ""
-"I would like to give special thanks to credits. The following is a guide to "
-"the list of credits for this plugin:"
+#: admin/uix-custom-metaboxes/init.php:1515
+msgid "ID"
 msgstr ""
 
-#: helper/tabs/credits.php:16
-msgid "Gallery Metabox"
+#: admin/uix-custom-metaboxes/init.php:1544
+msgid "-"
 msgstr ""
 
-#: helper/tabs/credits.php:17
-msgid "Flexslider"
+#: admin/uix-custom-metaboxes/init.php:1662
+msgid "Untitled"
 msgstr ""
 
-#: helper/tabs/credits.php:18
-msgid "Shuffle"
+#: admin/uix-custom-metaboxes/controller-upload.php:29
+msgid "Select an image"
 msgstr ""
 
-#: helper/tabs/credits.php:19
-msgid "Switcheroo"
+#: admin/uix-custom-metaboxes/controller-upload.php:30
+msgid "remove image"
 msgstr ""
 
-#: helper/tabs/custom-css.php:27 helper/tabs/general-settings.php:65
+#: helper/tabs/general-settings.php:65 helper/tabs/custom-css.php:27
 msgid "Settings saved."
-msgstr ""
-
-#: helper/tabs/custom-css.php:85
-msgid "You have already used custom stylesheet files."
-msgstr ""
-
-#: helper/tabs/custom-css.php:93
-#, php-format
-msgid ""
-"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
-"uix-products-custom.css</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/css/</code> ). You can connect to your site via an FTP client, make "
-"the changes and then upload the file back to the server. Once you have "
-"created an existing CSS file, Uix Products will use it as a default style "
-"sheet instead of the <a href=\"%1$s\" target=\"_blank\">%2$s</a> to your "
-"WordPress Theme. Of course, Uix Products's function of \"Custom CSS\" is "
-"still valid."
-msgstr ""
-
-#: helper/tabs/custom-css.php:101
-msgid "You have already used custom JavaScript files."
-msgstr ""
-
-#: helper/tabs/custom-css.php:107
-#, php-format
-msgid ""
-"- Making a new javascrpt (.js) document which name to <strong>uix-products-"
-"custom.js</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/js/</code> ). Once you have created an existing JS file, Uix "
-"Products will use it as a default script instead of the \"<a href=\"%1$s\" "
-"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
-msgstr ""
-
-#: helper/tabs/custom-css.php:118
-msgid "Paste your CSS code"
-msgstr ""
-
-#: helper/tabs/custom-css.php:120
-msgid ""
-"You could add new styles code to your website, without modifying original ."
-"css files."
-msgstr ""
-
-#: helper/tabs/custom-css.php:121
-msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
-msgstr ""
-
-#: helper/tabs/custom-css.php:146 helper/tabs/custom-css.php:160
-msgid "CSS file root directory:"
-msgstr ""
-
-#: helper/tabs/custom-css.php:151
-msgid "Close"
 msgstr ""
 
 #: helper/tabs/general-settings.php:87
@@ -830,47 +772,6 @@ msgstr ""
 
 #: helper/tabs/general-settings.php:182
 msgid "Image Size in Single Post"
-msgstr ""
-
-#: helper/tabs/temp.php:43
-msgid ""
-"Uix Products template files already exists. Remove Uix Products template "
-"files in your templates directory:"
-msgstr ""
-
-#: helper/tabs/temp.php:45
-msgid ""
-"As a workaround you can use FTP, access path <code>/wp-content/themes/{your-"
-"theme}/</code> and remove Uix Products template files."
-msgstr ""
-
-#: helper/tabs/temp.php:49 helper/tabs/temp.php:71
-msgid "Template files list:"
-msgstr ""
-
-#: helper/tabs/temp.php:53
-msgid ""
-"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
-"When you create them again, the default plugin template will be used."
-msgstr ""
-
-#: helper/tabs/temp.php:53
-msgid "Remove Uix Products Template Files"
-msgstr ""
-
-#: helper/tabs/temp.php:59
-msgid "Copy Uix Products template files in your templates directory:"
-msgstr ""
-
-#: helper/tabs/temp.php:66
-msgid ""
-"Hi, there! It’s just a custom template file in the theme folder. Of course "
-"you doesn’t need to create it, you can use of the default page template or "
-"your own custom template file directly."
-msgstr ""
-
-#: helper/tabs/temp.php:77
-msgid "Click This Button to Copy Uix Products Files"
 msgstr ""
 
 #: helper/tabs/usage.php:21
@@ -976,6 +877,181 @@ msgid ""
 "overwrite it. It will be on creating new styles to your website, without "
 "modifying original <code>.css</code> files. Go to <strong>\"Uix Products -> "
 "Settings -> Custom CSS\"</strong>.</h4>"
+msgstr ""
+
+#: helper/tabs/custom-css.php:85
+msgid "You have already used custom stylesheet files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:93
+#, php-format
+msgid ""
+"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
+"uix-products-custom.css</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/css/</code> ). You can connect to your site via an FTP client, make "
+"the changes and then upload the file back to the server. Once you have "
+"created an existing CSS file, Uix Products will use it as a default style "
+"sheet instead of the <a href=\"%1$s\" target=\"_blank\">%2$s</a> to your "
+"WordPress Theme. Of course, Uix Products's function of \"Custom CSS\" is "
+"still valid."
+msgstr ""
+
+#: helper/tabs/custom-css.php:101
+msgid "You have already used custom JavaScript files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:107
+#, php-format
+msgid ""
+"- Making a new javascrpt (.js) document which name to <strong>uix-products-"
+"custom.js</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/js/</code> ). Once you have created an existing JS file, Uix "
+"Products will use it as a default script instead of the \"<a href=\"%1$s\" "
+"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
+msgstr ""
+
+#: helper/tabs/custom-css.php:118
+msgid "Paste your CSS code"
+msgstr ""
+
+#: helper/tabs/custom-css.php:120
+msgid ""
+"You could add new styles code to your website, without modifying original ."
+"css files."
+msgstr ""
+
+#: helper/tabs/custom-css.php:121
+msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
+msgstr ""
+
+#: helper/tabs/custom-css.php:146 helper/tabs/custom-css.php:160
+msgid "CSS file root directory:"
+msgstr ""
+
+#: helper/tabs/custom-css.php:151
+msgid "Close"
+msgstr ""
+
+#: helper/tabs/temp.php:43
+msgid ""
+"Uix Products template files already exists. Remove Uix Products template "
+"files in your templates directory:"
+msgstr ""
+
+#: helper/tabs/temp.php:45
+msgid ""
+"As a workaround you can use FTP, access path <code>/wp-content/themes/{your-"
+"theme}/</code> and remove Uix Products template files."
+msgstr ""
+
+#: helper/tabs/temp.php:49 helper/tabs/temp.php:71
+msgid "Template files list:"
+msgstr ""
+
+#: helper/tabs/temp.php:53
+msgid ""
+"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
+"When you create them again, the default plugin template will be used."
+msgstr ""
+
+#: helper/tabs/temp.php:53
+msgid "Remove Uix Products Template Files"
+msgstr ""
+
+#: helper/tabs/temp.php:59
+msgid "Copy Uix Products template files in your templates directory:"
+msgstr ""
+
+#: helper/tabs/temp.php:66
+msgid ""
+"Hi, there! It’s just a custom template file in the theme folder. Of course "
+"you doesn’t need to create it, you can use of the default page template or "
+"your own custom template file directly."
+msgstr ""
+
+#: helper/tabs/temp.php:77
+msgid "Click This Button to Copy Uix Products Files"
+msgstr ""
+
+#: helper/tabs/credits.php:11
+msgid ""
+"I would like to give special thanks to credits. The following is a guide to "
+"the list of credits for this plugin:"
+msgstr ""
+
+#: helper/tabs/credits.php:16
+msgid "Gallery Metabox"
+msgstr ""
+
+#: helper/tabs/credits.php:17
+msgid "Flexslider"
+msgstr ""
+
+#: helper/tabs/credits.php:18
+msgid "Shuffle"
+msgstr ""
+
+#: helper/tabs/credits.php:19
+msgid "Switcheroo"
+msgstr ""
+
+#: helper/tabs/about.php:12
+msgid ""
+"This plugin enables a products post type and taxonomies. You can add a new "
+"artwork, theme or plugin item to appear in your theme. It also registers "
+"separate products taxonomies for tags and categories. If featured images are "
+"selected, they will be displayed in the column view."
+msgstr ""
+
+#: helper/tabs/about.php:15
+msgid "Features"
+msgstr ""
+
+#: helper/tabs/about.php:18
+msgid "* 3 Product types for choice"
+msgstr ""
+
+#: helper/tabs/about.php:19
+msgid "* List of retina-ready"
+msgstr ""
+
+#: helper/tabs/about.php:20
+msgid "* Full responsive design"
+msgstr ""
+
+#: helper/tabs/about.php:21
+msgid ""
+"* Using template files to customize your theme & display all product items"
+msgstr ""
+
+#: helper/tabs/about.php:22
+msgid "* Regenerate thumbnails after changing their size."
+msgstr ""
+
+#: helper/tabs/about.php:23
+msgid "* Adding categories support to a custom post type in WordPress"
+msgstr ""
+
+#: helper/tabs/about.php:24
+msgid "* It contains about 4 different layouts to choose from"
+msgstr ""
+
+#: helper/tabs/about.php:25
+msgid "* Support gallery"
+msgstr ""
+
+#: helper/tabs/about.php:26
+msgid "* There are some simple options to the theme customizer"
+msgstr ""
+
+#: helper/tabs/about.php:27
+msgid "* Filterable to display product items to your site"
+msgstr ""
+
+#: helper/tabs/about.php:28
+msgid "* Support widgets to the spot you wish it to appear"
 msgstr ""
 
 #. Description of the plugin

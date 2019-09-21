@@ -22,13 +22,13 @@ if ( !class_exists( 'Uix_Products_UploadMedia' ) ) {
 			wp_enqueue_media();
 	
 			echo '
-			<div class="uix-cmb__btn--upload-container">
+			<div class="uix-products-cmb__btn--upload-container">
 				
 				<label for="'.esc_attr( $id ).'">'.esc_html( $title ).'</label>
 				'.( !empty( $id ) ? '<input type="text" id="'.esc_attr( $id ).'" class="'.esc_attr( $class ).'" name="'.esc_attr( $name ).'" value="'.esc_url( $value ).'" placeholder="'.esc_attr( $placeholder ).'" />' : '' ).' 
-				<a href="javascript:" class="uix-cmb__btn uix-cmb__btn--upload uix-cmb__upload-target" id="trigger_id_'.esc_attr( $id ).'" data-remove-btn="drop_trigger_id_'.esc_attr( $id ).'" data-insert-img="'.esc_attr( $id ).'" data-insert-preview="'.esc_attr( $id ).'_preview"><i class="dashicons dashicons-format-image"></i>'.esc_html__( 'Select an image', 'uix-shortcodes' ).'</a>
-				<a href="javascript:" class="remove-btn" id="drop_trigger_id_'.esc_attr( $id ).'" data-insert-img="'.esc_attr( $id ).'" data-insert-preview="'.esc_attr( $id ).'_preview" style="display:none">'.esc_html__( 'remove image', 'uix-shortcodes' ).'</a>
-				'.( !empty( $value ) ? '<div id="'.esc_attr( $id ).'_preview" class="uix-cmb__upload-preview" style="display:block"><img src="'.esc_url( $value ).'" alt=""></div>' : '<div id="'.esc_attr( $id ).'_preview" class="uix-cmb__upload-preview"><img src="" alt=""></div>' ).' 
+				<a href="javascript:" class="uix-products-cmb__btn uix-products-cmb__btn--upload uix-products-cmb__upload-target" id="trigger_id_'.esc_attr( $id ).'" data-remove-btn="drop_trigger_id_'.esc_attr( $id ).'" data-insert-img="'.esc_attr( $id ).'" data-insert-preview="'.esc_attr( $id ).'_preview"><i class="dashicons dashicons-format-image"></i>'.esc_html__( 'Select an image', 'uix-products' ).'</a>
+				<a href="javascript:" class="remove-btn" id="drop_trigger_id_'.esc_attr( $id ).'" data-insert-img="'.esc_attr( $id ).'" data-insert-preview="'.esc_attr( $id ).'_preview" style="display:none">'.esc_html__( 'remove image', 'uix-products' ).'</a>
+				'.( !empty( $value ) ? '<div id="'.esc_attr( $id ).'_preview" class="uix-products-cmb__upload-preview" style="display:block"><img src="'.esc_url( $value ).'" alt=""></div>' : '<div id="'.esc_attr( $id ).'_preview" class="uix-products-cmb__upload-preview"><img src="" alt=""></div>' ).' 
 				
 			</div>
 			'.PHP_EOL;

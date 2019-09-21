@@ -53,6 +53,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.3.2 (September 18, 2019) =
+
+* Tweak: Enhance the functionality of the uix custom metabox.
+* Tweak: MCEEditor upgrade in form component.
+
+
 ##### = 1.3.1 (February 20, 2019) =
 
 * New: Add live demo page to this plugin. (/live-demo)
