@@ -117,7 +117,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 												'full-screen'  =>  array(
                                                                     'id'             =>  'cus_page_ex_demoname_6_opt-full-screen-toggle',
                                                                     'type'           =>  'text',
-                                                                    'title'          =>  esc_html__( 'full-screen', 'uix-products' ),
+                                                                    'title'          =>  esc_html__( 'full-screen', 'your-theme' ),
                                                                     'desc_primary'   =>  '',
                                                                 ),
 												'cus-height'   =>  array( 
@@ -274,14 +274,14 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 					array(
 						'id'            =>  'uix_products_themeplugin_multicontent',
 						'type'          =>  'multi-content',
-						'title'         =>  esc_html__( 'Multiple Content Area', 'uix-products' ),
+						'title'         =>  esc_html__( 'Multiple Content Area', 'your-theme' ),
 						'options'       =>  array( 
-											'label_title'      => esc_html__( 'Title', 'uix-products' ),
-											'label_value'      => esc_html__( 'Contnet', 'uix-products' ),
-                                            'label_id'         => esc_html__( 'Step ID', 'uix-products' ),
-                                            'label_subtitle'   => esc_html__( 'Subtitle', 'uix-products' ),
-                                            'label_level'      => esc_html__( 'Level', 'uix-products' ),
-                                            'label_classname'  => esc_html__( 'Class Name', 'uix-products' ),
+											'label_title'      => esc_html__( 'Title', 'your-theme' ),
+											'label_value'      => esc_html__( 'Contnet', 'your-theme' ),
+                                            'label_id'         => esc_html__( 'Step ID', 'your-theme' ),
+                                            'label_subtitle'   => esc_html__( 'Subtitle', 'your-theme' ),
+                                            'label_level'      => esc_html__( 'Level', 'your-theme' ),
+                                            'label_classname'  => esc_html__( 'Class Name', 'your-theme' ),
                                             'height_teeny'     => 50,
                                             'toolbar_teeny'    => 'formatselect forecolor backcolor bold italic underline strikethrough alignleft aligncenter alignright uix_products_link uix_products_unlink removeformat customCode',
 											'height'           => 450,
