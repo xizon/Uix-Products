@@ -56,6 +56,8 @@
 	width: 99%;
 }
 
+
+
 .uix-products-cmb__text--div--toggle {
     position: relative;
     border: solid 1px #ddd;
@@ -388,12 +390,38 @@ table.uix-products-cmb .uix-products-cmb__label {
     margin-bottom: 3px;
 }
 
-.uix-products-cmb__btn i {
-    font-size: 16px;
-    line-height: 1.2;
+.uix-products-cmb__btn svg {
+    fill: #0073aa;
+    opacity: 0.57;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
+    margin-right: 5px;
 }
 
+
+.uix-products-cmb__removebtn {
+	display: inline-block;
+	padding: 5px;
+	width: 25px;
+	height: 25px;
+    background: #d51212;
+    text-decoration: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	-webkit-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
+	-moz-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
+	box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
+    text-align: center;
+}
+.uix-products-cmb__removebtn svg {
+    margin: 0;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    transform: translate(-2.5px,-2.5px);
+}
 
 /* 
  ---------------------------
@@ -632,56 +660,12 @@ table.uix-products-cmb .uix-products-cmb__label {
 }
 
 
-.uix-products-cmb__upload-wrapper .remove-btn {
-    display: block;
-	font-size: 12px;
-	line-height: 1 !important;
-	padding: 5px 10px !important;
-	width: 15px;
-	display: block;
-	overflow: hidden;
-	height: 20px;
-	text-transform: capitalize;
+.uix-products-cmb__upload-wrapper .uix-products-cmb__removebtn {
 	position: absolute;
 	left: 0;
 	top: 5px;
-	text-indent: -9999em;
 }
 
-
-
-.uix-products-cmb__upload-wrapper .remove-btn:after {
-	display: block;
-	content: 'x';
-	font-family: sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	padding: 5px;
-	width: 10px;
-	height: 10px;
-	line-height: 10px;
-	text-indent: 0;
-	position: absolute;
-	left: 0;
-	top: 5px;
-    background: #d51212;
-    color: #fff;
-    text-decoration: none;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 1px solid #ba0202;
-	-webkit-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
-	-moz-box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
-	box-shadow: 1.5px 2.598px 8px 0px rgba(213, 18, 18, 0.39);
-}
-
-.uix-products-cmb__upload-wrapper .remove-btn:focus {
-	outline: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
 
 
 .uix-products-cmb__upload-wrapper .uix-products-cmb__upload-preview {
@@ -699,10 +683,6 @@ table.uix-products-cmb .uix-products-cmb__label {
     overflow: hidden;
 }
 
-
-.uix-products-cmb__btn--upload-container .remove-btn {
-    line-height: 35px;
-}
 
 .uix-products-cmb__btn--upload-container:before {
     display: block;
@@ -904,9 +884,24 @@ table.uix-products-cmb .uix-products-cmb__label {
 }
 
 
-.ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
-	margin-left: -45px !important;
+
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-e,
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 0 !important;  
+    margin-right: 0 !important; 
+    font-family: Arial, "sans-serif" !important;
+    cursor: pointer !important;
 }
+
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+    margin-left: -15px !important;
+}
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
+    margin-left: -5px !important;
+}
+
 
 .ui-datepicker .ui-datepicker-header {
 	background: none !important;

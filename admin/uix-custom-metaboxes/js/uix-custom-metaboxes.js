@@ -318,7 +318,11 @@ var UixProductsCustomMetaboxes = function( obj ) {
 							format = $this.data( 'format' );
 
 						$this.datepicker({
-							dateFormat : format
+							dateFormat : format,
+                            changeMonth: true,
+                            changeYear: true,
+                            nextText: '→',
+                            prevText: '←'
 						});
 
 					} );		

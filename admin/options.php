@@ -641,9 +641,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 
 
 					),
-                    
-                    
-
+      
    
                     
                     
