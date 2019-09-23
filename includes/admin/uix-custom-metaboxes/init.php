@@ -79,7 +79,7 @@ if ( !class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 		*/    
 //        public static function mce_external_plugins($plugins) {   
 //
-//            $plugins['code'] = UixProducts::plug_directory() .'admin/uix-custom-metaboxes/editor/plugins/syntax-highlight-code/prism.js';
+//            $plugins['code'] = UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/editor/plugins/syntax-highlight-code/prism.js';
 //            return $plugins;
 //        }
 //        add_filter('mce_external_plugins', 'my_mce_external_plugins');
@@ -105,18 +105,18 @@ if ( !class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 			  {
     
 				
-					wp_enqueue_style( 'uix-products-custom-metaboxes', UixProducts::plug_directory() .'admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min.css', false, self::$ver, 'all' );
+					wp_enqueue_style( 'uix-products-custom-metaboxes', UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min.css', false, self::$ver, 'all' );
 					//RTL		
 					if ( is_rtl() ) {
-						wp_enqueue_style( 'uix-products-custom-metaboxes-rtl', UixProducts::plug_directory() .'admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min-rtl.css', false, self::$ver, 'all' );
+						wp_enqueue_style( 'uix-products-custom-metaboxes-rtl', UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/css/uix-custom-metaboxes.min-rtl.css', false, self::$ver, 'all' );
 					} 
 				  
 				  
-					wp_enqueue_script( 'uix-products-custom-metaboxes', UixProducts::plug_directory() .'admin/uix-custom-metaboxes/js/uix-custom-metaboxes.min.js', array( 'jquery' ), self::$ver, true );
+					wp_enqueue_script( 'uix-products-custom-metaboxes', UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/js/uix-custom-metaboxes.min.js', array( 'jquery' ), self::$ver, true );
                   
                   
 					wp_localize_script( 'uix-products-custom-metaboxes',  'uix_products_custom_metaboxes_lang', array( 
-						'ed_url'                  => UixProducts::plug_directory() .'admin/uix-custom-metaboxes/',
+						'ed_url'                  => UixProducts::plug_directory() .'includes/admin/uix-custom-metaboxes/',
 						'ed_media_title'          => __( 'Select Files', 'uix-products' ),
 						'ed_media_text'           => __( 'Insert', 'uix-products' ),				
 						'ed_image'                => __( 'Insert Image', 'uix-products' ),

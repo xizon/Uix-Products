@@ -94,11 +94,11 @@ class UixProducts {
 		
 		//Add custom meta boxes API. 
 		//Provides a compatible solution for some personalized themes that require Uix Products.
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/uix-custom-metaboxes/init.php';
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/uix-custom-metaboxes/controller-upload.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/uix-custom-metaboxes/init.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/uix-custom-metaboxes/controller-upload.php';
 		
 		//Options for custom meta boxes
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/options.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/options.php';
 		
 	}
 	
@@ -164,8 +164,8 @@ class UixProducts {
 		 ) 
 		 {
 				  
-		     wp_enqueue_style( self::PREFIX . '-products-admin', self::plug_directory() .'admin/css/style.min.css', false, self::ver(), 'all' );
-			 wp_enqueue_script( self::PREFIX . '-products-admin', self::plug_directory() .'admin/js/core.min.js', array( 'jquery' ), self::ver(), true );	
+		     wp_enqueue_style( self::PREFIX . '-products-admin', self::plug_directory() .'includes/admin/css/style.min.css', false, self::ver(), 'all' );
+			 wp_enqueue_script( self::PREFIX . '-products-admin', self::plug_directory() .'includes/admin/js/core.min.js', array( 'jquery' ), self::ver(), true );	
 	  
 		  }
 		
@@ -823,7 +823,7 @@ class UixProducts {
 	 */
 	public static function cat() {
 	
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'inc/class-walker-uix_products_category.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/classes-frontend/class-walker-uix_products_category.php';
 		
 	}
 	
@@ -833,7 +833,7 @@ class UixProducts {
 	 */
 	public static function register_my_widget( $links ) {
 		// Recent products widget
-		require 'inc/class-widgets.php';
+		require 'includes/classes-frontend/class-widgets.php';
 		register_widget( 'Uix_Products_Recent_Products_Widget' );
 		
 		register_sidebar( array(
@@ -893,7 +893,7 @@ class UixProducts {
 		  $currentScreen = get_current_screen();
 		
 		  if( $currentScreen->id === "uix_products" ) {
-			  require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/gallery-metabox/init.php';
+			  require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/gallery-metabox/init.php';
 		  }
 		
 	
@@ -901,7 +901,7 @@ class UixProducts {
 	
 	public static function gallery_app() {
 		
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'admin/gallery-metabox/front-display.php';
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/gallery-metabox/front-display.php';
 	
 	}
 	
