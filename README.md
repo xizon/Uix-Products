@@ -53,6 +53,13 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+
+##### = 1.3.3 (September 24, 2019) =
+
+* Dev: Added filter `add_filter( 'uix_products_custom_metaboxes_vars', 'mytheme_modify_vars' );` for current Custom Metaboxes.
+
+
+
 ##### = 1.3.2 (September 18, 2019) =
 
 * Tweak: Enhance the functionality of the uix custom metabox.

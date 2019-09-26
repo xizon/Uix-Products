@@ -318,6 +318,39 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 
 
 
+/*
+ [Dev]:
+ 
+    if ( !function_exists( 'mytheme_modify_vars' ) ) {
+        add_filter( 'uix_products_custom_metaboxes_vars', 'mytheme_modify_vars' );
+        function mytheme_modify_vars() {
+
+            $all_config = array();
+            $config  = array(
+
+                    //-- Settings 1
+                    array(
+                        'config' => array( ... )
+                    ),
+
+                   //-- Settings 2
+                    array(
+                        'config' => array( ... )
+                    ),
+
+                );
+
+            array_push( $all_config, $config );
+
+            return $all_config;
+
+        } 
+    }
+
+ 
+*/
+
+
 
 if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) { 
 	

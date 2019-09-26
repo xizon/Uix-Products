@@ -48,6 +48,8 @@ if ( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' 
 			$uix_products_show = 10;
 		}
 	
+        
+        $uix_products_opt_custom_params 	         = wp_unslash( $_POST[ 'uix_products_opt_custom_params' ] );
 	
 	
 		// Save the posted value in the database
@@ -59,6 +61,7 @@ if ( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' 
 		update_option( 'uix_products_opt_cover_height', $uix_products_opt_cover_height );
 		update_option( 'uix_products_opt_cover_single_width', $uix_products_opt_cover_single_width );
 		update_option( 'uix_products_opt_cover_single_height', $uix_products_opt_cover_single_height );
+        update_option( 'uix_products_opt_custom_params', $uix_products_opt_custom_params );
 		
 	
 		// Put a "settings saved" message on the screen
@@ -198,6 +201,22 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
             
           </tr>  
                   
+            
+          <tr>
+            <th scope="row">
+              <?php _e( 'Custom Parameters', 'uix-products' ); ?>
+            </th>
+             <td>
+                <p>
+                    <textarea name="uix_products_opt_custom_params" class="regular-text" rows="5" style="width:98%;"><?php echo esc_textarea( get_option( 'uix_products_opt_custom_params', '{"key1":"value1","key2":"value2","key3":"value3"}' ) ); ?></textarea>
+                    <?php _e( 'Can be used for your custom slide parameters.', 'uix-products' ); ?>
+                </p>
+               
+            </td>         
+            
+          </tr> 
+             
+            
            
           
         </table> 
