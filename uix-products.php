@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.3.3
+ * Version:     1.3.4
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -48,10 +48,9 @@ class UixProducts {
 		add_action( 'admin_init', array( __CLASS__, 'tc_i18n' ) );
 		add_action( 'admin_init', array( __CLASS__, 'load_helper' ) );
 		add_action( 'admin_init', array( __CLASS__, 'nag_ignore' ) );
-		add_action( 'current_screen', array( __CLASS__, 'gallery' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'options_admin_menu' ) );
 		add_action( 'wp_head', array( __CLASS__, 'cat' ) );
-		add_action( 'wp_head', array( __CLASS__, 'gallery_app' ) );
+        add_action( 'wp_head', array( __CLASS__, 'gallery_app' ) );
 		add_filter( 'body_class', array( __CLASS__, 'new_class' ) );
 		add_action( 'widgets_init', array( __CLASS__, 'register_my_widget' ) );
 		add_filter( 'post_thumbnail_html', array( __CLASS__, 'remove_thumbnail_dimensions' ), 10, 4 );
@@ -877,31 +876,18 @@ class UixProducts {
 		}
 
 	}
-	
+
 	
 	/*
-	 *  Gallery metabox
+	 *  Get gallery
 	 *
 	 *
 	 */
-	public static function gallery() {
-		
-		  //Check if screen ID
-		  $currentScreen = get_current_screen();
-		
-		  if( $currentScreen->id === "uix_products" ) {
-			  require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/gallery-metabox/init.php';
-		  }
-		
-	
-	}	
 	
 	public static function gallery_app() {
-		
-		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/gallery-metabox/front-display.php';
-	
+		require_once UIX_PRODUCTS_PLUGIN_DIR.'includes/admin/gallery/front-display.php';
 	}
-	
+    
 	/*
 	 * Extend the default WordPress body classes.
 	 *
@@ -918,7 +904,7 @@ class UixProducts {
 
 	}
 	
-	
+	   
 	/*
 	 * Check the post type of the current page in wp-admin
 	 * 

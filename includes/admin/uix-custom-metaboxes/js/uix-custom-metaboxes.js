@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.3 (September 17, 2019)
+ * @version		: 1.4 (November 11, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -37,10 +37,10 @@ var UixProductsCustomMetaboxes = function( obj ) {
 				UixProductsCustomMetaboxesConstructor.prototype.color.call( this, '.uix-products-cmb__color-selector' );
 				UixProductsCustomMetaboxesConstructor.prototype.tabs.call( this, '.uix-products-cmb__tabsgroup-selector' );
 				UixProductsCustomMetaboxesConstructor.prototype.date.call( this, '.uix-products-cmb__date-selector' );
-				UixProductsCustomMetaboxesConstructor.prototype.upload.call( this, '.uix-products-cmb__upload-target' );
 				UixProductsCustomMetaboxesConstructor.prototype.customAttrs.call( this, '.uix-products-cmb__custom-attributes-field', 100 );
                 UixProductsCustomMetaboxesConstructor.prototype.expandItem.call( this, '.uix-products-cmb__text--div--toggle__trigger' );
-                UixProductsCustomMetaboxesConstructor.prototype.titleChange.call( this, '.uix-products-cmb__text--div--toggle', '.uix-products-cmb__text--div--toggle__trigger', '.uix-products-cmb__text--div--toggle__title' );                
+                UixProductsCustomMetaboxesConstructor.prototype.titleChange.call( this, '.uix-products-cmb__text--div--toggle', '.uix-products-cmb__text--div--toggle__trigger', '.uix-products-cmb__text--div--toggle__title' );          
+                UixProductsCustomMetaboxesConstructor.prototype.upload.call( this );
                 UixProductsCustomMetaboxesConstructor.prototype.editor.call( this );
                 UixProductsCustomMetaboxesConstructor.prototype.toggleSelect.call( this );
 				
@@ -373,7 +373,8 @@ var UixProductsCustomMetaboxes = function( obj ) {
 			jQuery( document ).ready( function() {
                 
                 //Initialize Select of Toggle
-                jQuery( '.uix-products-cmb__text--div--toggle' ).UixProductsToggleSelectInit();
+                jQuery( '.uix-products-cmb__wrapper.uix-products-cmb__custom-attributes-field' ).UixProductsToggleSelectInit();
+                jQuery( '.uix-products-cmb__text--div--toggle__simple-sel' ).UixProductsToggleSimpleSelectInit({ type: 'file'});
 
                 
 			});
@@ -391,132 +392,99 @@ var UixProductsCustomMetaboxes = function( obj ) {
 		 * Upload Media Control
 		 * ---------------------------------------------------
 		 *
-		 * @param  {string} selector       - The selector ID or class
 		 * @return {void}                  - The constructor.
 		 */
-		upload: function( selector ) {
+		upload: function() {
 
 	
 			jQuery( document ).ready( function() {
-				
+                
 
+                var selector = '.uix-products-cmb__upload-target';
+                
+                //Custom selectors
 				jQuery( selector ).each( function()  {
 					var $this     = jQuery( this ),
-					    pid       = $this.data( 'insert-preview' ),
-						rid       = $this.data( 'remove-btn' ),
-						tid       = $this.data( 'insert-img' ),
-						_closebtn = '#' + rid;
-
+                        uuid      = UixProductsGUID.create(),
+					    pid       = $this.data( 'insert-preview' ).replace(/\{id\}/g, uuid ),
+						tid       = $this.data( 'insert-img' ).replace(/\{id\}/g, uuid ),
+						_closebtn = '.uix-products-cmb__removebtn';
+         
+                
+                    
+                    //init button and preview status
+                    $this.attr( 'aria-disabled', true );
 					if ( jQuery( '#' + tid ).val() != '' ) {
-						jQuery( _closebtn ).show();
+						$this.next( _closebtn ).show();
 						$this.hide();
 					} else {
 						$this.show();
 					}
 
-					 //Delete pictrue   
-					 if ( _closebtn ){
+					 //Delete image   
+                    $this.next( _closebtn ).off( 'click.UixProductsUploadClose' ).on( 'click.UixProductsUploadClose', function( event ){
+                        event.preventDefault();
 
-						//Prevent duplicate function assigned
-						jQuery( _closebtn ).off( 'click' );
-						 
-						jQuery( document ).on( 'click', _closebtn, function( event ){
+                        jQuery( '#' + tid ).val( '' );
+                        jQuery( '#' + pid ).find( 'img' ).attr( 'src','' );
+                        jQuery( '#' + pid ).hide();
 
-							event.preventDefault();
+                        jQuery( this ).hide();
+                        jQuery( this ).closest( '.uix-products-cmb__upload-wrapper' ).find( selector ).show();
+                        jQuery( this ).closest( '.uix-products-cmb__upload-wrapper' ).find( selector ).attr( 'aria-disabled', true );
 
-							jQuery( '#' + tid ).val( '' );
-							jQuery( '#' + pid ).find( 'img' ).attr( 'src','' );
-							jQuery( '#' + pid ).hide();
+                    } );	
+                    
+                    
+                    //Prevent duplicate function assigned
+                    $this.off( 'click.UixProductsUpload' ).on( 'click.UixProductsUpload', function( e ) {
+                        e.preventDefault();
 
-							jQuery( this ).hide();
-							$this.show();
-							$this.data( 'click', 1 );
+                        var upload_frame, 
+                            attachment,
+                            $thisClick = jQuery( this );
 
+                        if ( typeof upload_frame === typeof undefined ) $thisClick.attr( 'aria-disabled', true );
 
-						} );		
+                        if ( $thisClick.attr( 'aria-disabled' ) == 'true' ) {
 
-					 }
+                            if( upload_frame ){
+                                upload_frame.open();
+                                return;
+                            }
+                            upload_frame = wp.media( {
+								title: uix_products_custom_metaboxes_lang.ed_media_title,
+								button: {
+								text: uix_products_custom_metaboxes_lang.ed_media_text,
+                            },
+                                multiple: false
+                            } );
+                            upload_frame.on( 'select',function(){
+                                attachment = upload_frame.state().get( 'selection' ).first().toJSON();
+                                jQuery( '#' + tid ).val( attachment.url );
+                                jQuery( '#' + pid ).find( 'img' ).attr( 'src',attachment.url );//image preview
+                                jQuery( '#' + pid ).show();
 
-				});
+                                $thisClick.next( _closebtn ).show();
+                                $thisClick.hide();
 
-				//Prevent duplicate function assigned
-				jQuery( selector ).off( 'click' ).data( 'click', 1 );
+                            } );
 
-				
-				jQuery( document ).on( 'click', selector, function( e ) {
-					e.preventDefault();
-
-					var $this     = jQuery( this ),
-						pid       = $this.data( 'insert-preview' ),
-						rid       = $this.data( 'remove-btn' ),
-						tid       = $this.data( 'insert-img' );
-
-					var upload_frame, attachment, _closebtn = '#' + rid;
-
-
-					if ( $this.data( 'click' ) == 1 ) {
-						
-						if( upload_frame ){
-							upload_frame.open();
-							return;
-						}
-						upload_frame = wp.media( {
-							title: 'Select Files',
-							button: {
-							text: 'Insert into post',
-						},
-							multiple: false
-						} );
-						upload_frame.on( 'select',function(){
-							attachment = upload_frame.state().get( 'selection' ).first().toJSON();
-							jQuery( '#' + tid ).val( attachment.url );
-							jQuery( '#' + pid ).find( 'img' ).attr( 'src',attachment.url );//image preview
-							jQuery( '#' + pid ).show();
-
-							if ( _closebtn ){
-								jQuery( _closebtn ).show();
-								$this.hide();
-							}
+                            upload_frame.open();
 
 
-						} );
-
-						upload_frame.open();
-
-						
-						
-					}
-					
-					$this.data( 'click', 0 );
+                        }//end if $this.attr( 'aria-disabled' )
 
 
+                        $this.attr( 'aria-disabled', false );
 
 
-					 //Delete pictrue   
-					 if ( _closebtn ){
+                    });//endif click.UixProductsUpload
+                    
 
-						//Prevent duplicate function assigned
-						jQuery( _closebtn ).off( 'click' );
+				});//end each
+                
 
-						jQuery( document ).on( 'click', _closebtn, function( event ){
-
-							event.preventDefault();
-
-							jQuery( '#' + tid ).val( '' );
-							jQuery( '#' + pid ).find( 'img' ).attr( 'src','' );
-							jQuery( '#' + pid ).hide();
-
-							jQuery( this ).hide();
-							$this.show();
-							$this.data( 'click', 1 );
-
-
-						} );		
-
-					 }	
-
-
-				});	
 				
 				
 			});
@@ -557,6 +525,8 @@ var UixProductsCustomMetaboxes = function( obj ) {
 					//Prevent duplicate function assigned
 					$addButton.off( 'click.UixProductsCustomMetaboxes_customAttrs_add' ).on( 'click.UixProductsCustomMetaboxes_customAttrs_add', function( e ) {
 						e.preventDefault();
+                        
+                        var $btn = jQuery( this );
                       
 						if( x < maxField ){ 
 							x++;
@@ -567,11 +537,21 @@ var UixProductsCustomMetaboxes = function( obj ) {
                             jQuery.when( jQuery( wrapperID ).length > 0 ).then( function() {
                                 
                                 //Initialize Select of Toggle
+                                if ( typeof $btn.data( 'type' ) !== typeof undefined ) {
+                                   jQuery( '.uix-products-cmb__text--div--toggle__simple-sel' ).UixProductsToggleSimpleSelectInit({ type: $btn.data( 'type' ) });
+                                }
                                 UixProductsCustomMetaboxesInit.toggleSelect();
+                                
                                 
 
                                 //Initialize Editor
                                 UixProductsCustomMetaboxesInit.editor();
+                                
+                                
+
+                                //Initialize Uploader
+                                UixProductsCustomMetaboxesInit.upload();
+                                
                                 
                             });
                             
@@ -1038,131 +1018,130 @@ UixProductsCustomMetaboxesInit.getInstance();
         }, options );
  
         this.each( function() {
+            
+            
 	
-            
-            var $this = $( this );
-            
-            
-         
-            //get current selector
-            var el = '';
-            var elChild = '';
-            var elArr = $this[0].classList;
-            
-            if ( elArr && elArr.length ) {
-                elArr.forEach( function( element ) {
-                    if ( element.indexOf( '--child' ) < 0 ) {
-                        el += '.' + element;
-                    } else {
-                       elChild += '.' + element;
-                    }
-                    
-                });    
-            }
-            
-           
-            var $sel = $this.find( settings.fieldSelect );
-            
-            
-            //get child options value
-            var childVal = [];
-            $( el ).closest( 'td' ).find( elChild ).each( function() {
+            $( this ).find( settings.wrapper ).each( function()  {
+                
+                var $this = $( this );
+             
+                //Get the root & child container styles
+                var el = '';
+                var elChild = '';
+                var elArr = $this[0].classList;
+                var $sel = $this.find( settings.fieldSelect );
+    
 
-                var _val = $( this ).find( settings.fieldId ).val();
-                if ( _val != '' ) {
-                    childVal.push( _val );
+                if ( elArr && elArr.length ) {
+                    elArr.forEach( function( element ) {
+                        if ( element.indexOf( '--child' ) < 0 ) {
+                            el += '.' + element;
+                        } else {
+                           elChild += '.' + element;
+                        }
+
+                    });    
                 }
-            });     
 
-        
-          
-            //push options
-            var options = '<option value="">'+uix_products_custom_metaboxes_lang.select_empty_text+'</option>';
-            $( el ).closest( 'td' ).find( el ).each( function() {
-                
-                var _id = $( this ).find( settings.fieldId ).val(),
-                    _val = $( this ).find( settings.fieldTitle ).val();
-                
-                if ( _id != '' ) {
-                    options += '<option value="'+_id+'">'+_val+'</option>';
-                }
-                
-            });     
-          
-           
-            $sel.html( options ).promise().done( function(){
-                var curFieldID = $this.find( settings.fieldId ).val(),
-                    defaultVal = $this.find( settings.fieldDefaultValue ).val();
 
-                //init options
-                $sel.find( '> option' ).each( function() {
-                    
-                    var $option = $( this ),
-                        curOptionVal = $option.attr( 'value' );
-                    
-                    //remove current option
-                    if ( curFieldID == this.value ) {
-                        $option.remove();
+                //get child options value
+                var childVal = [];
+                $( el ).closest( 'td' ).find( elChild ).each( function() {
+
+                    var _val = $( this ).find( settings.fieldId ).val();
+                    if ( _val != '' && typeof _val !== typeof undefined ) {
+                        childVal.push( _val );
                     }
-                    
-                }); 
-                
-                
-                setTimeout( function() {
-                    $( el ).closest( 'td' ).find( settings.fieldSelect ).each( function() {
-                        var _sel = $( this );
-                        
-                        //remove child options
-                        childVal.forEach( function( element ) {
-                            _sel.find( '> option[value="'+element+'"]' ).remove();
-                        }); 
-                         
-                        
-                    });                  
-                }, 100 );
+                });     
 
-                
-                //set default value for select
-                $sel.val( defaultVal );    
-                
-                
-                //remove options when it has child
+
+
+                //push options
+                var options = '<option value="">'+uix_products_custom_metaboxes_lang.select_empty_text+'</option>';
                 $( el ).closest( 'td' ).find( el ).each( function() {
-                    
-                    if ( $( this ).find( settings.fieldId ).val() == defaultVal ) {
-                        $( this ).find( settings.fieldSelect + '> option' ).each( function() {
-                            if ( $( this ).attr( 'value' ) != '' ) {
-                                $( this ).remove();
-                            }
 
-                        });  
+                    var _id = $( this ).find( settings.fieldId ).val(),
+                        _val = $( this ).find( settings.fieldTitle ).val();
+
+                    if ( _id != '' && typeof _id !== typeof undefined ) {
+                        options += '<option value="'+_id+'">'+_val+'</option>';
                     }
-                });  
-                
-                                
-                //Store temporary default value
-                $sel.off( 'change.UixProductsToggleSelect' ).on( 'change.UixProductsToggleSelect', function() {
-                    
-                    var childClassName = settings.wrapperChild.replace( '.', '' );
-                    $this.find( settings.fieldDefaultValue ).val( $( this ).val() );
-                    if ( $( this ).val() != '' ) {
-                        $( this ).closest( settings.wrapper ).addClass( childClassName );
-                    } else {
-                        $( this ).closest( settings.wrapper ).removeClass( childClassName );
-                    }
-                    
 
-                }); 
-                                
-                
-                
-            });//end $sel.html
-            
-            
+                });     
 
-        
+
+                $sel.html( options ).promise().done( function(){
+                    var curFieldID = $this.find( settings.fieldId ).val(),
+                        defaultVal = $this.find( settings.fieldDefaultValue ).val();
+
+                    //init options
+                    $sel.find( '> option' ).each( function() {
+
+                        var $option = $( this ),
+                            curOptionVal = $option.attr( 'value' );
+
+                        //remove current option
+                        if ( curFieldID == this.value ) {
+                            $option.remove();
+                        }
+
+                    }); 
+
+
+                    setTimeout( function() {
+                        $( el ).closest( 'td' ).find( settings.fieldSelect ).each( function() {
+                            var _sel = $( this );
+
+                            //remove child options
+                            childVal.forEach( function( element ) {
+                                _sel.find( '> option[value="'+element+'"]' ).remove();
+                            }); 
+
+
+                        });                  
+                    }, 100 );
+
+
+                    //set default value for select
+                    $sel.val( defaultVal );    
+
+
+                    //remove options when it has child
+                    $( el ).closest( 'td' ).find( el ).each( function() {
+
+                        if ( $( this ).find( settings.fieldId ).val() == defaultVal ) {
+                            $( this ).find( settings.fieldSelect + '> option' ).each( function() {
+                                if ( $( this ).attr( 'value' ) != '' ) {
+                                    $( this ).remove();
+                                }
+
+                            });  
+                        }
+                    });  
+
+
+                    //Store temporary default value
+                    $sel.off( 'change.UixProductsToggleSelect' ).on( 'change.UixProductsToggleSelect', function() {
+
+                        var childClassName = settings.wrapperChild.replace( '.', '' );
+                        $this.find( settings.fieldDefaultValue ).val( $( this ).val() );
+                        if ( $( this ).val() != '' ) {
+                            $( this ).closest( settings.wrapper ).addClass( childClassName );
+                        } else {
+                            $( this ).closest( settings.wrapper ).removeClass( childClassName );
+                        }
+
+
+                    }); 
+
+
+
+                });//end $sel.html 
+                
+
+            });//end each $( this ).find( settings.wrapper )
+
             
- 
 		});
  
     };
@@ -1171,6 +1150,90 @@ UixProductsCustomMetaboxesInit.getInstance();
 
 
 
+
+/*! 
+ * ************************************
+ * Initialize Simple Select of Toggle
+ *************************************
+ */	
+
+( function ( $ ) {
+	'use strict';
+    $.fn.UixProductsToggleSimpleSelectInit = function( options ) {
+ 
+        // This is the easiest way to have default options.
+        var settings = $.extend({ 
+            type              : 'file',
+            wrapper           : '.uix-products-cmb__text--div--toggle',
+            trigger           : '.uix-products-cmb__text--div--toggle__trigger'
+        }, options );
+ 
+        this.each( function( index ) {
+            
+            var $this = $( this ),
+                $selInput = $this.prev( '[type="hidden"]' ),
+                defaultVal = $selInput.val();
+            
+            
+            if ( defaultVal == '' ) {
+                defaultVal = $this.find( 'option:selected' ).val();
+            }
+            
+            //Get the root container style
+            var el = '';
+            var elArr = $this[0].classList;
+
+            if ( elArr && elArr.length ) {
+                elArr.forEach( function( element ) {
+                    el += '.' + element;
+                });    
+            }
+            
+            
+            //Determine if it is the last element
+            var last = ( index == $( el ).length - 1 ) ? true : false;
+            
+            
+            if ( settings.type == 'html' && last ) {
+                defaultVal = $this.find( 'option' ).eq( 1 ).val();
+            }
+
+            
+            //set default value for select
+            $selInput.val( defaultVal );    
+            $this.val( defaultVal );    
+            $this.closest( settings.wrapper ).find( settings.trigger ).find( 'span' ).html( $this.find( 'option:selected' ).text() );
+
+            
+            //Display or hide fields
+            switch( defaultVal ) {
+                case 'file':
+                $this.closest( settings.wrapper ).find( '.uix-products-cmb__text--row[data-type="file"]' ).show();
+                $this.closest( settings.wrapper ).find( '.uix-products-cmb__text--row[data-type="html"]' ).hide();
+                break;
+
+                case 'html':
+                $this.closest( settings.wrapper ).find( '.uix-products-cmb__text--row[data-type="file"]' ).hide();
+                $this.closest( settings.wrapper ).find( '.uix-products-cmb__text--row[data-type="html"]' ).show();
+                break;      
+            }      
+            
+               
+
+            //Store temporary default value
+            $this.off( 'change.UixProductsToggleSimpleSelect' ).on( 'change.UixProductsToggleSimpleSelect', function() {
+                $selInput.val( $( this ).val() );
+                $( this ).closest( settings.wrapper ).find( settings.trigger ).find( 'span' ).html( $( this ).find( 'option:selected' ).text() );
+            }); 
+            
+                
+
+            
+		});
+ 
+    };
+ 
+}( jQuery ));
 
 /*! 
  * ************************************

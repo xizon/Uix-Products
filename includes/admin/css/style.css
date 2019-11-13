@@ -126,9 +126,7 @@
 #uix-products-meta-themeplugin-settings {
 	display: none;
 }
-#gallery-metabox {
-	display: block !important;
-}
+
 .uix-products-type-icon {
 	filter:alpha(opacity=50);  
 	-moz-opacity:0.5;   

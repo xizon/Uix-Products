@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-09-26 07:17+0000\n"
+"POT-Creation-Date: 2019-11-13 16:03+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,52 +23,52 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-products.php:239
+#: uix-products.php:238
 msgid "Uix Products Settings"
 msgstr ""
 
-#: uix-products.php:240 uix-products.php:317
+#: uix-products.php:239 uix-products.php:316
 msgid "Settings"
 msgstr ""
 
-#: uix-products.php:257 uix-products.php:258 uix-products.php:318
-#: uix-products.php:371 helper/settings.php:59
+#: uix-products.php:256 uix-products.php:257 uix-products.php:317
+#: uix-products.php:370 helper/settings.php:59
 msgid "How to use?"
 msgstr ""
 
-#: uix-products.php:265 uix-products.php:266 helper/settings.php:69
+#: uix-products.php:264 uix-products.php:265 helper/settings.php:69
 msgid "Template Files"
 msgstr ""
 
-#: uix-products.php:274 uix-products.php:275
+#: uix-products.php:273 uix-products.php:274
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-products.php:283
+#: uix-products.php:282
 msgid "Helper"
 msgstr ""
 
-#: uix-products.php:284 helper/settings.php:55
+#: uix-products.php:283 helper/settings.php:55
 msgid "About"
 msgstr ""
 
-#: uix-products.php:370
+#: uix-products.php:369
 msgid ""
 "Do you want to create a products website with WordPress?  Learn how to add "
 "products to your themes."
 msgstr ""
 
-#: uix-products.php:386
+#: uix-products.php:385
 msgid ""
 "<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: uix-products.php:386 helper/tabs/usage.php:29
+#: uix-products.php:385 helper/tabs/usage.php:29
 msgid "Create now!"
 msgstr ""
 
-#: uix-products.php:386 helper/tabs/temp.php:61
+#: uix-products.php:385 helper/tabs/temp.php:61
 msgid ""
 "As a workaround you can use FTP, access the Uix Products template files path "
 "<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
@@ -76,42 +76,42 @@ msgid ""
 "/</code>. "
 msgstr ""
 
-#: uix-products.php:478
+#: uix-products.php:477
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
 "write-blog\"></i> Edit this template</a>"
 msgstr ""
 
-#: uix-products.php:608
+#: uix-products.php:607
 msgid "Operation successfully completed!"
 msgstr ""
 
-#: uix-products.php:618
+#: uix-products.php:617
 msgid ""
 "There was a problem copying your template files:</strong> Please check your "
 "server settings. You can upload files to theme templates directory using FTP."
 msgstr ""
 
-#: uix-products.php:626
+#: uix-products.php:625
 msgid ""
 "There was a problem removing your template files:</strong> Please check your "
 "server settings. You can upload files to theme templates directory using FTP."
 msgstr ""
 
-#: uix-products.php:629
+#: uix-products.php:628
 msgid "Remove successful!"
 msgstr ""
 
-#: uix-products.php:837
+#: uix-products.php:836
 msgid "Primary Sidebar"
 msgstr ""
 
-#: uix-products.php:839
+#: uix-products.php:838
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: uix-products.php:1057
+#: uix-products.php:1043
 msgid "Load More"
 msgstr ""
 
@@ -119,7 +119,7 @@ msgstr ""
 msgid "Pages: "
 msgstr ""
 
-#: theme_templates/single-uix_products.php:99 includes/admin/options.php:779
+#: theme_templates/single-uix_products.php:99 includes/admin/options.php:484
 msgid "Edit"
 msgstr ""
 
@@ -132,17 +132,17 @@ msgid "Client"
 msgstr ""
 
 #: theme_templates/single-uix_products.php:127
-#: theme_templates/single-uix_products.php:213 includes/admin/options.php:772
-#: includes/admin/options.php:907
+#: theme_templates/single-uix_products.php:213 includes/admin/options.php:477
+#: includes/admin/options.php:612
 msgid "Category"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:134 includes/admin/options.php:413
+#: theme_templates/single-uix_products.php:134 includes/admin/options.php:64
 msgid "Project URL"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:141 includes/admin/options.php:436
-#: includes/admin/options.php:908
+#: theme_templates/single-uix_products.php:141 includes/admin/options.php:87
+#: includes/admin/options.php:613
 msgid "Author"
 msgstr ""
 
@@ -175,24 +175,24 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:228 includes/admin/options.php:550
+#: theme_templates/single-uix_products.php:228 includes/admin/options.php:204
 msgid "Compatible With"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:235 includes/admin/options.php:557
+#: theme_templates/single-uix_products.php:235 includes/admin/options.php:211
 msgid "Compatible Browsers"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:248 includes/admin/options.php:587
+#: theme_templates/single-uix_products.php:248 includes/admin/options.php:241
 msgid "Files Included"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:261 includes/admin/options.php:614
+#: theme_templates/single-uix_products.php:261 includes/admin/options.php:268
 #: helper/tabs/general-settings.php:121
 msgid "Layout"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:268 includes/admin/options.php:634
+#: theme_templates/single-uix_products.php:268 includes/admin/options.php:288
 msgid "Additional Info"
 msgstr ""
 
@@ -200,7 +200,7 @@ msgstr ""
 msgid "Installation"
 msgstr ""
 
-#: theme_templates/single-uix_products.php:282 includes/admin/options.php:648
+#: theme_templates/single-uix_products.php:282 includes/admin/options.php:302
 msgid "Tags"
 msgstr ""
 
@@ -218,7 +218,7 @@ msgid "%s"
 msgstr ""
 
 #: theme_templates/taxonomy-uix_products_category.php:29
-#: theme_templates/tmpl-uix_products.php:28 includes/admin/options.php:776
+#: theme_templates/tmpl-uix_products.php:28 includes/admin/options.php:481
 msgid "All"
 msgstr ""
 
@@ -283,278 +283,334 @@ msgstr ""
 msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
 msgstr ""
 
-#: includes/admin/options.php:365
+#: includes/admin/options.php:16
 msgid "Product Type"
 msgstr ""
 
-#: includes/admin/options.php:380
+#: includes/admin/options.php:31
 msgid "Artwork"
 msgstr ""
 
-#: includes/admin/options.php:381
+#: includes/admin/options.php:32
 msgid "Theme or Plugin"
 msgstr ""
 
-#: includes/admin/options.php:403
+#: includes/admin/options.php:54
 msgid "Artwork Settings"
 msgstr ""
 
-#: includes/admin/options.php:414 includes/admin/options.php:429
+#: includes/admin/options.php:65 includes/admin/options.php:80
 msgid "http://"
 msgstr ""
 
-#: includes/admin/options.php:415
+#: includes/admin/options.php:66
 msgid "Enter destination URL of this project. <strong>(optional)</strong>"
 msgstr ""
 
-#: includes/admin/options.php:421
+#: includes/admin/options.php:72
 msgid "Client Name"
 msgstr ""
 
-#: includes/admin/options.php:422
+#: includes/admin/options.php:73
 msgid "Enter name of your clients. <strong>(optional)</strong>"
 msgstr ""
 
-#: includes/admin/options.php:428
+#: includes/admin/options.php:79
 msgid "Client URL"
 msgstr ""
 
-#: includes/admin/options.php:430
+#: includes/admin/options.php:81
 msgid "Enter URL of your clients site. <strong>(optional)</strong>"
 msgstr ""
 
-#: includes/admin/options.php:437
+#: includes/admin/options.php:88
 msgid "Enter name of this project author. <strong>(optional)</strong>"
 msgstr ""
 
-#: includes/admin/options.php:443
+#: includes/admin/options.php:94
 msgid "Release Date"
 msgstr ""
 
-#: includes/admin/options.php:444
+#: includes/admin/options.php:95
 msgid "Enter date of your projects. <strong>(optional)</strong>"
 msgstr ""
 
-#: includes/admin/options.php:455 includes/admin/options.php:668
+#: includes/admin/options.php:106 includes/admin/options.php:322
 msgid "Custom Attributes"
 msgstr ""
 
-#: includes/admin/options.php:457 includes/admin/options.php:670
-#: includes/admin/uix-custom-metaboxes/init.php:1526
-#: includes/admin/uix-custom-metaboxes/init.php:1707
+#: includes/admin/options.php:109 includes/admin/options.php:325
+#: includes/admin/uix-custom-metaboxes/init.php:1605
+#: includes/admin/uix-custom-metaboxes/init.php:1810
 msgid "Title"
 msgstr ""
 
-#: includes/admin/options.php:458 includes/admin/options.php:671
-#: includes/admin/uix-custom-metaboxes/init.php:1527
-#: includes/admin/uix-custom-metaboxes/init.php:1708
+#: includes/admin/options.php:110 includes/admin/options.php:326
+#: includes/admin/uix-custom-metaboxes/init.php:1606
+#: includes/admin/uix-custom-metaboxes/init.php:1811
 msgid "Value"
 msgstr ""
 
-#: includes/admin/options.php:476
+#: includes/admin/options.php:111 includes/admin/options.php:327
+#: includes/admin/options.php:367 includes/admin/options.php:371
+#: includes/admin/uix-custom-metaboxes/init.php:1034
+#: includes/admin/uix-custom-metaboxes/init.php:1607
+#: includes/admin/uix-custom-metaboxes/init.php:1816
+#: includes/admin/uix-custom-metaboxes/init.php:2176
+#: includes/admin/uix-custom-metaboxes/init.php:2181
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/options.php:112 includes/admin/options.php:328
+#: includes/admin/options.php:486
+#: includes/admin/uix-custom-metaboxes/init.php:1608
+#: includes/admin/uix-custom-metaboxes/init.php:1817
+msgid "Add New"
+msgstr ""
+
+#: includes/admin/options.php:130
 msgid "Theme or Plugin Settings"
 msgstr ""
 
-#: includes/admin/options.php:486 includes/admin/options.php:906
+#: includes/admin/options.php:140 includes/admin/options.php:611
 msgid "Type"
 msgstr ""
 
-#: includes/admin/options.php:491
+#: includes/admin/options.php:145
 msgid "Theme"
 msgstr ""
 
-#: includes/admin/options.php:492
+#: includes/admin/options.php:146
 msgid "Plugin"
 msgstr ""
 
-#: includes/admin/options.php:503
+#: includes/admin/options.php:157
 msgid "Item Prices"
 msgstr ""
 
-#: includes/admin/options.php:504
+#: includes/admin/options.php:158
 msgid "Enter your expected value of this item for every single sell minimum."
 msgstr ""
 
-#: includes/admin/options.php:506
+#: includes/admin/options.php:160
 msgid "$"
 msgstr ""
 
-#: includes/admin/options.php:514
+#: includes/admin/options.php:168
 msgid "Item Name"
 msgstr ""
 
-#: includes/admin/options.php:515
+#: includes/admin/options.php:169
 msgid "E.g. Uixplant, 15 characters maximum."
 msgstr ""
 
-#: includes/admin/options.php:521
+#: includes/admin/options.php:175
 msgid "Item Title"
 msgstr ""
 
-#: includes/admin/options.php:522
+#: includes/admin/options.php:176
 msgid "E.g. Multi-purpose HTML5 WordPress Theme"
 msgstr ""
 
-#: includes/admin/options.php:528
+#: includes/admin/options.php:182
 msgid "Demo Link"
 msgstr ""
 
-#: includes/admin/options.php:529
+#: includes/admin/options.php:183
 msgid ""
 "Direct link to your demo or video without any iframe, support WP shortcode. "
 "(E.g. http://my-site.com/demo/)"
 msgstr ""
 
-#: includes/admin/options.php:535
+#: includes/admin/options.php:189
 msgid "Purchase/Download Link"
 msgstr ""
 
-#: includes/admin/options.php:536
+#: includes/admin/options.php:190
 msgid ""
 "Direct link to the purchase or download page, support WP shortcode. (E.g. "
 "http://market-place.com/yourtheme/)"
 msgstr ""
 
-#: includes/admin/options.php:543
+#: includes/admin/options.php:197
 msgid "Current Version"
 msgstr ""
 
-#: includes/admin/options.php:544
+#: includes/admin/options.php:198
 msgid "Your Item Version, E.g. 1.0.0"
 msgstr ""
 
-#: includes/admin/options.php:551
+#: includes/admin/options.php:205
 msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr ""
 
-#: includes/admin/options.php:619
+#: includes/admin/options.php:273
 msgid "Null"
 msgstr ""
 
-#: includes/admin/options.php:620
+#: includes/admin/options.php:274
 msgid "Responsive"
 msgstr ""
 
-#: includes/admin/options.php:621
+#: includes/admin/options.php:275
 msgid "Fixed"
 msgstr ""
 
-#: includes/admin/options.php:622
+#: includes/admin/options.php:276
 msgid "Liquid"
 msgstr ""
 
-#: includes/admin/options.php:623
+#: includes/admin/options.php:277
 msgid "Static"
 msgstr ""
 
-#: includes/admin/options.php:635
+#: includes/admin/options.php:289
 msgid "E.g. Well Documentation"
 msgstr ""
 
-#: includes/admin/options.php:641
+#: includes/admin/options.php:295
 msgid "Installation Info"
 msgstr ""
 
-#: includes/admin/options.php:642
+#: includes/admin/options.php:296
 msgid ""
 "E.g. Installation and set up instructions are attached (look for "
 "Documentation folder)."
 msgstr ""
 
-#: includes/admin/options.php:649
+#: includes/admin/options.php:303
 msgid ""
 "Maximum of 15 keywords covering features, usage, and styling. Keywords "
 "should all be in lowercase and separated by commas. e.g. photography, "
 "gallery, modern, jquery, wordpress theme"
 msgstr ""
 
-#: includes/admin/options.php:656
+#: includes/admin/options.php:310
 msgid "Updated Date"
 msgstr ""
 
-#: includes/admin/options.php:725
+#: includes/admin/options.php:348
+msgid "Image Gallery"
+msgstr ""
+
+#: includes/admin/options.php:362
+#: includes/admin/uix-custom-metaboxes/init.php:2171
+msgid "Files"
+msgstr ""
+
+#: includes/admin/options.php:363
+#: includes/admin/uix-custom-metaboxes/init.php:2172
+msgid "Text"
+msgstr ""
+
+#: includes/admin/options.php:366
+#: includes/admin/uix-custom-metaboxes/init.php:2185
+msgid "Enable Lightbox for this gallery?"
+msgstr ""
+
+#: includes/admin/options.php:368
+#: includes/admin/uix-custom-metaboxes/init.php:1035
+#: includes/admin/uix-custom-metaboxes/init.php:2182
+msgid "Select an image"
+msgstr ""
+
+#: includes/admin/options.php:369
+#: includes/admin/uix-custom-metaboxes/init.php:2174
+msgid "Custom Content"
+msgstr ""
+
+#: includes/admin/options.php:370
+#: includes/admin/uix-custom-metaboxes/init.php:2175
+msgid "Upload Your Files"
+msgstr ""
+
+#: includes/admin/options.php:372
+#: includes/admin/uix-custom-metaboxes/init.php:2177
+msgid "Add Files"
+msgstr ""
+
+#: includes/admin/options.php:373
+#: includes/admin/uix-custom-metaboxes/init.php:2178
+msgid "Add Text"
+msgstr ""
+
+#: includes/admin/options.php:430
 msgid "Uix Products"
 msgstr ""
 
-#: includes/admin/options.php:726
+#: includes/admin/options.php:431
 msgid "Products Item"
 msgstr ""
 
-#: includes/admin/options.php:727 includes/admin/options.php:730
+#: includes/admin/options.php:432 includes/admin/options.php:435
 msgid "Add New Item"
 msgstr ""
 
-#: includes/admin/options.php:728
+#: includes/admin/options.php:433
 msgid "Add New Products Item"
 msgstr ""
 
-#: includes/admin/options.php:729
+#: includes/admin/options.php:434
 msgid "Edit Item"
 msgstr ""
 
-#: includes/admin/options.php:731
+#: includes/admin/options.php:436
 msgid "View Item"
 msgstr ""
 
-#: includes/admin/options.php:732
+#: includes/admin/options.php:437
 msgid "Search Items"
 msgstr ""
 
-#: includes/admin/options.php:733
+#: includes/admin/options.php:438
 msgid "No Items Found"
 msgstr ""
 
-#: includes/admin/options.php:734
+#: includes/admin/options.php:439
 msgid "No Items Found In Trash"
 msgstr ""
 
-#: includes/admin/options.php:771 includes/admin/options.php:773
+#: includes/admin/options.php:476 includes/admin/options.php:478
 msgid "Categories"
 msgstr ""
 
-#: includes/admin/options.php:774
+#: includes/admin/options.php:479
 msgid "Search"
 msgstr ""
 
-#: includes/admin/options.php:775
+#: includes/admin/options.php:480
 msgid "Popular"
 msgstr ""
 
-#: includes/admin/options.php:777 includes/admin/options.php:778
+#: includes/admin/options.php:482 includes/admin/options.php:483
 msgid "Parent"
 msgstr ""
 
-#: includes/admin/options.php:780
+#: includes/admin/options.php:485
 msgid "Update"
 msgstr ""
 
-#: includes/admin/options.php:781
-#: includes/admin/uix-custom-metaboxes/init.php:1607
-#: includes/admin/uix-custom-metaboxes/init.php:1948
-msgid "Add New"
-msgstr ""
-
-#: includes/admin/options.php:782
+#: includes/admin/options.php:487
 msgid "New"
 msgstr ""
 
-#: includes/admin/options.php:783
+#: includes/admin/options.php:488
 msgid "Separate with commas"
 msgstr ""
 
-#: includes/admin/options.php:784
+#: includes/admin/options.php:489
 msgid "Add or remove"
 msgstr ""
 
-#: includes/admin/options.php:785
+#: includes/admin/options.php:490
 msgid "Choose from the most used"
 msgstr ""
 
-#: includes/admin/options.php:904
+#: includes/admin/options.php:609
 msgid "Thumbnail"
 msgstr ""
 
-#: includes/admin/options.php:964
+#: includes/admin/options.php:669
 msgid "[artwork]"
 msgstr ""
 
@@ -871,18 +927,14 @@ msgid ""
 msgstr ""
 
 #: helper/tabs/credits.php:16
-msgid "Gallery Metabox"
-msgstr ""
-
-#: helper/tabs/credits.php:17
 msgid "Flexslider"
 msgstr ""
 
-#: helper/tabs/credits.php:18
+#: helper/tabs/credits.php:17
 msgid "Shuffle"
 msgstr ""
 
-#: helper/tabs/credits.php:19
+#: helper/tabs/credits.php:18
 msgid "Switcheroo"
 msgstr ""
 
@@ -943,31 +995,6 @@ msgstr ""
 msgid "* Support widgets to the spot you wish it to appear"
 msgstr ""
 
-#: includes/admin/gallery-metabox/init.php:110
-#: includes/admin/gallery-metabox/init.php:165
-msgid "Remove image"
-msgstr ""
-
-#: includes/admin/gallery-metabox/init.php:120
-msgid "Add/Edit Images"
-msgstr ""
-
-#: includes/admin/gallery-metabox/init.php:124
-msgid "Enable Lightbox for this gallery?"
-msgstr ""
-
-#: includes/admin/gallery-metabox/init.php:146
-msgid "Add Images to Gallery"
-msgstr ""
-
-#: includes/admin/gallery-metabox/init.php:148
-msgid "Add to gallery"
-msgstr ""
-
-#: includes/admin/gallery-metabox/init.php:284
-msgid "Image Gallery"
-msgstr ""
-
 #: includes/admin/uix-custom-metaboxes/init.php:120
 msgid "Select Files"
 msgstr ""
@@ -1009,7 +1036,7 @@ msgid "Language"
 msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/init.php:130
-#: includes/admin/uix-custom-metaboxes/init.php:1740
+#: includes/admin/uix-custom-metaboxes/init.php:1853
 msgid "-"
 msgstr ""
 
@@ -1022,41 +1049,28 @@ msgid "Group Title"
 msgstr ""
 
 #: includes/admin/uix-custom-metaboxes/init.php:387
-#: includes/admin/uix-custom-metaboxes/init.php:1367
+#: includes/admin/uix-custom-metaboxes/init.php:1440
 msgid "Field Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1552
-#: includes/admin/uix-custom-metaboxes/init.php:1782
-msgid "Remove field"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:1709
+#: includes/admin/uix-custom-metaboxes/init.php:1812
 msgid "Subtitle"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1710
+#: includes/admin/uix-custom-metaboxes/init.php:1813
 msgid "ID"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1711
+#: includes/admin/uix-custom-metaboxes/init.php:1814
 msgid "Level"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1712
+#: includes/admin/uix-custom-metaboxes/init.php:1815
 msgid "Class Name"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:1858
+#: includes/admin/uix-custom-metaboxes/init.php:1971
 msgid "Untitled"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/controller-upload.php:29
-msgid "Select an image"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/controller-upload.php:30
-msgid "remove image"
 msgstr ""
 
 #. Description of the plugin

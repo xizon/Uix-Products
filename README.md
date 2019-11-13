@@ -54,6 +54,14 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 ### Updates
 
 
+##### = 1.3.4 (November 11, 2019) =
+
+* Fix: Fixed button trigger event for uploading image control.
+* Dev: New loop fields control for richer release types.
+* Remove: Remove the gallery metabox and replace it with uix custom metaboxes.
+* Tweak: Optimized scalability for components such as uploads.
+
+
 ##### = 1.3.3 (September 24, 2019) =
 
 * Dev: Added filter `add_filter( 'uix_products_custom_metaboxes_vars', 'mytheme_modify_vars' );` for current Custom Metaboxes.
@@ -215,6 +223,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 - WP 4.9.*
 - WP 5.1.*
 - WP 5.2.*
+- WP 5.3.*
 
 
 ### Screenshot
@@ -241,7 +250,6 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ##### I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
-- [Gallery Metabox](https://github.com/uixplorer/gallery-metabox)
 - [Flexslider](https://github.com/woothemes/FlexSlider)
 - [Shuffle](https://github.com/Vestride/Shuffle)
 - [Switcheroo](https://github.com/OriginalEXE/Switcheroo)

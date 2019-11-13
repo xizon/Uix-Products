@@ -5,8 +5,8 @@ Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
-Tested up to: 5.2
-Stable tag: 1.3.3
+Tested up to: 5.3
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,15 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 == Changelog ==
+
+
+= 1.3.4 (November 11, 2019) =
+
+* Fix: Fixed button trigger event for uploading image control.
+* Dev: New loop fields control for richer release types.
+* Remove: Remove the gallery metabox and replace it with uix custom metaboxes.
+* Tweak: Optimized scalability for components such as uploads.
+
 
 
 = 1.3.3 (September 24, 2019) =

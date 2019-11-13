@@ -7,7 +7,8 @@
 
 $layout            = get_option( 'uix_products_opt_layout', 'standard' );
 $cat_termlist      = get_the_term_list( get_the_ID(), 'uix_products_category', '', ', ', '' );
-$attachments       = uix_products_get_gallery_ids(); 
+$gallery           = get_post_meta( get_the_ID(), '_easy_image_gallery', true );
+$lightbox_enable   = NULL;
 
 // Thumbnail size
 if ( $layout == 'masonry' ) { 
@@ -24,33 +25,75 @@ if ( $layout == 'masonry' ) {
 
 
     <div id="uix-products-item-<?php the_ID(); ?>">
-    
-        <?php if ( $attachments && is_array( $attachments ) ) { ?>
+        
             <div class="custom-uix-products-flexslider">
                 <div class="custom-uix-products-slides">
-					<?php foreach ( $attachments as $attachment ) :
-                                $img_url	= wp_get_attachment_url( $attachment );
-                                $img_alt	= get_post_meta( $attachment, '_wp_attachment_image_alt', true );
-                                $img_echo	= UixProducts::remove_thumbnail_str( wp_get_attachment_image( $attachment, 'post-thumbnail-large' ) );
-                    ?>
-                        <?php if ( !empty( $img_echo ) ) { ?>
-                                    <div class="item">
-                                        <?php if (  'on' == uix_products_gallery_is_lightbox_enabled() ) { ?>
-                                            <a href="<?php echo esc_url( $img_url ); ?>" title="<?php echo esc_attr( $img_alt ); ?>" rel="uix-products-slider-prettyPhoto[<?php the_ID(); ?>]">
-                                                <?php echo wp_kses( $img_echo, wp_kses_allowed_html( 'post' ) ); ?>
+                    
+                    <?php             
+                    $_data = json_decode( $gallery, true );
+                             
+                    if ( is_array( $_data ) && sizeof( $_data ) > 1 ) {
+                        
+                        //----------
+                        foreach( $_data as $index => $value ) {
+                            if ( is_array( $value ) && sizeof( $value ) > 0 ) {
+
+                                //Exclude lightbox fields
+                                if ( array_key_exists( 'lightbox', $value ) ) {
+                                    $lightbox_enable = esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'lightbox' ] ) );
+                                    break;
+                                }//endif array_key_exists( 'lightbox', $value )
+                            }//endif $value
+                        }//end foreach      
+                        
+
+                        //----------
+                        foreach( $_data as $index => $value ) :
+
+                            if ( is_array( $value ) && sizeof( $value ) > 0 ) {
+                                //Exclude lightbox fields
+                                if ( ! array_key_exists( 'lightbox', $value ) ) {
+
+                            ?>
+                                <div class="item uix-products-portfolio-type-<?php echo esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'type' ] ) ); ?>">
+
+                                    <?php
+                                    $img_url = Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'filePath' ] );
+
+                                    if ( !empty( $img_url ) ) {
+                                    ?>
+                                        <?php if (  'on' == $lightbox_enable ) { ?>
+                                            <a href="<?php echo esc_url( $img_url ); ?>" rel="uix-products-slider-prettyPhoto[<?php the_ID(); ?>]">
+                                                <img src="<?php echo esc_url( $img_url ); ?>" alt="">
                                             </a>
                                         <?php } else { ?>
-                                            <?php echo wp_kses( $img_echo, wp_kses_allowed_html( 'post' ) ); ?>
+                                            <img src="<?php echo esc_url( $img_url ); ?>" alt="">
                                         <?php } ?>    
-                                    </div>			
-                                        
-                        <?php } ?>
-                    <?php endforeach; ?>
+                                    
+                                    <?php } ?>
+
+                                    <?php echo UixProducts::kses( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+
+                                </div>     
+                            <?php
+
+                                }//endif array_key_exists( 'lightbox', $value )
+
+                            }//endif $value
+
+
+                        endforeach;
+
+                    ?> 
+                    
+                    
+			
                 </div>
                 <!-- .custom-uix-products-slides end -->
             </div>
             <!-- .custom-uix-products-flexslider end -->
-            
+        
+
         <?php } else { ?>  
             <?php if ( has_post_thumbnail() ) { ?> 
 				<?php
@@ -60,8 +103,9 @@ if ( $layout == 'masonry' ) {
                     ) ); 
                 ?> 
             <?php } ?>
-        <?php } ?>
-                        
+        <?php } ?> 
+        
+      
     
     
     </div>   
