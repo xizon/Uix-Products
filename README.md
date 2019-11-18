@@ -53,8 +53,9 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
-##### = 1.3.5 (November 18, 2019) =
+##### = 1.3.6 (November 18, 2019) =
 
+* Fix: Fixed Type display of item list in admin panel.
 * Tweak: Optimized category switching script.
 
 
