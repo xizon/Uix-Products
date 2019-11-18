@@ -53,6 +53,10 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.3.5 (November 18, 2019) =
+
+* Tweak: Optimized category switching script.
+
 
 ##### = 1.3.4 (November 11, 2019) =
 

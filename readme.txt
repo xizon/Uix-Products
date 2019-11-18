@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 5.3
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 == Changelog ==
+
+
+= 1.3.5 (November 18, 2019) =
+
+* Tweak: Optimized category switching script.
 
 
 = 1.3.4 (November 11, 2019) =

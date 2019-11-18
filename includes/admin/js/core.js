@@ -3,83 +3,80 @@
 	
 	$( function(){  
 
-		
-		
 		/*! 
 		 * ************************************************
-		 * Sets default screen options for Page Screen
+		 * Sets default screen options for Uix Products
 		 *************************************************
 		 */
-		var $type  = $( '#uix-products-meta-typeshow-hide' ),
-			$opt1  = $( '#uix-products-meta-artwork-settings-hide' ),
-			$opt2  = $( '#uix-products-meta-themeplugin-settings-hide' );
+		var productsType         = 'uix-products-meta-typeshow',
+			productsOpt1         = ['uix-products-meta-artwork-settings'],
+			productsOpt2         = ['uix-products-meta-themeplugin-settings'],
+            productsOpt3         = [];
 		
 		//Required, Used to determine the action of the plug-in itself
 		//When the theme only needs "artwork" category, 
 		//the HTML code in the admin panel needs to have the class name "uix-products-meta-theme-custom".
-		if ( $( '.uix-products-meta-theme-custom' ).length == 0 ) {
-			setTimeout( function() {
-				if ( ! $type.is( ":checked" ) ) $type.prop( 'checked', true ).triggerHandler( 'click' );
-				UixProducts_artwork_settings_show();
-				
-				//Switch post type
-				$( '[data-target-id="uix_products_typeshow"] > [data-value]' ).each( function()  {
-					var type   = $( this ).data( 'value' ),
-						$radio = $( this ).find( '[type="radio"]' );
+        if ( $( '.uix-products-meta-theme-custom' ).length == 0 ) {
+            setTimeout( function() {
+                var $type = $( '#' + productsType + '-hide' );
+                if ( ! $type.is( ":checked" ) ) $type.prop( 'checked', true ).triggerHandler( 'click' );
+                uix_products_artwork_settings_show();
 
-					if ( type == 'artwork' ) {
-						if ( $radio.is( ":checked" ) ) {
-							UixProducts_artwork_settings_show();
-						}
+                //Switch post type
+                $( '[data-target-id="uix_products_typeshow"] > [data-value]' ).each( function()  {
+                    uix_products_change_settings( $( this ).data( 'value' ), $( this ).find( '[type="radio"]' ) );
+                });	
 
-					}
+            }, 100 );    
+        }
 
-					if ( type == 'theme-plugin' ) {
-						if ( $radio.is( ":checked" ) ) {
-							UixProducts_themeplugin_settings_show();
-						}	
-
-					}	
-				});	
-				
-			}, 100 );
-			
-
-			
-		}
 
 		
 		$( '[data-target-id="uix_products_typeshow"] > [data-value]' ).on( 'click', function() {
-			var type   = $( this ).data( 'value' ),
-				$radio = $( this ).find( '[type="radio"]' );
-			
-			if ( type == 'artwork' ) {
-				if ( $radio.is( ":checked" ) ) {
-					UixProducts_artwork_settings_show();
-				}
-				
-			}
-			
-			if ( type == 'theme-plugin' ) {
-				if ( $radio.is( ":checked" ) ) {
-					UixProducts_themeplugin_settings_show();
-				}	
-				
-			}	
-			
-
+			uix_products_change_settings( $( this ).data( 'value' ), $( this ).find( '[type="radio"]' ) );
 		});
-		
-		function UixProducts_artwork_settings_show() {
-			$opt2.prop( 'checked', false ).triggerHandler( 'click' );
-			$opt1.prop( 'checked', true ).triggerHandler( 'click' );
+
+
+		function uix_products_change_settings( type, radio ) {
+            switch( type ) {
+                case 'artwork':
+                    if ( radio.is( ":checked" ) ) { uix_products_artwork_settings_show() };
+                    break;
+
+                case 'theme-plugin':
+                    if ( radio.is( ":checked" ) ) { uix_products_themeplugin_settings_show() };
+                    break;
+             
+
+            }   
 		}	
 		
-		function UixProducts_themeplugin_settings_show() {
-			$opt1.prop( 'checked', false ).triggerHandler( 'click' );
-			$opt2.prop( 'checked', true ).triggerHandler( 'click' );
+		function uix_products_artwork_settings_show() {
+            //merge multiple array
+            var hideArr = productsOpt2.concat( productsOpt3 );
+            hideArr.forEach( function( element ) {
+                $( '#' + element + '-hide' ).prop( 'checked', false ).triggerHandler( 'click' );
+            });  
+            
+            //display target
+            productsOpt1.forEach( function( element ) {
+                $( '#' + element + '-hide' ).prop( 'checked', true ).triggerHandler( 'click' );
+            });
+			
+		}	
+		
+		function uix_products_themeplugin_settings_show() {
+            //merge multiple array
+            var hideArr = productsOpt1.concat( productsOpt3 );
+            hideArr.forEach( function( element ) {
+                $( '#' + element + '-hide' ).prop( 'checked', false ).triggerHandler( 'click' );
+            });  
+            
+            //display target
+            productsOpt2.forEach( function( element ) {
+                $( '#' + element + '-hide' ).prop( 'checked', true ).triggerHandler( 'click' );
+            });
 		}
-
 		
 	
 	
