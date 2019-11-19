@@ -90,10 +90,6 @@ table.uix-products-cmb tr th {
     margin-left: 5px;
 }
 
-.uix-products-cmb__custom-attributes-field__sortablebtn {
-    right: auto;
-    left: 30px;
-}
 
 
 
@@ -183,5 +179,10 @@ table.uix-products-cmb tr th {
 .uix-products-cmb__custom-attributes-field__addbtn--multi {
     border-right: 1px solid #ECF9FF;
     border-left: 1px solid #b5dbf5;
+}
+
+.uix-products-cmb__custom-attributes-field__sortablebtn {
+    right: auto;
+    left: 30px;
 }
 
