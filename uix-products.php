@@ -235,26 +235,33 @@ class UixProducts {
 	 *
 	 */
 	 public static function options_admin_menu() {
-	
-	    //settings
-		$hook = add_submenu_page(
-			'edit.php?post_type=uix_products',
-			__( 'Uix Products Settings', 'uix-products' ),
-			__( 'Settings', 'uix-products' ),
-			'manage_options',
-			'uix-products-custom-submenu-page',
-			array( __CLASS__, 'uix_products_options_page' )
-		);
-		
-		add_action("load-{$hook}", function( $caps ) {
-			header( "Location: " . admin_url( "admin.php?page=".self::HELPER."&tab=general-settings" ) );
-			exit;
-		 });
+
+         
+//		$hook = add_submenu_page(
+//			'edit.php?post_type=uix_products',
+//			__( 'Uix Products Settings', 'uix-products' ),
+//			__( 'Settings', 'uix-products' ),
+//			'manage_options',
+//			'uix-products-custom-submenu-page',
+//			array( __CLASS__, 'uix_products_options_page' )
+//		);
+//		
+//		add_action("load-{$hook}", function( $caps ) {
+//			header( "Location: " . admin_url( "admin.php?page=".self::HELPER."&tab=general-settings" ) );
+//			exit;
+//        });
 		 
 		 
-	
 	
         //Add sub links
+		add_submenu_page(
+			'edit.php?post_type=uix_products',
+			__( 'Settings', 'uix-products' ),
+			__( 'Settings', 'uix-products' ),
+			'manage_options',
+			admin_url( "admin.php?page=".self::HELPER."&tab=general-settings" )
+		);	    
+         
 		add_submenu_page(
 			'edit.php?post_type=uix_products',
 			__( 'How to use?', 'uix-products' ),
