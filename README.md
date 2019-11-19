@@ -53,6 +53,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.3.7 (November 19, 2019) =
+
+* New: Add drag sorting for Uix Custom Metaboxes' Image Gallery.
+
+
 ##### = 1.3.6 (November 18, 2019) =
 
 * Fix: Fixed Type display of item list in admin panel.

@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.4 (November 11, 2019)
+ * @version		: 1.5 (November 19, 2019)
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -41,7 +41,7 @@ var UixProductsCustomMetaboxes = function( obj ) {
                 UixProductsCustomMetaboxesConstructor.prototype.expandItem.call( this, '.uix-products-cmb__text--div--toggle__trigger' );
                 UixProductsCustomMetaboxesConstructor.prototype.titleChange.call( this, '.uix-products-cmb__text--div--toggle', '.uix-products-cmb__text--div--toggle__trigger', '.uix-products-cmb__text--div--toggle__title' );          
                 UixProductsCustomMetaboxesConstructor.prototype.upload.call( this );
-                UixProductsCustomMetaboxesConstructor.prototype.editor.call( this );
+                UixProductsCustomMetaboxesConstructor.prototype.editor.call( this, false );
                 UixProductsCustomMetaboxesConstructor.prototype.toggleSelect.call( this );
 				
 			});
@@ -336,22 +336,22 @@ var UixProductsCustomMetaboxes = function( obj ) {
 			//Chain method calls
 			return this;
 		},		
-			
 		
 		/*! 
 		 * 
 		 * Editor
 		 * ---------------------------------------------------
 		 *
+         * @param  {boolean} init          - Whether to reset the editor.
 		 * @return {void}                  - The constructor.
 		 */
-		editor: function() {
+		editor: function( reset ) {
 
 			jQuery( document ).ready( function() {
                 
                
                 //Initialize Editor
-                jQuery( '.uix-products-cmb__mce-editor' ).UixProductsEditorInit();
+                jQuery( '.uix-products-cmb__mce-editor' ).UixProductsEditorInit({init: reset});
 
                 
 			});
@@ -545,7 +545,7 @@ var UixProductsCustomMetaboxes = function( obj ) {
                                 
 
                                 //Initialize Editor
-                                UixProductsCustomMetaboxesInit.editor();
+                                UixProductsCustomMetaboxesInit.editor( false );
                                 
                                 
 
@@ -589,6 +589,33 @@ var UixProductsCustomMetaboxes = function( obj ) {
 
 					});	
 
+                    // Custom attributes field ordering
+                    jQuery( '.uix-products-cmb__custom-attributes-field' ).sortable({
+                        items                   : '.uix-products-cmb__text--div--toggle--sortable',
+                        handle                  : '.uix-products-cmb__custom-attributes-field__sortablebtn',
+                        cursor                  : 'move',
+                        scrollSensitivity       : 40,
+                        forcePlaceholderSize    : true,
+                        forceHelperSize         : false,
+                        helper                  : 'clone',
+                        opacity                 : 0.65,
+                        placeholder             : 'wc-metabox-sortable-placeholder',
+                        start:function( event,ui ) {
+                            ui.item.css( 'background-color', '#f6f6f6' );
+                        },
+                        stop:function( event,ui ){
+                            ui.item.removeAttr( 'style' );
+                            
+                            //Initialize Editor
+                            UixProductsCustomMetaboxesInit.editor( true );   
+                            
+                        },
+                        update: function( event, ui ) {
+
+                        }
+                    });       
+                    
+                    
 					
 					
 				} );		
@@ -965,7 +992,8 @@ UixProductsCustomMetaboxesInit.getInstance();
         var settings = $.extend({
             id      : '', 
             toolbar : '', 
-            height  : '' 
+            height  : '',
+            init    : false
         }, options );
  
         this.each( function() {
@@ -974,6 +1002,11 @@ UixProductsCustomMetaboxesInit.getInstance();
                 id       = settings.id, 
                 toolbar  = settings.toolbar, 
                 height   = settings.height;
+            
+            
+            if ( settings.init ) {
+                $this.attr( 'aria-init', 0 );
+            }
 			
             if ( $this.attr( 'aria-init' ) == 0 ) {
                 var _textarea = $this.find( 'textarea' );
