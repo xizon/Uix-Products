@@ -209,7 +209,7 @@ if( isset( $_GET[ 'tab' ] ) && $_GET[ 'tab' ] == 'general-settings' ) {
              <td>
                 <p>
                     <textarea name="uix_products_opt_custom_params" class="regular-text" rows="5" style="width:98%;"><?php echo esc_textarea( get_option( 'uix_products_opt_custom_params', '{"key1":"value1","key2":"value2","key3":"value3"}' ) ); ?></textarea>
-                    <?php _e( 'Can be used for your custom slide parameters.', 'uix-products' ); ?>
+                    <?php _e( 'Can be used for your custom parameters.', 'uix-products' ); ?>
                 </p>
                
             </td>         

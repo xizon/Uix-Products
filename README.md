@@ -53,6 +53,14 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+
+
+##### = 1.3.8 (November 19, 2019) =
+
+* New: Added zh_CN language support.
+* Fix: Correct the path error of Setting after the corresponding theme.
+
+
 ##### = 1.3.7 (November 19, 2019) =
 
 * New: Add drag sorting for Uix Custom Metaboxes' Image Gallery.

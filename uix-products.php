@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.3.7
+ * Version:     1.3.8
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -181,8 +181,46 @@ class UixProducts {
 	public static function tc_i18n() {
 	
 	
-	    load_plugin_textdomain( 'uix-products', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/'  );
-		
+        load_plugin_textdomain('uix-products', false, dirname(plugin_basename(__FILE__)).'/languages/');
+
+        //move language files to System folder "languages/plugins/yourplugin-<locale>.po"
+        global $wp_filesystem;
+        
+        if ( empty( $wp_filesystem ) ) {
+            require_once (ABSPATH . '/wp-admin/includes/file.php');
+            WP_Filesystem();
+        }
+        
+        $filenames = array();
+        $filepath = UIX_PRODUCTS_PLUGIN_DIR.'languages/';
+        $systempath = WP_CONTENT_DIR . '/languages/plugins/';
+        
+        if ( !$wp_filesystem->is_dir( $systempath ) ) {
+            $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
+        }
+        
+
+        foreach(glob(dirname(__FILE__)."/languages/*.po") as $file) {
+            $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+        }
+
+        foreach(glob(dirname(__FILE__)."/languages/*.mo") as $file) {
+            $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+        }
+
+        foreach ($filenames as $filename) {
+
+            // Copy
+            $dir1 = $wp_filesystem->find_folder($filepath);
+            $file1 = trailingslashit($dir1).$filename;
+
+            $dir2 = $wp_filesystem->find_folder($systempath);
+            $file2 = trailingslashit($dir2).$filename;
+
+            $filecontent = $wp_filesystem->get_contents($file1);
+
+            $wp_filesystem->put_contents($file2, $filecontent, FS_CHMOD_FILE);
+        }
 
 	}
 	
@@ -259,7 +297,7 @@ class UixProducts {
 			__( 'Settings', 'uix-products' ),
 			__( 'Settings', 'uix-products' ),
 			'manage_options',
-			admin_url( "admin.php?page=".self::HELPER."&tab=general-settings" )
+            'admin.php?page='.self::HELPER.'&tab=general-settings'
 		);	    
          
 		add_submenu_page(
@@ -625,7 +663,7 @@ class UixProducts {
 						  </script>';
 					
 				} else {
-					$info   = __( 'There was a problem copying your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.', 'uix-products' );
+					$info   = __( '<strong>There was a problem copying your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.', 'uix-products' );
 					$notice = $div_notice_error_before.$info.$div_notice_after;
 				}
 				
@@ -633,7 +671,7 @@ class UixProducts {
 
 			} else {
 				if ( self::tempfile_exists() ) {
-					$info   = __( 'There was a problem removing your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.', 'uix-products' );
+					$info   = __( '<strong>There was a problem removing your template files:</strong> Please check your server settings. You can upload files to theme templates directory using FTP.', 'uix-products' );
 					$notice = $div_notice_error_before.$info.$div_notice_after;
 				} else {
 					$info   = $echo_ok_status.__( 'Remove successful!', 'uix-products' );
