@@ -184,34 +184,39 @@ class UixProducts {
         load_plugin_textdomain('uix-products', false, dirname(plugin_basename(__FILE__)).'/languages/');
 
         //move language files to System folder "languages/plugins/yourplugin-<locale>.po"
-        global $wp_filesystem;
-        
-        if ( empty( $wp_filesystem ) ) {
-            require_once (ABSPATH . '/wp-admin/includes/file.php');
-            WP_Filesystem();
-        }
-        
-        $filenames = array();
-        $filepath = UIX_PRODUCTS_PLUGIN_DIR.'languages/';
-        $systempath = WP_CONTENT_DIR . '/languages/plugins/';
-        
-        if ( !$wp_filesystem->is_dir( $systempath ) ) {
-            $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
-        }
-        
+        //Only execute one-time scripts
+        $transient = self::PREFIX . '-products-lang_onetime_check';
+        if ( !get_transient( $transient ) ) {
+            
+            set_transient( $transient, 'locked', 1800 ); // lock function for 30 Minutes
+ 
+            global $wp_filesystem;
 
-        foreach(glob(dirname(__FILE__)."/languages/*.po") as $file) {
-            $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
-        }
+            if ( empty( $wp_filesystem ) ) {
+                require_once (ABSPATH . '/wp-admin/includes/file.php');
+                WP_Filesystem();
+            }
 
-        foreach(glob(dirname(__FILE__)."/languages/*.mo") as $file) {
-            $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
-        }
+            $filenames = array();
+            $filepath = UIX_PRODUCTS_PLUGIN_DIR.'languages/';
+            $systempath = WP_CONTENT_DIR . '/languages/plugins/';
 
-        foreach ($filenames as $filename) {
+            if ( !$wp_filesystem->is_dir( $systempath ) ) {
+                $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
+            }
 
-            // Copy
-            if ( ! file_exists( $systempath . $filename ) ) {
+
+            foreach(glob(dirname(__FILE__)."/languages/*.po") as $file) {
+                $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+            }
+
+            foreach(glob(dirname(__FILE__)."/languages/*.mo") as $file) {
+                $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+            }
+
+            foreach ($filenames as $filename) {
+
+                // Copy
                 $dir1 = $wp_filesystem->find_folder($filepath);
                 $file1 = trailingslashit($dir1).$filename;
 
@@ -221,11 +226,14 @@ class UixProducts {
                 $filecontent = $wp_filesystem->get_contents($file1);
 
                 $wp_filesystem->put_contents($file2, $filecontent, FS_CHMOD_FILE);   
+
             }
 
-        }
+        }//endif get_transient( $transient )
+
 
 	}
+    
 	
 	/*
 	 * The function finds the position of the first occurrence of a string inside another string.
