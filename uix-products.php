@@ -197,9 +197,12 @@ class UixProducts {
 
         if ( !$wp_filesystem->is_dir( $systempath ) ) {
             $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
+        }//endif is_dir( $systempath ) 
+            
+        if ( $wp_filesystem->is_dir( $systempath ) ) {
             
             //Only execute one-time scripts
-            $transient = self::PREFIX . '-products-admin-languages_onetime_check';
+            $transient = self::PREFIX . '-products-lang_files_onetime_check';
             if ( !get_transient( $transient ) ) {
 
                 set_transient( $transient, 'locked', 1800 ); // lock function for 30 Minutes
@@ -231,10 +234,10 @@ class UixProducts {
 
 
 
-            }//endif get_transient( $transient )
-
+            }//endif get_transient( $transient )   
             
         }//endif is_dir( $systempath ) 
+        
 
 
 	}
