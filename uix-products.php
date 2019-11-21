@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.3.8
+ * Version:     1.3.85
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -184,52 +184,57 @@ class UixProducts {
         load_plugin_textdomain('uix-products', false, dirname(plugin_basename(__FILE__)).'/languages/');
 
         //move language files to System folder "languages/plugins/yourplugin-<locale>.po"
-        //Only execute one-time scripts
-        $transient = self::PREFIX . '-products-lang_onetime_check';
-        if ( !get_transient( $transient ) ) {
+        global $wp_filesystem;
+
+        if ( empty( $wp_filesystem ) ) {
+            require_once (ABSPATH . '/wp-admin/includes/file.php');
+            WP_Filesystem();
+        }
+
+        $filenames = array();
+        $filepath = UIX_PRODUCTS_PLUGIN_DIR.'languages/';
+        $systempath = WP_CONTENT_DIR . '/languages/plugins/';
+
+        if ( !$wp_filesystem->is_dir( $systempath ) ) {
+            $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
             
-            set_transient( $transient, 'locked', 1800 ); // lock function for 30 Minutes
- 
-            global $wp_filesystem;
+            //Only execute one-time scripts
+            $transient = self::PREFIX . '-products-admin-languages_onetime_check';
+            if ( !get_transient( $transient ) ) {
 
-            if ( empty( $wp_filesystem ) ) {
-                require_once (ABSPATH . '/wp-admin/includes/file.php');
-                WP_Filesystem();
-            }
-
-            $filenames = array();
-            $filepath = UIX_PRODUCTS_PLUGIN_DIR.'languages/';
-            $systempath = WP_CONTENT_DIR . '/languages/plugins/';
-
-            if ( !$wp_filesystem->is_dir( $systempath ) ) {
-                $wp_filesystem->mkdir( $systempath, FS_CHMOD_DIR );
-            }
+                set_transient( $transient, 'locked', 1800 ); // lock function for 30 Minutes
 
 
-            foreach(glob(dirname(__FILE__)."/languages/*.po") as $file) {
-                $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
-            }
+                foreach(glob(dirname(__FILE__)."/languages/*.po") as $file) {
+                    $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+                }
 
-            foreach(glob(dirname(__FILE__)."/languages/*.mo") as $file) {
-                $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
-            }
+                foreach(glob(dirname(__FILE__)."/languages/*.mo") as $file) {
+                    $filenames[] = str_replace(dirname(__FILE__)."/languages/", '', $file);
+                }
 
-            foreach ($filenames as $filename) {
+                foreach ($filenames as $filename) {
 
-                // Copy
-                $dir1 = $wp_filesystem->find_folder($filepath);
-                $file1 = trailingslashit($dir1).$filename;
+                    // Copy
+                    $dir1 = $wp_filesystem->find_folder($filepath);
+                    $file1 = trailingslashit($dir1).$filename;
 
-                $dir2 = $wp_filesystem->find_folder($systempath);
-                $file2 = trailingslashit($dir2).$filename;
+                    $dir2 = $wp_filesystem->find_folder($systempath);
+                    $file2 = trailingslashit($dir2).$filename;
 
-                $filecontent = $wp_filesystem->get_contents($file1);
+                    $filecontent = $wp_filesystem->get_contents($file1);
 
-                $wp_filesystem->put_contents($file2, $filecontent, FS_CHMOD_FILE);   
+                    $wp_filesystem->put_contents($file2, $filecontent, FS_CHMOD_FILE);  
 
-            }
+                }
+                
 
-        }//endif get_transient( $transient )
+
+
+            }//endif get_transient( $transient )
+
+            
+        }//endif is_dir( $systempath ) 
 
 
 	}

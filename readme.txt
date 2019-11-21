@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 5.3
-Stable tag: 1.3.8
+Stable tag: 1.3.85
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -113,7 +113,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 == Changelog ==
 
 
-= 1.3.8 (November 19, 2019) =
+= 1.3.85 (November 19, 2019) =
 
 * New: Added zh_CN language support.
 * Fix: Correct the path error of Setting after the corresponding theme.

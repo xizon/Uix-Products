@@ -55,7 +55,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 
-##### = 1.3.8 (November 19, 2019) =
+##### = 1.3.85 (November 19, 2019) =
 
 * New: Added zh_CN language support.
 * Fix: Correct the path error of Setting after the corresponding theme.
