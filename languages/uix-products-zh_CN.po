@@ -4,9 +4,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2019-11-20 14:35+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
-"PO-Revision-Date: 2019-11-20 14:36+0000\n"
+"PO-Revision-Date: 2019-12-31 06:32+0000\n"
 "Last-Translator: chuckie <uiuxlab@gmail.com>\n"
-"Language-Team: Chinese (China)\n"
+"Language-Team: 简体中文\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.3.1; wp-5.3"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
 
 #: uix-products.php:259 uix-products.php:260 uix-products.php:327
 msgid "Settings"
@@ -575,7 +575,7 @@ msgstr "相册画廊"
 #: includes/admin/options.php:359
 #: includes/admin/uix-custom-metaboxes/init.php:2171
 msgid "Files"
-msgstr "图片"
+msgstr "图片或视频"
 
 #: includes/admin/options.php:360
 #: includes/admin/uix-custom-metaboxes/init.php:2172
@@ -590,8 +590,8 @@ msgstr "启用灯箱效果?"
 #: includes/admin/options.php:365
 #: includes/admin/uix-custom-metaboxes/init.php:1035
 #: includes/admin/uix-custom-metaboxes/init.php:2182
-msgid "Select an image"
-msgstr "选择一张图片"
+msgid "Select image or video"
+msgstr "选择图片或视频"
 
 #: includes/admin/options.php:366
 #: includes/admin/uix-custom-metaboxes/init.php:2174
@@ -606,7 +606,7 @@ msgstr "上传图片"
 #: includes/admin/options.php:369
 #: includes/admin/uix-custom-metaboxes/init.php:2177
 msgid "Add Files"
-msgstr "添加图片"
+msgstr "添加图片/视频"
 
 #: includes/admin/options.php:370
 #: includes/admin/uix-custom-metaboxes/init.php:2178

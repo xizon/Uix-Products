@@ -362,7 +362,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
                                             ),
                                             'label_lightbox'              => esc_html__( 'Enable Lightbox for this gallery?', 'uix-products' ),
                                             'label_controller_up_remove'  => esc_html__( 'Remove', 'uix-products' ),
-                                            'label_controller_up_add'     => esc_html__( 'Select an image', 'uix-products' ),
+                                            'label_controller_up_add'     => esc_html__( 'Select image or video', 'uix-products' ),
                                             'label_html'           => esc_html__( 'Custom Content', 'uix-products' ),
                                             'label_file'           => esc_html__( 'Upload Your Files', 'uix-products' ),
                                             'label_upbtn_remove'   => esc_html__( 'Remove', 'uix-products' ),

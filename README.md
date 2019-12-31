@@ -54,6 +54,10 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 ### Updates
 
 
+##### = 1.3.9 (December 19, 2019) =
+
+* New: Added support for video formats.
+
 
 ##### = 1.3.85 (November 19, 2019) =
 
