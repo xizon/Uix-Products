@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 5.3
-Stable tag: 1.3.95
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 == Changelog ==
+
+= 1.4.0 (January 18, 2020) =
+
+* New: Added Custom Meta Boxes API documentation to admin menu.
+
 
 = 1.3.95 (December 19, 2019) =
 

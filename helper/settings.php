@@ -83,6 +83,11 @@ function uix_products_options_page(){
 	}
 	
 
+	$tabs[] = array(
+		'tab'     =>  'for-developer', 
+		'title'   =>  __( '<i class="dashicons dashicons-networking"></i> For Theme Developer', 'uix-products' )
+	);		
+    
 	
 	?>
     <h2 class="nav-tab-wrapper">

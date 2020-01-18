@@ -54,6 +54,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 ### Updates
 
 
+##### = 1.4.0 (January 18, 2020) =
+
+* New: Added Custom Meta Boxes API documentation to admin menu.
+
+
 ##### = 1.3.95 (December 19, 2019) =
 
 * New: Added support for video formats.
@@ -272,9 +277,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ##### I would like to give special thanks to credits. The following is a guide to the list of credits for this plugin:
 
-- [Flexslider](https://github.com/woothemes/FlexSlider)
-- [Shuffle](https://github.com/Vestride/Shuffle)
-- [Switcheroo](https://github.com/OriginalEXE/Switcheroo)
+- [Uix Kit](https://github.com/xizon/uix-kit)
 
 
 ### How to use?
