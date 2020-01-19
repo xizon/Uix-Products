@@ -256,6 +256,8 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
     function uix_products_taxonomy_cols_display( $columns, $post_id ) {
 
         switch ( $columns ) {
+                
+            
 
             //------
             case "uix-products-thumbnail":
@@ -277,9 +279,35 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
 
             //------
             case "uix-products-category":
+                
+                $category_list = get_the_term_list( $post_id, 'uix_products_category', '', ', ', '' );
+                $category_list_no_link = wp_get_object_terms( $post_id, 'uix_products_category' );
+                
 
-                if ( $category_list = get_the_term_list( $post_id, 'uix_products_category', '', ', ', '' ) ) {
-                    echo $category_list;
+                if ( $category_list_no_link ) {
+                    
+                    $params = array( 
+                            'post_type' => 'uix_products',
+                            'uix_products_category' => $category_list_no_link[0] -> slug
+                        );
+                    
+                    
+                    $temp_var = 'uix_products_typeshow';
+                    if ( isset( $_GET[ $temp_var ] ) && !empty( $_GET[ $temp_var ] ) ) {
+                        array_push( $params, array( 
+                            $temp_var => $_GET[ $temp_var ]
+                        ));
+                    }
+                        
+                    if ( isset( $_GET[ 'order' ] ) && !empty( $_GET[ 'order' ] ) ) {
+                        array_push( $params, array( 
+                            'order' => $_GET[ 'order' ]
+                        ));
+                    }    
+                    
+                    $_url = esc_url( add_query_arg( $params, admin_url( 'edit.php' ) ) );
+
+                    echo '<a href="'.$_url.'">'.$category_list_no_link[0] -> name.'</a>';
                 } else {
                     echo '&mdash;';
                 }
@@ -292,7 +320,31 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
 
                 $type = get_post_meta( get_the_ID(), 'uix_products_typeshow', true );
                 if ( !empty( $type ) ) {
-                    echo "[{$type}]";
+                
+                    $params = array( 
+                            'post_type' => 'uix_products',
+                            'uix_products_typeshow' => $type
+                        );
+                    
+                    
+                    $temp_var = 'uix_products_category';
+                    if ( isset( $_GET[ $temp_var ] ) && !empty( $_GET[ $temp_var ] ) ) {
+                        array_push( $params, array( 
+                            $temp_var => $_GET[ $temp_var ]
+                        ));
+                    }
+                    
+                    if ( isset( $_GET[ 'order' ] ) && !empty( $_GET[ 'order' ] ) ) {
+                        array_push( $params, array( 
+                            'order' => $_GET[ 'order' ]
+                        ));
+                    }      
+                    
+                    $_url = esc_url( add_query_arg( $params, admin_url( 'edit.php' ) ) ); 
+                    
+                    
+                    echo '<a href="'.$_url.'">['.$type.']</a>';
+                    
                 } else {
                     echo '&mdash;';
                 }         
@@ -311,4 +363,59 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
    
 }
 
+/**
+ * Custom column sorting and filtering for custom post type
+ *
+ */
+if ( !function_exists( 'uix_products_admin_posts_filter' ) ) {
+    add_filter( 'parse_query', 'uix_products_admin_posts_filter' );
+    function uix_products_admin_posts_filter($query) {
+        global $pagenow;
+
+        $qv = &$query->query_vars;
+        
+
+        if ( is_admin() && $pagenow == 'edit.php' && $_GET['post_type'] == 'uix_products' ) {
+
+            if ( isset( $_GET[ 'uix_products_typeshow' ] ) && !empty( $_GET[ 'uix_products_typeshow' ] ) ) {
+
+                $args = array(
+
+                    'meta_query'  => array(
+                                        array(
+                                                'key'     => 'uix_products_typeshow',
+                                                'value'   => $_GET[ 'uix_products_typeshow' ],
+                                                'compare' => 'IN',
+                                           )
+                                     )
+                );
+
+
+                $query -> set( 'meta_query', $args );
+                return $query;    
+
+            } 
+
+        }
+    }
+
+}
+
+
+    
+
+
+/**
+ * Add Sortable Custom Columns in WordPress Dashboard  
+ *
+ */
+if ( !function_exists( 'uix_products_register_post_column_views_sortable' ) ) {
+    add_filter( 'manage_edit-uix_products_sortable_columns', 'uix_products_register_post_column_views_sortable' );
+    function uix_products_register_post_column_views_sortable( $newcolumn ) {
+        $newcolumn['uix-products-category'] = 'uix-products-category';
+        $newcolumn['uix-products-type'] = 'uix-products-type';
+        return $newcolumn;
+    }
+
+}
 

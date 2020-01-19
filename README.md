@@ -54,6 +54,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 ### Updates
 
 
+##### = 1.4.1 (January 19, 2020) =
+
+* New: Custom column sorting and filtering for custom post type in admin panel.
+
+
 ##### = 1.4.0 (January 18, 2020) =
 
 * New: Added Custom Meta Boxes API documentation to admin menu.
