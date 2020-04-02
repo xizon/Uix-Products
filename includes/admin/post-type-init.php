@@ -363,6 +363,8 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
    
 }
 
+
+
 /**
  * Custom column sorting and filtering for custom post type
  *
@@ -375,7 +377,7 @@ if ( !function_exists( 'uix_products_admin_posts_filter' ) ) {
         $qv = &$query->query_vars;
         
 
-        if ( is_admin() && $pagenow == 'edit.php' && $_GET['post_type'] == 'uix_products' ) {
+        if ( is_admin() && $pagenow == 'edit.php' && (isset( $_GET[ 'post_type' ] ) && $_GET['post_type'] == 'uix_products') ) {
 
             if ( isset( $_GET[ 'uix_products_typeshow' ] ) && !empty( $_GET[ 'uix_products_typeshow' ] ) ) {
 

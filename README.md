@@ -53,6 +53,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.4.2 (April 2, 2020) =
+
+* Fix: Fixed undefined index of post_type in version 5.4.
+
+
 
 ##### = 1.4.1 (January 19, 2020) =
 
