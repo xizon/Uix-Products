@@ -5,8 +5,8 @@ Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
-Tested up to: 5.4
-Stable tag: 1.4.2
+Tested up to: 5.5.1
+Stable tag: 1.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 
 == Changelog ==
+
+
+= 1.4.3 (September 25, 2020) =
+
+* Tweak: Compatible with WP 5.5.*.
+* Fix: Modified the style display of the module.
 
 
 = 1.4.2 (April 2, 2020) =

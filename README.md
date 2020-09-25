@@ -53,6 +53,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.4.3 (September 25, 2020) =
+
+* Tweak: Compatible with WP 5.5.*.
+* Fix: Modified the style display of the module.
+
+
 ##### = 1.4.2 (April 2, 2020) =
 
 * Fix: Fixed undefined index of post_type in version 5.4.
@@ -261,6 +267,8 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 - WP 5.1.*
 - WP 5.2.*
 - WP 5.3.*
+- WP 5.4.*
+- WP 5.5.*
 
 
 ### Screenshot
