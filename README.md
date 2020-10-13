@@ -53,6 +53,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.4.4 (October 13, 2020) =
+
+* Tweak: Optimized the language support and media insertion of the editor for Uix Custom Meta Boxes.
+
+
+
 ##### = 1.4.3 (September 25, 2020) =
 
 * Tweak: Compatible with WP 5.5.*.
