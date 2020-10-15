@@ -8,7 +8,7 @@
  * Plugin name: Uix Products
  * Plugin URI:  https://uiux.cc/wp-plugins/uix-products/
  * Description: Readily organize & present your artworks, themes, plugins with Uix Products template files. Convenient for theme customization.  
- * Version:     1.4.4
+ * Version:     1.4.5
  * Author:      UIUX Lab
  * Author URI:  https://uiux.cc
  * License:     GPLv2 or later
@@ -113,10 +113,7 @@ class UixProducts {
 	 *
 	 */
 	public static function frontpage_scripts() {
-	
-		// flexslider
-		wp_enqueue_script( 'flexslider', self::plug_directory() .'assets/js/jquery.flexslider.min.js', array( 'jquery' ), '2.7.0', true );	
-		wp_enqueue_style( 'flexslider', self::plug_directory() .'assets/css/flexslider.min.css', false, '2.7.0', 'all' );
+
 		
 		// prettyPhoto
 		wp_enqueue_script( 'prettyPhoto', self::plug_directory() .'assets/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );	

@@ -53,6 +53,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.4.5 (October 13, 2020) =
+
+* Remove: Remove Flexslider plugin.
+
+
+
 ##### = 1.4.4 (October 13, 2020) =
 
 * Tweak: Optimized the language support and media insertion of the editor for Uix Custom Meta Boxes.

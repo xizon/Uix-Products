@@ -25,74 +25,131 @@ if ( $layout == 'masonry' ) {
 
 
     <div id="uix-products-item-<?php the_ID(); ?>">
-        
-            <div class="custom-uix-products-flexslider">
-                <div class="custom-uix-products-slides">
-                    
-                    <?php             
-                    $_data = json_decode( $gallery, true );
-                             
-                    if ( is_array( $_data ) && sizeof( $_data ) > 1 ) {
-                        
-                        //----------
-                        foreach( $_data as $index => $value ) {
-                            if ( is_array( $value ) && sizeof( $value ) > 0 ) {
-
-                                //Exclude lightbox fields
-                                if ( array_key_exists( 'lightbox', $value ) ) {
-                                    $lightbox_enable = esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'lightbox' ] ) );
-                                    break;
-                                }//endif array_key_exists( 'lightbox', $value )
-                            }//endif $value
-                        }//end foreach      
-                        
-
-                        //----------
-                        foreach( $_data as $index => $value ) :
-
-                            if ( is_array( $value ) && sizeof( $value ) > 0 ) {
-                                //Exclude lightbox fields
-                                if ( ! array_key_exists( 'lightbox', $value ) ) {
-
-                            ?>
-                                <div class="item uix-products-portfolio-type-<?php echo esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'type' ] ) ); ?>">
-
-                                    <?php
-                                    $img_url = Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'filePath' ] );
-
-                                    if ( !empty( $img_url ) ) {
-                                    ?>
-                                        <?php if (  'on' == $lightbox_enable ) { ?>
-                                            <a href="<?php echo esc_url( $img_url ); ?>" rel="uix-products-slider-prettyPhoto[<?php the_ID(); ?>]">
-                                                <img src="<?php echo esc_url( $img_url ); ?>" alt="">
-                                            </a>
-                                        <?php } else { ?>
-                                            <img src="<?php echo esc_url( $img_url ); ?>" alt="">
-                                        <?php } ?>    
-                                    
-                                    <?php } ?>
-
-                                    <?php echo UixProducts::kses( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
-
-                                </div>     
-                            <?php
-
-                                }//endif array_key_exists( 'lightbox', $value )
-
-                            }//endif $value
+		
+		
+		 <?php
+			$custom_slideshow_opt_animation       = 'slide';  //slide,scale,none
+			$custom_slideshow_opt_auto            = true;
+			$custom_slideshow_opt_effect_duration = 600;
+			$custom_slideshow_opt_speed           = 10000;
+			$custom_slideshow_opt_paging_nav      = true;
+			$custom_slideshow_opt_arr_nav         = true;
+			$custom_slideshow_opt_animloop        = true;
+			$custom_slideshow_opt_drag            = false;
 
 
-                        endforeach;
+			$translation_array = array(
+				'animation'        =>  $custom_slideshow_opt_animation,
+				'auto'             =>  ( $custom_slideshow_opt_auto ) ? 'true' : 'false',
+				'duration'         =>  $custom_slideshow_opt_effect_duration,
+				'speed'            =>  $custom_slideshow_opt_speed,
+				'paging_nav'       =>  ( $custom_slideshow_opt_paging_nav ) ? 'true' : 'false',
+				'arr_nav'          =>  ( $custom_slideshow_opt_arr_nav ) ? 'true' : 'false',
+				'animloop'         =>  ( $custom_slideshow_opt_animloop ) ? 'true' : 'false',
+				'draggable'        =>  ( $custom_slideshow_opt_drag ) ? 'true' : 'false'
+			);
 
-                    ?> 
-                    
-                    
-			
-                </div>
-                <!-- .custom-uix-products-slides end -->
-            </div>
-            <!-- .custom-uix-products-flexslider end -->
-        
+
+		?>
+
+
+
+			<div role="banner" class="uix-products-slideshow__wrapper">
+			   <div data-uix-products-slideshow="1" class="uix-products-slideshow__outline uix-products-slideshow uix-products-slideshow--eff-<?php echo esc_attr( $translation_array[ 'animation' ] ); ?>" 
+				  data-draggable="<?php echo esc_attr( $translation_array[ 'draggable' ] ); ?>"
+				  data-draggable-cursor="move"	   
+				  data-auto="<?php echo esc_attr( $translation_array[ 'auto' ] ); ?>"
+				  data-loop="<?php echo esc_attr( $translation_array[ 'animloop' ] ); ?>"
+				  data-speed="<?php echo esc_attr( $translation_array[ 'duration' ] ); ?>"
+				  data-timing="<?php echo esc_attr( $translation_array[ 'speed' ] ); ?>" 
+				  data-count-total="false"
+				  data-count-now="false"
+				  data-controls-pagination=".my-a-slider-pagination-<?php the_ID(); ?>" 
+				  data-controls-arrows=".my-a-slider-arrows-<?php the_ID(); ?>">
+				   <div class="uix-products-slideshow__inner">
+
+						<?php             
+						$_data = json_decode( $gallery, true );
+
+						if ( is_array( $_data ) && sizeof( $_data ) > 1 ) {
+
+							//----------
+							foreach( $_data as $index => $value ) {
+								if ( is_array( $value ) && sizeof( $value ) > 0 ) {
+
+									//Exclude lightbox fields
+									if ( array_key_exists( 'lightbox', $value ) ) {
+										$lightbox_enable = esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'lightbox' ] ) );
+										break;
+									}//endif array_key_exists( 'lightbox', $value )
+								}//endif $value
+							}//end foreach      
+
+
+							//----------
+							foreach( $_data as $index => $value ) :
+
+								if ( is_array( $value ) && sizeof( $value ) > 0 ) {
+									//Exclude lightbox fields
+									if ( ! array_key_exists( 'lightbox', $value ) ) {
+										
+										$img_url = Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'filePath' ] );
+										
+										if ( !empty( $img_url ) ) {
+
+								?>
+					   
+					   
+									<?php if (  'on' == $lightbox_enable ) { ?>
+										<a href="<?php echo esc_url( $img_url ); ?>" rel="uix-products-slider-prettyPhoto[<?php the_ID(); ?>]">
+									<?php } ?>    
+					   
+									<div class="uix-products-slideshow__item uix-products-portfolio-type-<?php echo esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'type' ] ) ); ?>">
+										<img src="<?php echo esc_url( $img_url ); ?>" alt="">
+										<?php echo UixProducts::kses( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+									</div>   
+					   
+					   
+									<?php if (  'on' == $lightbox_enable ) { ?>
+										</a>
+									<?php } ?>    
+					   
+					   
+								<?php
+											
+										}//endif !empty( $img_url )	
+
+									}//endif array_key_exists( 'lightbox', $value )
+
+								}//endif $value
+
+
+							endforeach;
+
+						?> 
+
+
+
+
+				   </div>
+				  <!-- /.uix-products-slideshow__inner -->
+
+				</div>
+			   <!-- /.uix-products-slideshow__outline -->
+
+
+			   <?php if ( $custom_slideshow_opt_paging_nav ) { ?>
+				   <div class="uix-products-slideshow__pagination my-a-slider-pagination-<?php the_ID(); ?>"></div>
+			   <?php } ?>
+			   <?php if ( $custom_slideshow_opt_arr_nav ) { ?>
+				   <div class="uix-products-slideshow__arrows my-a-slider-arrows-<?php the_ID(); ?>">
+						<a href="#" class="uix-products-slideshow__arrows--prev"></a>
+						<a href="#" class="uix-products-slideshow__arrows--next"></a>
+				   </div>
+			   <?php } ?>
+
+		   </div>
+		   <!-- /.uix-products-slideshow__wrapper -->
 
         <?php } else { ?>  
             <?php if ( has_post_thumbnail() ) { ?> 
