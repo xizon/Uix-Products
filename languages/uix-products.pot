@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2020-10-15 07:00+0000\n"
+"POT-Creation-Date: 2020-10-16 02:26+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -23,52 +23,52 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: uix-products.php:313 uix-products.php:314 uix-products.php:390
+#: uix-products.php:336 uix-products.php:337 uix-products.php:413
 msgid "Settings"
 msgstr ""
 
-#: uix-products.php:321 uix-products.php:322 uix-products.php:391
-#: uix-products.php:444 helper/settings.php:59
+#: uix-products.php:344 uix-products.php:345 uix-products.php:414
+#: uix-products.php:467 helper/settings.php:59
 msgid "How to use?"
 msgstr ""
 
-#: uix-products.php:329 uix-products.php:330 helper/settings.php:69
+#: uix-products.php:352 uix-products.php:353 helper/settings.php:69
 msgid "Template Files"
 msgstr ""
 
-#: uix-products.php:338 uix-products.php:339
+#: uix-products.php:361 uix-products.php:362
 msgid "Custom CSS"
 msgstr ""
 
-#: uix-products.php:347 uix-products.php:348
+#: uix-products.php:370 uix-products.php:371
 msgid "For Theme Developer"
 msgstr ""
 
-#: uix-products.php:356
+#: uix-products.php:379
 msgid "Helper"
 msgstr ""
 
-#: uix-products.php:357 helper/settings.php:55
+#: uix-products.php:380 helper/settings.php:55
 msgid "About"
 msgstr ""
 
-#: uix-products.php:443
+#: uix-products.php:466
 msgid ""
 "Do you want to create a products website with WordPress?  Learn how to add "
 "products to your themes."
 msgstr ""
 
-#: uix-products.php:459
+#: uix-products.php:482
 msgid ""
 "<strong>You need to create Uix Products template files in your templates "
 "directory. You can create the files on the WordPress admin panel.</strong>"
 msgstr ""
 
-#: uix-products.php:459 helper/tabs/usage.php:29
+#: uix-products.php:482 helper/tabs/usage.php:29
 msgid "Create now!"
 msgstr ""
 
-#: uix-products.php:459 helper/tabs/temp.php:61
+#: uix-products.php:482 helper/tabs/temp.php:61
 msgid ""
 "As a workaround you can use FTP, access the Uix Products template files path "
 "<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
@@ -76,44 +76,44 @@ msgid ""
 "/</code>. "
 msgstr ""
 
-#: uix-products.php:551
+#: uix-products.php:574
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
 "write-blog\"></i> Edit this template</a>"
 msgstr ""
 
-#: uix-products.php:681
+#: uix-products.php:704
 msgid "Operation successfully completed!"
 msgstr ""
 
-#: uix-products.php:691
+#: uix-products.php:714
 msgid ""
 "<strong>There was a problem copying your template files:</strong> Please "
 "check your server settings. You can upload files to theme templates "
 "directory using FTP."
 msgstr ""
 
-#: uix-products.php:699
+#: uix-products.php:722
 msgid ""
 "<strong>There was a problem removing your template files:</strong> Please "
 "check your server settings. You can upload files to theme templates "
 "directory using FTP."
 msgstr ""
 
-#: uix-products.php:702
+#: uix-products.php:725
 msgid "Remove successful!"
 msgstr ""
 
-#: uix-products.php:910
+#: uix-products.php:933
 msgid "Primary Sidebar"
 msgstr ""
 
-#: uix-products.php:912
+#: uix-products.php:935
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: uix-products.php:1117
+#: uix-products.php:1140
 msgid "Load More"
 msgstr ""
 
@@ -960,7 +960,7 @@ msgid ""
 msgstr ""
 
 #: helper/tabs/credits.php:16
-msgid "Shuffle"
+msgid "Muuri"
 msgstr ""
 
 #: helper/tabs/credits.php:17

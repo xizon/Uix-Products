@@ -254,6 +254,50 @@
     }
 }
 
+
+
+/* Filter or Masonry (Need muuri.js )*/
+/* You can directly use uix-core-grid__col-* to control the width of the item */
+.uix-products-container[data-show-type*="filter"] > .uix-products-tiles,
+.uix-products-container[data-show-type*="masonry"] > .uix-products-tiles {
+    position: relative;
+  /* required */
+    overflow: inherit;
+    width: calc(100% + 15px);
+}
+
+.uix-products-container[data-show-type*="filter"] > .uix-products-tiles .uix-products-item,
+.uix-products-container[data-show-type*="masonry"] > .uix-products-tiles .uix-products-item {
+  /* required */
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.uix-products-container[data-show-type*="filter"] > .uix-products-tiles .uix-products-item > div,
+.uix-products-container[data-show-type*="masonry"] > .uix-products-tiles .uix-products-item > div {
+    position: relative;
+    width: calc(100% - 15px);
+    height: 100%;
+}
+
+.uix-products-container[data-show-type*="filter"] > .uix-products-tiles .uix-products-item.muuri-item-dragging,
+.uix-products-container[data-show-type*="masonry"] > .uix-products-tiles .uix-products-item.muuri-item-dragging {
+    z-index: 3;
+}
+
+.uix-products-container[data-show-type*="filter"] > .uix-products-tiles .uix-products-item.muuri-item-releasing,
+.uix-products-container[data-show-type*="masonry"] > .uix-products-tiles .uix-products-item.muuri-item-releasing {
+    z-index: 2;
+}
+
+.uix-products-container[data-show-type*="filter"] > .uix-products-tiles .uix-products-item.muuri-item-hidden,
+.uix-products-container[data-show-type*="masonry"] > .uix-products-tiles .uix-products-item.muuri-item-hidden {
+    z-index: 0;
+}
+
+
+
 /* ====================================================== 
    3. Products Categories            
 /* ====================================================== */

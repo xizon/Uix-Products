@@ -23,14 +23,11 @@ function gravatar_favicon() {
 	<meta charset="utf-8">
     <title><?php echo get_bloginfo( 'name', 'display' ); ?> | <?php _e( 'Demos', 'uix-products' ); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<script src="<?php echo $demopath; ?>js/modernizr.min.js?ver=3.3.1"></script>
+	<script src="<?php echo $demopath; ?>js/HTML5/modernizr.min-3.5.0.js?ver=3.5.0"></script>
 	<script>if ( top !== self ) top.location.replace( self.location.href );</script>
     <link rel="stylesheet" href='<?php echo $demopath; ?>css/bootstrap.min.css?ver=3.3.7' type='text/css' media='all' />
     <link rel="stylesheet" href='<?php echo $demopath; ?>css/template.min.css' type='text/css' media='all' />
 	<link href="<?php echo $demopath; ?>css/font-awesome.min.css?ver=4.5.0" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script type='text/javascript' src='<?php echo $demopath; ?>js/respond.min.js?ver=1.4.2'></script>
-    <![endif]-->
     <link rel="shortcut icon" href="<?php gravatar_favicon(); ?>" type="image/x-icon" />
     
 </head>

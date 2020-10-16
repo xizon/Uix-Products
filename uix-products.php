@@ -36,7 +36,7 @@ class UixProducts {
 		
 		$products_prefix = 'custom-products';
 		
-		
+		add_action( 'init', array( __CLASS__, 'register_scripts' ) );
 		add_action( 'admin_print_scripts-edit.php', array( __CLASS__, 'check_current_post_type' ) );
 		add_action( 'admin_print_scripts-post-new.php', array( __CLASS__, 'check_current_post_type' ) );
 		add_action( 'admin_print_scripts-post.php', array( __CLASS__, 'check_current_post_type' ) );
@@ -108,36 +108,59 @@ class UixProducts {
 	
 	
 	/*
+	 * Register scripts and styles.
+	 *
+	 *
+	 */
+	public static function register_scripts() {
+		
+		
+		//Add-ons
+		//--------------------
+		// prettyPhoto
+		wp_register_script( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );	
+		wp_register_style( 'prettyPhoto', self::plug_directory() .'assets/add-ons/prettyPhoto/jquery.prettyPhoto.css', false, '3.1.5', 'all' );
+	
+		// Muuri
+		wp_register_script( 'muuri', self::plug_directory() .'assets/add-ons/muuri/muuri.min.js', false, '0.8.0', true );
+		
+		
+		
+		//Core
+		//--------------------
+		if ( self::core_css_file_exists() ) {
+			//Add shortcodes style to Front-End
+			wp_register_style( self::PREFIX . '-products', self::core_css_file(), false, self::ver(), 'all');
+			
+		}
+		
+		//Main stylesheets and scripts to Front-End
+		wp_register_script( self::PREFIX . '-products', self::core_js_file(), array( 'jquery' ), self::ver(), true );	
+
+	}
+	
+	
+	
+	/*
 	 * Enqueue scripts and styles.
 	 *
 	 *
 	 */
 	public static function frontpage_scripts() {
 
+		//Add-ons
+		//--------------------
+		wp_enqueue_script( 'imagesloaded' );
+		wp_enqueue_script( 'muuri' ); //Use with `imagesloaded`
+		wp_enqueue_script( 'prettyPhoto' );
+		wp_enqueue_style( 'prettyPhoto' );
 		
-		// prettyPhoto
-		wp_enqueue_script( 'prettyPhoto', self::plug_directory() .'assets/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.5', true );	
-		wp_enqueue_style( 'prettyPhoto', self::plug_directory() .'assets/css/jquery.prettyPhoto.css', false, '3.1.5', 'all' );
-	
-		// Shuffle
-		wp_enqueue_script( 'shuffle', self::plug_directory() .'assets/js/jquery.shuffle.js', array( 'jquery', 'modernizr' ), '3.1.1', true );
-		
-		// Shuffle.js requires Modernizr..
-		wp_enqueue_script( 'modernizr', self::plug_directory() .'assets/js/modernizr.min.js', false, '3.3.1', false );	
-	
-		// Masonry
-		wp_enqueue_script( 'masonry' );	
+		//Core
+		//--------------------
+		wp_enqueue_script( self::PREFIX . '-products' );
+		wp_enqueue_style( self::PREFIX . '-products' );
 		
 		
-		if ( self::core_css_file_exists() ) {
-			//Add shortcodes style to Front-End
-			wp_enqueue_style( self::PREFIX . '-products', self::core_css_file(), false, self::ver(), 'all');
-			
-		}
-		
-		//Main stylesheets and scripts to Front-End
-		wp_enqueue_script( self::PREFIX . '-products', self::core_js_file(), array( 'jquery' ), self::ver(), true );	
-
 
 	}
 	

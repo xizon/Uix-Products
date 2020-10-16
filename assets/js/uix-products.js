@@ -48,90 +48,146 @@
 	
 		/*! 
 		 * ************************************
-		 * Grid List
+		 * Grid List ( With Filterable and Masonry )
 		 *************************************
 		 */
+		/* @ Version 1.0 (October 15, 2020) */
 		$( '.uix-products-container' ).each( function() {
-			var type = $( this ).data( 'show-type' );
+
+			var galleryType    = $( this ).data( 'show-type' ),
+			    filterCat      = $( this ).data( 'filter-id' ),
+				$grid          = $( this ).find( '.uix-products-tiles' ),
+				$allItems      = $( this ).find( '.uix-products-item' ),
+				$filterOptions = $( filterCat );
 			
+			if ( typeof galleryType === typeof undefined ) return false;
+			
+			/* 
+			 ---------------------------
+			 Add a tagname to each list item
+			 ---------------------------
+			 */ 
 			// Masonry
-			if ( type.indexOf( 'masonry' ) >= 0  ) {
+			if ( galleryType.indexOf( 'masonry' ) >= 0  ) {
 				$( this ).addClass( 'masonry-container' );
 				$( this ).find( '.uix-products-item' ).addClass( 'masonry-item' );
 			}
 			
 			// Filterable
-			if ( type.indexOf( 'filter' ) >= 0  ) {
+			if ( galleryType.indexOf( 'filter' ) >= 0  ) {
 				$( this ).addClass( 'filter-container' );
 				$( this ).find( '.uix-products-item' ).addClass( 'filter-item' );	
 			}	
-		
-		});
-	
-	    /*--  Function of Masonry  --*/
-		var masonryObj = $( '.masonry-container .uix-products-tiles' );
-		imagesLoaded( masonryObj ).on( 'always', function() {
-			  masonryObj.masonry({
-				itemSelector: '.masonry-item'
-			  });  
-		});
-		
-		
-	    /*--  Function of Filterable  --*/
-		if ( $( "[data-show-type]" ).length > 0 ) {
-			if ( $( "[data-show-type]" ).data( 'show-type' ).indexOf( 'filter' ) >= 0 ) {
-				
-				$( '.uix-products-container' ).each( function() {
-					var filterCat = $( this ).data( 'filter-id' ),
-						$grid = $( this ).find( '.uix-products-tiles' ),
-						$filterOptions = $( filterCat );
-						
-					imagesLoaded( $grid ).on( 'always', function() {
-						
-						 $grid.shuffle({
-							itemSelector: '.filter-item',
-							speed: 550, // Transition/animation speed (milliseconds).
-							easing: 'ease-out', // CSS easing function to use.
-							sizer: null // Sizer element. Use an element to determine the size of columns and gutters.
-						  });
-						  
-						
-						$filterOptions.find( 'li > a' ).on( 'click', function( e ) {
-							
-							  var $this = $( this ),
-								  activeClass = 'current-cat',
-								  isActive = $this.hasClass( activeClass ),
-								  group = isActive ? 'all' : $this.data('group');
-						
-							  // Hide current label, show current label in title
-							  if ( !isActive ) {
-								$filterOptions.find( '.' + activeClass ).removeClass( activeClass );
-							  }
-						
-							  $this.toggleClass( activeClass );
-						
-							  // Filter elements
-							  $grid.shuffle( 'shuffle', group );
-							  
-							  return false;
-							  
-							  
-						} ); 
-					
-			
-					});
-	
-					
-				} );
-		
-				
-			} else {
-				$( '[data-group="all"]' ).parent( 'li' ).hide();
-			}
-	
-		}
-		
 
+			
+			if ( galleryType.indexOf( 'filter' ) >= 0 || galleryType.indexOf( 'masonry' ) >= 0 ) {
+
+				var MuuriGrid = new Muuri( $grid.get(0), {
+					items: $grid.get(0).querySelectorAll( '.uix-products-item' ),
+					
+					// Default show animation
+					showDuration: 300,
+					showEasing: 'ease',
+
+					// Default hide animation
+					hideDuration: 300,
+					hideEasing: 'ease',
+
+					// Item's visible/hidden state styles
+					visibleStyles: {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					hiddenStyles: {
+						opacity: '0',
+						transform: 'scale(0.5)'
+					},
+
+					// Layout
+					layout: {
+						fillGaps: false,
+						horizontal: false,
+						alignRight: false,
+						alignBottom: false,
+						rounding: true
+					},
+					layoutOnResize: 100,
+					layoutOnInit: true,
+					layoutDuration: 300,
+					layoutEasing: 'ease',
+					
+					//// Drag & Drop
+					dragEnabled: false
+				});
+
+
+				// When all items have loaded refresh their
+				// dimensions and layout the grid.
+				imagesLoaded( $grid ).on( 'always', function() {
+					MuuriGrid.refreshItems().layout();
+					// For a little finishing touch, let's fade in
+					// the images after all them have loaded and
+					// they are corrertly positioned.
+					$( 'body' ).addClass( 'images-loaded' );
+				});
+
+				
+				/* 
+				 ---------------------------
+				 Function of Filterable and Masonry
+				 ---------------------------
+				 */ 
+				if ( galleryType.indexOf( 'filter' ) >= 0 ) {
+	
+					$filterOptions.find( 'li > a' ).off( 'click' ).on( 'click', function() {
+						var $this       = $( this );
+						var activeClass = 'current-cat',
+							  isActive    = $this.parent().hasClass( activeClass ),
+							  group       = isActive ? 'all' : $this.data( 'group' );
+
+						// Hide current label, show current label in title
+						if ( !isActive ) {
+							$filterOptions.find( '.' + activeClass ).removeClass( activeClass );
+						}
+
+						$this.parent().toggleClass( activeClass );
+
+						// Filter elements
+						var filterFieldValue = group;
+						MuuriGrid.filter( function ( item ) {
+
+							var element       = item.getElement(),
+								  curCats       = element.getAttribute( 'data-groups' ).toString().replace(/^\,|\,$/g, '').replace(/^\[|\]$/g, '') + ',all',
+								  isFilterMatch = !filterFieldValue ? true : ( curCats || '' ).indexOf( filterFieldValue ) > -1;
+
+							return isFilterMatch;
+						});
+
+
+						return false;	
+					});	
+				}
+
+				
+
+			}//endif galleryType.indexOf( 'filter' ) >= 0 || galleryType.indexOf( 'masonry' ) >= 0
+
+			
+
+				
+			//remove filter button of all
+			//-------
+			if ( galleryType.indexOf( 'filter' ) < 0 ) {
+				if ( filterCat == '' ) {
+					$filterOptions = $( '.uix-products-cat-list' );
+				}
+				
+				$filterOptions.find( '[data-group="all"]' ).parent( 'li' ).remove();
+			}	
+			
+
+		} );
+		
 		
 		
 		
@@ -284,7 +340,6 @@
                         nativeItemW,
                         nativeItemH,
                         activated                = $this.data( 'activated' ); 
-				
 				
                 
                     if ( typeof activated === typeof undefined || activated === 0 ) {
@@ -454,7 +509,7 @@
              * @param  {String} countCurID             - Current number ID or class of counter.
              * @param  {String} paginationID           - Navigation ID for paging control of each slide.
              * @param  {String} arrowsID               - Previous/Next arrow navigation ID.
-             * @return {Void}                          - The constructor.
+             * @return {Void}                          - The varructor.
              */
             function sliderAutoPlay( playTimes, timing, loop, slider, countTotalID, countCurID, paginationID, arrowsID ) {	
 

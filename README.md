@@ -55,8 +55,9 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ##### = 1.4.5 (October 13, 2020) =
 
+* New: Use `Muuri` plug-in to make filtering and masonry effects.
 * Remove: Remove Flexslider plugin.
-
+* Remove: Remove shuffle.js and modernizr.js.
 
 
 ##### = 1.4.4 (October 13, 2020) =
