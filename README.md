@@ -53,6 +53,12 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.4.6 (October 21, 2020) =
+
+* Fix: Optimized the color transparency control, compatible with WP 5.5.0 and above.
+* Tweak: Expand and optimize Uix Custom Meta Boxes.
+
+
 ##### = 1.4.5 (October 13, 2020) =
 
 * New: Use `Muuri` plug-in to make filtering and masonry effects.
