@@ -53,7 +53,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
-##### = 1.4.6 (October 21, 2020) =
+##### = 1.4.7 (October 21, 2020) =
 
 * Fix: Optimized the color transparency control, compatible with WP 5.5.0 and above.
 * Tweak: Expand and optimize Uix Custom Meta Boxes.

@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 5.5.1
-Stable tag: 1.4.6
+Stable tag: 1.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -112,7 +112,7 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 == Changelog ==
 
-= 1.4.6 (October 21, 2020) =
+= 1.4.7 (October 21, 2020) =
 
 * Fix: Optimized the color transparency control, compatible with WP 5.5.0 and above.
 * Tweak: Expand and optimize Uix Custom Meta Boxes.

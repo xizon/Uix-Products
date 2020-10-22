@@ -908,7 +908,7 @@ UixProductsCustomMetaboxesInit.getInstance();
 							
 						}
 
-						ed.addButton( 'uix_products_image', {
+						ed.addButton('uix_products_image', {
 						  icon: 'mce-ico mce-i-image',
 						  tooltip: uix_products_custom_metaboxes_lang.ed_image,
 						  onclick: uix_products_mce_insertImage
