@@ -285,29 +285,46 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
                 
 
                 if ( $category_list_no_link ) {
-                    
-                    $params = array( 
-                            'post_type' => 'uix_products',
-                            'uix_products_category' => $category_list_no_link[0] -> slug
-                        );
-                    
-                    
-                    $temp_var = 'uix_products_typeshow';
-                    if ( isset( $_GET[ $temp_var ] ) && !empty( $_GET[ $temp_var ] ) ) {
-                        array_push( $params, array( 
-                            $temp_var => $_GET[ $temp_var ]
-                        ));
-                    }
-                        
-                    if ( isset( $_GET[ 'order' ] ) && !empty( $_GET[ 'order' ] ) ) {
-                        array_push( $params, array( 
-                            'order' => $_GET[ 'order' ]
-                        ));
-                    }    
-                    
-                    $_url = esc_url( add_query_arg( $params, admin_url( 'edit.php' ) ) );
+					
+					$to_end = count($category_list_no_link);
+					$category_list_no_link = array_reverse($category_list_no_link);
+					$cat_slug = ( isset( $_GET['uix_products_category'] ) ) ? $_GET['uix_products_category'] : '';
+					
+					$params = array( 
+							'post_type' => 'uix_products',
+							'uix_products_category' => $cat_slug
+						);
 
-                    echo '<a href="'.$_url.'">'.$category_list_no_link[0] -> name.'</a>';
+
+					$temp_var = 'uix_products_typeshow';
+					if ( isset( $_GET[ $temp_var ] ) && !empty( $_GET[ $temp_var ] ) ) {
+						array_push( $params, array( 
+							$temp_var => $_GET[ $temp_var ]
+						));
+					}
+
+					if ( isset( $_GET[ 'order' ] ) && !empty( $_GET[ 'order' ] ) ) {
+						array_push( $params, array( 
+							'order' => $_GET[ 'order' ]
+						));
+					}    
+
+					
+					//echo categories
+					foreach ($category_list_no_link as $key=>$value) {
+
+						$_url = esc_url( admin_url( 'edit.php' ) . '?post_type=uix_products&uix_products_category=' . $value -> slug );
+						$_split = ', ';
+						
+						if (0 === --$to_end) {
+						    $_split = '';
+						}
+						
+						echo '<a href="'.$_url.'">'.$value -> name.'</a>' . $_split;	
+						
+					}
+                    
+
                 } else {
                     echo '&mdash;';
                 }

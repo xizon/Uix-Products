@@ -6,6 +6,7 @@
 
 class Uix_Products_Dropdown_Walker_Products_Category extends Walker_Category {
 
+
     function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
 
 			$cat_name = esc_attr( $category->name );
@@ -17,7 +18,7 @@ class Uix_Products_Dropdown_Walker_Products_Category extends Walker_Category {
 			$termchildren = get_term_children( $category->term_id, $category->taxonomy );
 	
 			if( count( $termchildren ) > 0 ){
-				$aclass =  ' class="parent" ';
+				$aclass =  ' class="first-level" ';
 			}
 			
 
@@ -35,6 +36,7 @@ class Uix_Products_Dropdown_Walker_Products_Category extends Walker_Category {
            $link .= '>';
            $link .= $cat_name . '</a>';
 
+		
 
 
 			if ( !empty($show_count) ) $link .= ' (' . intval($category->count) . ')';

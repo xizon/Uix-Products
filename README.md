@@ -58,6 +58,12 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 ### Updates
 
+##### = 1.4.9 (October 23, 2020) =
+
+* Fix: Fixed the column problem of categories display in the admin panel.
+
+
+
 ##### = 1.4.8 (October 23, 2020) =
 
 * Tweak: Refactored the trigger script for custom metabox switching.

@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 5.5.1
-Stable tag: 1.4.8
+Stable tag: 1.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +120,11 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 
 == Changelog ==
+
+= 1.4.9 (October 23, 2020) =
+
+* Fix: Fixed the column problem of categories display in the admin panel.
+
 
 = 1.4.8 (October 23, 2020) =
 
