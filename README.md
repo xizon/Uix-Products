@@ -50,6 +50,11 @@ Occasionally you may wish to edit one of the templates that come with Uix Produc
 Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> Settings -> Custom CSS"**
 
 
+##### FAQ 3: Custom meta boxes of Uix Products to your theme.
+
+Occasionally you may wish to edit one of the meta boxes that come with Uix Products. Instead of editing the templates right in the plugin you should move them to your theme, so that your changes aren't lost when you update the Uix Products plugin. This document will show you how to safely custom meta boxes to your theme. Go to **"Uix Products -> Settings -> For Theme Developer"**.
+
+
 
 ### Updates
 
