@@ -53,6 +53,11 @@ Go to **"Uix Products -> Settings -> General Settings"** or **"Uix Products -> S
 
 ### Updates
 
+##### = 1.4.8 (October 23, 2020) =
+
+* Tweak: Refactored the trigger script for custom metabox switching.
+
+
 ##### = 1.4.7 (October 21, 2020) =
 
 * Fix: Optimized the color transparency control, compatible with WP 5.5.0 and above.
