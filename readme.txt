@@ -6,7 +6,7 @@ Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
 Tested up to: 5.5.1
-Stable tag: 1.4.9
+Stable tag: 1.4.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +120,11 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 
 == Changelog ==
+
+= 1.4.10 (October 25, 2020) =
+
+* New: Add taxonomy filters to the products admin page.
+
 
 = 1.4.9 (October 23, 2020) =
 

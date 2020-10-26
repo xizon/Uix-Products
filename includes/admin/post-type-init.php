@@ -152,14 +152,53 @@ if ( !function_exists( 'uix_products_taxonomy_gallery_metabox' ) ) {
  *
  *
  */
+if ( !class_exists( 'Uix_Products_Walker_Custom_CategoryDropdown' ) ) {
+	class Uix_Products_Walker_Custom_CategoryDropdown extends Walker_CategoryDropdown {
+
+		public function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
+			$pad = str_repeat('&nbsp;', $depth * 3);
+
+			/** This filter is documented in wp-includes/category-template.php */
+			$cat_name = apply_filters( 'list_cats', $category->name, $category );
+
+			if ( isset( $args['value_field'] ) && isset( $category->{$args['value_field']} ) ) {
+				$value_field = $args['value_field'];
+			} else {
+				$value_field = 'slug';
+			}
+
+
+			$output .= "\t<option class=\"level-$depth\" data-term-id=\"" . esc_attr( $category->{$value_field} ) . "\"";
+
+			// Type-juggling causes false matches, so we force everything to a string.
+			if ( isset( $_GET[$category->taxonomy] ) && (string) $_GET[$category->taxonomy] === (string) $category->slug )
+				$output .= ' selected="selected"';
+
+			$output .= ' value="'.esc_attr($category->slug).'" '; /* Custom */
+
+			$output .= '>';
+			$output .= $pad.$cat_name;
+			if ( $args['show_count'] )
+				$output .= '&nbsp;&nbsp;('. number_format_i18n( $category->count ) .')';
+			$output .= "</option>\n";
+		}
+	}
+
+}
+
+
+
 if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
     add_action( 'restrict_manage_posts', 'uix_products_taxonomy_tax_filters' );
     function uix_products_taxonomy_tax_filters() {
 
         global $typenow;
+		
+		
+		$cat_taxonomy = 'uix_products_category';
 
         // An array of all the taxonomyies you want to display. Use the taxonomy name or slug
-        $taxonomies = array( 'uix_products_category' );
+        $taxonomies = array( $cat_taxonomy );
 
         // must set this to the post type you want the filter(s) displayed on
         if ( $typenow == 'uix_products' ) {
@@ -167,21 +206,30 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
             foreach ( $taxonomies as $tax_slug ) {
                 $current_tax_slug = isset( $_GET[$tax_slug] ) ? $_GET[$tax_slug] : false;
                 $tax_obj = get_taxonomy( $tax_slug );
+				
                 $tax_name = $tax_obj->labels->name;
-                $terms = get_terms($tax_slug);
-                if ( count( $terms ) > 0) {
-                    echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
-                    echo "<option value=''>$tax_name</option>";
-                    foreach ( $terms as $term ) {
-                        echo '<option value=' . $term->slug, $current_tax_slug == $term->slug ? ' selected="selected"' : '','>' . $term->name .' ( ' . $term->count .')</option>';
-                    }
-                    echo "</select>";
-                }
+				
+				
+				$taxonomies = get_terms( array(
+					'taxonomy' => $tax_slug,
+					'hide_empty' => true
+				) );
+				
+				
+				wp_dropdown_categories( array(
+					'taxonomy' => $tax_slug,
+					'name' => $cat_taxonomy,
+					'id' => $cat_taxonomy,
+					'class' => 'postform',
+					'hide_empty' => true,
+					'hierarchical' => true,
+					'walker'  => new Uix_Products_Walker_Custom_CategoryDropdown()
+				) );
+
             }
         }
     }  
 }
-
 
 
 

@@ -58,6 +58,12 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 ### Updates
 
+##### = 1.4.10 (October 25, 2020) =
+
+* New: Add taxonomy filters to the products admin page.
+
+
+
 ##### = 1.4.9 (October 23, 2020) =
 
 * Fix: Fixed the column problem of categories display in the admin panel.
