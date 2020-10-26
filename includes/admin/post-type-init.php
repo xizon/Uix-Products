@@ -486,3 +486,23 @@ if ( !function_exists( 'uix_products_register_post_column_views_sortable' ) ) {
 
 }
 
+
+
+/**
+ * Set default title for Wordpress Custom Post Types
+ *
+ */
+if ( !function_exists( 'uix_products_mask_empty_post_title' ) ) {
+	add_filter('pre_post_title', 'uix_products_mask_empty_post_title');
+	function uix_products_mask_empty_post_title($value) {
+
+		if( get_post_type() === 'uix_products' ) {
+			if ( empty($value) ) {
+				return __( '(no title)' );
+			}	
+		}
+
+		return $value;
+	}
+}
+

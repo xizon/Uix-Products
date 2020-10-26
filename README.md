@@ -58,6 +58,13 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 ### Updates
 
+
+##### = 1.5.0 (October 26, 2020) =
+
+* Fix: Fixed an issue where the title of the custom post type was empty and could not be published when publishing.
+
+
+
 ##### = 1.4.10 (October 25, 2020) =
 
 * New: Add taxonomy filters to the products admin page.
