@@ -59,6 +59,13 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 ### Updates
 
 
+##### = 1.5.1 (October 28, 2020) =
+
+* Tweak: Optimized the output of categories in each column in the admin panel.
+* Tweak: Modified API tutorial document.
+
+
+
 ##### = 1.5.0 (October 26, 2020) =
 
 * Fix: Fixed an issue where the title of the custom post type was empty and could not be published when publishing.

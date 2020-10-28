@@ -15,26 +15,75 @@ if( !isset( $_GET[ 'tab' ] ) || $_GET[ 'tab' ] == 'for-developer' ) {
         <h3>
             <?php _e( '(1) Added filter for current Custom Metaboxes. Add the following code to your theme or plugin:', 'uix-products' ); ?>
         </h3>  
-	   
+	   	<p>
+	   	    <?php printf( __( '<a href="%1$s" target="_blank">Demo Here</a>', 'uix-products' ), esc_url( UIX_PRODUCTS_PLUGIN_URL.'includes/admin/options.demo-for-your-theme.php.txt' ) ); ?>
+		</p>  	   
+
   	    <blockquote class="uix-bg-custom-blockquote">
-<pre>// Custom metaboxes
+<pre>// Custom product types for metaboxes
+//----------------------
+global $uix_products_typeshow_val;
+// This global variable will be used to match the key `uix_products_typeshow` of 
+// the meta field for items list in the admin panel.
+
+
+$uix_products_typeshow_val = array(
+	'artwork'          => '&lt;i class="dashicons dashicons-admin-customizer uix-products-type-icon"&gt;&lt;/i&gt;'.esc_html__( 'Artwork', 'uix-products' ),
+	'theme-plugin'     => '&lt;i class="dashicons dashicons-laptop uix-products-type-icon"&gt;&lt;/i&gt;'.esc_html__( 'Theme or Plugin', 'uix-products' ),
+ );
+
+
+// Custom metaboxes
 //----------------------
 if ( !function_exists( 'mytheme_uix_products_modify_vars' ) ) {
     add_filter( 'uix_products_custom_metaboxes_vars', 'mytheme_uix_products_modify_vars' );
     function mytheme_uix_products_modify_vars() {
         $all_config = array();
-        $config  = array(
+		$config  = array(
 
-                //-- Settings 1
-                array(
-                    'config' => array( ... )
-                ),
+			//-- Products Type
+			array(
+				'config' => array( 
+					'id'         =>  'uix-products-meta-typeshow', 
+					'title'      =>  esc_html__( 'Product Type', 'uix-products' ),
+					'screen'     =>  'uix_products', 
+					'context'    =>  'side',
+					'priority'   =>  'high',
+					'fields' => array( 
 
-               //-- Settings 2
-                array(
-                    'config' => array( ... )
-                ),
-            );
+							array(
+								'id'          =>  'uix_products_typeshow',
+								'type'        =>  'radio',
+								'title'       =>  '',
+								'default'     =>  'artwork',
+								'options'     =>  array( 
+													'br'          => true,
+													'radio_type'  => 'normal',
+													'value'       => $uix_products_typeshow_val
+												  )
+							),
+
+					)
+				)
+
+			),
+
+			//-- Settings 1
+			array(
+				'config' => array( ... )
+			),
+
+			//-- Settings 2
+			array(
+				'config' => array( ... )
+			),
+
+			//-- Settings 3
+			array(
+				'config' => array( ... )
+			),
+
+		);
 
         array_push( $all_config, $config );
         return $all_config;

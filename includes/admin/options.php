@@ -1,8 +1,25 @@
 <?php
 /*
+ * Custom product types for metaboxes
+ * 
+ */ 
+global $uix_products_typeshow_val;
+// This global variable will be used to match the key `uix_products_typeshow` of 
+// the meta field for items list in the admin panel.
+
+$uix_products_typeshow_val = array(
+	'artwork'          => '<i class="dashicons dashicons-admin-customizer uix-products-type-icon"></i>'.esc_html__( 'Artwork', 'uix-products' ),
+	'theme-plugin'     => '<i class="dashicons dashicons-laptop uix-products-type-icon"></i>'.esc_html__( 'Theme or Plugin', 'uix-products' ),
+ );
+
+
+
+
+/*
  * Custom Metaboxes and Fields
  *
  */
+
 
 if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) { 
 	
@@ -28,10 +45,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 						'options'     =>  array( 
 											'br'          => true,
 											'radio_type'  => 'normal',
-											'value'       => array(
-                                                'artwork'          => '<i class="dashicons dashicons-admin-customizer uix-products-type-icon"></i>'.esc_html__( 'Artwork', 'uix-products' ),
-                                                'theme-plugin'     => '<i class="dashicons dashicons-laptop uix-products-type-icon"></i>'.esc_html__( 'Theme or Plugin', 'uix-products' ),
-                                             )
+											'value'       => $uix_products_typeshow_val
 										  )
 
 					),

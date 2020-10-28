@@ -1,0 +1,261 @@
+<?php
+//==========================================================================================
+//================================ DEMO ====================================================
+//==========================================================================================
+
+
+
+if ( !class_exists( 'UixProducts' ) ) {
+    return;
+}
+
+/*
+ * Custom product types for metaboxes
+ * 
+ */ 
+global $uix_products_typeshow_val;
+// This global variable will be used to match the key `uix_products_typeshow` of 
+// the meta field for items list in the admin panel.
+
+$uix_products_typeshow_val = array(
+				'artwork'  => '<i class="dashicons dashicons-admin-customizer uix-products-type-icon"></i>'.esc_html__( 'Works', 'your-theme' ),
+				'clients'  => '<i class="dashicons dashicons-admin-users uix-products-type-icon"></i>'.esc_html__( 'Clients', 'your-theme' ),
+				'video'    => '<i class="dashicons dashicons-admin-collapse uix-products-type-icon"></i>'.esc_html__( 'Video', 'your-theme' ),
+			 );
+
+
+
+
+/*
+ * Custom Metaboxes and Fields
+ *
+ */
+if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) { 
+	
+
+    if ( !function_exists( 'yourtheme_modify_vars' ) ) {
+        add_filter( 'uix_products_custom_metaboxes_vars', 'yourtheme_modify_vars' );
+        function yourtheme_modify_vars() {
+
+            global $uix_products_types;
+			global $uix_products_typeshow_val;
+			
+
+            $all_config = array();
+            $config  = array(
+				
+				
+				    
+                
+                    //-- Products Type
+                    array(
+                        'config' => array( 
+                            'id'         =>  'uix-products-meta-typeshow', 
+                            'title'      =>  esc_html__( 'Product Type', 'your-theme' ),
+                            'screen'     =>  'uix_products', 
+                            'context'    =>  'side',
+                            'priority'   =>  'high',
+                            'fields' => array( 
+
+                                array(
+                                    'id'          =>  'uix_products_typeshow',
+                                    'type'        =>  'radio',
+                                    'title'       =>  '',
+                                    'default'     =>  'artwork',
+                                    'options'     =>  array( 
+                                                        'br'          => true,
+                                                        'radio_type'  => 'normal',
+                                                        'value'       => $uix_products_typeshow_val
+                                                      )
+									
+
+                                ),
+
+
+
+
+                            )
+                        )
+
+                    ),
+ 
+                
+                
+                    //-- Settings 1
+                    array(
+                        'config' => array( 
+                            'id'         =>  'uix-products-meta-artwork-settings', 
+                            'title'      =>  esc_html__( 'Detail', 'your-theme' ),
+                            'screen'     =>  'uix_products', 
+                            'context'    =>  'normal',
+                            'priority'   =>  'high',
+                            'fields' => array( 
+
+								
+                                array(
+                                    'id'          =>  'uix_products_artwork_project_type',
+                                    'type'        =>  'radio',
+                                    'title'       =>  esc_html__( 'Cover Size', 'your-theme' ),
+                                    'default'     =>  '1',
+                                    'options'     =>  array( 
+                                                        'radio_type'  => 'normal',
+                                                        'value'       => array(
+                                                            '1'            =>  esc_html__( 'large cover', 'your-theme' ),
+                                                            '2'            =>  esc_html__( 'small cover', 'your-theme' )
+                                                         )
+
+
+                                                      )
+
+                                ),
+                               
+								
+                      
+								array(
+									'id'       =>  'uix_products_artwork_project_detail',
+									'type'     =>  'editor',
+									'title'    =>  esc_html__( 'Detail', 'your-theme' ),
+									'options'     =>  array( 
+														'editor_height'   => 400,
+														'editor_toolbar'  => 'formatselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_link uix_products_unlink | removeformat outdent indent superscript subscript hr uix_products_image customCode fullscreen'
+													  )
+								),		
+
+								
+                                
+
+                            )
+                        )
+                    ),
+                
+                    //-- Settings 2
+                    array(
+                        'config' => array( 
+                            'id'         =>  'uix-products-meta-clients-settings', 
+                            'title'      =>  esc_html__( 'Clients', 'your-theme' ),
+                            'screen'     =>  'uix_products', 
+                            'context'    =>  'normal',
+                            'priority'   =>  'high',
+                            'fields' => array( 
+
+
+                                array(
+                                    'id'          =>  'uix_products_clients_project_image',
+                                    'type'        =>  'image',
+                                    'title'       =>  esc_html__( 'Upload a Logo', 'your-theme' ),
+                                    'options'     =>  array( 
+                                                            'label_controller_up_remove'  => esc_html__( 'remove', 'your-theme' ),
+                                                            'label_controller_up_add'     => esc_html__( 'add new', 'your-theme' ),
+                                                      )
+                                ),                        
+
+
+                            )
+                        )
+                    ),
+                
+				
+                    //-- Settings 3
+                    array(
+                        'config' => array( 
+                            'id'         =>  'uix-products-meta-video-settings', 
+                            'title'      =>  esc_html__( 'Video', 'your-theme' ),
+                            'screen'     =>  'uix_products', 
+                            'context'    =>  'normal',
+                            'priority'   =>  'high',
+                            'fields' => array( 
+
+								
+                                array(
+                                    'id'             =>  'uix_products_video_project_title',
+                                    'type'           =>  'text',
+                                    'title'          =>  esc_html__( 'Title', 'your-theme' ),
+                                ),
+
+								
+                                array(
+                                    'id'          =>  'uix_products_video_project_v',
+                                    'type'        =>  'image',
+                                    'title'       =>  esc_html__( 'Upload a video', 'your-theme' ),
+                                    'options'     =>  array( 
+                                                            'label_controller_up_remove'  => esc_html__( 'remove', 'your-theme' ),
+                                                            'label_controller_up_add'     => esc_html__( 'add new', 'your-theme' ),
+                                                      )
+                                ),     
+								
+
+
+
+
+                            )
+                        )
+                    ),
+                      
+				
+				
+                
+                    //---
+                     
+
+
+                );
+
+            array_push( $all_config, $config );
+
+            return $all_config;
+
+        } 
+    }
+
+    
+}
+
+/*
+ * Custom publish page
+ *
+ */
+if ( !function_exists( 'yourtheme_uix_products_publish_page' ) ) {
+    add_action( 'admin_enqueue_scripts' , 'yourtheme_uix_products_publish_page' );
+    function yourtheme_uix_products_publish_page() {
+        $currentScreen = get_current_screen();
+        
+		
+        if ( $currentScreen->id == 'uix_products' ) {
+            
+            //----Hide editor
+            $custom_css = "
+			/* hide categories tabs */
+			#uix_products_category-tabs {
+				display: none;
+			}	
+
+			/* hide add new button */
+			#uix_products_category-adder {
+				display: none;
+			}	
+
+			/* hide default editor */
+			#postdivrich {
+				display: none;
+			}	
+
+			/* custom categorydiv scroller */
+			.categorydiv div.tabs-panel {
+				max-height: 350px;
+			}
+			";
+            wp_add_inline_style( UixProducts::PREFIX . '-products-admin', $custom_css ); 
+            
+            
+            //----Disable excerpt
+            remove_meta_box( 'postexcerpt', 'uix_products', 'normal' ); 
+            
+        }
+
+    }
+	
+	
+	
+}
+
+

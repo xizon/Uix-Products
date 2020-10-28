@@ -1,4 +1,6 @@
 <?php
+
+
 /*
  * Removing a Meta Box
  * 
@@ -303,6 +305,10 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
     add_action( 'manage_uix_products_posts_custom_column', 'uix_products_taxonomy_cols_display', 10, 2 );
     function uix_products_taxonomy_cols_display( $columns, $post_id ) {
 
+		//get Custom product types for metaboxes
+		global $uix_products_typeshow_val;
+		
+		
         switch ( $columns ) {
                 
             
@@ -384,6 +390,7 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
             case "uix-products-type":
 
                 $type = get_post_meta( get_the_ID(), 'uix_products_typeshow', true );
+				
                 if ( !empty( $type ) ) {
                 
                     $params = array( 
@@ -408,7 +415,25 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
                     $_url = esc_url( add_query_arg( $params, admin_url( 'edit.php' ) ) ); 
                     
                     
-                    echo '<a href="'.$_url.'">['.$type.']</a>';
+                    
+					
+					//check product type
+					if ( is_array( $uix_products_typeshow_val ) ) {
+						
+						$cat_not_match_str = '&mdash;';
+							
+						foreach ($uix_products_typeshow_val as $key=>$value) {
+							if ( $key == $type ) {
+								echo '<a href="'.$_url.'">'.$value.'</a>';
+								$cat_not_match_str = '';
+								break;
+							}
+						}	
+						echo $cat_not_match_str;
+					} else {
+						echo '&mdash;';
+					}
+
                     
                 } else {
                     echo '&mdash;';
