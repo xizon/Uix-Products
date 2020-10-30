@@ -38,6 +38,10 @@ $uix_products_typeshow_val = array(
 if ( !function_exists( 'mytheme_uix_products_modify_vars' ) ) {
     add_filter( 'uix_products_custom_metaboxes_vars', 'mytheme_uix_products_modify_vars' );
     function mytheme_uix_products_modify_vars() {
+	
+	    global $uix_products_typeshow_val;
+		
+		
         $all_config = array();
 		$config  = array(
 

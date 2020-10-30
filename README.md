@@ -58,6 +58,10 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 ### Updates
 
+##### = 1.5.12 (October 30, 2020) =
+
+* Tweak: update demo config for options.
+
 
 ##### = 1.5.1 (October 28, 2020) =
 
