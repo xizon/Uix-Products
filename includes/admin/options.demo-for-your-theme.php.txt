@@ -37,7 +37,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
         add_filter( 'uix_products_custom_metaboxes_vars', 'yourtheme_modify_vars' );
         function yourtheme_modify_vars() {
 
-            global $uix_products_types;
+            
 			global $uix_products_typeshow_val;
 			
 
