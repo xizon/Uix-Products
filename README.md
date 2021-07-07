@@ -59,6 +59,13 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 ### Updates
 
 
+##### = 1.5.17 (July 5, 2021) =
+
+* Tweak: Performance optimization of dynamic forms (use virtual tree to update dom) for Custom Meta Boxes.
+* Tweak: Optimized the escape compatibility issue of the editor control for Custom Meta Boxes.
+
+
+
 ##### = 1.5.15 (December 8, 2020) =
 
 * Tweak: Upgraded the uploading control.
@@ -335,6 +342,8 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 - WP 5.4.*
 - WP 5.5.*
 - WP 5.6.*
+- WP 5.7.*
+
 
 
 ### Screenshot

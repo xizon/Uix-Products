@@ -17,7 +17,7 @@
 
 				//Exclude lightbox fields
 				if ( array_key_exists( 'lightbox', $value ) ) {
-					$lightbox_enable = esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'lightbox' ] ) );
+					$lightbox_enable = esc_attr( Uix_Products_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'lightbox' ] ) );
 					break;
 				}//endif array_key_exists( 'lightbox', $value )
 			}//endif $value
@@ -32,17 +32,17 @@
 				if ( ! array_key_exists( 'lightbox', $value ) ) {
 
 			?>
-				<div class="uix-products-portfolio-type-<?php echo esc_attr( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'type' ] ) ); ?>">
+				<div class="uix-portfolio-type-<?php echo esc_attr( Uix_Products_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'type' ] ) ); ?>">
 
 					<?php
-					$img_url = Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'filePath' ] );
+					$img_url = Uix_Products_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'filePath' ] );
 
 					if ( !empty( $img_url ) ) {
 						echo '<img src="'.esc_url( $img_url ).'" alt="" '.( $lightbox_enable == 'on' ? 'class="lightbox"' : '' ).'>';
 					}
 					?>
 
-					<?php echo UixProducts::kses( Uix_Products_Custom_Metaboxes::parse_json_data_from_editor( $value[ 'value' ] ) ); ?>
+					<?php echo UixProductsCmb::kses( Uix_Products_Custom_Metaboxes::parse_jsondata_from_editor( $value[ 'value' ] ) ); ?>
 
 				</div>     
 			<?php
@@ -62,7 +62,7 @@
 
 *
 */
-class UixProductsFormType_MultiPortfolio extends Uix_Products_Custom_Metaboxes {
+class UixProductsCmbFormType_MultiPortfolio extends Uix_Products_Custom_Metaboxes {
 	
 
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
@@ -92,7 +92,7 @@ class UixProductsFormType_MultiPortfolio extends Uix_Products_Custom_Metaboxes {
 
 
 		//editor options
-		$editor_toolbar = 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_link uix_products_unlink | removeformat outdent indent superscript subscript hr uix_products_image uix_products_highlightcode media customCode fullscreen';
+		$editor_toolbar = 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_cmb_link uix_products_cmb_unlink | removeformat outdent indent superscript subscript hr uix_products_cmb_image uix_products_cmb_highlightcode media uix_products_cmb_customcode fullscreen';
 
 		$editor_height = 200;
 
@@ -133,7 +133,7 @@ class UixProductsFormType_MultiPortfolio extends Uix_Products_Custom_Metaboxes {
 		$type_res .= '</select>';
 
 
-		//level
+		//
 		$temp = '
 
 			<div class="uix-products-cmb__text--div uix-products-cmb__text--div--toggle uix-products-cmb__text--div--toggle--sortable">
@@ -161,7 +161,7 @@ class UixProductsFormType_MultiPortfolio extends Uix_Products_Custom_Metaboxes {
 							'.esc_html( $label_file ).'
 						</p>
 						<div class="uix-products-cmb__upload-wrapper">
-							'.Uix_Products_UploadMedia::add( array(
+							'.Uix_Products_Cmb_UploadMedia::add( array(
 								'title'          => '',
 								'child'          => true,
 								'id'             => esc_attr( $id ).'_attrs_file-{id}',
@@ -253,12 +253,12 @@ class UixProductsFormType_MultiPortfolio extends Uix_Products_Custom_Metaboxes {
 
 											//Exclude lightbox fields
 											if ( array_key_exists( 'lightbox', $value ) ) {
-												$lightbox_enable = esc_attr( self::parse_json_data_from_editor( $value[ 'lightbox' ] ) );
+												$lightbox_enable = esc_attr( self::parse_jsondata_from_editor( $value[ 'lightbox' ] ) );
 											} else {
-												$item_code .= str_replace( '{type}', esc_attr( self::parse_json_data_from_editor( $value[ 'type' ] ) ),
+												$item_code .= str_replace( '{type}', esc_attr( self::parse_jsondata_from_editor( $value[ 'type' ] ) ),
 															 str_replace( '{id}', uniqid(),
-															 str_replace( '{value}', esc_textarea( self::parse_json_data_from_editor( $value[ 'value' ] ) ),
-															 str_replace( '{filePath}', esc_textarea( self::parse_json_data_from_editor( $value[ 'filePath' ] ) ),
+															 str_replace( '{value}', esc_textarea( self::parse_jsondata_from_editor( $value[ 'value' ] ) ),
+															 str_replace( '{filePath}', esc_textarea( self::parse_jsondata_from_editor( $value[ 'filePath' ] ) ),
 															 $temp 
 															))));    
 											}

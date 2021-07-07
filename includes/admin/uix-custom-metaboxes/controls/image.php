@@ -3,7 +3,7 @@
 * Field Type: Image
 *
 */
-class UixProductsFormType_Image extends Uix_Products_Custom_Metaboxes {
+class UixProductsCmbFormType_Image extends Uix_Products_Custom_Metaboxes {
 	
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
 
@@ -32,7 +32,7 @@ class UixProductsFormType_Image extends Uix_Products_Custom_Metaboxes {
 
 					<div class="uix-products-cmb__upload-wrapper">
 						<?php
-						Uix_Products_UploadMedia::add( array(
+						Uix_Products_Cmb_UploadMedia::add( array(
 							'title'          => '',
 							'id'             => esc_attr( $id ),
 							'name'           => esc_attr( $id ),

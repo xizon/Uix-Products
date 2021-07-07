@@ -117,7 +117,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
 									'title'    =>  esc_html__( 'Detail', 'your-theme' ),
 									'options'     =>  array( 
 														'editor_height'   => 400,
-														'editor_toolbar'  => 'formatselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_link uix_products_unlink | removeformat outdent indent superscript subscript hr uix_products_image customCode fullscreen'
+														'editor_toolbar'  => 'formatselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_cmb_link uix_products_cmb_unlink | removeformat outdent indent superscript subscript hr uix_products_cmb_image uix_products_cmb_customcode fullscreen'
 													  )
 								),		
 

@@ -3,15 +3,15 @@
 * Field Type: Editor
 *
 * @print: 
-* echo UixProducts::kses( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
+* echo UixProductsCmb::kses( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_appear_3', true ) );
 *
 */
-class UixProductsFormType_Editor extends Uix_Products_Custom_Metaboxes {
+class UixProductsCmbFormType_Editor extends Uix_Products_Custom_Metaboxes {
 	
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
 
 		//editor options
-		$editor_toolbar = 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_link uix_products_unlink | removeformat outdent indent superscript subscript hr uix_products_image uix_products_highlightcode media customCode fullscreen';
+		$editor_toolbar = 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_cmb_link uix_products_cmb_unlink | removeformat outdent indent superscript subscript hr uix_products_cmb_image uix_products_cmb_highlightcode media uix_products_cmb_customcode fullscreen';
 		$editor_height = 200;  
 
 
@@ -29,7 +29,7 @@ class UixProductsFormType_Editor extends Uix_Products_Custom_Metaboxes {
 
 					<?php 
 
-						$editor_toolbar  = 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_link uix_products_unlink | removeformat outdent indent superscript subscript hr uix_products_image uix_products_highlightcode media customCode fullscreen';
+						$editor_toolbar  = 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_cmb_link uix_products_cmb_unlink | removeformat outdent indent superscript subscript hr uix_products_cmb_image uix_products_cmb_highlightcode media uix_products_cmb_customcode fullscreen';
 						$editor_height   = 200;
 						if ( is_array ( $options ) ) {
 							if ( isset( $options[ 'editor_toolbar' ] ) ) $editor_toolbar = $options[ 'editor_toolbar' ];

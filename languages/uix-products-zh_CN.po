@@ -4,9 +4,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2020-10-28 07:25+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
-"PO-Revision-Date: 2020-10-28 07:27+0000\n"
+"PO-Revision-Date: 2021-07-07 05:49+0000\n"
 "Last-Translator: chuckie\n"
-"Language-Team: 简体中文\n"
+"Language-Team: Chinese (China)\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -23,768 +23,37 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.5.1"
 
-#: uix-products.php:334 uix-products.php:335 uix-products.php:411
-msgid "Settings"
-msgstr "设置"
-
-#: uix-products.php:342 uix-products.php:343 uix-products.php:412
-#: uix-products.php:465 helper/settings.php:59
-msgid "How to use?"
-msgstr "如何使用?"
-
-#: uix-products.php:350 uix-products.php:351 helper/settings.php:69
-msgid "Template Files"
-msgstr "模板文件"
-
-#: uix-products.php:359 uix-products.php:360
-msgid "Custom CSS"
-msgstr "自定义CSS"
-
-#: uix-products.php:368 uix-products.php:369
-msgid "For Theme Developer"
-msgstr "开发者文档"
-
-#: uix-products.php:377
-msgid "Helper"
-msgstr "助手"
-
-#: uix-products.php:378 helper/settings.php:55
-msgid "About"
-msgstr "关于插件"
-
-#: uix-products.php:464
-msgid ""
-"Do you want to create a products website with WordPress?  Learn how to add "
-"products to your themes."
-msgstr "您是否要使用WordPress创建产品网站？ 了解如何将产品添加到主题中。"
-
-#: uix-products.php:480
-msgid ""
-"<strong>You need to create Uix Products template files in your templates "
-"directory. You can create the files on the WordPress admin panel.</strong>"
-msgstr "<strong>您需要在模板目录中创建Uix产品模板文件。 您可以在WordPress管理面板上创建文件。</strong>"
-
-#: uix-products.php:480 helper/tabs/usage.php:29
-msgid "Create now!"
-msgstr "立即创建!"
-
-#: uix-products.php:480 helper/tabs/temp.php:61
-msgid ""
-"As a workaround you can use FTP, access the Uix Products template files path "
-"<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
-"files to your theme templates directory <code>/wp-content/themes/{your-theme}"
-"/</code>. "
+#: includes/admin/options.php:171
+msgid "$"
 msgstr ""
-"解决方法是，可以使用FTP，访问Uix产品库模板文件路径<code>/wp-content/plugins/uix-"
-"products/theme_templates/</code>，然后将文件上传到主题模板目录<code>/wp-"
-"content/themes/{your-theme}/</code>。"
-
-#: uix-products.php:572
-#, php-format
-msgid ""
-"<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
-"write-blog\"></i> Edit this template</a>"
-msgstr ""
-"<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
-"write-blog\"></i> 编辑这个模板</a>"
-
-#: uix-products.php:702
-msgid "Operation successfully completed!"
-msgstr "操作成功!"
-
-#: uix-products.php:712
-msgid ""
-"<strong>There was a problem copying your template files:</strong> Please "
-"check your server settings. You can upload files to theme templates "
-"directory using FTP."
-msgstr "<strong>复制模板文件时出现问题</strong>：请检查您的服务器设置。 您可以使用FTP将文件上传到主题模板目录。"
-
-#: uix-products.php:720
-msgid ""
-"<strong>There was a problem removing your template files:</strong> Please "
-"check your server settings. You can upload files to theme templates "
-"directory using FTP."
-msgstr "<strong>删除模板文件时出现问题</strong>：请检查服务器设置。 您可以使用FTP将文件上传到主题模板目录。"
-
-#: uix-products.php:723
-msgid "Remove successful!"
-msgstr "删除成功!"
-
-#: uix-products.php:931
-msgid "Primary Sidebar"
-msgstr "主侧边栏"
-
-#: uix-products.php:933
-msgid "Appears on posts and pages in the sidebar."
-msgstr "出现在侧栏中的帖子和页面上。"
-
-#: uix-products.php:1138
-msgid "Load More"
-msgstr "载入更多"
-
-#: theme_templates/single-uix_products.php:92
-msgid "Pages: "
-msgstr "页面:"
-
-#: theme_templates/single-uix_products.php:99
-#: includes/admin/post-type-init.php:94
-msgid "Edit"
-msgstr "编辑"
-
-#: theme_templates/single-uix_products.php:113
-msgid "Date"
-msgstr "日期"
-
-#: theme_templates/single-uix_products.php:120
-msgid "Client"
-msgstr "客户"
-
-#: theme_templates/single-uix_products.php:127
-#: theme_templates/single-uix_products.php:213
-#: includes/admin/post-type-init.php:87 includes/admin/post-type-init.php:286
-msgid "Category"
-msgstr "分类"
-
-#: theme_templates/single-uix_products.php:134 includes/admin/options.php:77
-msgid "Project URL"
-msgstr "项目URL"
-
-#: theme_templates/single-uix_products.php:141
-#: includes/admin/post-type-init.php:287 includes/admin/options.php:100
-msgid "Author"
-msgstr "作者"
-
-#: theme_templates/single-uix_products.php:164
-#: theme_templates/single-uix_products.php:303
-msgid "Description"
-msgstr "描述"
-
-#: theme_templates/single-uix_products.php:177
-msgid "Live Demo"
-msgstr "在线演示"
-
-#: theme_templates/single-uix_products.php:184
-msgid "Buy Now for $"
-msgstr "立刻购买$"
-
-#: theme_templates/single-uix_products.php:186
-msgid "Free Download"
-msgstr "免费下载"
-
-#: theme_templates/single-uix_products.php:194
-msgid "Created"
-msgstr "创建于"
-
-#: theme_templates/single-uix_products.php:206
-msgid "Updated"
-msgstr "更新于"
-
-#: theme_templates/single-uix_products.php:221
-msgid "Version"
-msgstr "版本"
-
-#: theme_templates/single-uix_products.php:228 includes/admin/options.php:215
-msgid "Compatible With"
-msgstr "兼容"
-
-#: theme_templates/single-uix_products.php:235 includes/admin/options.php:222
-msgid "Compatible Browsers"
-msgstr "兼容浏览器"
-
-#: theme_templates/single-uix_products.php:248 includes/admin/options.php:252
-msgid "Files Included"
-msgstr "包含文件类型"
-
-#: theme_templates/single-uix_products.php:261 includes/admin/options.php:279
-#: helper/tabs/general-settings.php:121
-msgid "Layout"
-msgstr "布局"
-
-#: theme_templates/single-uix_products.php:268 includes/admin/options.php:299
-msgid "Additional Info"
-msgstr "附加信息"
-
-#: theme_templates/single-uix_products.php:275
-msgid "Installation"
-msgstr "安装"
-
-#: theme_templates/single-uix_products.php:282 includes/admin/options.php:313
-msgid "Tags"
-msgstr "标签"
-
-#: theme_templates/single-uix_products.php:316
-msgid "&larr;"
-msgstr "&larr;"
-
-#: theme_templates/single-uix_products.php:317
-msgid "&rarr;"
-msgstr "&rarr;"
 
 #: theme_templates/taxonomy-uix_products_category.php:24
 #, php-format
 msgid "%s"
 msgstr "%s"
 
-#: theme_templates/taxonomy-uix_products_category.php:29
-#: theme_templates/tmpl-uix_products.php:28
-#: includes/admin/post-type-init.php:91
-msgid "All"
-msgstr "所有"
+#: theme_templates/single-uix_products.php:316
+msgid "&larr;"
+msgstr "&larr;"
 
-#: theme_templates/taxonomy-uix_products_category.php:49
-#: theme_templates/tmpl-uix_products.php:48
-msgid "No categories"
-msgstr "无分类"
-
-#: live-demo/index.php:24
-msgid "Demos"
-msgstr "演示"
-
-#: live-demo/index.php:78 live-demo/index.php:79
-msgid "Select a Theme"
-msgstr "选择一个主题"
-
-#: live-demo/index.php:85
-msgid "Close This Bar"
-msgstr "关闭工具栏"
-
-#: live-demo/index.php:90
-msgid "Download"
-msgstr "下载"
-
-#: live-demo/index.php:97
-msgid "Smartphone View"
-msgstr "手机视图"
-
-#: live-demo/index.php:102
-msgid "Tablet View"
-msgstr "平板视图"
-
-#: live-demo/index.php:107
-msgid "Desktop View"
-msgstr "桌面视图"
-
-#: live-demo/index.php:115
-msgid "Prev"
-msgstr "上一个"
-
-#: live-demo/index.php:123
-msgid "Next"
-msgstr "下一个"
-
-#: helper/settings.php:33
-msgid "You do not have sufficient permissions to access this page."
-msgstr "您没有足够的权限访问此页面。"
-
-#: helper/settings.php:41
-msgid "Uix Products Helper"
-msgstr "帮助说明"
-
-#: helper/settings.php:64
-msgid "Credits"
-msgstr "鸣谢"
-
-#: helper/settings.php:75
-msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
-msgstr "<i class=\"dashicons dashicons-admin-generic\"></i> 基础设置"
-
-#: helper/settings.php:81
-msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
-msgstr "<i class=\"dashicons dashicons-welcome-view-site\"></i> 自定义CSS"
-
-#: helper/settings.php:88
-msgid "<i class=\"dashicons dashicons-networking\"></i> For Theme Developer"
-msgstr "<i class=\"dashicons dashicons-networking\"></i> 开发者文档"
-
-#. Name of the plugin
-#: includes/admin/post-type-init.php:40
-msgid "Uix Products"
-msgstr "Uix产品库"
-
-#: includes/admin/post-type-init.php:41
-msgid "Products Item"
-msgstr "产品"
-
-#: includes/admin/post-type-init.php:42 includes/admin/post-type-init.php:45
-msgid "Add New Item"
-msgstr "添加新产品"
-
-#: includes/admin/post-type-init.php:43
-msgid "Add New Products Item"
-msgstr "添加新产品"
-
-#: includes/admin/post-type-init.php:44
-msgid "Edit Item"
-msgstr "编辑"
-
-#: includes/admin/post-type-init.php:46
-msgid "View Item"
-msgstr "查看"
-
-#: includes/admin/post-type-init.php:47
-msgid "Search Items"
-msgstr "搜索"
-
-#: includes/admin/post-type-init.php:48
-msgid "No Items Found"
-msgstr "没找到内容"
-
-#: includes/admin/post-type-init.php:49
-msgid "No Items Found In Trash"
-msgstr "垃圾箱无内容"
-
-#: includes/admin/post-type-init.php:86 includes/admin/post-type-init.php:88
-msgid "Categories"
-msgstr "分类"
-
-#: includes/admin/post-type-init.php:89
-msgid "Search"
-msgstr "搜索"
-
-#: includes/admin/post-type-init.php:90
-msgid "Popular"
-msgstr "常用的"
-
-#: includes/admin/post-type-init.php:92 includes/admin/post-type-init.php:93
-msgid "Parent"
-msgstr "父级"
-
-#: includes/admin/post-type-init.php:95
-msgid "Update"
-msgstr "更新"
-
-#: includes/admin/post-type-init.php:96 includes/admin/options.php:125
-#: includes/admin/options.php:339
-#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:37
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:81
-msgid "Add New"
-msgstr "新增"
-
-#: includes/admin/post-type-init.php:97
-msgid "New"
-msgstr "新增"
-
-#: includes/admin/post-type-init.php:98
-msgid "Separate with commas"
-msgstr "逗号隔开"
-
-#: includes/admin/post-type-init.php:99
-msgid "Add or remove"
-msgstr "添加或删除"
-
-#: includes/admin/post-type-init.php:100
-msgid "Choose from the most used"
-msgstr "选择使用最多的"
-
-#: includes/admin/post-type-init.php:283
-msgid "Thumbnail"
-msgstr "缩略图"
-
-#: includes/admin/post-type-init.php:285 includes/admin/options.php:153
-msgid "Type"
-msgstr "类型"
-
-#: includes/admin/options.php:11
-msgid "Artwork"
-msgstr "案例作品"
-
-#: includes/admin/options.php:12
-msgid "Theme or Plugin"
-msgstr "主题或插件"
-
-#: includes/admin/options.php:34
-msgid "Product Type"
-msgstr "产品类型"
-
-#: includes/admin/options.php:67
-msgid "Artwork Settings"
-msgstr "案例作品设置"
-
-#: includes/admin/options.php:78 includes/admin/options.php:93
-msgid "http://"
+#: helper/tabs/usage.php:78
+msgid ""
+"&nbsp;&nbsp;&nbsp;&nbsp;(1) WordPress comes with a theme and plugin editor "
+"as part of the core functionality. You can find it in your install by going "
+"to <strong>\"Appearance > Editor\"</strong> from your sidebar."
 msgstr ""
+"&nbsp;&nbsp;&nbsp;&nbsp;(1) WordPress随附主题和插件编辑器，作为核心功能的一部分。 您可以从侧边栏找到它： "
+"<strong>\"外观 > 编辑\"</strong>"
 
-#: includes/admin/options.php:79
-msgid "Enter destination URL of this project. <strong>(optional)</strong>"
-msgstr "输入此项目的目标URL。 <strong>（可选）</strong>"
-
-#: includes/admin/options.php:85
-msgid "Client Name"
-msgstr "客户名称"
-
-#: includes/admin/options.php:86
-msgid "Enter name of your clients. <strong>(optional)</strong>"
-msgstr "输入客户的名称。 <strong>(可选)</strong>"
-
-#: includes/admin/options.php:92
-msgid "Client URL"
-msgstr "客户URL"
-
-#: includes/admin/options.php:94
-msgid "Enter URL of your clients site. <strong>(optional)</strong>"
-msgstr "输入客户的网站地址。 <strong>(可选)</strong>"
-
-#: includes/admin/options.php:101
-msgid "Enter name of this project author. <strong>(optional)</strong>"
-msgstr "输入项目作者名称。 <strong>(可选)</strong>"
-
-#: includes/admin/options.php:107
-msgid "Release Date"
-msgstr "发布时间"
-
-#: includes/admin/options.php:108
-msgid "Enter date of your projects. <strong>(optional)</strong>"
-msgstr "输入项目的发布时间。 <strong>(可选)</strong>"
-
-#: includes/admin/options.php:119 includes/admin/options.php:333
-msgid "Custom Attributes"
-msgstr "自定义属性"
-
-#: includes/admin/options.php:122 includes/admin/options.php:336
-#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:34
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:74
-msgid "Title"
-msgstr "文本"
-
-#: includes/admin/options.php:123 includes/admin/options.php:337
-#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:35
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:75
-msgid "Value"
-msgstr "值"
-
-#: includes/admin/options.php:124 includes/admin/options.php:338
-#: includes/admin/options.php:378 includes/admin/options.php:382
-#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:36
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:80
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:79
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:84
-#: includes/admin/uix-custom-metaboxes/controls/image.php:11
-msgid "Remove"
-msgstr "删除"
-
-#: includes/admin/options.php:143
-msgid "Theme or Plugin Settings"
-msgstr "主题或插件设置"
-
-#: includes/admin/options.php:158
-msgid "Theme"
-msgstr "主题"
-
-#: includes/admin/options.php:159
-msgid "Plugin"
-msgstr "插件"
-
-#: includes/admin/options.php:168
-msgid "Item Prices"
-msgstr "项目价格"
-
-#: includes/admin/options.php:169
-msgid "Enter your expected value of this item for every single sell minimum."
-msgstr "输入每笔最低销售的预期价格。"
-
-#: includes/admin/options.php:171
-msgid "$"
+#: helper/tabs/usage.php:86
+msgid ""
+"&nbsp;&nbsp;&nbsp;&nbsp;(2) You can connect to your site via an <strong>"
+"FTP</strong> client, download a copy of the file you want to change, make "
+"the changes and then upload the file back to the server, overwriting the "
+"file that’s on the server."
 msgstr ""
-
-#: includes/admin/options.php:179
-msgid "Item Name"
-msgstr "项目名称"
-
-#: includes/admin/options.php:180
-msgid "E.g. Uixplant, 15 characters maximum."
-msgstr "例如: Uixplant，最多15个字符。"
-
-#: includes/admin/options.php:186
-msgid "Item Title"
-msgstr "项目标题"
-
-#: includes/admin/options.php:187
-msgid "E.g. Multi-purpose HTML5 WordPress Theme"
-msgstr "例如: 多功能HTML5 WordPress主题"
-
-#: includes/admin/options.php:193
-msgid "Demo Link"
-msgstr "演示地址"
-
-#: includes/admin/options.php:194
-msgid ""
-"Direct link to your demo or video without any iframe, support WP shortcode. "
-"(E.g. http://my-site.com/demo/)"
-msgstr "无需任何iframe即可直接链接到演示或视频，支持WP短代码。 （例如http://my-site.com/demo/）"
-
-#: includes/admin/options.php:200
-msgid "Purchase/Download Link"
-msgstr "购买/下载地址"
-
-#: includes/admin/options.php:201
-msgid ""
-"Direct link to the purchase or download page, support WP shortcode. (E.g. "
-"http://market-place.com/yourtheme/)"
-msgstr "直接链接到购买或下载页面，支持WP简码。 （例如http://market-place.com/yourtheme/）"
-
-#: includes/admin/options.php:208
-msgid "Current Version"
-msgstr "当前版本"
-
-#: includes/admin/options.php:209
-msgid "Your Item Version, E.g. 1.0.0"
-msgstr "您的商品版本，例如 1.0.0"
-
-#: includes/admin/options.php:216
-msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
-msgstr "例如: WPML, Bootstrap 3.x, WordPress 4.5+"
-
-#: includes/admin/options.php:284
-msgid "Null"
-msgstr "无"
-
-#: includes/admin/options.php:285
-msgid "Responsive"
-msgstr "响应式"
-
-#: includes/admin/options.php:286
-msgid "Fixed"
-msgstr "固定"
-
-#: includes/admin/options.php:287
-msgid "Liquid"
-msgstr "流体布局=="
-
-#: includes/admin/options.php:288
-msgid "Static"
-msgstr "静态"
-
-#: includes/admin/options.php:300
-msgid "E.g. Well Documentation"
-msgstr "例如: 详细文档"
-
-#: includes/admin/options.php:306
-msgid "Installation Info"
-msgstr "安装信息"
-
-#: includes/admin/options.php:307
-msgid ""
-"E.g. Installation and set up instructions are attached (look for "
-"Documentation folder)."
-msgstr "例如: 随附安装和设置说明（查找“文档”文件夹）。"
-
-#: includes/admin/options.php:314
-msgid ""
-"Maximum of 15 keywords covering features, usage, and styling. Keywords "
-"should all be in lowercase and separated by commas. e.g. photography, "
-"gallery, modern, jquery, wordpress theme"
-msgstr "最多15个关键字，涵盖功能，用法和样式。 关键字应全部小写并以逗号分隔。 例如 摄影，画廊，现代，jquery，wordpress主题"
-
-#: includes/admin/options.php:321
-msgid "Updated Date"
-msgstr "更新时间"
-
-#: includes/admin/options.php:359
-msgid "Image Gallery"
-msgstr "相册画廊"
-
-#: includes/admin/options.php:373
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:74
-msgid "Files"
-msgstr "图片或视频"
-
-#: includes/admin/options.php:374
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:75
-msgid "Text"
-msgstr "文本"
-
-#: includes/admin/options.php:377
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:88
-msgid "Enable Lightbox for this gallery?"
-msgstr "启用灯箱效果?"
-
-#: includes/admin/options.php:379
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:85
-#: includes/admin/uix-custom-metaboxes/controls/image.php:12
-msgid "Select image or video"
-msgstr "选择图片或视频"
-
-#: includes/admin/options.php:380
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:77
-msgid "Custom Content"
-msgstr "自定义文本内容"
-
-#: includes/admin/options.php:381
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:78
-msgid "Upload Your Files"
-msgstr "上传图片"
-
-#: includes/admin/options.php:383
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:80
-msgid "Add Files"
-msgstr "添加图片/视频"
-
-#: includes/admin/options.php:384
-#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:81
-msgid "Add Text"
-msgstr "添加文本"
-
-#: includes/classes-frontend/class-widgets.php:14
-msgid "Use this widget to list your recent products."
-msgstr "使用此小部件列出您的近期产品。"
-
-#: includes/classes-frontend/class-widgets.php:17
-msgid "Uix Products: Recent Products"
-msgstr "Uix产品库: 近期产品"
-
-#: includes/classes-frontend/class-widgets.php:31
-#: includes/classes-frontend/class-widgets.php:229
-msgid "Recent Products"
-msgstr "近期产品"
-
-#: includes/classes-frontend/class-widgets.php:237
-msgid "Title:"
-msgstr "标题:"
-
-#: includes/classes-frontend/class-widgets.php:240
-msgid "Number of products to show:"
-msgstr "产品展示数量:"
-
-#: includes/classes-frontend/class-widgets.php:245
-msgid "Only display artworks?"
-msgstr "仅显示案例作品?"
-
-#: includes/classes-frontend/class-widgets.php:250
-msgid "Only display themes?"
-msgstr "仅显示主题?"
-
-#: includes/classes-frontend/class-widgets.php:254
-msgid "Only display plugins?"
-msgstr "仅显示插件?"
-
-#: includes/classes-frontend/class-widgets.php:258
-msgid "Display post date?"
-msgstr "显示发布时间?"
-
-#: helper/tabs/general-settings.php:68 helper/tabs/custom-css.php:27
-msgid "Settings saved."
-msgstr "设置已保存."
-
-#: helper/tabs/general-settings.php:90
-msgid "Numeric Pagination"
-msgstr "数字分页"
-
-#: helper/tabs/general-settings.php:96
-msgid ""
-"If this option turned on, the products list will use numeric pagination."
-msgstr "如果打开此选项，则产品列表将使用数字分页。"
-
-#: helper/tabs/general-settings.php:105
-msgid "Filterable Animated Products"
-msgstr "可过滤的动画"
-
-#: helper/tabs/general-settings.php:111
-msgid ""
-"Allows you to create a very modern and outstanding products which filters "
-"instantly."
-msgstr "使您可以创建非常顺畅的过渡动画。"
-
-#: helper/tabs/general-settings.php:129
-msgid "Standard"
-msgstr "标准"
-
-#: helper/tabs/general-settings.php:135
-msgid "Masonry"
-msgstr "砖块布局"
-
-#: helper/tabs/general-settings.php:147
-msgid "Products Pages Show at Most"
-msgstr "页面最多显示"
-
-#: helper/tabs/general-settings.php:152
-msgid "products"
-msgstr "个"
-
-#: helper/tabs/general-settings.php:163
-msgid "Image Size for Cover Thumbnails"
-msgstr "缩略图的大小"
-
-#: helper/tabs/general-settings.php:168 helper/tabs/general-settings.php:174
-#: helper/tabs/general-settings.php:190 helper/tabs/general-settings.php:196
-msgid "px"
-msgstr "像素"
-
-#: helper/tabs/general-settings.php:168 helper/tabs/general-settings.php:190
-msgid "(width)"
-msgstr "(宽)"
-
-#: helper/tabs/general-settings.php:174 helper/tabs/general-settings.php:196
-msgid "(height)"
-msgstr "(高)"
-
-#: helper/tabs/general-settings.php:185
-msgid "Image Size in Single Post"
-msgstr "单张图片大小"
-
-#: helper/tabs/general-settings.php:207
-msgid "Custom Parameters"
-msgstr "自定义参数"
-
-#: helper/tabs/general-settings.php:212
-msgid "Can be used for your custom parameters."
-msgstr "可用于您的自定义参数。"
-
-#: helper/tabs/for-developer.php:11
-msgid ""
-"Occasionally you may wish to edit one of the meta boxes that come with Uix "
-"Products. Instead of editing the templates right in the plugin you should "
-"move them to your theme, so that your changes aren't lost when you update "
-"the Uix Products plugin. This document will show you how to safely custom "
-"meta boxes to your theme."
-msgstr ""
-"有时，您可能希望自定义编辑Uix产品库随附的meta boxes。 "
-"与其直接在插件中编辑模板，不如将模板移至您的主题，以便更新Uix产品库插件时所做的更改不会丢失。 本文档将向您展示如何安全地自定义主题的meta "
-"boxes。"
-
-#: helper/tabs/for-developer.php:16
-msgid ""
-"(1) Added filter for current Custom Metaboxes. Add the following code to "
-"your theme or plugin:"
-msgstr "（1）为当前的自定义元框添加了过滤器。 将以下代码添加到主题或插件："
-
-#: helper/tabs/for-developer.php:19
-#, php-format
-msgid "<a href=\"%1$s\" target=\"_blank\">Demo Here</a>"
-msgstr "<a href=\"%1$s\" target=\"_blank\">自定义元框配置例子</a>"
-
-#: helper/tabs/for-developer.php:118
-msgid "(2) How to call in a PHP page"
-msgstr "(2) 如何在PHP页面中使用"
-
-#: helper/tabs/for-developer.php:155
-msgid "(3) Custom Meta Boxes API"
-msgstr "(3) Custom Meta Boxes 接口文档"
-
-#: helper/tabs/for-developer.php:159
-#, php-format
-msgid "<a href=\"%1$s\" target=\"_blank\">Online Documentation</a>"
-msgstr "<a href=\"%1$s\" target=\"_blank\">在线文档</a>"
-
-#: helper/tabs/usage.php:21
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can "
-"see a prompt pointed out as absolutely critical. Go to <strong>\"Appearance -"
-"> Install Plugins\"</strong>.\n"
-"Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-"
-"content/plugins/) And upload files there.)</h4>"
-msgstr ""
-"<h4 class=\"uix-bg-custom-title\">1. 激活主题后你会看到重要提示，进入 <strong>\"外观 -> "
-"安装插件\"</strong>.\n"
-"或者上传插件到你的WordPress目录, 并激活它, 路径为 (/wp-content/plugins/)</h4>"
-
-#: helper/tabs/usage.php:25
-msgid ""
-"<h4 class=\"uix-bg-custom-title\">2. You need to create Uix Products "
-"template files in your templates directory. You can create the files on the "
-"WordPress admin panel.</h4>"
-msgstr ""
-"<h4 class=\"uix-bg-custom-title\">2. 您需要在模板目录中创建Uix产品库模板文件。 "
-"您可以在WordPress管理面板上创建文件。</h4>"
+"&nbsp;&nbsp;&nbsp;&nbsp;(2) 您可以通过<strong> FTP </strong>"
+"客户端连接到您的站点，下载要更改的文件进行更改，然后将文件上传回服务器，从而覆盖服务器上的文件。"
 
 #: helper/tabs/usage.php:33
 msgid ""
@@ -811,6 +80,156 @@ msgstr ""
 "uix_products.php\"</code> and <code>\"taxonomy-uix_products_category."
 "php\"</code>在您的模板目录中。 如果找不到这些文件，则只需从目录中复制它们到 \"/wp-content/plugins/uix-"
 "products/theme_templates/\" 目录下即可。"
+
+#: theme_templates/single-uix_products.php:317
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: helper/tabs/for-developer.php:16
+msgid ""
+"(1) Added filter for current Custom Metaboxes. Add the following code to "
+"your theme or plugin:"
+msgstr "（1）为当前的自定义元框添加了过滤器。 将以下代码添加到主题或插件："
+
+#: helper/tabs/for-developer.php:122
+msgid "(2) How to call in a PHP page"
+msgstr "(2) 如何在PHP页面中使用"
+
+#: helper/tabs/for-developer.php:159
+msgid "(3) Custom Meta Boxes API"
+msgstr "(3) Custom Meta Boxes 接口文档"
+
+#: helper/tabs/general-settings.php:174 helper/tabs/general-settings.php:196
+msgid "(height)"
+msgstr "(高)"
+
+#: helper/tabs/general-settings.php:168 helper/tabs/general-settings.php:190
+msgid "(width)"
+msgstr "(宽)"
+
+#: helper/tabs/about.php:18
+msgid "* 3 Product types for choice"
+msgstr "* 3 种基本产品类型"
+
+#: helper/tabs/about.php:23
+msgid "* Adding categories support to a custom post type in WordPress"
+msgstr "* 支持自定义分类"
+
+#: helper/tabs/about.php:27
+msgid "* Filterable to display product items to your site"
+msgstr "* 过滤效果支持"
+
+#: helper/tabs/about.php:20
+msgid "* Full responsive design"
+msgstr "* 响应式设计"
+
+#: helper/tabs/about.php:24
+msgid "* It contains about 4 different layouts to choose from"
+msgstr "* 包含多种布局选择"
+
+#: helper/tabs/about.php:19
+msgid "* List of retina-ready"
+msgstr "* Retina准备"
+
+#: helper/tabs/about.php:22
+msgid "* Regenerate thumbnails after changing their size."
+msgstr "* 更改缩略图大小后，重新生成缩略图"
+
+#: helper/tabs/about.php:25
+msgid "* Support gallery"
+msgstr "* 支持动态灵活的图片画廊展示"
+
+#: helper/tabs/about.php:28
+msgid "* Support widgets to the spot you wish it to appear"
+msgstr "* 支持小工具"
+
+#: helper/tabs/about.php:26
+msgid "* There are some simple options to the theme customizer"
+msgstr "* 简单的主题自定义选项"
+
+#: helper/tabs/about.php:21
+msgid ""
+"* Using template files to customize your theme & display all product items"
+msgstr "* 使用模板文件来轻松自定义主题"
+
+#: includes/admin/uix-custom-metaboxes/init.php:249
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:131
+msgid "-"
+msgstr ""
+
+#: helper/tabs/custom-css.php:93
+#, php-format
+msgid ""
+"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
+"uix-products-custom.css</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/css/</code> ). You can connect to your site via an FTP client, make "
+"the changes and then upload the file back to the server. Once you have "
+"created an existing CSS file, Uix Products will use it as a default style "
+"sheet instead of the <a href=\"%1$s\" target=\"_blank\">%2$s</a> to your "
+"WordPress Theme. Of course, Uix Products's function of \"Custom CSS\" is "
+"still valid."
+msgstr ""
+"- 制作一个新的样式表（CSS）文档，其名称为 <strong>uix-products-custom.css</strong>并上传到你的主题目录 ( "
+"<code>/wp-content/themes/{your-theme}/</code> 或者<code>/wp-"
+"content/themes/{your-theme}/assets/css/</code> ). "
+"您可以通过FTP客户端连接到站点，进行更改，然后将文件上传回服务器。 创建现有CSS文件后，Uix产品库会将其用作默认样式 <a "
+"href=\"%1$s\" target=\"_blank\">%2$s</a>。 当然，Uix产品库的“自定义CSS”功能仍然有效。"
+
+#: helper/tabs/custom-css.php:107
+#, php-format
+msgid ""
+"- Making a new javascrpt (.js) document which name to <strong>uix-products-"
+"custom.js</strong> to your templates directory ( <code>/wp-"
+"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
+"/assets/js/</code> ). Once you have created an existing JS file, Uix "
+"Products will use it as a default script instead of the \"<a href=\"%1$s\" "
+"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
+msgstr ""
+"- 制作一个新的javascript（.js）文档，将其命名为 <strong>uix-products-custom.js</strong>"
+"并上传到主题目录 ( <code>/wp-content/themes/{your-theme}/</code> 或者 <code>/wp-"
+"content/themes/{your-theme}/assets/js/</code> ). 创建现有JS文件后，Uix产品库会将其用作默认脚本  "
+"\"<a href=\"%1$s\" target=\"_blank\">%2$s</a>\"。"
+
+#: helper/tabs/for-developer.php:19
+#, php-format
+msgid "<a href=\"%1$s\" target=\"_blank\">Demo Here</a>"
+msgstr "<a href=\"%1$s\" target=\"_blank\">自定义元框配置例子</a>"
+
+#: helper/tabs/for-developer.php:163
+#, php-format
+msgid "<a href=\"%1$s\" target=\"_blank\">Online Documentation</a>"
+msgstr "<a href=\"%1$s\" target=\"_blank\">在线文档</a>"
+
+#: uix-products.php:572
+#, php-format
+msgid ""
+"<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
+"write-blog\"></i> Edit this template</a>"
+msgstr ""
+"<a target=\"_blank\" href=\"%1$s\"><i class=\"dashicons dashicons-welcome-"
+"write-blog\"></i> 编辑这个模板</a>"
+
+#: helper/tabs/usage.php:21
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">1. After activating your theme, you can "
+"see a prompt pointed out as absolutely critical. Go to <strong>\"Appearance -"
+"> Install Plugins\"</strong>.\n"
+"Or, upload the plugin to wordpress, Activate it. (Access the path (/wp-"
+"content/plugins/) And upload files there.)</h4>"
+msgstr ""
+"<h4 class=\"uix-bg-custom-title\">1. 激活主题后你会看到重要提示，进入 <strong>\"外观 -> "
+"安装插件\"</strong>.\n"
+"或者上传插件到你的WordPress目录, 并激活它, 路径为 (/wp-content/plugins/)</h4>"
+
+#: helper/tabs/usage.php:25
+msgid ""
+"<h4 class=\"uix-bg-custom-title\">2. You need to create Uix Products "
+"template files in your templates directory. You can create the files on the "
+"WordPress admin panel.</h4>"
+msgstr ""
+"<h4 class=\"uix-bg-custom-title\">2. 您需要在模板目录中创建Uix产品库模板文件。 "
+"您可以在WordPress管理面板上创建文件。</h4>"
 
 #: helper/tabs/usage.php:45
 msgid ""
@@ -863,25 +282,6 @@ msgstr ""
 "模板文件来自定义此页面的外观和风格的各个方面<strong>(访问主题目录的路径)</strong> . 编辑WordPress模板文件的最佳做法:"
 "</h4>"
 
-#: helper/tabs/usage.php:78
-msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;(1) WordPress comes with a theme and plugin editor "
-"as part of the core functionality. You can find it in your install by going "
-"to <strong>\"Appearance > Editor\"</strong> from your sidebar."
-msgstr ""
-"&nbsp;&nbsp;&nbsp;&nbsp;(1) WordPress随附主题和插件编辑器，作为核心功能的一部分。 您可以从侧边栏找到它： "
-"<strong>\"外观 > 编辑\"</strong>"
-
-#: helper/tabs/usage.php:86
-msgid ""
-"&nbsp;&nbsp;&nbsp;&nbsp;(2) You can connect to your site via an <strong>"
-"FTP</strong> client, download a copy of the file you want to change, make "
-"the changes and then upload the file back to the server, overwriting the "
-"file that’s on the server."
-msgstr ""
-"&nbsp;&nbsp;&nbsp;&nbsp;(2) 您可以通过<strong> FTP </strong>"
-"客户端连接到您的站点，下载要更改的文件进行更改，然后将文件上传回服务器，从而覆盖服务器上的文件。"
-
 #: helper/tabs/usage.php:90
 msgid ""
 "<h4 class=\"uix-bg-custom-title\">8. The Uix Products plugin allows users to "
@@ -902,75 +302,112 @@ msgstr ""
 "文件，在不修改原始样式的情况下为您的网站创建新样式. 进入 <strong>\"Uix产品库 -> 设置 -> 自定义CSS\"</strong>."
 "</h4>"
 
-#: helper/tabs/custom-css.php:85
-msgid "You have already used custom stylesheet files."
-msgstr "您已经使用了自定义样式表文件。"
+#: helper/settings.php:75
+msgid "<i class=\"dashicons dashicons-admin-generic\"></i> General Settings"
+msgstr "<i class=\"dashicons dashicons-admin-generic\"></i> 基础设置"
 
-#: helper/tabs/custom-css.php:93
-#, php-format
+#: helper/settings.php:88
+msgid "<i class=\"dashicons dashicons-networking\"></i> For Theme Developer"
+msgstr "<i class=\"dashicons dashicons-networking\"></i> 开发者文档"
+
+#: helper/settings.php:81
+msgid "<i class=\"dashicons dashicons-welcome-view-site\"></i> Custom CSS"
+msgstr "<i class=\"dashicons dashicons-welcome-view-site\"></i> 自定义CSS"
+
+#: uix-products.php:712
 msgid ""
-"- Making a new Cascading Style Sheet (CSS) document which name to <strong>"
-"uix-products-custom.css</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/css/</code> ). You can connect to your site via an FTP client, make "
-"the changes and then upload the file back to the server. Once you have "
-"created an existing CSS file, Uix Products will use it as a default style "
-"sheet instead of the <a href=\"%1$s\" target=\"_blank\">%2$s</a> to your "
-"WordPress Theme. Of course, Uix Products's function of \"Custom CSS\" is "
-"still valid."
-msgstr ""
-"- 制作一个新的样式表（CSS）文档，其名称为 <strong>uix-products-custom.css</strong>并上传到你的主题目录 ( "
-"<code>/wp-content/themes/{your-theme}/</code> 或者<code>/wp-"
-"content/themes/{your-theme}/assets/css/</code> ). "
-"您可以通过FTP客户端连接到站点，进行更改，然后将文件上传回服务器。 创建现有CSS文件后，Uix产品库会将其用作默认样式 <a "
-"href=\"%1$s\" target=\"_blank\">%2$s</a>。 当然，Uix产品库的“自定义CSS”功能仍然有效。"
+"<strong>There was a problem copying your template files:</strong> Please "
+"check your server settings. You can upload files to theme templates "
+"directory using FTP."
+msgstr "<strong>复制模板文件时出现问题</strong>：请检查您的服务器设置。 您可以使用FTP将文件上传到主题模板目录。"
 
-#: helper/tabs/custom-css.php:101
-msgid "You have already used custom JavaScript files."
-msgstr "您已经使用了自定义JavaScript文件。"
-
-#: helper/tabs/custom-css.php:107
-#, php-format
+#: uix-products.php:720
 msgid ""
-"- Making a new javascrpt (.js) document which name to <strong>uix-products-"
-"custom.js</strong> to your templates directory ( <code>/wp-"
-"content/themes/{your-theme}/</code> or <code>/wp-content/themes/{your-theme}"
-"/assets/js/</code> ). Once you have created an existing JS file, Uix "
-"Products will use it as a default script instead of the \"<a href=\"%1$s\" "
-"target=\"_blank\">%2$s</a>\" to your WordPress Theme."
-msgstr ""
-"- 制作一个新的javascript（.js）文档，将其命名为 <strong>uix-products-custom.js</strong>"
-"并上传到主题目录 ( <code>/wp-content/themes/{your-theme}/</code> 或者 <code>/wp-"
-"content/themes/{your-theme}/assets/js/</code> ). 创建现有JS文件后，Uix产品库会将其用作默认脚本  "
-"\"<a href=\"%1$s\" target=\"_blank\">%2$s</a>\"。"
+"<strong>There was a problem removing your template files:</strong> Please "
+"check your server settings. You can upload files to theme templates "
+"directory using FTP."
+msgstr "<strong>删除模板文件时出现问题</strong>：请检查服务器设置。 您可以使用FTP将文件上传到主题模板目录。"
 
-#: helper/tabs/custom-css.php:118
-msgid "Paste your CSS code"
-msgstr "粘贴CSS代码"
-
-#: helper/tabs/custom-css.php:120
+#: uix-products.php:480
 msgid ""
-"You could add new styles code to your website, without modifying original ."
-"css files."
-msgstr "您可以在您的网站上添加新样式代码，而无需修改原始.css文件。"
+"<strong>You need to create Uix Products template files in your templates "
+"directory. You can create the files on the WordPress admin panel.</strong>"
+msgstr "<strong>您需要在模板目录中创建Uix产品模板文件。 您可以在WordPress管理面板上创建文件。</strong>"
+
+#: uix-products.php:378 helper/settings.php:55
+msgid "About"
+msgstr "关于插件"
 
 #: helper/tabs/custom-css.php:121
 msgid "Add <code>.rtl .your-classname { .. }</code> to build RTL stylesheets."
 msgstr "添加 <code>.rtl .your-classname { .. }</code> 建立RTL样式表。"
 
-#: helper/tabs/custom-css.php:146 helper/tabs/custom-css.php:160
-msgid "CSS file root directory:"
-msgstr "CSS文件的根目录："
+#: includes/admin/options.php:383
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:80
+msgid "Add Files"
+msgstr "添加图片/视频"
 
-#: helper/tabs/custom-css.php:151
-msgid "Close"
-msgstr "关闭"
+#: includes/admin/post-type-init.php:96 includes/admin/options.php:125
+#: includes/admin/options.php:339
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:37
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:95
+msgid "Add New"
+msgstr "新增"
 
-#: helper/tabs/temp.php:43
+#: includes/admin/post-type-init.php:42 includes/admin/post-type-init.php:45
+msgid "Add New Item"
+msgstr "添加新产品"
+
+#: includes/admin/post-type-init.php:43
+msgid "Add New Products Item"
+msgstr "添加新产品"
+
+#: includes/admin/post-type-init.php:99
+msgid "Add or remove"
+msgstr "添加或删除"
+
+#: includes/admin/options.php:384
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:81
+msgid "Add Text"
+msgstr "添加文本"
+
+#: theme_templates/single-uix_products.php:268 includes/admin/options.php:299
+msgid "Additional Info"
+msgstr "附加信息"
+
+#: theme_templates/taxonomy-uix_products_category.php:29
+#: theme_templates/tmpl-uix_products.php:28
+#: includes/admin/post-type-init.php:91
+msgid "All"
+msgstr "所有"
+
+#: helper/tabs/general-settings.php:111
 msgid ""
-"Uix Products template files already exists. Remove Uix Products template "
-"files in your templates directory:"
-msgstr "Uix产品库模板文件已存在。 在模板目录中删除Uix产品库模板文件："
+"Allows you to create a very modern and outstanding products which filters "
+"instantly."
+msgstr "使您可以创建非常顺畅的过渡动画。"
+
+#: uix-products.php:933
+msgid "Appears on posts and pages in the sidebar."
+msgstr "出现在侧栏中的帖子和页面上。"
+
+#: includes/admin/uix-custom-metaboxes/init.php:250
+msgid "Are you sure you want to delete?"
+msgstr "确定删除?"
+
+#: helper/tabs/temp.php:53
+msgid ""
+"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
+"When you create them again, the default plugin template will be used."
+msgstr "您确定吗？\\n可以根据您的插件模板主题进行设置。 再次创建它们时，将使用默认的插件模板。"
+
+#: includes/admin/options.php:11
+msgid "Artwork"
+msgstr "案例作品"
+
+#: includes/admin/options.php:67
+msgid "Artwork Settings"
+msgstr "案例作品设置"
 
 #: helper/tabs/temp.php:45
 msgid ""
@@ -980,23 +417,270 @@ msgstr ""
 "作为一种解决方法，您可以使用FTP，访问路径<code>/wp-content/themes/{your-theme}/</code>"
 "并删除Uix产品库模板文件。"
 
-#: helper/tabs/temp.php:49 helper/tabs/temp.php:71
-msgid "Template files list:"
-msgstr "模板文件列表: "
-
-#: helper/tabs/temp.php:53
+#: uix-products.php:480 helper/tabs/temp.php:61
 msgid ""
-"Are you sure?\\nIt is possible based on your theme of the plugin templates. "
-"When you create them again, the default plugin template will be used."
-msgstr "您确定吗？\\n可以根据您的插件模板主题进行设置。 再次创建它们时，将使用默认的插件模板。"
+"As a workaround you can use FTP, access the Uix Products template files path "
+"<code>/wp-content/plugins/uix-products/theme_templates/</code> and upload "
+"files to your theme templates directory <code>/wp-content/themes/{your-theme}"
+"/</code>. "
+msgstr ""
+"解决方法是，可以使用FTP，访问Uix产品库模板文件路径<code>/wp-content/plugins/uix-"
+"products/theme_templates/</code>，然后将文件上传到主题模板目录<code>/wp-"
+"content/themes/{your-theme}/</code>。"
 
-#: helper/tabs/temp.php:53
-msgid "Remove Uix Products Template Files"
-msgstr "删除Uix产品库模板文件"
+#: theme_templates/single-uix_products.php:141
+#: includes/admin/post-type-init.php:287 includes/admin/options.php:100
+msgid "Author"
+msgstr "作者"
+
+#: theme_templates/single-uix_products.php:184
+msgid "Buy Now for $"
+msgstr "立刻购买$"
+
+#: helper/tabs/general-settings.php:212
+msgid "Can be used for your custom parameters."
+msgstr "可用于您的自定义参数。"
+
+#: includes/admin/post-type-init.php:86 includes/admin/post-type-init.php:88
+msgid "Categories"
+msgstr "分类"
+
+#: theme_templates/single-uix_products.php:127
+#: theme_templates/single-uix_products.php:213
+#: includes/admin/post-type-init.php:87 includes/admin/post-type-init.php:286
+msgid "Category"
+msgstr "分类"
+
+#: includes/admin/post-type-init.php:100
+msgid "Choose from the most used"
+msgstr "选择使用最多的"
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:93
+msgid "Class Name"
+msgstr "类别名称"
+
+#: helper/tabs/temp.php:77
+msgid "Click This Button to Copy Uix Products Files"
+msgstr "单击此按钮以复制Uix产品库模板文件"
+
+#: theme_templates/single-uix_products.php:120
+msgid "Client"
+msgstr "客户"
+
+#: includes/admin/options.php:85
+msgid "Client Name"
+msgstr "客户名称"
+
+#: includes/admin/options.php:92
+msgid "Client URL"
+msgstr "客户URL"
+
+#: helper/tabs/custom-css.php:151
+msgid "Close"
+msgstr "关闭"
+
+#: live-demo/index.php:85
+msgid "Close This Bar"
+msgstr "关闭工具栏"
+
+#: theme_templates/single-uix_products.php:235 includes/admin/options.php:222
+msgid "Compatible Browsers"
+msgstr "兼容浏览器"
+
+#: theme_templates/single-uix_products.php:228 includes/admin/options.php:215
+msgid "Compatible With"
+msgstr "兼容"
 
 #: helper/tabs/temp.php:59
 msgid "Copy Uix Products template files in your templates directory:"
 msgstr "将Uix产品库模板文件复制到您的模板目录中："
+
+#: uix-products.php:480 helper/tabs/usage.php:29
+msgid "Create now!"
+msgstr "立即创建!"
+
+#: theme_templates/single-uix_products.php:194
+msgid "Created"
+msgstr "创建于"
+
+#: helper/settings.php:64
+msgid "Credits"
+msgstr "鸣谢"
+
+#: helper/tabs/custom-css.php:146 helper/tabs/custom-css.php:160
+msgid "CSS file root directory:"
+msgstr "CSS文件的根目录："
+
+#: includes/admin/options.php:208
+msgid "Current Version"
+msgstr "当前版本"
+
+#: includes/admin/options.php:119 includes/admin/options.php:333
+msgid "Custom Attributes"
+msgstr "自定义属性"
+
+#: includes/admin/options.php:380
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:77
+msgid "Custom Content"
+msgstr "自定义文本内容"
+
+#: uix-products.php:359 uix-products.php:360
+msgid "Custom CSS"
+msgstr "自定义CSS"
+
+#: helper/tabs/general-settings.php:207
+msgid "Custom Parameters"
+msgstr "自定义参数"
+
+#: theme_templates/single-uix_products.php:113
+msgid "Date"
+msgstr "日期"
+
+#: includes/admin/options.php:193
+msgid "Demo Link"
+msgstr "演示地址"
+
+#: live-demo/index.php:24
+msgid "Demos"
+msgstr "演示"
+
+#: theme_templates/single-uix_products.php:164
+#: theme_templates/single-uix_products.php:303
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:90
+msgid "Description"
+msgstr "描述"
+
+#: live-demo/index.php:107
+msgid "Desktop View"
+msgstr "桌面视图"
+
+#: includes/admin/options.php:201
+msgid ""
+"Direct link to the purchase or download page, support WP shortcode. (E.g. "
+"http://market-place.com/yourtheme/)"
+msgstr "直接链接到购买或下载页面，支持WP简码。 （例如http://market-place.com/yourtheme/）"
+
+#: includes/admin/options.php:194
+msgid ""
+"Direct link to your demo or video without any iframe, support WP shortcode. "
+"(E.g. http://my-site.com/demo/)"
+msgstr "无需任何iframe即可直接链接到演示或视频，支持WP短代码。 （例如http://my-site.com/demo/）"
+
+#: includes/classes-frontend/class-widgets.php:258
+msgid "Display post date?"
+msgstr "显示发布时间?"
+
+#: uix-products.php:464
+msgid ""
+"Do you want to create a products website with WordPress?  Learn how to add "
+"products to your themes."
+msgstr "您是否要使用WordPress创建产品网站？ 了解如何将产品添加到主题中。"
+
+#: live-demo/index.php:90
+msgid "Download"
+msgstr "下载"
+
+#: includes/admin/options.php:307
+msgid ""
+"E.g. Installation and set up instructions are attached (look for "
+"Documentation folder)."
+msgstr "例如: 随附安装和设置说明（查找“文档”文件夹）。"
+
+#: includes/admin/options.php:187
+msgid "E.g. Multi-purpose HTML5 WordPress Theme"
+msgstr "例如: 多功能HTML5 WordPress主题"
+
+#: includes/admin/options.php:180
+msgid "E.g. Uixplant, 15 characters maximum."
+msgstr "例如: Uixplant，最多15个字符。"
+
+#: includes/admin/options.php:300
+msgid "E.g. Well Documentation"
+msgstr "例如: 详细文档"
+
+#: includes/admin/options.php:216
+msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
+msgstr "例如: WPML, Bootstrap 3.x, WordPress 4.5+"
+
+#: theme_templates/single-uix_products.php:99
+#: includes/admin/post-type-init.php:94
+msgid "Edit"
+msgstr "编辑"
+
+#: includes/admin/post-type-init.php:44
+msgid "Edit Item"
+msgstr "编辑"
+
+#: includes/admin/options.php:377
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:88
+msgid "Enable Lightbox for this gallery?"
+msgstr "启用灯箱效果?"
+
+#: includes/admin/options.php:108
+msgid "Enter date of your projects. <strong>(optional)</strong>"
+msgstr "输入项目的发布时间。 <strong>(可选)</strong>"
+
+#: includes/admin/options.php:79
+msgid "Enter destination URL of this project. <strong>(optional)</strong>"
+msgstr "输入此项目的目标URL。 <strong>（可选）</strong>"
+
+#: includes/admin/options.php:101
+msgid "Enter name of this project author. <strong>(optional)</strong>"
+msgstr "输入项目作者名称。 <strong>(可选)</strong>"
+
+#: includes/admin/options.php:86
+msgid "Enter name of your clients. <strong>(optional)</strong>"
+msgstr "输入客户的名称。 <strong>(可选)</strong>"
+
+#: includes/admin/options.php:94
+msgid "Enter URL of your clients site. <strong>(optional)</strong>"
+msgstr "输入客户的网站地址。 <strong>(可选)</strong>"
+
+#: includes/admin/options.php:169
+msgid "Enter your expected value of this item for every single sell minimum."
+msgstr "输入每笔最低销售的预期价格。"
+
+#: helper/tabs/about.php:15
+msgid "Features"
+msgstr "特色"
+
+#: includes/admin/uix-custom-metaboxes/init.php:620
+#: includes/admin/uix-custom-metaboxes/controls/radio.php:156
+msgid "Field Title"
+msgstr "字段标题"
+
+#: includes/admin/options.php:373
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:74
+msgid "Files"
+msgstr "图片或视频"
+
+#: theme_templates/single-uix_products.php:248 includes/admin/options.php:252
+msgid "Files Included"
+msgstr "包含文件类型"
+
+#: helper/tabs/general-settings.php:105
+msgid "Filterable Animated Products"
+msgstr "可过滤的动画"
+
+#: includes/admin/options.php:286
+msgid "Fixed"
+msgstr "固定"
+
+#: uix-products.php:368 uix-products.php:369
+msgid "For Theme Developer"
+msgstr "开发者文档"
+
+#: theme_templates/single-uix_products.php:186
+msgid "Free Download"
+msgstr "免费下载"
+
+#: includes/admin/uix-custom-metaboxes/init.php:297
+msgid "Group Title"
+msgstr "组标题"
+
+#: uix-products.php:377
+msgid "Helper"
+msgstr "助手"
 
 #: helper/tabs/temp.php:66
 msgid ""
@@ -1005,9 +689,22 @@ msgid ""
 "your own custom template file directly."
 msgstr "嗨，您好！ 它只是主题文件夹中的自定义模板文件。 当然，您无需创建它，您可以直接使用默认页面模板或您自己的自定义模板文件。"
 
-#: helper/tabs/temp.php:77
-msgid "Click This Button to Copy Uix Products Files"
-msgstr "单击此按钮以复制Uix产品库模板文件"
+#: uix-products.php:342 uix-products.php:343 uix-products.php:412
+#: uix-products.php:465 helper/settings.php:59
+msgid "How to use?"
+msgstr "如何使用?"
+
+#: includes/admin/options.php:78 includes/admin/options.php:93
+msgid "http://"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://uiux.cc"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://uiux.cc/wp-plugins/uix-products/"
+msgstr ""
 
 #: helper/tabs/credits.php:11
 msgid ""
@@ -1015,13 +712,356 @@ msgid ""
 "the list of credits for this plugin:"
 msgstr "特别鸣谢："
 
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:91
+msgid "ID"
+msgstr ""
+
+#: helper/tabs/general-settings.php:96
+msgid ""
+"If this option turned on, the products list will use numeric pagination."
+msgstr "如果打开此选项，则产品列表将使用数字分页。"
+
+#: includes/admin/options.php:359
+msgid "Image Gallery"
+msgstr "相册画廊"
+
+#: helper/tabs/general-settings.php:163
+msgid "Image Size for Cover Thumbnails"
+msgstr "缩略图的大小"
+
+#: helper/tabs/general-settings.php:185
+msgid "Image Size in Single Post"
+msgstr "单张图片大小"
+
+#: includes/admin/uix-custom-metaboxes/init.php:239
+msgid "Insert"
+msgstr "插入"
+
+#: includes/admin/uix-custom-metaboxes/init.php:240
+msgid "Insert Image"
+msgstr "插入图片"
+
+#: includes/admin/uix-custom-metaboxes/init.php:243
+msgid "Insert/Edit link"
+msgstr "插入/编辑链接"
+
+#: theme_templates/single-uix_products.php:275
+msgid "Installation"
+msgstr "安装"
+
+#: includes/admin/options.php:306
+msgid "Installation Info"
+msgstr "安装信息"
+
+#: includes/admin/options.php:179
+msgid "Item Name"
+msgstr "项目名称"
+
+#: includes/admin/options.php:168
+msgid "Item Prices"
+msgstr "项目价格"
+
+#: includes/admin/options.php:186
+msgid "Item Title"
+msgstr "项目标题"
+
+#: includes/admin/uix-custom-metaboxes/init.php:248
+msgid "Language"
+msgstr "语言"
+
+#: theme_templates/single-uix_products.php:261 includes/admin/options.php:279
+#: helper/tabs/general-settings.php:121
+msgid "Layout"
+msgstr "布局"
+
+#: includes/admin/uix-custom-metaboxes/init.php:245
+msgid "Link Text"
+msgstr "链接地址"
+
+#: includes/admin/options.php:287
+msgid "Liquid"
+msgstr "流体布局=="
+
+#: theme_templates/single-uix_products.php:177
+msgid "Live Demo"
+msgstr "在线演示"
+
+#: uix-products.php:1138
+msgid "Load More"
+msgstr "载入更多"
+
+#: helper/tabs/general-settings.php:135
+msgid "Masonry"
+msgstr "砖块布局"
+
+#: includes/admin/options.php:314
+msgid ""
+"Maximum of 15 keywords covering features, usage, and styling. Keywords "
+"should all be in lowercase and separated by commas. e.g. photography, "
+"gallery, modern, jquery, wordpress theme"
+msgstr "最多15个关键字，涵盖功能，用法和样式。 关键字应全部小写并以逗号分隔。 例如 摄影，画廊，现代，jquery，wordpress主题"
+
 #: helper/tabs/credits.php:16
 msgid "Muuri"
 msgstr ""
 
+#: includes/admin/post-type-init.php:97
+msgid "New"
+msgstr "新增"
+
+#: live-demo/index.php:123
+msgid "Next"
+msgstr "下一个"
+
+#: theme_templates/taxonomy-uix_products_category.php:49
+#: theme_templates/tmpl-uix_products.php:48
+msgid "No categories"
+msgstr "无分类"
+
+#: includes/admin/post-type-init.php:48
+msgid "No Items Found"
+msgstr "没找到内容"
+
+#: includes/admin/post-type-init.php:49
+msgid "No Items Found In Trash"
+msgstr "垃圾箱无内容"
+
+#: includes/admin/options.php:284
+msgid "Null"
+msgstr "无"
+
+#: includes/classes-frontend/class-widgets.php:240
+msgid "Number of products to show:"
+msgstr "产品展示数量:"
+
+#: helper/tabs/general-settings.php:90
+msgid "Numeric Pagination"
+msgstr "数字分页"
+
+#: helper/tabs/for-developer.php:11
+msgid ""
+"Occasionally you may wish to edit one of the meta boxes that come with Uix "
+"Products. Instead of editing the templates right in the plugin you should "
+"move them to your theme, so that your changes aren't lost when you update "
+"the Uix Products plugin. This document will show you how to safely custom "
+"meta boxes to your theme."
+msgstr ""
+"有时，您可能希望自定义编辑Uix产品库随附的meta boxes。 "
+"与其直接在插件中编辑模板，不如将模板移至您的主题，以便更新Uix产品库插件时所做的更改不会丢失。 本文档将向您展示如何安全地自定义主题的meta "
+"boxes。"
+
+#: includes/classes-frontend/class-widgets.php:245
+msgid "Only display artworks?"
+msgstr "仅显示案例作品?"
+
+#: includes/classes-frontend/class-widgets.php:254
+msgid "Only display plugins?"
+msgstr "仅显示插件?"
+
+#: includes/classes-frontend/class-widgets.php:250
+msgid "Only display themes?"
+msgstr "仅显示主题?"
+
+#: includes/admin/uix-custom-metaboxes/init.php:246
+msgid "Open link in a new tab"
+msgstr "新窗口打开"
+
+#: uix-products.php:702
+msgid "Operation successfully completed!"
+msgstr "操作成功!"
+
+#: theme_templates/single-uix_products.php:92
+msgid "Pages: "
+msgstr "页面:"
+
+#: includes/admin/post-type-init.php:92 includes/admin/post-type-init.php:93
+msgid "Parent"
+msgstr "父级"
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:92
+msgid "Parent Category"
+msgstr "父级类别"
+
+#: helper/tabs/custom-css.php:118
+msgid "Paste your CSS code"
+msgstr "粘贴CSS代码"
+
+#: includes/admin/options.php:159
+msgid "Plugin"
+msgstr "插件"
+
+#: includes/admin/post-type-init.php:90
+msgid "Popular"
+msgstr "常用的"
+
+#: live-demo/index.php:115
+msgid "Prev"
+msgstr "上一个"
+
+#: uix-products.php:931
+msgid "Primary Sidebar"
+msgstr "主侧边栏"
+
+#: includes/admin/options.php:34
+msgid "Product Type"
+msgstr "产品类型"
+
+#: helper/tabs/general-settings.php:152
+msgid "products"
+msgstr "个"
+
+#: includes/admin/post-type-init.php:41
+msgid "Products Item"
+msgstr "产品"
+
+#: helper/tabs/general-settings.php:147
+msgid "Products Pages Show at Most"
+msgstr "页面最多显示"
+
+#: theme_templates/single-uix_products.php:134 includes/admin/options.php:77
+msgid "Project URL"
+msgstr "项目URL"
+
+#: includes/admin/options.php:200
+msgid "Purchase/Download Link"
+msgstr "购买/下载地址"
+
+#: helper/tabs/general-settings.php:168 helper/tabs/general-settings.php:174
+#: helper/tabs/general-settings.php:190 helper/tabs/general-settings.php:196
+msgid "px"
+msgstr "像素"
+
+#. Description of the plugin
+msgid ""
+"Readily organize & present your artworks, themes, plugins with Uix Products "
+"template files. Convenient for theme customization."
+msgstr "使用Uix产品库模板文件方便地整理和展示您的艺术品，主题，插件。 方便主题自定义。"
+
+#: includes/classes-frontend/class-widgets.php:31
+#: includes/classes-frontend/class-widgets.php:229
+msgid "Recent Products"
+msgstr "近期产品"
+
+#: includes/admin/options.php:107
+msgid "Release Date"
+msgstr "发布时间"
+
+#: includes/admin/options.php:124 includes/admin/options.php:338
+#: includes/admin/options.php:378 includes/admin/options.php:382
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:36
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:94
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:79
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:84
+#: includes/admin/uix-custom-metaboxes/controls/image.php:11
+msgid "Remove"
+msgstr "删除"
+
+#: includes/admin/uix-custom-metaboxes/init.php:242
+msgid "Remove link"
+msgstr "删除链接"
+
+#: uix-products.php:723
+msgid "Remove successful!"
+msgstr "删除成功!"
+
+#: helper/tabs/temp.php:53
+msgid "Remove Uix Products Template Files"
+msgstr "删除Uix产品库模板文件"
+
+#: includes/admin/options.php:285
+msgid "Responsive"
+msgstr "响应式"
+
+#: includes/admin/post-type-init.php:89
+msgid "Search"
+msgstr "搜索"
+
+#: includes/admin/post-type-init.php:47
+msgid "Search Items"
+msgstr "搜索"
+
+#: live-demo/index.php:78 live-demo/index.php:79
+msgid "Select a Theme"
+msgstr "选择一个主题"
+
+#: includes/admin/uix-custom-metaboxes/init.php:238
+msgid "Select Files"
+msgstr "选择文件"
+
+#: includes/admin/options.php:379
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:85
+#: includes/admin/uix-custom-metaboxes/controls/image.php:12
+msgid "Select image or video"
+msgstr "选择图片或视频"
+
+#: includes/admin/post-type-init.php:98
+msgid "Separate with commas"
+msgstr "逗号隔开"
+
+#: uix-products.php:334 uix-products.php:335 uix-products.php:411
+msgid "Settings"
+msgstr "设置"
+
+#: helper/tabs/general-settings.php:68 helper/tabs/custom-css.php:27
+msgid "Settings saved."
+msgstr "设置已保存."
+
+#: live-demo/index.php:97
+msgid "Smartphone View"
+msgstr "手机视图"
+
+#: includes/admin/uix-custom-metaboxes/init.php:241
+msgid "Source Code"
+msgstr "源代码"
+
+#: helper/tabs/general-settings.php:129
+msgid "Standard"
+msgstr "标准"
+
+#: includes/admin/options.php:288
+msgid "Static"
+msgstr "静态"
+
 #: helper/tabs/credits.php:17
 msgid "Switcheroo"
 msgstr ""
+
+#: includes/admin/uix-custom-metaboxes/init.php:247
+msgid "Syntax Highlight Code"
+msgstr "代码高亮"
+
+#: live-demo/index.php:102
+msgid "Tablet View"
+msgstr "平板视图"
+
+#: theme_templates/single-uix_products.php:282 includes/admin/options.php:313
+msgid "Tags"
+msgstr "标签"
+
+#: uix-products.php:350 uix-products.php:351 helper/settings.php:69
+msgid "Template Files"
+msgstr "模板文件"
+
+#: helper/tabs/temp.php:49 helper/tabs/temp.php:71
+msgid "Template files list:"
+msgstr "模板文件列表: "
+
+#: includes/admin/options.php:374
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:75
+msgid "Text"
+msgstr "文本"
+
+#: includes/admin/options.php:158
+msgid "Theme"
+msgstr "主题"
+
+#: includes/admin/options.php:12
+msgid "Theme or Plugin"
+msgstr "主题或插件"
+
+#: includes/admin/options.php:143
+msgid "Theme or Plugin Settings"
+msgstr "主题或插件设置"
 
 #: helper/tabs/about.php:12
 msgid ""
@@ -1031,147 +1071,108 @@ msgid ""
 "selected, they will be displayed in the column view."
 msgstr "该插件启用产品发布类型和分类。 您可以添加新的特色图片。"
 
-#: helper/tabs/about.php:15
-msgid "Features"
-msgstr "特色"
+#: includes/admin/post-type-init.php:283
+msgid "Thumbnail"
+msgstr "缩略图"
 
-#: helper/tabs/about.php:18
-msgid "* 3 Product types for choice"
-msgstr "* 3 种基本产品类型"
+#: includes/admin/options.php:122 includes/admin/options.php:336
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:34
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:88
+msgid "Title"
+msgstr "文本"
 
-#: helper/tabs/about.php:19
-msgid "* List of retina-ready"
-msgstr "* Retina准备"
+#: includes/classes-frontend/class-widgets.php:237
+msgid "Title:"
+msgstr "标题:"
 
-#: helper/tabs/about.php:20
-msgid "* Full responsive design"
-msgstr "* 响应式设计"
-
-#: helper/tabs/about.php:21
-msgid ""
-"* Using template files to customize your theme & display all product items"
-msgstr "* 使用模板文件来轻松自定义主题"
-
-#: helper/tabs/about.php:22
-msgid "* Regenerate thumbnails after changing their size."
-msgstr "* 更改缩略图大小后，重新生成缩略图"
-
-#: helper/tabs/about.php:23
-msgid "* Adding categories support to a custom post type in WordPress"
-msgstr "* 支持自定义分类"
-
-#: helper/tabs/about.php:24
-msgid "* It contains about 4 different layouts to choose from"
-msgstr "* 包含多种布局选择"
-
-#: helper/tabs/about.php:25
-msgid "* Support gallery"
-msgstr "* 支持动态灵活的图片画廊展示"
-
-#: helper/tabs/about.php:26
-msgid "* There are some simple options to the theme customizer"
-msgstr "* 简单的主题自定义选项"
-
-#: helper/tabs/about.php:27
-msgid "* Filterable to display product items to your site"
-msgstr "* 过滤效果支持"
-
-#: helper/tabs/about.php:28
-msgid "* Support widgets to the spot you wish it to appear"
-msgstr "* 支持小工具"
-
-#: includes/admin/uix-custom-metaboxes/init.php:220
-msgid "Select Files"
-msgstr "选择文件"
-
-#: includes/admin/uix-custom-metaboxes/init.php:221
-msgid "Insert"
-msgstr "插入"
-
-#: includes/admin/uix-custom-metaboxes/init.php:222
-msgid "Insert Image"
-msgstr "插入图片"
-
-#: includes/admin/uix-custom-metaboxes/init.php:223
-msgid "Remove link"
-msgstr "删除链接"
-
-#: includes/admin/uix-custom-metaboxes/init.php:224
-msgid "Insert/Edit link"
-msgstr "插入/编辑链接"
-
-#: includes/admin/uix-custom-metaboxes/init.php:225
-msgid "URL"
-msgstr "地址"
-
-#: includes/admin/uix-custom-metaboxes/init.php:226
-msgid "Link Text"
-msgstr "链接地址"
-
-#: includes/admin/uix-custom-metaboxes/init.php:227
-msgid "Open link in a new tab"
-msgstr "新窗口打开"
-
-#: includes/admin/uix-custom-metaboxes/init.php:228
-msgid "Syntax Highlight Code"
-msgstr "代码高亮"
-
-#: includes/admin/uix-custom-metaboxes/init.php:229
-msgid "Language"
-msgstr "语言"
-
-#: includes/admin/uix-custom-metaboxes/init.php:230
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:117
-msgid "-"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/init.php:231
-msgid "Are you sure you want to delete?"
-msgstr "确定删除?"
-
-#: includes/admin/uix-custom-metaboxes/init.php:278
-msgid "Group Title"
-msgstr "组标题"
-
-#: includes/admin/uix-custom-metaboxes/init.php:499
-#: includes/admin/uix-custom-metaboxes/controls/radio.php:156
-msgid "Field Title"
-msgstr "字段标题"
-
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:76
-msgid "Subtitle"
-msgstr "父标题"
-
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:77
-msgid "ID"
-msgstr ""
-
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:78
-msgid "Level"
-msgstr "级别"
-
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:79
-msgid "Class Name"
-msgstr "类别名称"
-
-#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:235
-msgid "Untitled"
-msgstr "无标题"
-
-#. Description of the plugin
-msgid ""
-"Readily organize & present your artworks, themes, plugins with Uix Products "
-"template files. Convenient for theme customization."
-msgstr "使用Uix产品库模板文件方便地整理和展示您的艺术品，主题，插件。 方便主题自定义。"
-
-#. URI of the plugin
-msgid "https://uiux.cc/wp-plugins/uix-products/"
-msgstr ""
+#: includes/admin/post-type-init.php:285 includes/admin/options.php:153
+msgid "Type"
+msgstr "类型"
 
 #. Author of the plugin
 msgid "UIUX Lab"
 msgstr ""
 
-#. Author URI of the plugin
-msgid "https://uiux.cc"
-msgstr ""
+#. Name of the plugin
+#: includes/admin/post-type-init.php:40
+msgid "Uix Products"
+msgstr "Uix产品库"
+
+#: helper/settings.php:41
+msgid "Uix Products Helper"
+msgstr "帮助说明"
+
+#: helper/tabs/temp.php:43
+msgid ""
+"Uix Products template files already exists. Remove Uix Products template "
+"files in your templates directory:"
+msgstr "Uix产品库模板文件已存在。 在模板目录中删除Uix产品库模板文件："
+
+#: includes/classes-frontend/class-widgets.php:17
+msgid "Uix Products: Recent Products"
+msgstr "Uix产品库: 近期产品"
+
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:234
+msgid "Untitled"
+msgstr "无标题"
+
+#: includes/admin/post-type-init.php:95
+msgid "Update"
+msgstr "更新"
+
+#: theme_templates/single-uix_products.php:206
+msgid "Updated"
+msgstr "更新于"
+
+#: includes/admin/options.php:321
+msgid "Updated Date"
+msgstr "更新时间"
+
+#: includes/admin/options.php:381
+#: includes/admin/uix-custom-metaboxes/controls/multi-portfolio.php:78
+msgid "Upload Your Files"
+msgstr "上传图片"
+
+#: includes/admin/uix-custom-metaboxes/init.php:244
+msgid "URL"
+msgstr "地址"
+
+#: includes/classes-frontend/class-widgets.php:14
+msgid "Use this widget to list your recent products."
+msgstr "使用此小部件列出您的近期产品。"
+
+#: includes/admin/options.php:123 includes/admin/options.php:337
+#: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:35
+#: includes/admin/uix-custom-metaboxes/controls/multi-content.php:89
+msgid "Value"
+msgstr "值"
+
+#: theme_templates/single-uix_products.php:221
+msgid "Version"
+msgstr "版本"
+
+#: includes/admin/post-type-init.php:46
+msgid "View Item"
+msgstr "查看"
+
+#: helper/tabs/custom-css.php:120
+msgid ""
+"You could add new styles code to your website, without modifying original ."
+"css files."
+msgstr "您可以在您的网站上添加新样式代码，而无需修改原始.css文件。"
+
+#: helper/settings.php:33
+msgid "You do not have sufficient permissions to access this page."
+msgstr "您没有足够的权限访问此页面。"
+
+#: helper/tabs/custom-css.php:101
+msgid "You have already used custom JavaScript files."
+msgstr "您已经使用了自定义JavaScript文件。"
+
+#: helper/tabs/custom-css.php:85
+msgid "You have already used custom stylesheet files."
+msgstr "您已经使用了自定义样式表文件。"
+
+#: includes/admin/options.php:209
+msgid "Your Item Version, E.g. 1.0.0"
+msgstr "您的商品版本，例如 1.0.0"

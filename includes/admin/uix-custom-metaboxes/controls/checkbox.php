@@ -6,7 +6,7 @@
 	* echo ( get_post_meta( get_the_ID(), 'cus_page_ex_demoname_8', true ) ) ? esc_attr( '_blank' ) : esc_attr( '_self' );
 	*
 	*/
-class UixProductsFormType_Checkbox extends Uix_Products_Custom_Metaboxes {
+class UixProductsCmbFormType_Checkbox extends Uix_Products_Custom_Metaboxes {
 	
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
 	?>

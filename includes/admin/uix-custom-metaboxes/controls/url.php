@@ -3,7 +3,7 @@
 * Field Type: URL
 *
 */
-class UixProductsFormType_Url extends Uix_Products_Custom_Metaboxes {
+class UixProductsCmbFormType_Url extends Uix_Products_Custom_Metaboxes {
 	
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
 	?>

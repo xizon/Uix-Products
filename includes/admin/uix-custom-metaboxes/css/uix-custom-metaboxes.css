@@ -2,7 +2,7 @@
  * ************************************************
  * Uix Custom Metaboxes
  *
- * @version		: 1.9 (December 8, 2020)
+ * @version		: 2.0 (July 5, 2021))
  * @author 		: UIUX Lab
  * @author URI 	: https://uiux.cc
  * @license     : MIT
@@ -79,15 +79,13 @@
 }
 
 
+
 /* Use only one column as a separate module */
 .uix-products-cmb__wrapper--one-column {
     text-align: left;
     padding-left: 10px;
 }
 
-.uix-products-cmb__wrapper--one-column > #uix_products_gallery_append {
-    margin-top: 10px;
-}
 
 @media (max-width: 768px) {
     
@@ -818,6 +816,7 @@ table.uix-products-cmb .uix-products-cmb__label {
 	outline: none;
 	border-radius: 4px;
 }
+
 
 
 .uix-products-cmb__custom-attributes-field table td {

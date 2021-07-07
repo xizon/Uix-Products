@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-if ( !class_exists( 'Uix_Products_UploadMedia' ) ) {
+if ( !class_exists( 'Uix_Products_Cmb_UploadMedia' ) ) {
 	
-	class Uix_Products_UploadMedia {
+	class Uix_Products_Cmb_UploadMedia {
 		
 		public static function add( $args, $echo = true ) {
 			
@@ -26,7 +26,6 @@ if ( !class_exists( 'Uix_Products_UploadMedia' ) ) {
 			wp_enqueue_media();
             
             
-            
             //check file type
             $is_video = false;
             $file_type = pathinfo( $value,PATHINFO_EXTENSION );
@@ -38,7 +37,7 @@ if ( !class_exists( 'Uix_Products_UploadMedia' ) ) {
                 $file_type == 'mpg'
             ) {
                 $is_video = true;
-            } 
+            }  
             
 	
 			$code =  '

@@ -15,7 +15,7 @@
 	echo $_echo;
 *
 */
-class UixProductsFormType_MultiCheckbox extends Uix_Products_Custom_Metaboxes {
+class UixProductsCmbFormType_MultiCheckbox extends Uix_Products_Custom_Metaboxes {
 	
 	public static function add( $id = '', $title = '', $desc = '', $default = '', $options = '', $placeholder = '', $desc_primary = '', $enable_table = false ) {
 	?>

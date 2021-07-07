@@ -383,7 +383,7 @@ if ( class_exists( 'Uix_Products_Custom_Metaboxes' ) ) {
                                             'label_upbtn_add_file' => esc_html__( 'Add Files', 'uix-products' ),
                                             'label_upbtn_add_html' => esc_html__( 'Add Text', 'uix-products' ),
                                             'editor_height'        => 300,
-                                            'editor_toolbar'       => 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_link uix_products_unlink | removeformat outdent indent superscript subscript hr uix_products_image uix_products_highlightcode media customCode fullscreen'
+                                            'editor_toolbar'       => 'formatselect fontselect forecolor backcolor bold italic underline strikethrough bullist numlist blockquote code alignleft aligncenter alignright uix_products_cmb_link uix_products_cmb_unlink | removeformat outdent indent superscript subscript hr uix_products_cmb_image uix_products_cmb_highlightcode media uix_products_cmb_customcode fullscreen'
                                           )
 
 
