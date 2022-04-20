@@ -1,6 +1,5 @@
 <?php
 
-
 /*
  * Removing a Meta Box
  * 
@@ -150,7 +149,7 @@ if ( !function_exists( 'uix_products_taxonomy_gallery_metabox' ) ) {
 
 
 /**
- * Adds taxonomy filters to the products admin page
+ * Adds "taxonomy" and "custom product types for metaboxes" filters to the products admin page
  *
  *
  */
@@ -195,15 +194,21 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
     function uix_products_taxonomy_tax_filters() {
 
         global $typenow;
-		
-		
-		$cat_taxonomy = 'uix_products_category';
+        
 
-        // An array of all the taxonomyies you want to display. Use the taxonomy name or slug
-        $taxonomies = array( $cat_taxonomy );
+		//get Custom product types for metaboxes
+		global $uix_products_typeshow_val;
 
         // must set this to the post type you want the filter(s) displayed on
         if ( $typenow == 'uix_products' ) {
+
+            // Filtering for Post Formats
+            //--------------------
+
+            $cat_taxonomy = 'uix_products_category';
+
+            // An array of all the taxonomyies you want to display. Use the taxonomy name or slug
+            $taxonomies = array( $cat_taxonomy );
 
             foreach ( $taxonomies as $tax_slug ) {
                 $current_tax_slug = isset( $_GET[$tax_slug] ) ? $_GET[$tax_slug] : false;
@@ -219,9 +224,13 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
 				
 				
 				wp_dropdown_categories( array(
+                    'show_option_all' => __('All Categories', 'uix-products'),
 					'taxonomy' => $tax_slug,
 					'name' => $cat_taxonomy,
 					'id' => $cat_taxonomy,
+                    'order' => 'asc',
+                    'orderby' => 'name',
+                    'show_count' => true,
 					'class' => 'postform',
 					'hide_empty' => true,
 					'hierarchical' => true,
@@ -229,7 +238,69 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
 				) );
 
             }
+
+            // Filtering for Custom product types for metaboxes
+            //--------------------
+            //check product type
+            if ( is_array( $uix_products_typeshow_val ) ) {
+            
+                // generate select
+                $select_id_for_type = 'uix_products_typeshow';
+                $current_type = isset($_GET[$select_id_for_type]) ? $_GET[$select_id_for_type] : '';
+                echo '<select name="'.$select_id_for_type.'" id=" '.$select_id_for_type.'">';
+                echo '<option value = "" >'.__( 'All Types', 'uix-products' ).'</option>';
+
+
+
+                foreach ($uix_products_typeshow_val as $key=>$value) {
+
+                    // get count
+                    $number_posts = array();
+                    $current_adminpage_url = admin_url(basename($_SERVER['REQUEST_URI']));
+                    $current_adminpage_url_params = explode( '?', $current_adminpage_url);
+                    $current_adminpage_url_params_count = count(explode( '&', $current_adminpage_url_params[1]));
+
+                    if ( $current_adminpage_url_params_count === 1 ) {
+
+                        // get count
+                        $relevant_products = new WP_Query(array(
+                            'post_type'           => 'uix_products',
+                            'post_status'         => 'publish',
+                            'meta_query'          => array(
+                                                        array(
+                                                                'key'     => $select_id_for_type,
+                                                                'value'   => $key
+                                                        ),
+                                                    ),
+                            
+                            ));
+
+                        $number_posts[$key] = $relevant_products->post_count;
+                        
+                        // Restore original Post Data
+                        wp_reset_postdata();
+
+                        $count_show = ' ('.number_format_i18n($number_posts[$key]).')';
+                    } else {
+                        $count_show = '';
+                    }
+
+                 
+                    echo '<option value="', sanitize_title($key), '"', $key == $current_type ? ' selected="selected"' : '', '>', strip_tags($value), $count_show.'</option>';
+
+                    // Restore original Post Data
+                    wp_reset_postdata();
+
+                }	
+
+                echo '</select>';
+            } 
+
+
         }
+
+
+
     }  
 }
 
@@ -307,8 +378,7 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
 
 		//get Custom product types for metaboxes
 		global $uix_products_typeshow_val;
-		
-		
+
         switch ( $columns ) {
                 
             
@@ -349,14 +419,17 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
 							'uix_products_category' => $cat_slug
 						);
 
+    
 
-					$temp_var = 'uix_products_typeshow';
-					if ( isset( $_GET[ $temp_var ] ) && !empty( $_GET[ $temp_var ] ) ) {
+                    //push new param "uix_products_typeshow"
+					$temp_var_typeshow = 'uix_products_typeshow';
+					if ( isset( $_GET[ $temp_var_typeshow ] ) && !empty( $_GET[ $temp_var_typeshow ] ) ) {
 						array_push( $params, array( 
-							$temp_var => $_GET[ $temp_var ]
+							$temp_var_typeshow => $_GET[ $temp_var_typeshow ]
 						));
 					}
 
+                    //push new param "order"
 					if ( isset( $_GET[ 'order' ] ) && !empty( $_GET[ 'order' ] ) ) {
 						array_push( $params, array( 
 							'order' => $_GET[ 'order' ]
@@ -367,7 +440,7 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
 					//echo categories
 					foreach ($category_list_no_link as $key=>$value) {
 
-						$_url = esc_url( admin_url( 'edit.php' ) . '?post_type=uix_products&uix_products_category=' . $value -> slug );
+                        $_url = esc_url( admin_url( 'edit.php' ) . '?post_type=uix_products&uix_products_category=' . $value -> slug ); 
 						$_split = ', ';
 						
 						if (0 === --$to_end) {
@@ -397,15 +470,17 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
                             'post_type' => 'uix_products',
                             'uix_products_typeshow' => $type
                         );
-                    
-                    
-                    $temp_var = 'uix_products_category';
-                    if ( isset( $_GET[ $temp_var ] ) && !empty( $_GET[ $temp_var ] ) ) {
+
+                    //push new param "uix_products_category"
+                    $temp_var_typeshow = 'uix_products_category';
+                    if ( isset( $_GET[ $temp_var_typeshow ] ) && !empty( $_GET[ $temp_var_typeshow ] ) ) {
                         array_push( $params, array( 
-                            $temp_var => $_GET[ $temp_var ]
+                            $temp_var_typeshow => $_GET[ $temp_var_typeshow ]
                         ));
                     }
-                    
+
+
+                    //push new param "order"
                     if ( isset( $_GET[ 'order' ] ) && !empty( $_GET[ 'order' ] ) ) {
                         array_push( $params, array( 
                             'order' => $_GET[ 'order' ]
@@ -414,9 +489,7 @@ if ( !function_exists( 'uix_products_taxonomy_cols_display' ) ) {
                     
                     $_url = esc_url( add_query_arg( $params, admin_url( 'edit.php' ) ) ); 
                     
-                    
-                    
-					
+             
 					//check product type
 					if ( is_array( $uix_products_typeshow_val ) ) {
 						
@@ -469,8 +542,9 @@ if ( !function_exists( 'uix_products_admin_posts_filter' ) ) {
 
         if ( is_admin() && $pagenow == 'edit.php' && (isset( $_GET[ 'post_type' ] ) && $_GET['post_type'] == 'uix_products') ) {
 
+    
+            // Update query with filter
             if ( isset( $_GET[ 'uix_products_typeshow' ] ) && !empty( $_GET[ 'uix_products_typeshow' ] ) ) {
-
                 $args = array(
 
                     'meta_query'  => array(
@@ -484,6 +558,7 @@ if ( !function_exists( 'uix_products_admin_posts_filter' ) ) {
 
 
                 $query -> set( 'meta_query', $args );
+
                 return $query;    
 
             } 

@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2020-10-28 07:25+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
-"PO-Revision-Date: 2021-07-07 05:49+0000\n"
+"PO-Revision-Date: 2022-04-20 15:59+0000\n"
 "Last-Translator: chuckie\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh_CN\n"
@@ -152,7 +152,7 @@ msgid ""
 "* Using template files to customize your theme & display all product items"
 msgstr "* 使用模板文件来轻松自定义主题"
 
-#: includes/admin/uix-custom-metaboxes/init.php:249
+#: includes/admin/uix-custom-metaboxes/init.php:256
 #: includes/admin/uix-custom-metaboxes/controls/multi-content.php:131
 msgid "-"
 msgstr ""
@@ -347,22 +347,22 @@ msgstr "添加 <code>.rtl .your-classname { .. }</code> 建立RTL样式表。"
 msgid "Add Files"
 msgstr "添加图片/视频"
 
-#: includes/admin/post-type-init.php:96 includes/admin/options.php:125
+#: includes/admin/post-type-init.php:95 includes/admin/options.php:125
 #: includes/admin/options.php:339
 #: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:37
 #: includes/admin/uix-custom-metaboxes/controls/multi-content.php:95
 msgid "Add New"
 msgstr "新增"
 
-#: includes/admin/post-type-init.php:42 includes/admin/post-type-init.php:45
+#: includes/admin/post-type-init.php:41 includes/admin/post-type-init.php:44
 msgid "Add New Item"
 msgstr "添加新产品"
 
-#: includes/admin/post-type-init.php:43
+#: includes/admin/post-type-init.php:42
 msgid "Add New Products Item"
 msgstr "添加新产品"
 
-#: includes/admin/post-type-init.php:99
+#: includes/admin/post-type-init.php:98
 msgid "Add or remove"
 msgstr "添加或删除"
 
@@ -377,9 +377,17 @@ msgstr "附加信息"
 
 #: theme_templates/taxonomy-uix_products_category.php:29
 #: theme_templates/tmpl-uix_products.php:28
-#: includes/admin/post-type-init.php:91
+#: includes/admin/post-type-init.php:90
 msgid "All"
 msgstr "所有"
+
+#: includes/admin/post-type-init.php:227
+msgid "All Categories"
+msgstr "所有类别"
+
+#: includes/admin/post-type-init.php:251
+msgid "All Types"
+msgstr "所有类型"
 
 #: helper/tabs/general-settings.php:111
 msgid ""
@@ -391,7 +399,7 @@ msgstr "使您可以创建非常顺畅的过渡动画。"
 msgid "Appears on posts and pages in the sidebar."
 msgstr "出现在侧栏中的帖子和页面上。"
 
-#: includes/admin/uix-custom-metaboxes/init.php:250
+#: includes/admin/uix-custom-metaboxes/init.php:257
 msgid "Are you sure you want to delete?"
 msgstr "确定删除?"
 
@@ -429,7 +437,7 @@ msgstr ""
 "content/themes/{your-theme}/</code>。"
 
 #: theme_templates/single-uix_products.php:141
-#: includes/admin/post-type-init.php:287 includes/admin/options.php:100
+#: includes/admin/post-type-init.php:393 includes/admin/options.php:100
 msgid "Author"
 msgstr "作者"
 
@@ -441,17 +449,17 @@ msgstr "立刻购买$"
 msgid "Can be used for your custom parameters."
 msgstr "可用于您的自定义参数。"
 
-#: includes/admin/post-type-init.php:86 includes/admin/post-type-init.php:88
+#: includes/admin/post-type-init.php:85 includes/admin/post-type-init.php:87
 msgid "Categories"
 msgstr "分类"
 
 #: theme_templates/single-uix_products.php:127
 #: theme_templates/single-uix_products.php:213
-#: includes/admin/post-type-init.php:87 includes/admin/post-type-init.php:286
+#: includes/admin/post-type-init.php:86 includes/admin/post-type-init.php:392
 msgid "Category"
 msgstr "分类"
 
-#: includes/admin/post-type-init.php:100
+#: includes/admin/post-type-init.php:99
 msgid "Choose from the most used"
 msgstr "选择使用最多的"
 
@@ -603,11 +611,11 @@ msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr "例如: WPML, Bootstrap 3.x, WordPress 4.5+"
 
 #: theme_templates/single-uix_products.php:99
-#: includes/admin/post-type-init.php:94
+#: includes/admin/post-type-init.php:93
 msgid "Edit"
 msgstr "编辑"
 
-#: includes/admin/post-type-init.php:44
+#: includes/admin/post-type-init.php:43
 msgid "Edit Item"
 msgstr "编辑"
 
@@ -644,7 +652,7 @@ msgstr "输入每笔最低销售的预期价格。"
 msgid "Features"
 msgstr "特色"
 
-#: includes/admin/uix-custom-metaboxes/init.php:620
+#: includes/admin/uix-custom-metaboxes/init.php:627
 #: includes/admin/uix-custom-metaboxes/controls/radio.php:156
 msgid "Field Title"
 msgstr "字段标题"
@@ -674,7 +682,7 @@ msgstr "开发者文档"
 msgid "Free Download"
 msgstr "免费下载"
 
-#: includes/admin/uix-custom-metaboxes/init.php:297
+#: includes/admin/uix-custom-metaboxes/init.php:304
 msgid "Group Title"
 msgstr "组标题"
 
@@ -733,15 +741,15 @@ msgstr "缩略图的大小"
 msgid "Image Size in Single Post"
 msgstr "单张图片大小"
 
-#: includes/admin/uix-custom-metaboxes/init.php:239
+#: includes/admin/uix-custom-metaboxes/init.php:246
 msgid "Insert"
 msgstr "插入"
 
-#: includes/admin/uix-custom-metaboxes/init.php:240
+#: includes/admin/uix-custom-metaboxes/init.php:247
 msgid "Insert Image"
 msgstr "插入图片"
 
-#: includes/admin/uix-custom-metaboxes/init.php:243
+#: includes/admin/uix-custom-metaboxes/init.php:250
 msgid "Insert/Edit link"
 msgstr "插入/编辑链接"
 
@@ -765,7 +773,7 @@ msgstr "项目价格"
 msgid "Item Title"
 msgstr "项目标题"
 
-#: includes/admin/uix-custom-metaboxes/init.php:248
+#: includes/admin/uix-custom-metaboxes/init.php:255
 msgid "Language"
 msgstr "语言"
 
@@ -774,7 +782,7 @@ msgstr "语言"
 msgid "Layout"
 msgstr "布局"
 
-#: includes/admin/uix-custom-metaboxes/init.php:245
+#: includes/admin/uix-custom-metaboxes/init.php:252
 msgid "Link Text"
 msgstr "链接地址"
 
@@ -805,7 +813,7 @@ msgstr "最多15个关键字，涵盖功能，用法和样式。 关键字应全
 msgid "Muuri"
 msgstr ""
 
-#: includes/admin/post-type-init.php:97
+#: includes/admin/post-type-init.php:96
 msgid "New"
 msgstr "新增"
 
@@ -818,11 +826,11 @@ msgstr "下一个"
 msgid "No categories"
 msgstr "无分类"
 
-#: includes/admin/post-type-init.php:48
+#: includes/admin/post-type-init.php:47
 msgid "No Items Found"
 msgstr "没找到内容"
 
-#: includes/admin/post-type-init.php:49
+#: includes/admin/post-type-init.php:48
 msgid "No Items Found In Trash"
 msgstr "垃圾箱无内容"
 
@@ -862,7 +870,7 @@ msgstr "仅显示插件?"
 msgid "Only display themes?"
 msgstr "仅显示主题?"
 
-#: includes/admin/uix-custom-metaboxes/init.php:246
+#: includes/admin/uix-custom-metaboxes/init.php:253
 msgid "Open link in a new tab"
 msgstr "新窗口打开"
 
@@ -874,7 +882,7 @@ msgstr "操作成功!"
 msgid "Pages: "
 msgstr "页面:"
 
-#: includes/admin/post-type-init.php:92 includes/admin/post-type-init.php:93
+#: includes/admin/post-type-init.php:91 includes/admin/post-type-init.php:92
 msgid "Parent"
 msgstr "父级"
 
@@ -890,7 +898,7 @@ msgstr "粘贴CSS代码"
 msgid "Plugin"
 msgstr "插件"
 
-#: includes/admin/post-type-init.php:90
+#: includes/admin/post-type-init.php:89
 msgid "Popular"
 msgstr "常用的"
 
@@ -910,7 +918,7 @@ msgstr "产品类型"
 msgid "products"
 msgstr "个"
 
-#: includes/admin/post-type-init.php:41
+#: includes/admin/post-type-init.php:40
 msgid "Products Item"
 msgstr "产品"
 
@@ -956,7 +964,7 @@ msgstr "发布时间"
 msgid "Remove"
 msgstr "删除"
 
-#: includes/admin/uix-custom-metaboxes/init.php:242
+#: includes/admin/uix-custom-metaboxes/init.php:249
 msgid "Remove link"
 msgstr "删除链接"
 
@@ -972,11 +980,11 @@ msgstr "删除Uix产品库模板文件"
 msgid "Responsive"
 msgstr "响应式"
 
-#: includes/admin/post-type-init.php:89
+#: includes/admin/post-type-init.php:88
 msgid "Search"
 msgstr "搜索"
 
-#: includes/admin/post-type-init.php:47
+#: includes/admin/post-type-init.php:46
 msgid "Search Items"
 msgstr "搜索"
 
@@ -984,7 +992,7 @@ msgstr "搜索"
 msgid "Select a Theme"
 msgstr "选择一个主题"
 
-#: includes/admin/uix-custom-metaboxes/init.php:238
+#: includes/admin/uix-custom-metaboxes/init.php:245
 msgid "Select Files"
 msgstr "选择文件"
 
@@ -994,7 +1002,7 @@ msgstr "选择文件"
 msgid "Select image or video"
 msgstr "选择图片或视频"
 
-#: includes/admin/post-type-init.php:98
+#: includes/admin/post-type-init.php:97
 msgid "Separate with commas"
 msgstr "逗号隔开"
 
@@ -1010,7 +1018,7 @@ msgstr "设置已保存."
 msgid "Smartphone View"
 msgstr "手机视图"
 
-#: includes/admin/uix-custom-metaboxes/init.php:241
+#: includes/admin/uix-custom-metaboxes/init.php:248
 msgid "Source Code"
 msgstr "源代码"
 
@@ -1026,7 +1034,7 @@ msgstr "静态"
 msgid "Switcheroo"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:247
+#: includes/admin/uix-custom-metaboxes/init.php:254
 msgid "Syntax Highlight Code"
 msgstr "代码高亮"
 
@@ -1071,7 +1079,7 @@ msgid ""
 "selected, they will be displayed in the column view."
 msgstr "该插件启用产品发布类型和分类。 您可以添加新的特色图片。"
 
-#: includes/admin/post-type-init.php:283
+#: includes/admin/post-type-init.php:389
 msgid "Thumbnail"
 msgstr "缩略图"
 
@@ -1085,7 +1093,7 @@ msgstr "文本"
 msgid "Title:"
 msgstr "标题:"
 
-#: includes/admin/post-type-init.php:285 includes/admin/options.php:153
+#: includes/admin/post-type-init.php:391 includes/admin/options.php:153
 msgid "Type"
 msgstr "类型"
 
@@ -1094,7 +1102,7 @@ msgid "UIUX Lab"
 msgstr ""
 
 #. Name of the plugin
-#: includes/admin/post-type-init.php:40
+#: includes/admin/post-type-init.php:39
 msgid "Uix Products"
 msgstr "Uix产品库"
 
@@ -1116,7 +1124,7 @@ msgstr "Uix产品库: 近期产品"
 msgid "Untitled"
 msgstr "无标题"
 
-#: includes/admin/post-type-init.php:95
+#: includes/admin/post-type-init.php:94
 msgid "Update"
 msgstr "更新"
 
@@ -1133,7 +1141,7 @@ msgstr "更新时间"
 msgid "Upload Your Files"
 msgstr "上传图片"
 
-#: includes/admin/uix-custom-metaboxes/init.php:244
+#: includes/admin/uix-custom-metaboxes/init.php:251
 msgid "URL"
 msgstr "地址"
 
@@ -1151,7 +1159,7 @@ msgstr "值"
 msgid "Version"
 msgstr "版本"
 
-#: includes/admin/post-type-init.php:46
+#: includes/admin/post-type-init.php:45
 msgid "View Item"
 msgstr "查看"
 

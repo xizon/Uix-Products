@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uix Slides 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2021-07-07 05:47+0000\n"
+"POT-Creation-Date: 2022-04-20 15:58+0000\n"
 "POT-Revision-Date: Sat Apr 08 2017 14:41:54 GMT+0800 (CST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -140,7 +140,7 @@ msgid ""
 "* Using template files to customize your theme & display all product items"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:249
+#: includes/admin/uix-custom-metaboxes/init.php:256
 #: includes/admin/uix-custom-metaboxes/controls/multi-content.php:131
 msgid "-"
 msgstr ""
@@ -304,22 +304,22 @@ msgstr ""
 msgid "Add Files"
 msgstr ""
 
-#: includes/admin/post-type-init.php:96 includes/admin/options.php:125
+#: includes/admin/post-type-init.php:95 includes/admin/options.php:125
 #: includes/admin/options.php:339
 #: includes/admin/uix-custom-metaboxes/controls/custom-attrs.php:37
 #: includes/admin/uix-custom-metaboxes/controls/multi-content.php:95
 msgid "Add New"
 msgstr ""
 
-#: includes/admin/post-type-init.php:42 includes/admin/post-type-init.php:45
+#: includes/admin/post-type-init.php:41 includes/admin/post-type-init.php:44
 msgid "Add New Item"
 msgstr ""
 
-#: includes/admin/post-type-init.php:43
+#: includes/admin/post-type-init.php:42
 msgid "Add New Products Item"
 msgstr ""
 
-#: includes/admin/post-type-init.php:99
+#: includes/admin/post-type-init.php:98
 msgid "Add or remove"
 msgstr ""
 
@@ -334,8 +334,16 @@ msgstr ""
 
 #: theme_templates/taxonomy-uix_products_category.php:29
 #: theme_templates/tmpl-uix_products.php:28
-#: includes/admin/post-type-init.php:91
+#: includes/admin/post-type-init.php:90
 msgid "All"
+msgstr ""
+
+#: includes/admin/post-type-init.php:227
+msgid "All Categories"
+msgstr ""
+
+#: includes/admin/post-type-init.php:251
+msgid "All Types"
 msgstr ""
 
 #: helper/tabs/general-settings.php:111
@@ -348,7 +356,7 @@ msgstr ""
 msgid "Appears on posts and pages in the sidebar."
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:250
+#: includes/admin/uix-custom-metaboxes/init.php:257
 msgid "Are you sure you want to delete?"
 msgstr ""
 
@@ -381,7 +389,7 @@ msgid ""
 msgstr ""
 
 #: theme_templates/single-uix_products.php:141
-#: includes/admin/post-type-init.php:287 includes/admin/options.php:100
+#: includes/admin/post-type-init.php:393 includes/admin/options.php:100
 msgid "Author"
 msgstr ""
 
@@ -393,17 +401,17 @@ msgstr ""
 msgid "Can be used for your custom parameters."
 msgstr ""
 
-#: includes/admin/post-type-init.php:86 includes/admin/post-type-init.php:88
+#: includes/admin/post-type-init.php:85 includes/admin/post-type-init.php:87
 msgid "Categories"
 msgstr ""
 
 #: theme_templates/single-uix_products.php:127
 #: theme_templates/single-uix_products.php:213
-#: includes/admin/post-type-init.php:87 includes/admin/post-type-init.php:286
+#: includes/admin/post-type-init.php:86 includes/admin/post-type-init.php:392
 msgid "Category"
 msgstr ""
 
-#: includes/admin/post-type-init.php:100
+#: includes/admin/post-type-init.php:99
 msgid "Choose from the most used"
 msgstr ""
 
@@ -555,11 +563,11 @@ msgid "E.g. WPML, Bootstrap 3.x, WordPress 4.5+"
 msgstr ""
 
 #: theme_templates/single-uix_products.php:99
-#: includes/admin/post-type-init.php:94
+#: includes/admin/post-type-init.php:93
 msgid "Edit"
 msgstr ""
 
-#: includes/admin/post-type-init.php:44
+#: includes/admin/post-type-init.php:43
 msgid "Edit Item"
 msgstr ""
 
@@ -596,7 +604,7 @@ msgstr ""
 msgid "Features"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:620
+#: includes/admin/uix-custom-metaboxes/init.php:627
 #: includes/admin/uix-custom-metaboxes/controls/radio.php:156
 msgid "Field Title"
 msgstr ""
@@ -626,7 +634,7 @@ msgstr ""
 msgid "Free Download"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:297
+#: includes/admin/uix-custom-metaboxes/init.php:304
 msgid "Group Title"
 msgstr ""
 
@@ -685,15 +693,15 @@ msgstr ""
 msgid "Image Size in Single Post"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:239
+#: includes/admin/uix-custom-metaboxes/init.php:246
 msgid "Insert"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:240
+#: includes/admin/uix-custom-metaboxes/init.php:247
 msgid "Insert Image"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:243
+#: includes/admin/uix-custom-metaboxes/init.php:250
 msgid "Insert/Edit link"
 msgstr ""
 
@@ -717,7 +725,7 @@ msgstr ""
 msgid "Item Title"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:248
+#: includes/admin/uix-custom-metaboxes/init.php:255
 msgid "Language"
 msgstr ""
 
@@ -726,7 +734,7 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:245
+#: includes/admin/uix-custom-metaboxes/init.php:252
 msgid "Link Text"
 msgstr ""
 
@@ -757,7 +765,7 @@ msgstr ""
 msgid "Muuri"
 msgstr ""
 
-#: includes/admin/post-type-init.php:97
+#: includes/admin/post-type-init.php:96
 msgid "New"
 msgstr ""
 
@@ -770,11 +778,11 @@ msgstr ""
 msgid "No categories"
 msgstr ""
 
-#: includes/admin/post-type-init.php:48
+#: includes/admin/post-type-init.php:47
 msgid "No Items Found"
 msgstr ""
 
-#: includes/admin/post-type-init.php:49
+#: includes/admin/post-type-init.php:48
 msgid "No Items Found In Trash"
 msgstr ""
 
@@ -811,7 +819,7 @@ msgstr ""
 msgid "Only display themes?"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:246
+#: includes/admin/uix-custom-metaboxes/init.php:253
 msgid "Open link in a new tab"
 msgstr ""
 
@@ -823,7 +831,7 @@ msgstr ""
 msgid "Pages: "
 msgstr ""
 
-#: includes/admin/post-type-init.php:92 includes/admin/post-type-init.php:93
+#: includes/admin/post-type-init.php:91 includes/admin/post-type-init.php:92
 msgid "Parent"
 msgstr ""
 
@@ -839,7 +847,7 @@ msgstr ""
 msgid "Plugin"
 msgstr ""
 
-#: includes/admin/post-type-init.php:90
+#: includes/admin/post-type-init.php:89
 msgid "Popular"
 msgstr ""
 
@@ -859,7 +867,7 @@ msgstr ""
 msgid "products"
 msgstr ""
 
-#: includes/admin/post-type-init.php:41
+#: includes/admin/post-type-init.php:40
 msgid "Products Item"
 msgstr ""
 
@@ -905,7 +913,7 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:242
+#: includes/admin/uix-custom-metaboxes/init.php:249
 msgid "Remove link"
 msgstr ""
 
@@ -921,11 +929,11 @@ msgstr ""
 msgid "Responsive"
 msgstr ""
 
-#: includes/admin/post-type-init.php:89
+#: includes/admin/post-type-init.php:88
 msgid "Search"
 msgstr ""
 
-#: includes/admin/post-type-init.php:47
+#: includes/admin/post-type-init.php:46
 msgid "Search Items"
 msgstr ""
 
@@ -933,7 +941,7 @@ msgstr ""
 msgid "Select a Theme"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:238
+#: includes/admin/uix-custom-metaboxes/init.php:245
 msgid "Select Files"
 msgstr ""
 
@@ -943,7 +951,7 @@ msgstr ""
 msgid "Select image or video"
 msgstr ""
 
-#: includes/admin/post-type-init.php:98
+#: includes/admin/post-type-init.php:97
 msgid "Separate with commas"
 msgstr ""
 
@@ -959,7 +967,7 @@ msgstr ""
 msgid "Smartphone View"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:241
+#: includes/admin/uix-custom-metaboxes/init.php:248
 msgid "Source Code"
 msgstr ""
 
@@ -975,7 +983,7 @@ msgstr ""
 msgid "Switcheroo"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:247
+#: includes/admin/uix-custom-metaboxes/init.php:254
 msgid "Syntax Highlight Code"
 msgstr ""
 
@@ -1020,7 +1028,7 @@ msgid ""
 "selected, they will be displayed in the column view."
 msgstr ""
 
-#: includes/admin/post-type-init.php:283
+#: includes/admin/post-type-init.php:389
 msgid "Thumbnail"
 msgstr ""
 
@@ -1034,7 +1042,7 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: includes/admin/post-type-init.php:285 includes/admin/options.php:153
+#: includes/admin/post-type-init.php:391 includes/admin/options.php:153
 msgid "Type"
 msgstr ""
 
@@ -1043,7 +1051,7 @@ msgid "UIUX Lab"
 msgstr ""
 
 #. Name of the plugin
-#: includes/admin/post-type-init.php:40
+#: includes/admin/post-type-init.php:39
 msgid "Uix Products"
 msgstr ""
 
@@ -1065,7 +1073,7 @@ msgstr ""
 msgid "Untitled"
 msgstr ""
 
-#: includes/admin/post-type-init.php:95
+#: includes/admin/post-type-init.php:94
 msgid "Update"
 msgstr ""
 
@@ -1082,7 +1090,7 @@ msgstr ""
 msgid "Upload Your Files"
 msgstr ""
 
-#: includes/admin/uix-custom-metaboxes/init.php:244
+#: includes/admin/uix-custom-metaboxes/init.php:251
 msgid "URL"
 msgstr ""
 
@@ -1100,7 +1108,7 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: includes/admin/post-type-init.php:46
+#: includes/admin/post-type-init.php:45
 msgid "View Item"
 msgstr ""
 

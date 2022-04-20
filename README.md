@@ -59,6 +59,14 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 ### Updates
 
 
+##### = 1.6.0 (April 20, 2022) =
+
+* New: Added Types filter to admin panel.
+* Tweak: Optimized the categories filter of the admin panel.
+* Tweak: Language update.
+* Tweak: Compatible with version 5.9.x.
+
+
 ##### = 1.5.17 (July 5, 2021) =
 
 * Tweak: Performance optimization of dynamic forms (use virtual tree to update dom) for Custom Meta Boxes.
@@ -344,6 +352,7 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 - WP 5.6.*
 - WP 5.7.*
 - WP 5.8.*
+- WP 5.9.*
 
 
 ### Screenshot
