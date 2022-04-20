@@ -255,7 +255,7 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
                 foreach ($uix_products_typeshow_val as $key=>$value) {
 
                     // get count
-                    $number_posts = array();
+                    $count_show = '';
                     $current_adminpage_url = admin_url(basename($_SERVER['REQUEST_URI']));
                     $current_adminpage_url_params = explode( '?', $current_adminpage_url);
                     $current_adminpage_url_params_count = count(explode( '&', $current_adminpage_url_params[1]));
@@ -265,6 +265,7 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
                         // get count
                         $relevant_products = new WP_Query(array(
                             'post_type'           => 'uix_products',
+                            'posts_per_page'      => -1,  // required
                             'post_status'         => 'publish',
                             'meta_query'          => array(
                                                         array(
@@ -275,14 +276,12 @@ if ( !function_exists( 'uix_products_taxonomy_tax_filters' ) ) {
                             
                             ));
 
-                        $number_posts[$key] = $relevant_products->post_count;
+                        $count_show = ' ('.number_format_i18n($relevant_products->post_count).')';
                         
                         // Restore original Post Data
                         wp_reset_postdata();
 
-                        $count_show = ' ('.number_format_i18n($number_posts[$key]).')';
-                    } else {
-                        $count_show = '';
+                        
                     }
 
                  
