@@ -339,7 +339,10 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 - WP 4.3.*
 - WP 4.4.1
 - WP 4.4.2
-- WP 4.5.*
+- WP 4.5
+- WP 4.5.1
+- WP 4.5.2
+- WP 4.5.3
 - WP 4.6.*
 - WP 4.7.*
 - WP 4.8.*
@@ -353,6 +356,7 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 - WP 5.7.*
 - WP 5.8.*
 - WP 5.9.*
+- WP 6.0.*
 
 
 ### Screenshot
