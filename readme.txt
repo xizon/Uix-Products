@@ -5,8 +5,9 @@ Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
 Requires at least: 4.2
-Tested up to: 6.0
-Stable tag: 1.6.0
+Tested up to: 6.1
+Requires PHP: 5.6
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +121,11 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 
 == Changelog ==
+
+= 1.6.1 (November 12, 2022) =
+
+* Tweak: Enhance the functionality of the uix custom metabox.
+
 
 = 1.6.0 (April 20, 2022) =
 
