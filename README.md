@@ -365,6 +365,7 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 - WP 6.1.*
 - WP 6.3.*
 - WP 6.4.*
+- WP 6.7.*
 
 
 ### Screenshot

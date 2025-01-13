@@ -3,9 +3,9 @@ Contributors: uiuxlab
 Donate link: https://uiux.cc
 Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-products/
-Tags: products, portfolio, work, work show, product, post type, artwork, artworks, showcase, image, images
+Tags: products, portfolio, work show, product, showcase
 Requires at least: 4.2
-Tested up to: 6.5.2
+Tested up to: 6.7.1
 Requires PHP: 5.6
 Stable tag: 1.6.1
 License: GPLv2 or later
