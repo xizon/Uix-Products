@@ -5,9 +5,9 @@ Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work show, product, showcase
 Requires at least: 4.2
-Tested up to: 6.7.1
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,10 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 
 == Changelog ==
+
+= 1.6.2 (April 24, 2025) =
+
+* Fix: Avoid the error "Function _load_textdomain_just_in_time was called incorrectly".
 
 = 1.6.1 (November 12, 2022) =
 

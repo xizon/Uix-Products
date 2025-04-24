@@ -58,6 +58,10 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 
 ### Updates
 
+##### = 1.6.2 (April 24, 2025) =
+
+* Fix: Avoid the error "Function _load_textdomain_just_in_time was called incorrectly".
+
 
 ##### = 1.6.1 (November 12, 2022) =
 
@@ -366,6 +370,7 @@ Occasionally you may wish to edit one of the meta boxes that come with Uix Produ
 - WP 6.3.*
 - WP 6.4.*
 - WP 6.7.*
+- WP 6.8.*
 
 
 ### Screenshot
