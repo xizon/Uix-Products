@@ -5,7 +5,7 @@ Author URI: https://uiux.cc
 Plugin URL: https://uiux.cc/wp-plugins/uix-products/
 Tags: products, portfolio, work show, product, showcase
 Requires at least: 4.2
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 5.6
 Stable tag: 1.6.2
 License: GPLv2 or later
